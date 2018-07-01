@@ -1,0 +1,45 @@
+---
+layout: post
+status: publish
+published: true
+title: Simple Lift and Shift using Web App for Containers and Azure Database for MySQL
+author:
+  display_name: Yoichi Kawasaki
+  login: yoichi
+  email: yokawasa@gmail.com
+  url: http://github.com/yokawasa
+author_login: yoichi
+author_email: yokawasa@gmail.com
+author_url: http://github.com/yokawasa
+wordpress_id: 131
+wordpress_url: http://unofficialism.info/posts/?p=131
+date: '2017-11-23 18:39:51 +0900'
+date_gmt: '2017-11-23 09:39:51 +0900'
+categories:
+- Azure
+tags:
+- AppServices
+- docker
+- web app for containers
+- mysql
+- Container
+---
+<p>去る10月、11月と<a href="https://azure.microsoft.com/ja-jp/services/app-service/containers/">Web App for Containers</a>と<a href="https://azure.microsoft.com/ja-jp/services/mysql/">Azure Database for MySQL</a>をつかったLife and Shiftシナリオのコンテンツを２つばかり作ったのでブログにのせておきます。それぞれRailsとPHPの簡単なLAMP構成アプリを題材に<a href="https://azure.microsoft.com/ja-jp/services/app-service/containers/">Web App for Containers</a>と<a href="https://azure.microsoft.com/ja-jp/services/mysql/">Azure Database for MySQL</a>を使ってAzure上で完全マネージドな構成にしましょうというお話です。データストアにMySQLやPostgreSQLをお使いで、シングルコンテナにおさまるアプリであれば、細かい違いはあれどだいたい同じような手順でここで紹介している完全マネージド構成に移行することができると思います。他には、よくある構成としてデータストアにMongoDBのようなNoSQLをお使いのものもありますが、そいつも<a href="https://docs.microsoft.com/ja-jp/azure/cosmos-db/">Cosmos DB</a> (<a href="https://docs.microsoft.com/ja-jp/azure/cosmos-db/mongodb-introduction">Mongo API版</a>) + <a href="https://azure.microsoft.com/ja-jp/services/app-service/containers/">Web App for Containers</a>構成に載せ替えることも可能かと思います。</p>
+<p>これらサービスは、パッチあてなどUpdateとランタイム更新のような面倒な作業は当然ながら、標準で冗長化対策、高負荷対策、セキュリティ対策などをやってくれていて、さらに効率的な監視・アラート、CI/CDを可能にする機能を提供しております。使える状況下ならば絶対に使わないと損なわけです。是非ともこれらサービスを活用してオフロードできるところはオフロードして、その分のリソースを皆さんにしかできない新規開発やビジネスベーションにフォーカスいただくことできっと今までよりも幸せになれるのでははなかいと思います。</p>
+<h2>Rails + MySQLアプリのLife and Shiftシナリオ</h2>
+<p><center><br />
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/f7IR6vOiwVQBQr" width="700" height="570.5" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/yokawasa/web-app-for-containers-mysqlrails-80754390" title="Web App for Containers + MySQLでコンテナ対応したRailsアプリを作ろう！" target="_blank">Web App for Containers + MySQLでコンテナ対応したRailsアプリを作ろう！</a> </strong> from <strong><a href="https://www.slideshare.net/yokawasa" target="_blank">Yoichi Kawasaki</a></strong> </div>
+<p></center></p>
+<h2>PHP + MySQLアプリのLife and Shiftシナリオ</h2>
+<p><center><br />
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/1H8vTu3XHbf1yd" width="700" height="570.5" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+<div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/yokawasa/web-app-for-containers-mysqlphp" title="Web App for Containers + MySQLでコンテナ対応したPHPアプリを作ろう！ " target="_blank">Web App for Containers + MySQLでコンテナ対応したPHPアプリを作ろう！ </a> </strong> from <strong><a href="https://www.slideshare.net/yokawasa" target="_blank">Yoichi Kawasaki</a></strong> </div>
+<p></center></p>
+<h2>Source Code</h2>
+<p>上記２シナリオに加えてPython/Django版も加えたアプリソースとCI設定ファイルのレポジトリはこちら</p>
+<ul style="list-style:disc inside">
+<li>Ruby on railsアプリとCI: <a href="https://github.com/yokawasa/ci-demo-rails-app">https://github.com/yokawasa/ci-demo-rails-app</a></li>
+<li>PHP/WordPressアプリとCI: <a href="https://github.com/yokawasa/WordPress">https://github.com/yokawasa/WordPress</a></li>
+<li>Python/DjangoアプリとCI:  <a href="https://github.com/yokawasa/ci-demo-django-app">https://github.com/yokawasa/ci-demo-django-app</a></li>
+</ul>

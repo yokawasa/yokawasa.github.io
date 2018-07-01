@@ -1,0 +1,155 @@
+---
+layout: post
+status: publish
+published: true
+title: Collecting logs into Azure DocumentDB using fluent-plugin-documentdb
+author:
+  display_name: Yoichi Kawasaki
+  login: yoichi
+  email: yokawasa@gmail.com
+  url: http://github.com/yokawasa
+author_login: yoichi
+author_email: yokawasa@gmail.com
+author_url: http://github.com/yokawasa
+wordpress_id: 80
+wordpress_url: http://unofficialism.info/posts/?p=80
+date: '2016-02-21 19:35:09 +0900'
+date_gmt: '2016-02-21 10:35:09 +0900'
+categories:
+- Azure
+- English
+tags:
+- DocumentDB
+- fluentd
+- fluent-plugin-documentdb
+- Ruby
+---
+<p>In this article, I'd like to introduces a solution to collect logs and store them into Azure DocumentDB using fluentd and its plugin, fluent-plugin-documentdb.</p>
+<p><a href="https://azure.microsoft.com/en-us/services/documentdb/">Azure DocumentDB</a> is a managed NoSQL database service provided by Microsoft Azure. It's schemaless, natively support JSON, very easy-to-use, very fast, highly reliable, and enables rapid deployment, you name it. <a href="http://www.fluentd.org/">Fluentd</a> is an open source data collector, which lets you unify the data collection and consumption for a better use and understanding of data. <a href="https://github.com/yokawasa/fluent-plugin-documentdb">fluent-plugin-documentdb</a> is fluentd output plugin that enables to store event collections into Azure DocumentDB.  </p>
+<p>This article shows how to</p>
+<ul style="list-style:disc inside">
+<li>Collect Apache httpd logs across web servers</li>
+<li>Ship the collected logs into the aggregator Fluentd in near real-time</li>
+<li>Store the collected logs into DocumentDB</li>
+<li>Utilize the collected log data stored on Document DB for advanced scenarios - like archiving the data to Azure Storage, doing Big data analysis, visualizing the data with PowerBI, and so forth</li>
+<p><br/></p>
+<p><center><img src="https://farm2.staticflickr.com/1462/24772450149_472e770ca8_c.jpg" width="800" height="384" alt="fluentd-azure-documentdb"></center></p>
+<h2>Pre-requisites</h2>
+<ul style="list-style:disc inside">
+<li>A basic understanding of fluentd - if you're not familiar with fluentd, <a href="http://docs.fluentd.org/articles/quickstart">fluentd quickstart guide</a> is good starting point</li>
+<li>Azure subscription - you need to have Azure subscription that grants you access to Microsoft Azure services, and under which you can create DocumentDB cluster. If you don't have yet click <a href="https://account.windowsazure.com/Subscriptions">here</a> to create it</li>
+</ul>
+<h2>Setup: Azure DocumentDB</h2>
+<p>To use Azure DocumentDB, you must create a DocumentDB database account using either the Azure portal, Azure Resource Manager templates, or Azure command-line interface (CLI). In addition, you must have a database and a collection to which fluent-plugin-documentdb writes event-stream out. Here are instructions:</p>
+<ul style="list-style:disc inside">
+<li>Create a DocumentDB database account using&nbsp;<a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-account/">the Azure portal</a>, or&nbsp;<a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-automation-resource-manager-cli/">Azure Resource Manager templates and Azure CLI</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-database/">How to create a database for DocumentDB</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-collection/">Create a DocumentDB collection</a></li>
+</ul>
+<h2>Setup: Fluentd Aggregator</h2>
+<p>First of all, install Fluentd. The following shows how to install Fluentd using Ruby gem packger but if you are not using Ruby Gem for the installation, please refer to <a href="http://docs.fluentd.org/categories/installation">this installation guide</a> where you can find many other ways to install Fluentd on many platforms.</p>
+<p><code lang="bash"><br />
+# install fluentd<br />
+sudo gem install fluentd --no-ri --no-rdoc</p>
+<p># create fluent.conf<br />
+fluentd --setup <directory-path-to-fluent-conf><br />
+</code></p>
+<p>Also, install <a href="https://github.com/yokawasa/fluent-plugin-documentdb">fluent-plugin-documentdb</a> for fluentd aggregator to store collected logs data into Azure DocumentDB.<br />
+<code lang="bash"><br />
+sudo gem install fluent-plugin-documentdb<br />
+</code></p>
+<p>Next, configure fluent.conf, a fluentd configuration file as follows. Please see <a href="https://github.com/yokawasa/fluent-plugin-documentdb">this</a> for fluent-plugin-documentdb configuration.</p>
+<p><code><br />
+# Receive events from 24224/tcp<br />
+# This is used by log forwarding and the fluent-cat command<br />
+<source><br />
+    @type forward<br />
+    port 24224<br />
+</source></p>
+<p># Store Data in DocumentDB<br />
+<match apache.access><br />
+    @type documentdb<br />
+    docdb_endpoint https://yoichikademo.documents.azure.com:443/<br />
+    docdb_account_key Tl1+ikQtnExxxUisJ+BXwbbaC8NtUqYVE9kUDXCNust5aYBduhui29Xtxz3DLP88PayjtgtnARc1PW+2wlA6jCJw==  (dummy)<br />
+    docdb_database LogDB<br />
+    docdb_collection Collection1<br />
+    auto_create_database true<br />
+    auto_create_collection true<br />
+    time_format %Y%m%d-%H:%M:%S<br />
+    localtime true<br />
+    add_time_field true<br />
+    time_field_name time<br />
+    add_tag_field true<br />
+    tag_field_name tag<br />
+</match><br />
+</code></p>
+<p>Regarding he port number of the aggregator host above, the default is 24224. Note that both TCP packets (event stream) and UDP packets (heartbeat message) are sent to this port, which mean you need to open both TCP and UDP for this port if you have access controls between forwarders and aggregator. Please see the <a href="http://docs.fluentd.org/articles/out_forward">forward Output plugin article</a> to understand more about forward plugin. </p>
+<p>Finally, run fluentd with specifiying fluent.conf that you configurea above.</p>
+<p><code lang="bash"><br />
+fluentd -c ./fluent.conf -vv &<br />
+</code></p>
+<h2>Setup: Fluentd Forwarders</h2>
+<p>First, to set up Fluentd, run the following command to setup Fluentd. Again If you are not using Ruby Gem for the installation, please refer to the <a href="http://docs.fluentd.org/v0.12/categories/installation">installation document</a>.  </p>
+<p><code lang="bash"><br />
+# install fluentd<br />
+sudo gem install fluentd --no-ri --no-rdoc</p>
+<p># create fluent.conf<br />
+fluentd --setup <directory-path-to-fluent-conf><br />
+</code></p>
+<p>Then, give Fluentd a read access to servers'log files.<br />
+<code lang="bash"><br />
+sudo chmod og+rx /var/log/apache2<br />
+sudo chmod og+r /var/log/apache2/*<br />
+</code></p>
+<p>Next, configure fluent.conf, a fluentd configuration file as follows to tail apache access logs and forard event to aggregator</p>
+<p><code><br />
+# Apache Access Logs<br />
+<source><br />
+    @type tail<br />
+    path /var/log/apache2/access.log   # monitoring file<br />
+    pos_file /tmp/fluentd_pos_file     # position file<br />
+    format apache                      # format<br />
+    tag apache.access                  # tag<br />
+</source></p>
+<p># Forward data to the aggregator<br />
+<match apache.access><br />
+    @type forward<br />
+    buffer_type memory<br />
+    buffer_chunk_limit 8m<br />
+    buffer_queue_limit 64<br />
+    flush_interval 1s<br />
+    <server><br />
+        host  <Aggregator's hostname or IP><br />
+        port 24224<br />
+    </server><br />
+    <secondary><br />
+        @type file<br />
+        path /var/log/fluentd/forward-failed<br />
+    </secondary><br />
+</match><br />
+</code></p>
+<p>Finally, start Fluentd with the configuration above to start log collections</p>
+<p><code lang="bash"><br />
+fluentd -c ./fluent.conf -vv &<br />
+</code></p>
+<h2>TEST</h2>
+<p>Let's check if logs will be forwarded from apache nodes to aggegator and ultimately stored in documentdb. First, create log events by sending test requests to web servers somehow (here using apache bench for example)</p>
+<p><code lang="bash"><br />
+ab -n 5 -c 2 http://<targetserver>/foo/bar/test.html<br />
+</code></p>
+<p>If logs are collected successfully, you can see the logs stored in DocumentDB easily by using Document DB's query explorer. Go to Azure Portal > Display your DocumentDB dashboard > Query Explorer.</p>
+<p><center><img src="https://farm2.staticflickr.com/1706/24533782173_4e562b7fa3_c.jpg" width="800" height="466" alt="DocumentDB-QueryExplorer"></center></p>
+<h2>More log collections from external sources</h2>
+<p>Fluentd's Input plugins extend Fluentd to retrieve and pull event logs from external sources. An input plugin typically creates a thread socket and a listen socket. It can also periodically pull data from data sources.  For examples, listening syslog events, tailing apache/nginx logs, and pulling data from well-known RDBMS/NoSQLs on-premices or on public cloud. See <a href="http://www.fluentd.org/plugins">http://www.fluentd.org/plugins</a></p>
+<h2>Setup for Advanced senarios</h2>
+<ul style="list-style:disc inside">
+<li>Using Secure-forward instead of simple forward plugin in order to have communication over SSL&nbsp;between forward servers and aggregator:  <a href="https://github.com/tagomoris/fluent-plugin-secure-forward">https://github.com/tagomoris/fluent-plugin-secure-forward</a> </li>
+<li>Configuring DocumentDB's <a href="http://hadoop.apache.org/">Hadoop</a> connector that allows DocumentDB to act as both a source and sink for <a href="http://hive.apache.org/">Hive</a>, <a href="http://pig.apache.org/">Pig</a> and MapReduce jobs: <a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-run-hadoop-with-hdinsight/">https://azure.microsoft.com/en-us/documentation/articles/documentdb-run-hadoop-with-hdinsight/</a></li>
+<li>Setup Azure Data factory to  from DocumentDB to Azure Blob Storage for Archiving the data: <a href="https://azure.microsoft.com/en-us/documentation/articles/data-factory-azure-documentdb-connector/">https://azure.microsoft.com/en-us/documentation/articles/data-factory-azure-documentdb-connector/</a></li>
+<li>Configuring DocumentDB's PowerBI connector that allows DocumentDB to act as a source for PowerBI to create insightful visualizations for DocumentDB data: <a href="https://azure.microsoft.com/en-us/blog/unleashing-insights-from-data-in-documentdb-with-power-bi/">https://azure.microsoft.com/en-us/blog/unleashing-insights-from-data-in-documentdb-with-power-bi/</a></li>
+</ul>
+<p><br/><br />
+<br/><br />
+<br/></p>
+<p>Happy log collections with Azure DocumentDB and fluentd!!</p>
+<p>END</p>

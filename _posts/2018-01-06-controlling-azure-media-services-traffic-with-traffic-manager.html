@@ -1,0 +1,93 @@
+---
+layout: post
+status: publish
+published: true
+title: Controlling Azure Media Services traffic with Traffic Manager
+author:
+  display_name: Yoichi Kawasaki
+  login: yoichi
+  email: yokawasa@gmail.com
+  url: http://github.com/yokawasa
+author_login: yoichi
+author_email: yokawasa@gmail.com
+author_url: http://github.com/yokawasa
+wordpress_id: 141
+wordpress_url: http://unofficialism.info/posts/?p=141
+date: '2018-01-06 23:05:28 +0900'
+date_gmt: '2018-01-06 14:05:28 +0900'
+categories:
+- Azure
+- English
+tags:
+- AzureMediaServices
+- TrafficManager
+- Resiliency
+---
+<p>This is an article on how you can achieve Azure Media Services (AMS) streaming traffic distribution with Traffic Manager.</p>
+<h2>The process for a client to find target AMS streaming endpoints</h2>
+<p>The figure shows how a client find target AMS streaming endpoints with Traffic Manager and requests from video players are distributed to streaming endpoints in AMS:</p>
+<p><img src="https://farm5.staticflickr.com/4645/25663550048_4f106e0f5e_c.jpg" width="800" height="539" alt="Controling Azure Media Services Traffic with Traffic Manager"></p>
+<p>When AMS endpoints are added to an Azure Traffic Manager profile, Azure Traffic Manager keeps track of the status of the endpoints (running, stopped, or deleted) so that it can decide which of those endpoints should receive traffic. You can configure the way to route network traffic to the endpoints by choosing <a href="https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods">traffic routing methods</a> available in Traffic Manager.</p>
+<h2>Configuration procedure</h2>
+<p>Suppose that you have 2 AMS accounts (<strong>amsaccount1</strong>, <strong>amsaccount2</strong>), and that you want to distribute requests to your Traffic Manager domain (<strong>myamsstreaming.trafficmanager.net</strong>) from video player clients to streaming endpoints in AMS. When AMS endpoints are added to an Azure Traffic Manager profile (<strong>myamsstreaming</strong>), Azure Traffic Manager keeps track of the status of your AMS streaming endpoints (running, stopped, or deleted) so that it can decide which of those endpoints should receive traffic. However, when it comes to AMS endpoints, it has to be toward a custom domain, NOT simply a Traffic Manager domain for clients' traffic to be distributed into AMS endpoints using Traffic Manager. So let's suppose you prepare a custom domain: <strong>streaming.mydomain.com</strong>.</p>
+<p><u>Example accounts and domains</u></p>
+<ul style="list-style:disc inside">
+<li>AMS Account1: <strong>amsaccount1</strong> (Streaming endpoint: amsaccount1.streaming.mediaservices.windows.net)</li>
+<li>AMS Account2: <strong>amsaccount2</strong> (Streaming endpoint: amsaccount2.streaming.mediaservices.windows.net)</li>
+<li>Traffic Manager Domain: <strong>myamsstreaming.trafficmanager.net</strong></li>
+<li>Custom Domain: <strong>streaming.mydomain.com</strong></li>
+</ul>
+<h3>(1) Point a custom domain to a Traffic Manager domain</h3>
+<p>You add the following alias (CNAME) to point the custom domain to the traffic manager domain:<br />
+<code><br />
+streaming.mydomain.com IN CNAME myamsstreaming.trafficmanager.net<br />
+</code></p>
+<p>Useful Link for this step: <a href="https://docs.microsoft.com/azure/traffic-manager/traffic-manager-point-internet-domain">Point a company Internet domain to an Azure Traffic Manager domain</a></p>
+<h3>(2) Add Azure Media Services origin hosts to the Traffic Manager</h3>
+<p>Add AMS endpoints to an Azure Traffic Manager profile as "External Endpoint" via either Azure Portal or Azure CLI / PowerShell. Here is an image of adding endpoints in Azure portal: </p>
+<p><img src="https://farm5.staticflickr.com/4637/38826321084_edb7bcdac6_c.jpg" width="800" height="316" alt="Add endpoints to Traffic Manager"></p>
+<p>Useful Link for this step: <a href="https://docs.microsoft.com/azure/traffic-manager/traffic-manager-manage-endpoints">Add, disable, enable, or delete endpoints</a></p>
+<h3>(3) Custom domain name ownership verification</h3>
+<p>First of all, get Media Service Account IDs (GUID) for your AMS accounts in this step. To find the Azure Media Service ID , go to the Azure portal and select your Media Service account. The Azure Media Service ID appears on the right of the DASHBOARD page. Let's suppose you get the following account IDs for AMS accounts (amsaccount1, amsaccount2):</p>
+<ul style="list-style:disc inside">
+<li>Account ID: <strong>8dcbe520-59c7-4591-8d98-1e765b7f3729</strong> for AMS account: amsaccount1</li>
+<li>Account ID: <strong>5e0e6784-4ed0-40a0-8444-33da6d4f7171</strong> for AMS account: amsaccount2</li>
+</ul>
+<p>Then, create CNAME that maps <strong>(accountId).(parent custom domain)</strong> to <strong>verifydns.(mediaservices-dns-zone)</strong>. This is necessary to proves that the Azure Media Services ID has the ownership of the custom domain. Here are CNAMEs to create in this step:</p>
+<p><code><br />
+## <MediaServicesAccountID>.<custom parent domain> IN CNAME verifydns.<mediaservices-dns-zone></p>
+<p>## Custom name Ownership verification for amsaccount1<br />
+8dcbe520-59c7-4591-8d98-1e765b7f3729.mydomain.com IN CNAME  verifydns.mediaservices.windows.net</p>
+<p>## Custom name Ownership verification for amsaccount2<br />
+5e0e6784-4ed0-40a0-8444-33da6d4f7171.mydomain.com IN CNAME  verifydns.mediaservices.windows.net<br />
+</code></p>
+<p>Refer to CustomHostNames section of <a href="https://docs.microsoft.com/rest/api/media/operations/streamingendpoint">StreamingEndpoint document</a> to learn more about the configuration in this step.</p>
+<h3>(4) Add Custom host name to each Azure Media Service streaming endpoint</h3>
+<p>Once you completed "Custom domain name ownership verification" configuration, you then need to configure to add custom host name to each Azure Media Service streaming endpoint. Unfortunately new portal doesn't include capability to add custom domain to the streaming endpoint. You can set it either using <a href="https://docs.microsoft.com/en-us/rest/api/media/operations/streamingendpoint">REST API</a> directly or using <a href="https://github.com/Azure/Azure-Media-Services-Explorer">Azure Media Explorer</a>. Here is how you add custom host name to the streaming endpoint in Azure Media Explorer:</p>
+<p><img src="https://farm5.staticflickr.com/4658/40310439831_0354721aa0_c.jpg" width="800" height="342" alt="azure-media-explorer-custom-host-streaming-endpoint"></p>
+<p>Choose "Streaming endpoint" in the top menu, right click on your streaming endpoint, and select "Streaming endpoint information and settings". In Streaming endpoint information form, type in your custom host name for the endpoint, and click "Update settings and close". That's it.</p>
+<h3>(5) Test video playback with your custom domain</h3>
+<p>Once all configurations above are completed (+ DNS settings are reflected), you will see the custom domain name lookup points to either of AMS endpoints added to the traffic manager like this:</p>
+<p><code><br />
+$ dig streaming.mydomain.com</p>
+<p>;; ANSWER SECTION:<br />
+streaming.mydomain.com. 600 IN CNAME myamsstreaming.trafficmanager.net.<br />
+myamsstreaming.trafficmanager.net. 300 IN CNAME amsaccount1.streaming.mediaservices.windows.net.<br />
+amsaccount1.streaming.mediaservices.windows.net. 60 IN CNAME wamsorigin-origin-903f1f37105244fba2270ae7b64021bd.cloudapp.net.<br />
+wamsorigin-origin-903f1f37105244fba2270ae7b64021bd.cloudapp.net. 60 IN A 104.215.4.76<br />
+</code></p>
+<p>Make sure to check if the custom name lookup points to the other endpoint when one of the endpoints are down.</p>
+<p>Finally, check if you can playback video with your custom domain. </p>
+<p><code><br />
+$ curl http://amsaccount1.streaming.mediaservices.windows.net/ee2e5286-d3fa-40fc-a393-c3c2a3ca5a84/BigBuckBunny.ism/manifest<br />
+<?xml version="1.0" encoding="UTF-8"?><SmoothStreamingMedia MajorVersion="2" MinorVersion="2" Duration="84693333" TimeScale="10000000"><StreamIndex Chunks="2" Type="audio" Url="QualityLevels({bitrate})/Fragments(aac_eng_2_128={start time})" QualityLevels="1" Language="eng" Name="aac_eng_2_128"><QualityLevel AudioTag="255" Index="0" BitsPerSample="16" Bitrate="128000" FourCC="AACL" CodecPrivateData="1190" Channels="2" PacketSize="4" SamplingRate="48000" /><c t="0" d="60160000" /><c d="24533333" /></StreamIndex><StreamIndex Chunks="2" Type="video" Url="QualityLevels({bitrate})/Fragments(video={start time})" QualityLevels="5"><QualityLevel Index="0" Bitrate="2896000" FourCC="H264" MaxWidth="1280" MaxHeight="720" CodecPrivateData="000000016764001FACD9405005BB011000000300100000030300F18319600000000168EBECB22C" /><QualityLevel Index="1" Bitrate="1789000" FourCC="H264" MaxWidth="960" MaxHeight="540" CodecPrivateData="000000016764001FACD940F0117EF011000003000100000300300F1831960000000168EBECB22C" /><QualityLevel Index="2" Bitrate="946000" FourCC="H264" MaxWidth="640" MaxHeight="360" CodecPrivateData="000000016764001EACD940A02FF97011000003000100000300300F162D960000000168EBECB22C" /><QualityLevel Index="3" Bitrate="612000" FourCC="H264" MaxWidth="480" MaxHeight="270" CodecPrivateData="0000000167640015ACD941E08FEB011000000300100000030300F162D9600000000168EBECB22C" /><QualityLevel Index="4" Bitrate="324000" FourCC="H264" MaxWidth="320" MaxHeight="180" CodecPrivateData="000000016764000DACD941419F9F011000000300100000030300F14299600000000168EBECB22C" /><c t="0" d="60000000" /><c d="24583333" /></StreamIndex></SmoothStreamingMedia></p>
+<p>$ curl http://streaming.mydomain.com/ee2e5286-d3fa-40fc-a393-c3c2a3ca5a84/BigBuckBunny.ism/manifest<br />
+<?xml version="1.0" encoding="UTF-8"?><SmoothStreamingMedia MajorVersion="2" MinorVersion="2" Duration="84693333" TimeScale="10000000"><StreamIndex Chunks="2" Type="audio" Url="QualityLevels({bitrate})/Fragments(aac_eng_2_128={start time})" QualityLevels="1" Language="eng" Name="aac_eng_2_128"><QualityLevel AudioTag="255" Index="0" BitsPerSample="16" Bitrate="128000" FourCC="AACL" CodecPrivateData="1190" Channels="2" PacketSize="4" SamplingRate="48000" /><c t="0" d="60160000" /><c d="24533333" /></StreamIndex><StreamIndex Chunks="2" Type="video" Url="QualityLevels({bitrate})/Fragments(video={start time})" QualityLevels="5"><QualityLevel Index="0" Bitrate="2896000" FourCC="H264" MaxWidth="1280" MaxHeight="720" CodecPrivateData="000000016764001FACD9405005BB011000000300100000030300F18319600000000168EBECB22C" /><QualityLevel Index="1" Bitrate="1789000" FourCC="H264" MaxWidth="960" MaxHeight="540" CodecPrivateData="000000016764001FACD940F0117EF011000003000100000300300F1831960000000168EBECB22C" /><QualityLevel Index="2" Bitrate="946000" FourCC="H264" MaxWidth="640" MaxHeight="360" CodecPrivateData="000000016764001EACD940A02FF97011000003000100000300300F162D960000000168EBECB22C" /><QualityLevel Index="3" Bitrate="612000" FourCC="H264" MaxWidth="480" MaxHeight="270" CodecPrivateData="0000000167640015ACD941E08FEB011000000300100000030300F162D9600000000168EBECB22C" /><QualityLevel Index="4" Bitrate="324000" FourCC="H264" MaxWidth="320" MaxHeight="180" CodecPrivateData="000000016764000DACD941419F9F011000000300100000030300F14299600000000168EBECB22C" /><c t="0" d="60000000" /><c d="24583333" /></StreamIndex></SmoothStreamingMedia><br />
+</code></p>
+<h2>Useful Links</h2>
+<ul style="list-style:disc inside">
+<li><a href="https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods">traffic routing methods</a></li>
+<li><a href="https://docs.microsoft.com/azure/traffic-manager/traffic-manager-point-internet-domain">Point a company Internet domain to an Azure Traffic Manager domain</a></li>
+<li><a href="https://docs.microsoft.com/azure/traffic-manager/traffic-manager-manage-endpoints">Add, disable, enable, or delete endpoints</a></li>
+<li><a href="https://docs.microsoft.com/rest/api/media/operations/streamingendpoint">StreamingEndpoint CustomHostNames Configuration</a></li>
+</ul>

@@ -1,0 +1,38 @@
+---
+layout: post
+status: publish
+published: true
+title: de:code 2017 DI08 - Azure Searchセッションフォローアップ
+author:
+  display_name: Yoichi Kawasaki
+  login: yoichi
+  email: yokawasa@gmail.com
+  url: http://github.com/yokawasa
+author_login: yoichi
+author_email: yokawasa@gmail.com
+author_url: http://github.com/yokawasa
+wordpress_id: 124
+wordpress_url: http://unofficialism.info/posts/?p=124
+date: '2017-07-04 14:58:05 +0900'
+date_gmt: '2017-07-04 05:58:05 +0900'
+categories:
+- Announcement
+- Azure
+tags:
+- AzureSearch
+- Bot
+---
+<p>de:code 2017で私が担当したAzure Searchセッションのスライドと動画が公開されたので、セッション中でもでお見せしたマテリアルと合わせてここでフォローアップさせていただきます。</p>
+<p><center><br />
+<iframe src="https://channel9.msdn.com/Events/de-code/2017/DI08/player" width="960" height="540" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>セッションスライドはこちら。セッション持ち時間が50分と短い中での説明なのでいろいろとカットしたのですが、Appendixという形でカットしたスライドや補足情報を載せてあります。P47〜65です。</p>
+<p><center><br />
+<iframe style="border: 1px solid #CCC; border-width: 1px; margin-bottom: 5px; max-width: 100%;" src="//www.slideshare.net/slideshow/embed_code/key/uGcitvMeeVzZC0" width="700" height="570" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen="allowfullscreen"> </iframe></center></p>
+<div style="margin-bottom: 5px;"><strong> <a title="[DI08] その情報うまく取り出せていますか? ～ 意外と簡単、Azure Search で短時間で検索精度と利便性を向上させるための方法" href="//www.slideshare.net/decode2017/di08-azure-search" target="_blank" rel="noopener">[DI08] その情報うまく取り出せていますか? ～ 意外と簡単、Azure Search で短時間で検索精度と利便性を向上させるための方法</a> </strong> from <strong><a href="https://www.slideshare.net/decode2017" target="_blank" rel="noopener">de:code 2017</a></strong></div>
+<p>&nbsp;</p>
+<p>その他、セッション中のデモで使用したツールやBotのソースコードは<a href="https://github.com/yokawasa/decode2017">Github</a>にアップしております。</p>
+<ul style="list-style: disc inside;">
+<li><a href="https://github.com/yokawasa/azure-search-ta">Azure Search Analyzer Test Web UI</a> - 基礎編アナライザーデモで使用したAnalyzer APIの結果表示Viewer</li>
+<li><a href="https://github.com/yokawasa/decode2017/tree/master/azure-search-explorer">Azure Search Explorer</a> - 基礎編デモ使った検索クエリ―結果を表示Viewer。あいまい(Fuzzy:N=2)、同義語辞書、スコアリングプロファイルの動作確認時用パラメータ入力可 - azure-search-explorer</li>
+<li><a href="https://github.com/yokawasa/decode2017/tree/master/azure-search-qna-bot">Azure Search QnA Bot</a> - 実践編のSlackアプリデモで使用したQ&amp;A Botのソースコード。Microsoft Bot Framework SDKを使用しバックエンドにAzure Searchを使用</li>
+</ul>
+<p>最後に、今回のセッションは検索サイド（クエリーを投げてインデックスにヒットして、ランキング処理されて結果が返却されるまで）に絞ってますが、他にもインデックスデータを生成するまでの話、モニタリングやオペレーション的な話、もう少しデープに言語処理的な話など取り上げたいトピックがまだまだあるので時間を見つけて私なりにブログやスライドに整理していきたいと思うております。</p>

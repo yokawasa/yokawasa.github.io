@@ -1,0 +1,94 @@
+---
+layout: post
+status: publish
+published: true
+title: Azure仮想マシンの一括起動・停止 （Classic版）
+author:
+  display_name: Yoichi Kawasaki
+  login: yoichi
+  email: yokawasa@gmail.com
+  url: http://github.com/yokawasa
+author_login: yoichi
+author_email: yokawasa@gmail.com
+author_url: http://github.com/yokawasa
+wordpress_id: 50
+wordpress_url: http://unofficialism.info/posts/?p=50
+date: '2015-11-29 10:48:15 +0900'
+date_gmt: '2015-11-29 01:48:15 +0900'
+categories:
+- Azure
+tags:
+- AzureVM
+- PowerShell
+- AzureCLI
+- ASM
+---
+<p>Azure仮想マシンV1の一括起動・停止する方法についてのナレッジをここに整理しておく。基本的にはPowerShellや<a href="https://azure.microsoft.com/ja-jp/documentation/articles/virtual-machines-command-line-tools/">Azure CLI</a>のVM起動・停止コマンドを並列で実行する方法でいけます。ただし同一クラウドサービス内に複数のVMがある場合は単純なコマンドの並列処理実行ではうまくいかない。その場合はAzureで用意されている複数ロールの一括起動・停止用REST APIを使いましょうというお話し。尚、ここでの一括処理はyoichikavm[001-100]の100VMを対象とする。</p>
+<h2>VM起動・停止コマンドの並列実行</h2>
+<p>yoichikavm[001-100]がそれぞれ別のクラウドサービスを持っている場合は、VM起動・停止コマンドを単純に並列実行するという手法で問題なく一括起動・停止ができる。例えばWindowsマシンの場合はPowershellの(Start|Stop)-AzureVMコマンドをStart-Jobを使用してバックグラウンドジョブとして実行させてやる、MacやLinuxであればvm (start|stop)コマンドをforkさせて複数故プロセスを走らせてやるなど。ここではStart-Jobでの並列実行例を紹介する。</p>
+<p><u>複数VMの一括起動: parallel-start.ps1</u><br />
+<code lang="powershell"><br />
+foreach($node in $( Get-AzureVM | Where-Object{$_.Name -match "yoichikavm*"}) ) {<br />
+    Write-Host $node.Name<br />
+    Start-Job -ScriptBlock{<br />
+        param($node)<br />
+        Start-AzureVM -ServiceName $node.ServiceName -Name $node.Name<br />
+    } -Arg $node<br />
+}<br />
+</code></p>
+<p><u>複数VMの一括停止: parallel-stop.ps1</u><br />
+<code lang="powershell"><br />
+foreach($node in $( Get-AzureVM | Where-Object{$_.Name -match "yoichikavm*"}) ) {<br />
+    Write-Host $node.Name<br />
+    Start-Job -ScriptBlock{<br />
+        param($node)<br />
+        Stop-AzureVM -ServiceName $node.ServiceName -Name $node.Name -Force<br />
+    } -Arg $node<br />
+}<br />
+</code></p>
+<h2>Start/Stop Roles APIの利用(同一クラウドサービス内に複数VMがある場合)</h2>
+<p>これは実際に私が躓いた際に<a href="https://twitter.com/ksasakims">@ksasakims</a>さんに教えてもらった方法。冒頭で簡単に説明したとおり同一クラウドサービス内に複数のVMがある場合は上記のような単純なコマンドの並列処理実行ではうまくいかない。この場合、<a href="https://msdn.microsoft.com/ja-jp/library/azure/dn469419.aspx">Start Roles</a>、<a href="https://msdn.microsoft.com/ja-jp/library/azure/dn469421.aspx">Shutdown Roles</a>のREST APIを使うことで同一クラウドサービス内の複数VMの同時起動。停止を実現することができる。<br />
+以下、APIについて簡単にご説明する。両APIともPOST先は下記同一のエントリーポイントとなっており、またBodyにそれぞれ下記のように起動VM,停止VMを記述する。</p>
+<p><u>POST用エントリーポイント</u><br />
+<code><br />
+https://management.core.windows.net/サブスクリプションID/services/hostedservices/クラウドサービス/deployments/デプロイ名/roles/Operations<br />
+</code></p>
+<p><u>BODY例: 一括起動 yoichikavm[001-100]</u><br />
+<code lang="xml"><br />
+<StartRolesOperation xmlns="http://schemas.microsoft.com/windowsazure" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><br />
+  <OperationType>StartRolesOperation</OperationType><br />
+  <Roles><br />
+    <Name>yoichikavm001</Name><br />
+    <Name>yoichikavm002</Name><br />
+    ... skip ...<br />
+    <Name>yoichikavm100</Name><br />
+  </Roles><br />
+</StartRolesOperation><br />
+</code></p>
+<p><u>BODY例) 一括停止 yoichikavm[001-100]</u><br />
+<code lang="xml"><br />
+<ShutdownRolesOperation xmlns="http://schemas.microsoft.com/windowsazure" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><br />
+  <OperationType>ShutdownRolesOperation</OperationType><br />
+  <Roles><br />
+    <Name>yoichikavm001</Name><br />
+    <Name>yoichikavm002</Name><br />
+    ... skip ...<br />
+    <Name>yoichikavm100</Name><br />
+  </Roles><br />
+  <PostShutdownAction>StoppedDeallocated</PostShutdownAction><br />
+</ShutdownRolesOperation><br />
+</code></p>
+<p>そして、共通ヘッダとして下記の２つが必要になる。<br />
+<code><br />
+Content-Type: application/xml<br />
+x-ms-version: 2015-04-01    << サービス管理バージョン、これは最新の2015-04-01でOK<br />
+</code></p>
+<p>認証については他のサービス管理APIと同様にAzure ADの使用もしくは証明書を利用した認証を行う必要がある。詳細についてはを「<a href="https://msdn.microsoft.com/ja-jp/library/azure/ee460782.aspx">サービス管理要求の認証</a>」参照いただければと思う。</p>
+<h2>LINKS</h2>
+<ul style="list-style:disc inside">
+<li><a href="https://azure.microsoft.com/ja-jp/documentation/articles/virtual-machines-command-line-tools/">Azure サービス管理での Mac、Linux、および Windows 用 Azure CLI の使用</a> </li>
+<li><a href="https://technet.microsoft.com/ja-jp/library/hh849698.aspx">Start-Jobでバックグラウンドジョブを実行</a></li>
+<li><a href="https://msdn.microsoft.com/ja-jp/library/azure/dn469419.aspx">仮想マシンの操作 - Start Roles</a> </li>
+<li><a href="https://msdn.microsoft.com/ja-jp/library/azure/dn469421.aspx">仮想マシンの操作 - Shutdown Roles</a></li>
+<li><a href="https://msdn.microsoft.com/ja-jp/library/azure/ee460782.aspx">サービス管理要求の認証</a></li>
+</ul>

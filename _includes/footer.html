@@ -1,0 +1,13 @@
+<footer class="site-footer">
+<center>
+<div class="wrapper">
+{%- if site.github_username -%}<a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">{{ site.github_username| escape }}</span></a> &nbsp; &nbsp; {%- endif -%}
+{%- if site.twitter_username -%}<a href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">{{ site.twitter_username| escape }}</span></a> &nbsp; &nbsp; {%- endif -%}
+<a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg> <span>RSS Feed</span></a>
+</div>
+
+<div class="credits">
+<span>&copy; {{ site.time | date: '%Y' }} &nbsp;{{site.author}} &nbsp; (created with the <a href="https://github.com/jekyll/minima">minima</a> theme in <a href="//jekyllrb.com">Jekyll</a>, hosted by <a href="https://github.com/">GitHub</a>)</span>
+</div>
+</center>
+</footer>

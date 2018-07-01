@@ -1,0 +1,237 @@
+---
+layout: post
+status: publish
+published: true
+title: ARMテンプレートを使って3分でAzure上にElasticsearchクラスタを構築する
+author:
+  display_name: Yoichi Kawasaki
+  login: yoichi
+  email: yokawasa@gmail.com
+  url: http://github.com/yokawasa
+author_login: yoichi
+author_email: yokawasa@gmail.com
+author_url: http://github.com/yokawasa
+wordpress_id: 56
+wordpress_url: http://unofficialism.info/posts/?p=56
+date: '2015-12-17 13:18:28 +0900'
+date_gmt: '2015-12-17 04:18:28 +0900'
+categories:
+- Azure
+tags:
+- ARM
+- AzureCLI
+- Elasticsearch
+- Kibana
+- ElasticStack
+---
+<p>これは<a href="http://qiita.com/advent-calendar/2015/elasticsearch">Elasticsearch Advent Calendar 2015</a>の17日目のエントリー</p>
+<p>ARMテンプレートと呼ばれるデプロイ手法を使ってAzure上にElasticsearchクラスタをさくっと構築する方法についてのお話で、主にAzure界隈のElasticsearchユーザ向けの内容となっている。タイトルにある3分でというのは実際に計ったわけではないがそれくらい簡単且つ短時間でできることを強調したく使わせていただいている・・・ということを前もって補足しておく（汗）。</p>
+<h2>ARMテンプレートとは？</h2>
+<p>ARMテンプレートの前にARMについて少し解説する。ARMはAzure Resource Managerの略で、アプリケーション構築に必要な<br />
+リソース（ストレージ、ネットワーク、コンピュート/仮想マシンなど）をデプロイし管理するための仕組みである。どんなソリューションのデプロイにおいても少なからず仮想ネットワーク、仮想マシン、ストレージ、LBなどのインフラの構築が必要で旧来のやり方ではこれらを１つ１つデプロイしていたかと思う。一方ARMの世界では必要な構築要素をリソースという単位にして、これらリソースを個別にデプロイするのではなく全てのリソースをグループ化してまとめてデプロイし、それらを管理・監視することができる。そして、それら複数のリソースはJSON形式のテンプレートで表現・展開できるようになっていて、このテンプレートのことをARMテンプレートと呼ぶ。Infrastructure as Codeなんて言葉がはやっていたりするが、まさにそれをAzureで実現するための公式な仕組みがARMであり、ARMテンプレートなのである。</p>
+<p>ちなみにこのARMテンプレート、手でいちから作る必要はなく、Azureクイックスタートテンプレートにさまざまなテンプレートが公開されているのでまずは自分の目的に似たようなことを実現しているテンプレートを選んでデプロイしてみることをお勧めする。完成されたものを見ることでお作法が学べるし、それをベースにカスタマイズしていくのが効率的である。</p>
+<ul style="list-style:disc inside">
+<li><a href="https://azure.microsoft.com/ja-jp/documentation/templates/">https://azure.microsoft.com/ja-jp/documentation/templates/</a></li>
+<li><a href="https://github.com/Azure/azure-quickstart-templates">https://github.com/Azure/azure-quickstart-templates</a></li>
+</ul>
+<h2>Elasticsearchクラスタのデプロイ</h2>
+<p>上記で説明したARMテンプレートを利用してElasticsearchクラスタのデプロイを行う。ここで使うARMテンプレートは<a href="https://github.com/Azure/azure-quickstart-templates">Azureクイック・スタートテンプレートギャラリー</a>にある<a href="https://github.com/Azure/azure-quickstart-templates/tree/master/elasticsearch">Elasticsearchテンプレート</a>を利用する。ARMテンプレートを使ったデプロイには複数の方法があるがここではLinux上で<a href="https://azure.microsoft.com/ja-jp/documentation/articles/resource-group-template-deploy/#maclinux-windows-azure-cli">Azure CLIを使った方法</a>で行う。ここでの実行OSはUbuntu 14.10。</p>
+<p><u>最新版のAzure CLIをインストールしてからAzureサブスクリプションに接続する</u><br />
+<code lang="bash"><br />
+$ sudo npm install -g azure-cli<br />
+$ azure --version<br />
+$ azure login<br />
+</code></p>
+<p>「<a href="https://azure.microsoft.com/ja-jp/documentation/articles/xplat-cli-connect/">Azure コマンド ライン インターフェイス (Azure CLI) からの Azure サブスクリプションへの接続</a>」に書かれているように、Azure CLI バージョン 0.9.10 以降では、対話型の azure login コマンドを使用して、任意の ID でアカウントにログインできる。尚、バージョン 0.9.9 以降は、多要素認証をサポートしている。<br />
+<br><br></p>
+<p><u>デプロイ用のリソースグループを作成する</u><br />
+ここでは西日本（Japan West）リージョンにResource-ES-JapanWestという名前のリソースグループを作成する。<br />
+<code lang="bash"><br />
+# azure group create -n "<リソースグループ名>" -l "<リージョン名>"<br />
+$ azure group create -n "Resource-ES-JapanWest" -l "Japan West"<br />
+</code><br />
+<br><br></p>
+<p><u>ARMテンプレートのダウンロードとパラメータの編集</u><br />
+Githubより<a href="https://github.com/Azure/azure-quickstart-templates">azure-quickstart-templates</a>をコピーして、Elasticsearch用テンプレートディレクトリに移動する<br />
+<code lang="bash"><br />
+$ git clone https://github.com/Azure/azure-quickstart-templates.git<br />
+$ cd azure-quickstart-template/elasticsearch<br />
+</code><br />
+<a href="https://github.com/Azure/azure-quickstart-templates/blob/master/elasticsearch/azuredeploy.parameters.json">azuredeploy.parameters.json</a>を編集してデプロイ用パラメータを入力する。ここでの入力内容は下記のとおり</p>
+<p><code lang="javascript"><br />
+{<br />
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",<br />
+  "contentVersion": "1.0.0.0",<br />
+  "parameters": {<br />
+    "adminUsername": {<br />
+      "value": "yoichika"       # 管理用ユーザ名<br />
+    },<br />
+    "adminPassword": {<br />
+      "value": "*********"      # 上記管理ユーザパスワード<br />
+    },<br />
+    "vmDataNodeCount": {<br />
+      "value": 3                # データノード数<br />
+    },<br />
+    "virtualNetworkName": {<br />
+      "value": "esvnet"         # 仮想ネットワーク名<br />
+    },<br />
+    "esClusterName": {<br />
+      "value": "elasticsearch"  # ESクラスタ名<br />
+    },<br />
+    "loadBalancerType": {<br />
+      "value": "internal"       # LBタイプ external or internal<br />
+    },<br />
+    "vmSizeDataNodes": {<br />
+      "value": "Standard_D1"    # データノード用のVMインスタンスサイズ<br />
+    },<br />
+    "vmClientNodeCount": {<br />
+      "value": 0              　#クライアントノード数<br />
+    },<br />
+    "marvel": {<br />
+      "value": "no"             # Marvel有効化: yes or no<br />
+    },<br />
+    "kibana": {<br />
+      "value": "yes"            # Kibana有効化: yes or no<br />
+    },<br />
+    "OS": {<br />
+      "value": "ubuntu"<br />
+    }<br />
+  }<br />
+}<br />
+</code><br />
+<br><br></p>
+<p><u>ARMテンプレートを元にクラスタのデプロイ</u></p>
+<p>一通り準備が整ったのでARMテンプレートを元に上記で作成したリソースグループにESクラスタをデプロイする。<br />
+<code lang="bash"><br />
+# azure group create "<resource group名>" "<リージョン>" \<br />
+#    -f <azuredeploy.jsonファイル><br />
+#    -d "<deploy名>"<br />
+#    -e <azuredeploy.parameters.jsonファイル></p>
+<p>$ azure group create "Resource-ES-JapanWest" "JapanWest" \<br />
+   -f azuredeploy.json \<br />
+   -d "Deploy-ES-JapanWest" \<br />
+   -e azuredeploy.parameters.json<br />
+</code></p>
+<p>途中のデプロイメント状況は次のコマンドで確認することができる。<br />
+<code lang="bash"><br />
+# azure group deployment show "<Resource group名>" "<deployment名>"<br />
+$ azure group deployment show  "Resource-ES-JapanWest" "Deploy-ES-JapanWest"<br />
+</code></p>
+<p>上記コマンドの処理が完了すればデプロイ完了。たったこれだけ。出来上がった構成だが、手っ取り早くは<a href="http://portal.azure.com">Azureポータル</a>で確認することができる。デプロイ用に作成したリソースグループ（ここではResource-ES-JapanWest）の中身を見ていただくとデプロイされた様々なリソース一覧（ストレージ、仮想ネットワーク、ロードバランサー、仮想マシン、ネットワークセキュリティグループ、パブリック用IP・・・など）が出来上がっていることが分かる。尚、出来上がったESクラスタは合計8VMで構成されており、ESマスターノード用に3つ、ESデータノード用に3つ、Kibana用に１つ、踏み台サーバ用に１つとなっている。仮想ネットワーク内のVMの配置状況を図にすると次のようになる。</p>
+<p><center><br />
+<img src="https://farm6.staticflickr.com/5813/23169037754_56a40e37f0_c.jpg" width="800" height="476" alt="ES-cluster-deployment"><br />
+</center></p>
+<h2>テスト実行</h2>
+<p>テスト用のデータセットを投入して、問題なくクラスタが動作するのかを確認してみる。データは<a href="https://www.elastic.co/guide/en/kibana/current/getting-started.html">こちら</a>でテストに提供されている <a href="https://www.elastic.co/guide/en/kibana/3.0/snippets/shakespeare.json">shakespeare.json</a>を利用する。shakespeare.jsonをダウンロード済みであること前提に下記のようにESクラスタにデータを投入する。</p>
+<p>まずはshakespeareデータセットのためにフィールドの<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current//mapping.html#mapping">Mapping</a>を実行<br />
+<code lang="bash"><br />
+curl -XPUT http://<ESノードのアドレス>:9200/shakespeare -d '<br />
+{<br />
+ "mappings" : {<br />
+  "_default_" : {<br />
+   "properties" : {<br />
+    "speaker" : {"type": "string", "index" : "not_analyzed" },<br />
+    "play_name" : {"type": "string", "index" : "not_analyzed" },<br />
+    "line_id" : { "type" : "integer" },<br />
+    "speech_number" : { "type" : "integer" }<br />
+   }<br />
+  }<br />
+ }<br />
+}<br />
+';<br />
+</code></p>
+<p>次にshakespeareデータセットをESクラスタにロード。<br />
+<code lang="bash"><br />
+curl -XPOST "<ESノードのアドレス>:9200/shakespeare/_bulk?pretty" --data-binary @shakespeare.json<br />
+</code></p>
+<p>上記処理完了後無事ロードが完了したかどうかインデックスのステータスを確認する。<br />
+<code lang="bash"><br />
+$ curl '<ESノードのアドレス>:9200/_cat/indices?v'</p>
+<p>(結果)<br />
+health status index               pri rep docs.count docs.deleted store.size pri.store.size<br />
+green  open   shakespeare           5   1     111396            0     36.2mb           18mb<br />
+green  open   .kibana               1   1          2            0     35.6kb         17.8kb<br />
+</code></p>
+<p>念のために検索クエリーを投げてみる。</p>
+<p><code lang="bash"><br />
+$ curl -s '<ESノードのアドレス>:9200/shakespeare/_search?q=*&size=1' | \<br />
+  python -mjson.tool| perl -Xpne 's/\\u([0-9a-fA-F]{4})/chr(hex($1))/eg'</p>
+<p>(結果)<br />
+{<br />
+    "_shards": {<br />
+        "failed": 0,<br />
+        "successful": 5,<br />
+        "total": 5<br />
+    },<br />
+    "hits": {<br />
+        "hits": [<br />
+            {<br />
+                "_id": "4904",<br />
+                "_index": "shakespeare",<br />
+                "_score": 1.0,<br />
+                "_source": {<br />
+                    "line_id": 4905,<br />
+                    "line_number": "3.3.74",<br />
+                    "play_name": "Henry VI Part 1",<br />
+                    "speaker": "JOAN LA PUCELLE",<br />
+                    "speech_number": 18,<br />
+                    "text_entry": "See, then, thou fightst against thy countrymen"<br />
+                },<br />
+                "_type": "line"<br />
+            }<br />
+        ],<br />
+        "max_score": 1.0,<br />
+        "total": 111396<br />
+    },<br />
+    "timed_out": false,<br />
+    "took": 9<br />
+}<br />
+</code></p>
+<p>さらにKibanaにアクセスしてESクラスタとの連携に問題がないか確認する。念のためにKibanaのエントリポイントはhttp://Kibanaアドレス:5601。特に問題なければKibana上で検索すると次のようにテストロードしたデータセットが閲覧できるはず。<br />
+<center><br />
+<img src="https://farm1.staticflickr.com/697/23771814526_eed65c0106_c.jpg" width="800" height="404" alt="Kibana-Page"><br />
+</center></p>
+<p><u>elasticsearch-headでクラスタノードの状態を確認</u></p>
+<p><a href="http://mobz.github.io/elasticsearch-head/">elasticsearch-head</a>はクラスタの構成やインデックスの中身表示、検索クエリの作成、結果取得など手軽に確認することができる便利なGUIツール。このelasticsearch-headを使ってクラスタノードの状態を確認する。インストールは次のようにプラグインコマンドで行う。<br />
+<code lang="bash"><br />
+$ sudo /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head<br />
+</code></p>
+<p>elasticsearch-headのエントリーポイントはhttp://<host>:9200/_plugin/headで結果は次のとおり。</p>
+<p><center><br />
+<img src="https://farm6.staticflickr.com/5673/23521556850_9a2b442a85_z.jpg" width="640" height="438" alt="elasticsearch-head-snapshot-shakespeare"></p>
+<p></center></p>
+<p>これを分かりやすくトポロジーにしてみたのが下図。緑の太枠のところがプライマリーシャードで細枠がレプリカシャードを表す。</p>
+<p><center><br />
+<img src="https://farm6.staticflickr.com/5766/23791138406_7df9ac9294_c.jpg" width="800" height="528" alt="ES-Cluster-Topology"><br />
+</center></p>
+<h2>ノードdiscoveryについて</h2>
+<p>Elasticsearchはノードdiscovery方式としてデフォルトでmulticastモードを使うようになっており、ノード間でクラスタ名（ここではelasticsearch）を合わせることで内部的に勝手にクラスタ構成を組んでくれるようになっている。このクラスタ内ノード探索は<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-discovery-zen.html">zen discovery</a>という探索モジュールが使われている。ただし、Azureの場合は仕組み上マルチキャストが利用できない（これはAWSでも同じ）ためunicastモードを使って見つける必要がある。</p>
+<p>ノードdiscovery方式はelasticsearchの設定ファイルelasticsearch.ymlに指定し、unicastモードの場合はdiscovery.zen.ping.unicast.hostsパラメターにノード群のIPをカンマ区切りで指定する。参考までに今回のデータノードのelasticsearch.ymlでは下記のように3つのデータノードのIPをdiscovery.zen.ping.unicast.hostsに指定している。</p>
+<p><u>/etc/elasticsearch/elasticsearch.yml</u><br />
+<code lang="javascript"><br />
+cluster.name: elasticsearch<br />
+node.name: esdatavm0<br />
+path.data: /datadisks/disk2/elasticsearch/data,/datadisks/disk1/elasticsearch/data<br />
+discovery.zen.ping.multicast.enabled: false<br />
+discovery.zen.ping.unicast.hosts: ["10.0.0.10","10.0.0.11","10.0.0.12"]<br />
+node.master: false<br />
+node.data: true<br />
+discovery.zen.minimum_master_nodes: 2<br />
+network.host: _non_loopback_<br />
+</code></p>
+<p><u>Azure Cloud pluginの紹介</u><br />
+最後に<a href="https://github.com/elastic/elasticsearch-cloud-azure">Azure Cloud plugin</a>の紹介をしたい。これはAzure APIを使って自動でAzureに展開されたノードの探索を行うことができるノードdiscoveryプラグインで、unicastモードのようにノードIPをいちいち指定する必要がない点でmulticastモードに似ている。ただし注意点としてこのプラグインはクラシックデプロイモデル管理下のリソース（V1）のみとなっている。よって、今回のようにARMテンプレートでデプロイしたESクラスタは対象外であるが、もしクラシックモデルでデプロイしたESクラスタであればノードdiscovery方式の１つとして是非お試しいただければと思う。</p>
+<p>Enjoy Elasticsearch on Azure!!</p>
+<p>おわり</p>
+<h2>LINKS</h2>
+<ul style="list-style:disc inside">
+<li><a href="https://azure.microsoft.com/ja-jp/documentation/templates/">Azureクイックスタートテンプレート</a></li>
+<li><a href="https://github.com/Azure/azure-quickstart-templates/tree/master/elasticsearch">Elasticsearch ARMテンプレート</a></li>
+<li><a href="https://azure.microsoft.com/ja-jp/documentation/articles/resource-group-template-deploy/#maclinux-windows-azure-cli">ARMテンプレートをAzure CLI でデプロイする</a></li>
+<li><a href="https://azure.microsoft.com/ja-jp/documentation/articles/xplat-cli-azure-resource-manager/">Azure リソース マネージャーでのAzure CLI の使用</a></li>
+<li><a href="https://www.elastic.co/guide/en/kibana/current/getting-started.html">Getting Started with Kibana</a></li>
+<li><a href="https://www.elastic.co/blog/found-elasticsearch-top-down">Elasticsearch from the Top Down</a></li>
+<li><a href="http://mobz.github.io/elasticsearch-head/">elasticsearch-head</a></li>
+<li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-discovery-zen.html">zen discovery</a></li>
+<li><a href="https://github.com/elastic/elasticsearch-cloud-azure">Azure Cloud Plugin</a></li>
+</ul>

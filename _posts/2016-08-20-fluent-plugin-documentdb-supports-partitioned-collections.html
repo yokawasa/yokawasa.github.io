@@ -1,0 +1,82 @@
+---
+layout: post
+status: publish
+published: true
+title: fluent-plugin-documentdb supports Partitioned collections
+author:
+  display_name: Yoichi Kawasaki
+  login: yoichi
+  email: yokawasa@gmail.com
+  url: http://github.com/yokawasa
+author_login: yoichi
+author_email: yokawasa@gmail.com
+author_url: http://github.com/yokawasa
+wordpress_id: 85
+wordpress_url: http://unofficialism.info/posts/?p=85
+date: '2016-08-20 15:55:21 +0900'
+date_gmt: '2016-08-20 06:55:21 +0900'
+categories:
+- Announcement
+- Azure
+- English
+tags:
+- DocumentDB
+- fluentd
+- fluent-plugin-documentdb
+- Ruby
+---
+<p>I&rsquo;d like to announce <a href="https://github.com/yokawasa/fluent-plugin-documentdb">fluent-plugin-documentdb</a> finally supports Azure DocumentDB Partitioned collections for higher storage and throughput. If you're not familiar with fluent-plugin-documentdb, read <a href="http://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/">my previous article</a> before move on.</p>
+<p>Partitioned collections is kick-ass feature that I had wanted to support in fluent-plugin-documentdb since the feature came out public (see <a href="https://azure.microsoft.com/ja-jp/updates/documentdb-partitioned-collections-for-higher-storage-and-throughput/">the announcement</a>). For big fan of fluent-plugin-documentdb, sorry for keeping you waiting for such a long time :-) If I may make excuses, I would say I haven't had as much time on the project, and I had to do ruby client implementation of Partitioned collections by myself as there is no official DocumentDB Ruby SDK that supports it (As a result I've created tiny Ruby DocumentDB client libraries that support the feature. Check <a href="https://github.com/yokawasa/fluent-plugin-documentdb/tree/master/lib/fluent/plugin/documentdb">this</a> out if you're interested). </p>
+<p><center><br />
+<img src="https://c3.staticflickr.com/9/8178/28479238194_845ca59186_c.jpg" width="800" height="333" alt="fluentd-azure-documentdb-collection"><br />
+</center></p>
+<h2>What are Partitioned collections?</h2>
+<p>According to <a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-partition-data/"> official documentation</a>, <strong>Partitioned collections</strong> can span multiple partitions and support very large amounts of storage and throughput. You must specify a <strong>partition key</strong> for the collection. Partitioned collections can support larger data volumes and process more requests compared to Single-partitioned collection. <del datetime="2016-08-21T02:31:11+00:00">Partitioned collections support <strong>up to 250 GB</strong> of storage and <strong>250,000&nbsp;request units&nbsp;per second</strong> of provisioned throughput</del> [Updated Aug 21, 2016] (<a href="https://twitter.com/arkramac">@arkramac</a> pointed <a href="https://twitter.com/yokawasa/status/766908784467783680">that</a> out for me) Partitioned collections support unlimited storage and throughput. 250GB storage and 250k req/sec are soft cap. You can increase these limits by contacting and asking <a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-increase-limits/">Azure support</a>. </p>
+<p>On the other hand, Single-partition collections have lower price options and the ability to query and perform transactions across all collection data. They have the scalability and storage limits of a single partition. You do not have to specify a partition key for these collections.</p>
+<h2>Creation of Partitioned collections</h2>
+<p>You can create Partitioned collections&nbsp;via the Azure portal, REST API ( >= version 2015-12-16), and client SDKs in .NET, Node.js, Java, and Python.&nbsp;In addition, you let fluent-plugin-documentdb create Partitioned collections automatically by adding the following configuration options upon the ones for single-partitioned collection in fluentd.conf: </p>
+<ul style="list-style:disc inside">
+<li><strong>auto_create_collection</strong> true</li>
+<li><strong>partitioned_collection</strong> true</li>
+<li><strong>partition_key</strong> [partition key for the collection]</li>
+<li><strong>offer_throughput</strong> [Offer throughtput value: must be more than and equals to 10100. See <a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-collection/">this</a> for more info on offer throughtput in creating collection]</li>
+</ul>
+<p>It creates a partitioned collection as you configure in starting the plugin if not exist at that time.</p>
+<h2>Configuration Example</h2>
+<p>Suppose that you want to read Apache access log as source for fluentd, and that you pick "host" as a partition Key for the collection, you can configure the plugin like this following:</p>
+<p><code></p>
+<p><source><br />
+    @type tail                          # input plugin<br />
+    path /var/log/apache2/access.log   # monitoring file<br />
+    pos_file /tmp/fluentd_pos_file     # position file<br />
+    format apache                      # format<br />
+    tag documentdb.access              # tag<br />
+</source></p>
+<p><match documentdb.*><br />
+    @type documentdb<br />
+    docdb_endpoint https://yoichikademo.documents.azure.com:443/<br />
+    docdb_account_key Tl1xykQxnExUisJ+BXwbbaC8NtUqYVE9kUDXCNust5aYBduhui29Xtxz3DLP88PayjtgtnARc1PW+2wlA6jCJw==<br />
+    docdb_database mydb<br />
+    docdb_collection my-partitioned-collection<br />
+    auto_create_database true<br />
+    auto_create_collection true<br />
+    partitioned_collection true<br />
+    partition_key host<br />
+    offer_throughput 10100<br />
+    localtime true<br />
+    time_format %Y%m%d-%H:%M:%S<br />
+    add_time_field true<br />
+    time_field_name time<br />
+    add_tag_field true<br />
+    tag_field_name tag<br />
+</match><br />
+</code></p>
+<p>Basically that's all additional configuration for Partitioned collections. Please refer to <a href="http://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/">my previous article</a> for the rest of setup and running work for the plugin. </p>
+<p>Happy log collections with fluent-plugin-documentdb!! </p>
+<h2>LINKS</h2>
+<ul style="list-style:disc inside">
+<li><a href="https://github.com/yokawasa/fluent-plugin-documentdb">https://github.com/yokawasa/fluent-plugin-documentdb</a></li>
+<li><a href="https://rubygems.org/gems/fluent-plugin-documentdb">https://rubygems.org/gems/fluent-plugin-documentdb</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-partition-data/">Partitioning and scaling in Azure DocumentDB</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/articles/documentdb-performance-levels/">Performance levels in DocumentDB</a></li>
+</ul>
