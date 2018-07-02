@@ -6,8 +6,6 @@ title: Collecting events into Azure Functions and triggering your custom code us
   fluent-plugin-azurefunctions
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com

@@ -5,8 +5,6 @@ published: true
 title: de:code 2017 DI08 - Azure Searchセッションフォローアップ
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com

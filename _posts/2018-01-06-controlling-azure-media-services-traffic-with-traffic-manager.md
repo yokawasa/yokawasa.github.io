@@ -46,10 +46,9 @@ Example accounts and domains
 ### (1) Point a custom domain to a Traffic Manager domain
 
 You add the following alias (CNAME) to point the custom domain to the traffic manager domain:
-`
-
+```
 streaming.mydomain.com IN CNAME myamsstreaming.trafficmanager.net
-`
+```
 
 Useful Link for this step: [Point a company Internet domain to an Azure Traffic Manager domain](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-point-internet-domain)
 
@@ -70,17 +69,15 @@ First of all, get Media Service Account IDs (GUID) for your AMS accounts in this
 
 Then, create CNAME that maps **(accountId).(parent custom domain)** to **verifydns.(mediaservices-dns-zone)**. This is necessary to proves that the Azure Media Services ID has the ownership of the custom domain. Here are CNAMEs to create in this step:
 
-`
-
-## . IN CNAME verifydns.`
+```
+## <MediaServicesAccountID>.<custom parent domain> IN CNAME verifydns.<mediaservices-dns-zone>
 
 ## Custom name Ownership verification for amsaccount1
-
 8dcbe520-59c7-4591-8d98-1e765b7f3729.mydomain.com IN CNAME  verifydns.mediaservices.windows.net
 
 ## Custom name Ownership verification for amsaccount2
-
 5e0e6784-4ed0-40a0-8444-33da6d4f7171.mydomain.com IN CNAME  verifydns.mediaservices.windows.net
+```
 
 Refer to CustomHostNames section of [StreamingEndpoint document](https://docs.microsoft.com/rest/api/media/operations/streamingendpoint) to learn more about the configuration in this step.
 
@@ -96,30 +93,31 @@ Choose "Streaming endpoint" in the top menu, right click on your streaming endpo
 
 Once all configurations above are completed (+ DNS settings are reflected), you will see the custom domain name lookup points to either of AMS endpoints added to the traffic manager like this:
 
-`
-
-$ dig streaming.mydomain.com`
+```
+$ dig streaming.mydomain.com
 
 ;; ANSWER SECTION:
-
 streaming.mydomain.com. 600 IN CNAME myamsstreaming.trafficmanager.net.
-
 myamsstreaming.trafficmanager.net. 300 IN CNAME amsaccount1.streaming.mediaservices.windows.net.
-
 amsaccount1.streaming.mediaservices.windows.net. 60 IN CNAME wamsorigin-origin-903f1f37105244fba2270ae7b64021bd.cloudapp.net.
-
 wamsorigin-origin-903f1f37105244fba2270ae7b64021bd.cloudapp.net. 60 IN A 104.215.4.76
+```
 
 Make sure to check if the custom name lookup points to the other endpoint when one of the endpoints are down.
 
 Finally, check if you can playback video with your custom domain. 
 
-`
-
+```shell
 $ curl http://amsaccount1.streaming.mediaservices.windows.net/ee2e5286-d3fa-40fc-a393-c3c2a3ca5a84/BigBuckBunny.ism/manifest
-`
 
+ <?xml version="1.0" encoding="UTF-8"?><SmoothStreamingMedia MajorVersion="2" MinorVersion="2" Duration="84693333" TimeScale="10000000"><StreamIndex Chunks="2" Type="audio" Url="QualityLevels({bitrate})/Fragments(aac_eng_2_128={start time})" QualityLevels="1" Language="eng" Name="aac_eng_2_128"><QualityLevel AudioTag="255" Index="0" BitsPerSample="16" Bitrate="128000" FourCC="AACL" CodecPrivateData="1190" Channels="2" PacketSize="4" SamplingRate="48000" /><c t="0" d="60160000" /><c d="24533333" /></StreamIndex><StreamIndex Chunks="2" Type="video" Url="QualityLevels({bitrate})/Fragments(video={start time})" QualityLevels="5"><QualityLevel Index="0" Bitrate="2896000" FourCC="H264" MaxWidth="1280" MaxHeight="720" CodecPrivateData="000000016764001FACD9405005BB011000000300100000030300F18319600000000168EBECB22C" /><QualityLevel Index="1" Bitrate="1789000" FourCC="H264" MaxWidth="960" MaxHeight="540" CodecPrivateData="000000016764001FACD940F0117EF011000003000100000300300F1831960000000168EBECB22C" /><QualityLevel Index="2" Bitrate="946000" FourCC="H264" MaxWidth="640" MaxHeight="360" CodecPrivateData="000000016764001EACD940A02FF97011000003000100000300300F162D960000000168EBECB22C" /><QualityLevel Index="3" Bitrate="612000" FourCC="H264" MaxWidth="480" MaxHeight="270" CodecPrivateData="0000000167640015ACD941E08FEB011000000300100000030300F162D9600000000168EBECB22C" /><QualityLevel Index="4" Bitrate="324000" FourCC="H264" MaxWidth="320" MaxHeight="180" CodecPrivateData="000000016764000DACD941419F9F011000000300100000030300F14299600000000168EBECB22C" /><c t="0" d="60000000" /><c d="24583333" /></StreamIndex></SmoothStreamingMedia>
+```
+
+```shell
 $ curl http://streaming.mydomain.com/ee2e5286-d3fa-40fc-a393-c3c2a3ca5a84/BigBuckBunny.ism/manifest
+
+ <?xml version="1.0" encoding="UTF-8"?><SmoothStreamingMedia MajorVersion="2" MinorVersion="2" Duration="84693333" TimeScale="10000000"><StreamIndex Chunks="2" Type="audio" Url="QualityLevels({bitrate})/Fragments(aac_eng_2_128={start time})" QualityLevels="1" Language="eng" Name="aac_eng_2_128"><QualityLevel AudioTag="255" Index="0" BitsPerSample="16" Bitrate="128000" FourCC="AACL" CodecPrivateData="1190" Channels="2" PacketSize="4" SamplingRate="48000" /><c t="0" d="60160000" /><c d="24533333" /></StreamIndex><StreamIndex Chunks="2" Type="video" Url="QualityLevels({bitrate})/Fragments(video={start time})" QualityLevels="5"><QualityLevel Index="0" Bitrate="2896000" FourCC="H264" MaxWidth="1280" MaxHeight="720" CodecPrivateData="000000016764001FACD9405005BB011000000300100000030300F18319600000000168EBECB22C" /><QualityLevel Index="1" Bitrate="1789000" FourCC="H264" MaxWidth="960" MaxHeight="540" CodecPrivateData="000000016764001FACD940F0117EF011000003000100000300300F1831960000000168EBECB22C" /><QualityLevel Index="2" Bitrate="946000" FourCC="H264" MaxWidth="640" MaxHeight="360" CodecPrivateData="000000016764001EACD940A02FF97011000003000100000300300F162D960000000168EBECB22C" /><QualityLevel Index="3" Bitrate="612000" FourCC="H264" MaxWidth="480" MaxHeight="270" CodecPrivateData="0000000167640015ACD941E08FEB011000000300100000030300F162D9600000000168EBECB22C" /><QualityLevel Index="4" Bitrate="324000" FourCC="H264" MaxWidth="320" MaxHeight="180" CodecPrivateData="000000016764000DACD941419F9F011000000300100000030300F14299600000000168EBECB22C" /><c t="0" d="60000000" /><c d="24583333" /></StreamIndex></SmoothStreamingMedia>
+```
 
 ## Useful Links
 

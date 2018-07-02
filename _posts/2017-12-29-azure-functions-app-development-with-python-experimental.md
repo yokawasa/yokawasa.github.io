@@ -5,8 +5,6 @@ published: true
 title: PythonによるAzure Functions アプリ開発 - Experimental編
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com
@@ -43,13 +41,13 @@ Experimental（実験的サポート）なので本番での利用は非推奨�
 
 Azure FunctionsのHosting PlanにはConsumption PlanとApp Service Planの2つがあって、言語に関係なく各プランの特徴は次の通り:
 
-Consumption Plan
+**Consumption Plan**
 
 - コード実行時にコンピューティング割り当て
 - リソース使用量（関数実行時間、使用メモリ）で課金
 - 自動スケール、各処理は〜10分まで
 
-App Service Plan
+**App Service Plan**
 
 - 専用VMでリソース確保
 - 継続処理：10分以上の処理
@@ -87,8 +85,9 @@ pipとKudu DebugConsole/UIを利用した２種類のモジュールインスト
 
 ## スライドとHands-onマテリアル
 
-これは今年の[11月20日](https://azure.connpass.com/event/72312/)a>と[11月28日](https://azure.connpass.com/event/72125/)に[Azure Antenna](https://azure.connpass.com/)で実施したHands-Onセッション（追記：その時の[記事](https://japan.zdnet.com/extra/azure_antenna_201712/35111765/)）のスライドとHands-Onマテリアルである。よかったらこちらも参考にしていただければと思う。
+[Azure Antenna](https://azure.connpass.com/)にて[2017年11月20日](https://azure.connpass.com/event/72312/)と[11月28日](https://azure.connpass.com/event/72125/)に実施したセッション資料:
 
+[![](https://image.slidesharecdn.com/serverlessappdevelopmentpythonja-171128085250/95/pythonazure-serverless-application-development-with-python-1-1024.jpg)](//www.slideshare.net/yokawasa/pythonazure-serverless-application-development-with-python-82884446)
 **[PythonによるAzureサーバレスアプリケーション開発 / Serverless Application Development with Python](//www.slideshare.net/yokawasa/pythonazure-serverless-application-development-with-python-82884446)** from **[Yoichi Kawasaki](https://www.slideshare.net/yokawasa)**
 
 Hands-onマテリアル：
@@ -96,3 +95,7 @@ Hands-onマテリアル：
 - [Hands-on: Serverless Application Development with Python](https://github.com/yokawasa/azure-functions-python-samples/tree/master/handson)
 
 それでは、Enjoy Serverless Application Development with Python!
+
+### [追記] 上記セッションに関する記事
+- [潜入レポート>> Pythonを使ったAzureサーバレスアプリケーション開発](https://japan.zdnet.com/extra/azure_antenna_201712/35111765/)
+- [渋谷ヒカリエ Azure Antenna ハンズオン 参加レポート](https://zine.qiita.com/event-report/azure-antenna-report/)

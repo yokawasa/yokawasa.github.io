@@ -5,8 +5,6 @@ published: true
 title: Azure Searchのアナライザーによるテキスト解析結果を出力する（だけの）ツール - azure-search-ta
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com

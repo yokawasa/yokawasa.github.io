@@ -5,8 +5,6 @@ published: true
 title: Simple Lift and Shift using Web App for Containers and Azure Database for MySQL
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com
@@ -30,11 +28,12 @@ tags:
 これらサービスは、パッチあてなどUpdateとランタイム更新のような面倒な作業は当然ながら、標準で冗長化対策、高負荷対策、セキュリティ対策などをやってくれていて、さらに効率的な監視・アラート、CI/CDを可能にする機能を提供しております。使える状況下ならば絶対に使わないと損なわけです。是非ともこれらサービスを活用してオフロードできるところはオフロードして、その分のリソースを皆さんにしかできない新規開発やビジネスベーションにフォーカスいただくことできっと今までよりも幸せになれるのでははなかいと思います。
 
 ## Rails + MySQLアプリのLife and Shiftシナリオ
-
+[![](https://image.slidesharecdn.com/webinar-app-and-db-rails-171012211316/95/web-app-for-containers-mysqlrails-1-1024.jpg?cb=1510960998)](//www.slideshare.net/yokawasa/web-app-for-containers-mysqlrails-80754390)
 **[Web App for Containers + MySQLでコンテナ対応したRailsアプリを作ろう！](//www.slideshare.net/yokawasa/web-app-for-containers-mysqlrails-80754390)** from **[Yoichi Kawasaki](https://www.slideshare.net/yokawasa)**
 
 ## PHP + MySQLアプリのLife and Shiftシナリオ
 
+[![](https://image.slidesharecdn.com/webinar-app-and-db-php-171117134141/95/web-app-for-containers-mysqlphp-1-1024.jpg?cb=1510960691)](//www.slideshare.net/yokawasa/web-app-for-containers-mysqlphp)
 **[Web App for Containers + MySQLでコンテナ対応したPHPアプリを作ろう！ ](//www.slideshare.net/yokawasa/web-app-for-containers-mysqlphp)** from **[Yoichi Kawasaki](https://www.slideshare.net/yokawasa)**
 
 ## Source Code

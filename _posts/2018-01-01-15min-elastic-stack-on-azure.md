@@ -5,8 +5,6 @@ published: true
 title: 15分でお届けするElastic Stack on Azure設計・構築ノウハウ
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com
@@ -30,6 +28,7 @@ tags:
 イベント開催日から少々時間が経過したが、[Elastic {ON} Tour 2017 東京](https://www.elastic.co/elasticon/tour/2017/tokyo)（2017年12月14日開催）というElastic社オフィシャルのユーザーカンファレンスにて登壇させていただく機会があり、そこで「15分でお届けする Elastic Stack on Azure 設計・構築ノウハウ」というお題でお話をさせていただいた。個人的にとても大好きなプロダクトなので、そのユーザーカンファレンスでお話をさせていただいたということと、そのプロダクトのAzureでの利用促進に微力ながらも貢献できたということは光栄至極である。ここではそのElastic {ON} Tourでの発表で使用したスライドに補足解説を加えて共有させていただく。
 
 ## セッションスライド（＋デモ動画）
+[![](https://image.slidesharecdn.com/elasticontourmicrosoftv4-171226103730/95/15-elastic-stack-on-azure-1-638.jpg?cb=1514285111)](//www.slideshare.net/yokawasa/15-elastic-stack-on-azure-84976576)
 
 **[15分でお届けする Elastic Stack on Azure 設計・構築ノウハウ](//www.slideshare.net/yokawasa/15-elastic-stack-on-azure-84976576)** from **[Yoichi Kawasaki](https://www.slideshare.net/yokawasa)**
 

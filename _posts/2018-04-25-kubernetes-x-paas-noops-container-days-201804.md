@@ -177,12 +177,12 @@ sample-osba-mysql-684ccd679f-nl252 osba-mysql-demo Id: 3 Content: bar
 
 ## 2. デモ - Virtual Kubelet + Azure Container Instances
 
-- Youtube Video: [Image Processing with Virtual Kubelet + ACI Demo](https://youtu.be/2GdXGvIOo40)
-- デモコード: [https://github.com/rbitia/aci-demos](https://github.com/rbitia/aci-demos)
+- Demo Video: [Image Processing with Virtual Kubelet + ACI Demo](https://youtu.be/2GdXGvIOo40)
+- Demo Code: [https://github.com/rbitia/aci-demos](https://github.com/rbitia/aci-demos)
 
 ## 3. デモ - Traffic Routing with Istio
 
-- Youtube Video: [Traffic Routing with Istio Demo](https://youtu.be/P_FFLvaMIX8)
+- Demo Video: [Traffic Routing with Istio Demo](https://youtu.be/P_FFLvaMIX8)
 
 セッション中に時間が足りなくてチラ見せ程度しかお見せできなかったサービスメッシュにIstio（Istio-0.5.0）を使ったトラフィックルーティングデモ。せっかくなのでここで全ての手順を紹介させていただく。アプリな単純なコンテナイメージのタグ名を表示するだけの[Flaskアプリ](https://github.com/yokawasa/docker-image-samples/tree/master/python-version-app)を利用している
 

@@ -5,8 +5,6 @@ published: true
 title: Azure Media & Cognitiveデモ：Speech-To-Text
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com

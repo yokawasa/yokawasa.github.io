@@ -5,8 +5,6 @@ published: true
 title: Azure サービスを活用して作るフルマネージドな全文検索アプリケーション
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com
@@ -27,6 +25,7 @@ tags:
 
 これは9/29 Azure Web Seminar 「Azure サービスを活用して作るフルマネージドな全文検索アプリケーション」のフォローアップ記事です。なかなか暇ができず少々時間が経過してしまいました。
 
+[![](https://image.slidesharecdn.com/webinar-azuresearchappdev-20170929v3-171010164213/95/azure-1-1024.jpg?cb=1507883150)](//www.slideshare.net/yokawasa/azure-80659652)
 **[Azure サービスを活用して作るフルマネージドな全文検索アプリケーション](//www.slideshare.net/yokawasa/azure-80659652)** from **[Yoichi Kawasaki](https://www.slideshare.net/yokawasa)**
 
 ## Sample Application & Source Code
@@ -41,15 +40,15 @@ Source Code: [https://github.com/yokawasa/azure-search-qna-demo/](https://github
 
 セミナー中に紹介した非構造化データの全文検索デモとして紹介したAI Digital Media Searchアプリケーション。メディア x 音声認識 x 機械翻訳 x 全文検索全てを絡めた面白いアプリケーションなのでこちらでデモ動画とソースコードを共有します。またこのアプリはAzure PaaSサービスを組み合わせてプレゼンテーションレイヤー(Web App for Container)のみならずデータ生成部分（AMS, Functions, Logic App）も全てサーバレスで実現しているのでこのエリアのサンプルアプリとしてもとても良いものになっていると思います。
 
-Source Code: [https://github.com/shigeyf/ai-digitalmedia](https://github.com/shigeyf/ai-digitalmedia)
+- Demo Video: [AI Digital Media Search Demo](https://www.youtube.com/watch?v=BvjKuFE2o8s)
+- Source Code: [https://github.com/shigeyf/ai-digitalmedia](https://github.com/shigeyf/ai-digitalmedia)
 
 ## AzureSearch.js - Azure Search UIライブラリ
 
 AzureSearch.jsはAzure SearchのUIライブラリで、Azure Searchプロダクトチーム主要開発者により開始されたOSSライブラリです。TypeScriptで書かれているのでとても読みやすく、また、ライブラリが提供するオブジェクト操作により非常に短いコードでサーチボックス、結果出力、ページネーション、ファセット、サジェスションなどで構成されるサーチ用UIを簡単に組み立てることが可能です。なかなかいけているライブラリにもかかわらず、あまり世の中に知られていないのはもったいないと思いセミナーの最後で紹介させていただきました。これ使わない手はないです。手っ取り早くは、下記のAzureSearch.jsアプリテンプレートジェネレータページで皆さんのAzure SearchアカウントのQueryKeyとインデックススキーマ（JSONフォーマット）を入力するとAzureSearch.jsアプリの雛形が生成されますので、そこから始めるのがよいかと思います。
 
 - [AzureSearch.jsプロジェクトトップ＠Github](https://github.com/Yahnoosh/AzSearch.js)
-- [デモアプリサイト](https://azsearchstore.azurewebsites.net/realestate.html<br />
-)
+- [デモアプリサイト](https://azsearchstore.azurewebsites.net/realestate.html)
 - [AzureSearch.jsアプリのテンプレートジェネレータ](http://azsearchstore.azurewebsites.net/azsearchgenerator/index.html)
 
 END
