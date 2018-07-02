@@ -21,12 +21,12 @@ tags:
 - Bot
 ---
 
-de:code 2017で私が担当したAzure Searchセッションのスライドと動画が公開されたので、セッション中でもでお見せしたマテリアルと合わせてここでフォローアップさせていただきます。
+de:code 2017で私が担当したAzure Searchセッションのスライドと動画が公開されたので、セッション中でもでお見せしたマテリアルと合わせてここでフォローアップさせていただきます。セッション持ち時間が50分と短い中での説明なのでいろいろとカットしたのですが、Appendixという形でカットしたスライドや補足情報を載せてあります。P47〜65です。
 
-セッションスライドはこちら。セッション持ち時間が50分と短い中での説明なのでいろいろとカットしたのですが、Appendixという形でカットしたスライドや補足情報を載せてあります。P47〜65です。
+Video: [https://channel9.msdn.com/Events/de-code/2017/DI08](https://channel9.msdn.com/Events/de-code/2017/DI08)
 
+[![](https://image.slidesharecdn.com/di08-170605024559/95/di08-azure-search-1-1024.jpg?cb=1497581718)](//www.slideshare.net/decode2017/di08-azure-search)
 **[[DI08] その情報うまく取り出せていますか? ～ 意外と簡単、Azure Search で短時間で検索精度と利便性を向上させるための方法](//www.slideshare.net/decode2017/di08-azure-search)** from **[de:code 2017](https://www.slideshare.net/decode2017)**
-
  
 
 その他、セッション中のデモで使用したツールやBotのソースコードは[Github](https://github.com/yokawasa/decode2017)にアップしております。
