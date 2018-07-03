@@ -17,7 +17,7 @@ title: unofficialism
 author: Yoichi Kawasaki
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Where I blog about technology and other awesome things"
+  Where I blog about technology and other awesome things
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://unofficialism.info" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yokawasa
@@ -35,7 +35,6 @@ plugins:
 
 feed:
     path: atom.xml
-
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
