@@ -32,7 +32,7 @@ Partitioned collections is kick-ass feature that I had wanted to support in flue
 
 ## What are Partitioned collections?
 
-According to [ official documentation](https://azure.microsoft.com/en-us/documentation/articles/documentdb-partition-data/), **Partitioned collections** can span multiple partitions and support very large amounts of storage and throughput. You must specify a **partition key** for the collection. Partitioned collections can support larger data volumes and process more requests compared to Single-partitioned collection. Partitioned collections support **up to 250 GB** of storage and **250,000 request units per second** of provisioned throughput [Updated Aug 21, 2016] ([@arkramac](https://twitter.com/arkramac) pointed [that](https://twitter.com/yokawasa/status/766908784467783680) out for me) Partitioned collections support unlimited storage and throughput. 250GB storage and 250k req/sec are soft cap. You can increase these limits by contacting and asking [Azure support](https://azure.microsoft.com/en-us/documentation/articles/documentdb-increase-limits/). 
+According to [ official documentation](https://azure.microsoft.com/en-us/documentation/articles/documentdb-partition-data/), **Partitioned collections** can span multiple partitions and support very large amounts of storage and throughput. You must specify a **partition key** for the collection. Partitioned collections can support larger data volumes and process more requests compared to Single-partitioned collection. ~~Partitioned collections support **up to 250 GB** of storage and **250,000 request units per second** of provisioned throughput~~[Updated Aug 21, 2016] ([@arkramac](https://twitter.com/arkramac) pointed [that](https://twitter.com/yokawasa/status/766908784467783680) out for me) Partitioned collections support unlimited storage and throughput. 250GB storage and 250k req/sec are soft cap. You can increase these limits by contacting and asking [Azure support](https://azure.microsoft.com/en-us/documentation/articles/documentdb-increase-limits/). 
 
 On the other hand, Single-partition collections have lower price options and the ability to query and perform transactions across all collection data. They have the scalability and storage limits of a single partition. You do not have to specify a partition key for these collections.
 
@@ -43,7 +43,7 @@ You can create Partitioned collections via the Azure portal, REST API ( >= versi
 - **auto_create_collection** true
 - **partitioned_collection** true
 - **partition_key** [partition key for the collection]
-- **offer_throughput** [Offer throughtput value: must be more than and equals to 10100. See [this](https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-collection/) for more info on offer throughtput in creating collection]
+- **offer_throughput** [Offer throughtput value: must be more than and equals to `10100`. See [this](https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-collection/) for more info on offer throughtput in creating collection]
 
 It creates a partitioned collection as you configure in starting the plugin if not exist at that time.
 
@@ -51,47 +51,34 @@ It creates a partitioned collection as you configure in starting the plugin if n
 
 Suppose that you want to read Apache access log as source for fluentd, and that you pick "host" as a partition Key for the collection, you can configure the plugin like this following:
 
+```xml
+<source>
     @type tail                          # input plugin
-
     path /var/log/apache2/access.log   # monitoring file
-
     pos_file /tmp/fluentd_pos_file     # position file
-
     format apache                      # format
-
     tag documentdb.access              # tag
+</source>
 
+<match documentdb.*>
     @type documentdb
-
     docdb_endpoint https://yoichikademo.documents.azure.com:443/
-
     docdb_account_key Tl1xykQxnExUisJ+BXwbbaC8NtUqYVE9kUDXCNust5aYBduhui29Xtxz3DLP88PayjtgtnARc1PW+2wlA6jCJw==
-
     docdb_database mydb
-
     docdb_collection my-partitioned-collection
-
     auto_create_database true
-
     auto_create_collection true
-
-    partitioned_collection true
-
+    partitioned_collection true 
     partition_key host
-
     offer_throughput 10100
-
     localtime true
-
     time_format %Y%m%d-%H:%M:%S
-
     add_time_field true
-
     time_field_name time
-
     add_tag_field true
-
     tag_field_name tag
+</match>
+```
 
 Basically that's all additional configuration for Partitioned collections. Please refer to [my previous article](http://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/) for the rest of setup and running work for the plugin. 
 

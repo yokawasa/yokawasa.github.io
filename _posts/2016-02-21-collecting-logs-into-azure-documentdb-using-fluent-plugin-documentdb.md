@@ -55,146 +55,118 @@ To use Azure DocumentDB, you must create a DocumentDB database account using eit
 
 First of all, install Fluentd. The following shows how to install Fluentd using Ruby gem packger but if you are not using Ruby Gem for the installation, please refer to [this installation guide](http://docs.fluentd.org/categories/installation) where you can find many other ways to install Fluentd on many platforms.
 
-`
-
+```sh
 # install fluentd
-
-sudo gem install fluentd --no-ri --no-rdoc`
+$ sudo gem install fluentd --no-ri --no-rdoc
 
 # create fluent.conf
-
-fluentd --setup 
+$ fluentd --setup 
+```
 
 Also, install [fluent-plugin-documentdb](https://github.com/yokawasa/fluent-plugin-documentdb) for fluentd aggregator to store collected logs data into Azure DocumentDB.
-`
 
-sudo gem install fluent-plugin-documentdb
-`
+```sh
+$ sudo gem install fluent-plugin-documentdb
+```
 
 Next, configure fluent.conf, a fluentd configuration file as follows. Please see [this](https://github.com/yokawasa/fluent-plugin-documentdb) for fluent-plugin-documentdb configuration.
 
-`
-
+```xml
 # Receive events from 24224/tcp
-
 # This is used by log forwarding and the fluent-cat command
-
+<source>
     @type forward
-
     port 24224
-`
+</source>
 
 # Store Data in DocumentDB
-
+<match apache.access>
     @type documentdb
-
     docdb_endpoint https://yoichikademo.documents.azure.com:443/
-
     docdb_account_key Tl1+ikQtnExxxUisJ+BXwbbaC8NtUqYVE9kUDXCNust5aYBduhui29Xtxz3DLP88PayjtgtnARc1PW+2wlA6jCJw==  (dummy)
-
     docdb_database LogDB
-
     docdb_collection Collection1
-
     auto_create_database true
-
     auto_create_collection true
-
     time_format %Y%m%d-%H:%M:%S
-
     localtime true
-
     add_time_field true
-
     time_field_name time
-
     add_tag_field true
-
     tag_field_name tag
+</match>
+```
 
 Regarding he port number of the aggregator host above, the default is 24224. Note that both TCP packets (event stream) and UDP packets (heartbeat message) are sent to this port, which mean you need to open both TCP and UDP for this port if you have access controls between forwarders and aggregator. Please see the [forward Output plugin article](http://docs.fluentd.org/articles/out_forward) to understand more about forward plugin. 
 
 Finally, run fluentd with specifiying fluent.conf that you configurea above.
 
-`
-
-fluentd -c ./fluent.conf -vv &
-`
+```sh
+$ fluentd -c ./fluent.conf -vv &
+```
 
 ## Setup: Fluentd Forwarders
 
 First, to set up Fluentd, run the following command to setup Fluentd. Again If you are not using Ruby Gem for the installation, please refer to the [installation document](http://docs.fluentd.org/v0.12/categories/installation).  
 
-`
-
+```sh
 # install fluentd
-
-sudo gem install fluentd --no-ri --no-rdoc`
+$ sudo gem install fluentd --no-ri --no-rdoc`
 
 # create fluent.conf
-
-fluentd --setup 
+$ fluentd --setup 
+```
 
 Then, give Fluentd a read access to servers'log files.
-`
 
-sudo chmod og+rx /var/log/apache2
-
-sudo chmod og+r /var/log/apache2/*
-`
+```sh
+$ sudo chmod og+rx /var/log/apache2
+$ sudo chmod og+r /var/log/apache2/*
+```
 
 Next, configure fluent.conf, a fluentd configuration file as follows to tail apache access logs and forard event to aggregator
 
-`
-
+```xml
 # Apache Access Logs
-
+<source>
     @type tail
-
     path /var/log/apache2/access.log   # monitoring file
-
     pos_file /tmp/fluentd_pos_file     # position file
-
     format apache                      # format
-
     tag apache.access                  # tag
-`
+</source>
 
 # Forward data to the aggregator
-
+<match apache.access>
     @type forward
-
     buffer_type memory
-
     buffer_chunk_limit 8m
-
     buffer_queue_limit 64
-
     flush_interval 1s
-
-        host  
-
+    <server>
+        host  <Aggregator's hostname or IP>
         port 24224
-
+    </server>
+    <secondary>
         @type file
-
         path /var/log/fluentd/forward-failed
+    </secondary>
+</match>
+```
 
 Finally, start Fluentd with the configuration above to start log collections
 
-`
-
-fluentd -c ./fluent.conf -vv &
-`
+```sh
+$ fluentd -c ./fluent.conf -vv &
+```
 
 ## TEST
 
 Let's check if logs will be forwarded from apache nodes to aggegator and ultimately stored in documentdb. First, create log events by sending test requests to web servers somehow (here using apache bench for example)
 
-`
-
-ab -n 5 -c 2 http:///foo/bar/test.html
-`
+```sh
+$ ab -n 5 -c 2 http://<targetserver>/foo/bar/test.html
+```
 
 If logs are collected successfully, you can see the logs stored in DocumentDB easily by using Document DB's query explorer. Go to Azure Portal > Display your DocumentDB dashboard > Query Explorer.
 

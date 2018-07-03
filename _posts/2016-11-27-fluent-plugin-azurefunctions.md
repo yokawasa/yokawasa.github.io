@@ -44,107 +44,113 @@ Create a function (HTTP Trigger). First, you need to have an function app that h
 
 A quick-start HTTP trigger function sample is included under [examples/function-csharp](https://github.com/yokawasa/fluent-plugin-azurefunctions/tree/master/examples/function-csharp) in Github repository. You simply need to save the code ([run.csx](https://github.com/yokawasa/fluent-plugin-azurefunctions/blob/master/examples/function-csharp/run.csx)) and configuration files ([function.json](https://github.com/yokawasa/fluent-plugin-azurefunctions/blob/master/examples/function-csharp/function.json), [project.json](https://github.com/yokawasa/fluent-plugin-azurefunctions/blob/master/examples/function-csharp/project.json)) in the same Azure function folder. Explaining a little bit about each of files, the **function.json** file defines the function bindings and other configuration settings. The runtime uses this file to determine the events to monitor and how to pass data into and return data from function execution. The **project.json** defines packages that the application depends. The **run.csx** is a core application file where you write your code to process Your jobs. Here is a sample run.csx:
 
+```csharp
+using System.Net;
+using Newtonsoft.Json;
+
+public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
+{
+    log.Info("C# HTTP trigger function to process fluentd output request.");
+    log.Info( string.Format("Dump request:\n {0}",req.ToString()));
+    // parse query parameter
+    string payload = req.GetQueryNameValuePairs()
+        .FirstOrDefault(q => string.Compare(q.Key, "payload", true) == 0)
+        .Value;
+    // Get request body
+    dynamic data = await req.Content.ReadAsAsync<object>();
+    if (data.payload == null) {
+        log.Info("Please pass a payload on the query string or in the request body");
+        return new HttpResponseMessage(HttpStatusCode.BadRequest);
+    }
+    // Process Your Jobs!
+    dynamic r = JsonConvert.DeserializeObject<dynamic>((string)data.payload);
+    if (r.key1!=null) log.Info(string.Format("key1={0}",r.key1));
+    if (r.key2!=null) log.Info(string.Format("key2={0}",r.key2));
+    if (r.key3!=null) log.Info(string.Format("key3={0}",r.key3));
+    if (r.mytime!=null) log.Info(string.Format("mytime={0}",r.mytime));
+    if (r.mytag!=null) log.Info(string.Format("mytag={0}",r.mytag));
+    return new HttpResponseMessage(HttpStatusCode.OK);
+}
+```
+
 ## Setup: Fluentd
 
 First of all, install Fluentd. The following shows how to install Fluentd using Ruby gem packger but if you are not using Ruby Gem for the installation, please refer to [this installation guide](http://docs.fluentd.org/categories/installation) where you can find many other ways to install Fluentd on many platforms.
 
-`
-
+```sh
 # install fluentd
-
-sudo gem install fluentd --no-ri --no-rdoc`
+$ sudo gem install fluentd --no-ri --no-rdoc
 
 # create fluent.conf
-
-fluentd --setup 
+$ fluentd --setup 
+```
 
 Also, install [fluent-plugin-azurefunctions](https://github.com/yokawasa/fluent-plugin-azurefunctions) for fluentd aggregator to send collected event data into Azure Functions.
-`
 
-sudo gem install fluent-plugin-azurefunctions
-`
+```sh
+$ sudo gem install fluent-plugin-azurefunctions
+```
 
 Next, configure fluent.conf, a fluentd configuration file as follows. Please refer to [this](https://github.com/yokawasa/fluent-plugin-azurefunctions#fluentd---fluentconf) for fluent-plugin-azurefunctions configuration. The following is a sample configuration where the plugin writes only records that are specified by key_names in incoming event stream out to Azure Functions:
 
-`
-
+```xml
 # This is used by event forwarding and the fluent-cat command
-
+<source>
     @type forward
-
     @id forward_input
-`
+</source>
 
 # Send Data to Azure Functions
-
+<match azurefunctions.**>
     @type azurefunctions
-
-    endpoint  AZURE_FUNCTION_ENDPOINT   # ex. https://.azurewebsites.net/api/
-
+    endpoint  AZURE_FUNCTION_ENDPOINT   # ex. https://<accountname>.azurewebsites.net/api/<functionname>
     function_key AZURE_FUNCTION_KEY     # ex. aRVQ7Lj0vzDhY0JBYF8gpxYyEBxLwhO51JSC7X5dZFbTvROs7uNg==
-
     key_names key1,key2,key3
-
     add_time_field true
-
     time_field_name mytime
-
     time_format %s
-
     localtime true
-
     add_tag_field true
-
     tag_field_name mytag
+</match>
+```
 
 [note] If **key_names** not specified above, all incoming records are posted to Azure Functions (See also [this](https://github.com/yokawasa/fluent-plugin-azurefunctions#fluentd---fluentconf)).
 
 Finally, run fluentd with the fluent.conf that you configure above.
 
-`
-
-fluentd -c ./fluent.conf -vv &
-`
+```sh
+$ fluentd -c ./fluent.conf -vv &
+```
 
 ## TEST
 
 Let's check if test events will be sent to Azure Functions that triggers the HTTP function (let's use [the sample function](https://github.com/yokawasa/fluent-plugin-azurefunctions/tree/master/examples/function-csharp) included in Github repo this time). First, generate test events using fluent-cat like this:
-`
 
+```sh
 echo ' { "key1":"value1", "key2":"value2", "key3":"value3"}' | fluent-cat azurefunctions.msg
-`
+```
 
 As both **add_time_field** and **add_tag_field** are enabled, time and tag fields are added to the record that are selected by **key_names** before posting to Azure Functions, thus actual HTTP Post request body would be like this:
 
-`
-
+```json
 {
-
     "payload": '{"key1":"value1", "key2":"value2", "key3":"value3", "mytime":"1480195100", "mytag":"azurefunctions.msg"}'
-
 }
-`
+```
 
 If events are sent to the function successfully, a HTTP trigger function handles the events and the following logs can be seen in Azure Functions log stream: 
 
-`
-
+```
 2016-11-26T21:18:55.200 Function started (Id=5392e7ae-3b8e-4f65-9fc1-6ae529cdfe3a)
-
 2016-11-26T21:18:55.200 C# HTTP trigger function to process fluentd output request.
-
 2016-11-26T21:18:55.200 key1=value1
-
 2016-11-26T21:18:55.200 key2=value2
-
 2016-11-26T21:18:55.200 key3=value3
-
 2016-11-26T21:18:55.200 mytime=1480195100
-
 2016-11-26T21:18:55.200 mytag=azurefunctions.msg
-
 2016-11-26T21:18:55.200 Function completed (Success, Id=5392e7ae-3b8e-4f65-9fc1-6ae529cdfe3a)
-`
+```
 
 ## Advanced Senarios
 

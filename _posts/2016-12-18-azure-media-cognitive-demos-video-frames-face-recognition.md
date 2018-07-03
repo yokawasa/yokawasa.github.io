@@ -29,7 +29,8 @@ tags:
 ![Video Summarization and Face Detection Demo Screenshot](https://c1.staticflickr.com/6/5484/30351964320_dc0b3400ca_b.jpg)
 ](http://azure-media-cognitive-demos.azurewebsites.net/faceapi/build2016keynote/)
 
-( [デモサイト](http://azure-media-cognitive-demos.azurewebsites.net/faceapi/build2016keynote/) | [Source Code](https://github.com/AzureMediaCognitiveDemos/VideoFramesFaceRecognition-Python) )
+- [demo site](http://azure-media-cognitive-demos.azurewebsites.net/faceapi/build2016keynote/) 
+- [source code](https://github.com/AzureMediaCognitiveDemos/VideoFramesFaceRecognition-Python)
 
 ## 主要テクノロジーと機能
 
@@ -41,60 +42,34 @@ tags:
 
 残念ながらFace APIはビデオコンテンツから直接顔検出することができないため、一旦ビデオコンテンツから各フレームごとの静止画を生成してその静止画を対象に処理を行う必要がある。ここでは各フレームごとの静止画生成にAzure Media Encoder Standard（MES）を利用する。MESを使うことでエンコードタスクとしてビデオコンテンツに対して様々な処理を行うことができるのだが、MESにはそのエンコードタスクの１つとしてサムネイル生成のためのタスクが用意されており、今回はこのサムネール生成タスクを利用する。他のエンコードタスク同様にサムネイル生成タスクについてもプリセットと呼ばれるエンコードに必要な情報を記述した XML または JSON形式ファイルを用意する必要がある。今回は1秒フレームごとにJPEG形式の静止画（サムネイル）を生成するために次のようなプリセット（[amsmp-thumbnail-config.json](https://github.com/AzureMediaCognitiveDemos/VideoFramesFaceRecognition-Python/blob/master/src/amsmp-thumbnail-config.json)）を用意した。
 
-`
-
+```json
 {
-
   "Version": 1.0,
-
   "Codecs": [
-
     {
-
       "Start": "00:00:00",
-
       "Step": "00:00:01",
-
       "Type": "JpgImage",
-
       "JpgLayers": [
-
         {
-
           "Quality": 90,
-
           "Type": "JpgLayer",
-
           "Width": 640,
-
           "Height": 360
-
         }
-
       ]
-
     }
-
   ],
-
   "Outputs": [
-
     {
-
       "FileName": "{Basename}_{Index}{Extension}",
-
       "Format": {
-
         "Type": "JpgFormat"
-
       }
-
     }
-
   ]
-
 }
-`
+```
 
 MESによるサムネイル処理実行方法やプリセットの詳細については「[Media Encoder Standard を使用した高度なエンコード](https://docs.microsoft.com/ja-jp/azure/media-services/media-services-custom-mes-presets-with-dotnet)」や同ページの「[サムネイルを生成する](https://docs.microsoft.com/ja-jp/azure/media-services/media-services-custom-mes-presets-with-dotnet#thumbnails)」項を参照ください。尚、今回のサムネイル生成のためのエンコーディング処理は小生自作の「[azure-media-processor-java](https://github.com/yokawasa/azure-media-processor-java)」を利用してバッチ実行している。
 
@@ -121,31 +96,30 @@ MESによるサムネイル処理実行方法やプリセットの詳細につ�
 
 2で得られた各フレーム中の人物情報と各フレームの時間を元に字幕用のデータフォーマットである[WebVTTフォーマット](https://w3c.github.io/webvtt/)ファイルを生成する。以下、6秒～30秒までの字幕出力を期したWebVTTファイルのサンプルであるが、見ていただいてわかる通りフレームの時間（最小秒単位）とそこで得られた人物名をセットで記述するとても単純なフォーマットとなっている。
 
-`
-
+```
 00:00:06.000 --> 00:00:07.000
-
 Satya Nadella(0.73295)`
 
 00:00:07.000 --> 00:00:08.000
-
 Satya Nadella(0.6313)
 
 00:00:27.000 --> 00:00:28.000
-
 Bryan Roper(0.68094)
 
 00:00:29.000 --> 00:00:30.000
-
 Bryan Roper(0.54939)
+```
 
 各フレームの時間について、今回のビデオコンテンツのフレームは1秒ごとに取得しており、フレームごとの静止画像ファイルにはフレームの順番がPostfixとしてファイル名に含まれているため単純にファイル名からフレームの時間が特定できるようになっている（例, 10番目のファイル= videoassetname_000010.jpg）。もし今回のような機械的なルールがない場合はフレーム用画像ファイル名と時間のマッピングが必要となる。
 
 ビデオコンテンツと字幕の再生は「[ビデオコンテンツの音声認識デモ](http://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/)」でも紹介したようにHTML5のtrackタグエレメントによるビデオファイルの字幕表示機能使って人物名の字幕表示を実現している。本デモではHTML5に下記のようにビデオファイル（MP4）をVideoソースとしてtrackエレメントにWebVTTファイル（[build2016keynote.vtt](https://github.com/AzureMediaCognitiveDemos/VideoFramesFaceRecognition-Python/blob/master/demo/build2016keynote/build2016keynote.vtt)）を指定している。
 
-`
-
-`
+```html
+<video id="Video1" controls autoplay width="600">
+    <source src="KEY01_VideoThumbnail.mp4" srclang="en" type="video/mp4">
+    <track id="trackJA"  src="build2016keynote.vtt"  kind="captions" srclang="ja" label="Person Name" default>
+</video>
+```
 
 ## デモデータ作成手順
 
@@ -166,23 +140,15 @@ Azure Media Face DetectorはAzure Media Servicesのメディアプロセッサ(M
 [デモページ](http://azure-media-cognitive-demos.azurewebsites.net/faceapi/build2016keynote/)をみていただくとお分かりのように今回のデモでは3分のビデオコンテンツを題材としているが、元ネタは[Channel9](https://channel9.msdn.com/Events/Build/2016/KEY01)で公開されている計138分の[Build 2016のキーノートセッション](https://channel9.msdn.com/Events/Build/2016/KEY01)である。このキーノートのセッションはデモコンテンツとしてはあまりに長かったのでこれを[Azure Media Video Thumbnails](https://docs.microsoft.com/ja-jp/azure/media-services/media-services-video-summarization)メディアプロセッサ（MP）を使って3分に要約している。Azure Media Video Thumbnailsはアルゴリズムベースで特徴シーンの検出とそれらを結合（サブクリップ）してビデオコンテンツを指定した長さに要約することができるMPで、現在Public Previewリリース中(2016年12月現在)。
 
 参考までに、要約（3分:180秒）に使用したAzure Media Video Thumbnailsのタスクプリセットは以下の通り：
-`
-
+```json
 {
-
     "version": "1.0",
-
     "options": {
-
         "outputAudio": "true",
-
         "maxMotionThumbnailDurationInSecs": "180",
-
         "fadeInFadeOut": "true"
-
     }
-
 }
-`
+```
 
 END

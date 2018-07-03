@@ -5,8 +5,6 @@ published: true
 title: Azureで複数VNETをVPNでデイジーチェーン接続してマルチホップアスセスする設定 (Classic版)
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com
@@ -35,40 +33,63 @@ tags:
 
 ![VPN-Daisy-Chain-Site2Site](https://farm2.staticflickr.com/1617/24008147956_b110c0c09e.jpg)
 
-[table id=1 column_widths="33%|33%|33%" /]
+| VNET Name | Address Space | VPN gateway | 
+| ------------- | ------------- | ------------- |
+| vnet1 | 172.17.0.0/16 |	40.74.135.162 |
+| vnet2	| 172.18.0.0/16 | 40.74.143.191 |
+| vnet3	| 172.19.0.0/16 | 40.74.136.22 |
+
 
 用意するローカルネットワークは次の5つ。local-vnet1～local-vnet3はそれぞれ、vnet1～vnet3のVPN Gateway経由でそれぞれvnet1～vnet3のアドレス空間にアクセスするためのローカルネットワーク設定。またlocal-vnet2-1はvnet2のVPN Gatewayを経由してvnet2とvnet1のアドレス空間にアクセスするためのローカルネットワーク設定で、local-vnet2-3はvnet2のVPN Gatewayを経由してvnet2とvnet3のアドレス空間にアクセスするためのローカルネットワーク設定である。
 
 ローカルネットワーク一覧
 
-[table id=2 column_widths="33%|33%|33%" /]
+| VNET Name | Address Space | VPN gateway | 
+| ------------- | ------------- | ------------- |
+| local-vnet1	 | 172.17.0.0/16 |	40.74.135.162 |
+| local-vnet2	 | 172.18.0.0/16 |	40.74.143.191 |
+| local-vnet3	 | 172.19.0.0/16 |	40.74.136.22 |
+| lcoal-vnet2-1 | 172.18.0.0/16, 172.17.0.0/16 | 40.74.143.191 |
+| lcoal-vnet2-3 | 172.18.0.0/16, 172.19.0.0/16 | 40.74.143.191 |
+
 
 ネットワーク設定用XMLのLocalNetworkSites設定内容
-`
-
-172.17.0.0/16
-
-40.74.135.162
-
-172.18.0.0/16
-
-40.74.143.191
-
-172.19.0.0/16
-
-40.74.136.22
-
-172.18.0.0/16
-172.17.0.0/16
-
-40.74.143.191
-
-172.18.0.0/16
-172.19.0.0/16
-
-40.74.143.191
-
-`
+```xml
+<LocalNetworkSites>
+  <LocalNetworkSite name="local-vnet1">
+    <AddressSpace>
+      <AddressPrefix>172.17.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <VPNGatewayAddress>40.74.135.162</VPNGatewayAddress>
+  </LocalNetworkSite>
+  <LocalNetworkSite name="local-vnet2">
+    <AddressSpace>
+      <AddressPrefix>172.18.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <VPNGatewayAddress>40.74.143.191</VPNGatewayAddress>
+  </LocalNetworkSite>
+  <LocalNetworkSite name="local-vnet3">
+    <AddressSpace>
+      <AddressPrefix>172.19.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <VPNGatewayAddress>40.74.136.22</VPNGatewayAddress>
+  </LocalNetworkSite>
+  <LocalNetworkSite name="local-vnet2-1">
+    <AddressSpace>
+      <AddressPrefix>172.18.0.0/16</AddressPrefix>
+      <AddressPrefix>172.17.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <VPNGatewayAddress>40.74.143.191</VPNGatewayAddress>
+  </LocalNetworkSite>
+  <LocalNetworkSite name="local-vnet2-3">
+    <AddressSpace>
+      <AddressPrefix>172.18.0.0/16</AddressPrefix>
+      <AddressPrefix>172.19.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <VPNGatewayAddress>40.74.143.191</VPNGatewayAddress>
+  </LocalNetworkSite>
+</LocalNetworkSites>
+```
 
 ### 1-1. 隣同士のVNETへのシングルホップアクセスのための設定例
 
@@ -79,27 +100,74 @@ tags:
 下記VirtualNetworkSitesでは、vnet1からはvnet2のアドレス空間にアクセスできるようにlocal-vnet2を接続先ローカルネットワークとして設定しており、vnet2からはvnet1とvnet3のアドレス空間にアクセスできるようにlocal-vent1とlocal-vnet3を接続先ローカルネットワークとして設定、そしてvnet3からはvnet2のアドレス空間にアクセスできるようにlocal-vnet2を接続先ローカルネットワークとして設定している。
 
 ネットワーク設定用XMLのVirtualNetworkSites設定内容
-`
-
-172.17.0.0/16
-
-172.17.0.0/19
-
-172.17.32.0/29
-
-172.18.0.0/16
-
-172.18.0.0/19
-
-172.18.32.0/29
-
-172.19.0.0/19
-
-172.19.0.0/22
-
-172.19.4.0/29
-
-`
+```xml
+<VirtualNetworkSites>
+  <VirtualNetworkSite name="vnet1" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.17.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.17.0.0/19</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.17.32.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet2">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+  <VirtualNetworkSite name="vnet2" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.18.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.18.0.0/19</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.18.32.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet1">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+        <LocalNetworkSiteRef name="local-vnet3">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+  <VirtualNetworkSite name="vnet3" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.19.0.0/19</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.19.0.0/22</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.19.4.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet2">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+</VirtualNetworkSites>
+</VirtualNetworkConfiguration>
+```
 
 ### 1-2. VNET1-VNET3間マルチホップアクセスのための設定
 
@@ -110,27 +178,74 @@ tags:
 下記VirtualNetworkSitesでは、vnet1からはvnet2のVPN Gatewayを経由してvnet2とvnet3のアドレス空間にアクセスできるようにlocal-vnet2-3を接続先ローカルネットワークとして設定しており、vnet2からはvnet1とvnet3のアドレス空間にアクセスできるようにローカルネットワークlocal-vent1とlocal-vnet3を接続先ローカルネットワークとして設定、そしてvnet3からはvnet2のVPN Gatewayを経由してvnet2とvnet1のアドレス空間にアクセスできるようにlocal-vnet2-1を接続先ローカルネットワークとして設定している。
 
 ネットワーク設定用XMLのVirtualNetworkSites設定内容
-`
 
-172.17.0.0/16
-
-172.17.0.0/19
-
-172.17.32.0/29
-
-172.18.0.0/16
-
-172.18.0.0/19
-
-172.18.32.0/29
-
-172.19.0.0/19
-
-172.19.0.0/22
-
-172.19.4.0/29
-
-`
+```xml
+<VirtualNetworkSites>
+  <VirtualNetworkSite name="vnet1" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.17.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.17.0.0/19</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.17.32.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet2-3">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+  <VirtualNetworkSite name="vnet2" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.18.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.18.0.0/19</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.18.32.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet1">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+        <LocalNetworkSiteRef name="local-vnet3">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+  <VirtualNetworkSite name="vnet3" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.19.0.0/19</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.19.0.0/22</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.19.4.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet2-1">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+</VirtualNetworkConfiguration>
+```
 
 ## 2. App Servicesと複数VNET間のデイジーチェーン接続
 
@@ -140,13 +255,23 @@ tags:
 
 VNET基本情報
 
-[table id=3 /]
+| VNET Name |	Address Space | VPN Client Address Pool	| VPN gateway |
+| ------------- | ------------- | ------------- | ------------- |
+| vnet1	| 172.17.0.0/16 | 192.168.1.0/28 | 40.74.135.162 |
+| vnet2	| 172.18.0.0/16 |  | 40.74.143.191 |
+
 
 用意するローカルネットワークは次の3つ。local-vnet1、local-vnet2はそれぞれvnet1、vnet2のVPN Gateway経由でそれぞれvnet1、vnet2のアドレス空間にアクセスするためのローカルネットワーク設定。またlocal-vnet1-pはvnet1のVPN Gatewayを経由してvnet1のアドレス空間とポイント対サイト用VPNクライアント用アドレス空間にアクセスするためのローカルネットワーク設定となっている。
 
 ネットワーク設定用XMLのLocalNetworkSites設定内容
 
-[table id=4 column_widths="33%|33%|33%" /]
+| Local VNET Name | Address Space | VPN gateway | 
+| ------------- | ------------- | ------------- |
+| local-vnet1 |  172.17.0.0/16 | 40.74.135.162 |
+| local-vnet2	| 172.18.0.0/16 | 40.74.143.191 |
+| local-vnet1-p	| 172.17.0.0/16, 192.168.1.0/28 | 40.74.135.162 | 
+
+
 
 ### 2-1. App Services-VNET2間でマルチホップアクセスできない設定例
 
@@ -155,23 +280,55 @@ Web Appとvnet1はポイント対サイトVPN接続設定を行う。一方vnet1
 ![VPN-Daisy-Chain-P2S-S2S-Config-SingleHopAccess](https://farm6.staticflickr.com/5687/23447083164_6cbd67e2f8_c.jpg)
 
 ネットワーク設定用XMLのVirtualNetworkSites設定内容
-`
 
-172.17.0.0/16
-
-172.17.0.0/19
-
-172.17.32.0/29
-
-192.168.1.0/28
-
-172.18.0.0/16
-
-172.18.0.0/19
-
-172.18.32.0/29
-
-`
+```xml
+<VirtualNetworkSites>
+  <VirtualNetworkSite name="vnet1" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.17.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.17.0.0/19</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.17.32.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <VPNClientAddressPool>
+        <AddressPrefix>192.168.1.0/28</AddressPrefix>
+      </VPNClientAddressPool>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet2">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+  <VirtualNetworkSite name="vnet2" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.18.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.18.0.0/19</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.18.32.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet1">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+</VirtualNetworkSites>
+</VirtualNetworkConfiguration>
+```
 
 ### 2-2. App Services-VNET2間マルチホップアクセスのための設定
 
@@ -180,23 +337,55 @@ Web Appとvnet1はポイント対サイトVPN接続設定を行う。一方vnet1
 ![VPN-Daisy-Chain-P2S-S2S-Config-MultipleHopAccess](https://farm2.staticflickr.com/1483/23707501489_e57bf35457_c.jpg)
 
 ネットワーク設定用XMLのVirtualNetworkSites設定内容
-`
 
-172.17.0.0/16
-
-172.17.0.0/19
-
-172.17.32.0/29
-
-192.168.1.0/28
-
-172.18.0.0/16
-
-172.18.0.0/19
-
-172.18.32.0/29
-
-`
+```xml
+<VirtualNetworkSites>
+  <VirtualNetworkSite name="vnet1" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.17.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.17.0.0/19</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.17.32.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <VPNClientAddressPool>
+        <AddressPrefix>192.168.1.0/28</AddressPrefix>
+      </VPNClientAddressPool>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet2">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+  <VirtualNetworkSite name="vnet2" Location="Japan West">
+    <AddressSpace>
+      <AddressPrefix>172.18.0.0/16</AddressPrefix>
+    </AddressSpace>
+    <Subnets>
+      <Subnet name="Subnet-1">
+        <AddressPrefix>172.18.0.0/19</AddressPrefix>
+      </Subnet>
+      <Subnet name="GatewaySubnet">
+        <AddressPrefix>172.18.32.0/29</AddressPrefix>
+      </Subnet>
+    </Subnets>
+    <Gateway>
+      <ConnectionsToLocalNetwork>
+        <LocalNetworkSiteRef name="local-vnet1-p">
+          <Connection type="IPsec" />
+        </LocalNetworkSiteRef>
+      </ConnectionsToLocalNetwork>
+    </Gateway>
+  </VirtualNetworkSite>
+</VirtualNetworkSites>
+</VirtualNetworkConfiguration>
+```
 
 おわり
 

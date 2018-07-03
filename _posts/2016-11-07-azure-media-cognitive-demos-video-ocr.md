@@ -28,7 +28,8 @@ OCRとはOptical Character Recognitionの略で日本語にすると光学文字
 [
 ![Video OCR Demo Screenshot](https://c5.staticflickr.com/6/5337/30534876532_4b2269fc57_c.jpg)](http://azure-media-cognitive-demos.azurewebsites.net/ocr/azuresubs/)
 
-( [デモサイト](http://azure-media-cognitive-demos.azurewebsites.net/ocr/azuresubs/) | [Source Code](https://github.com/AzureMediaCognitiveDemos/Video-OCR-Search-Python) )
+- [demo site](http://azure-media-cognitive-demos.azurewebsites.net/ocr/azuresubs/)
+- [source code](https://github.com/AzureMediaCognitiveDemos/Video-OCR-Search-Python)
 
 ## 主要テクノロジーと機能
 
@@ -36,91 +37,52 @@ OCRとはOptical Character Recognitionの略で日本語にすると光学文字
 
 このデモでは[Azure Media OCRメディアプロセッサー(MP)](https://azure.microsoft.com/en-us/documentation/articles/media-services-video-optical-character-recognition/)を使用してビデオファイル内のテキストコンテンツを検出してテキストファイルを生成している。OCRメディアプロセッサーは入力パラメータによりビデオ解析の挙動を調整することができる。主なパラメータとしては検索対象テキストの言語（日本語もサポート）、テキストの向き、サンプリングレート、ビデオフレーム内のテキスト検出対象のリージョンがあるが、本デモでの入力パラメータ（Video-OCR-Search-Python/src/[ocr-detectregion.json](https://github.com/AzureMediaCognitiveDemos/Video-OCR-Search-Python/blob/master/src/ocr-detectregion.json)）は以下の通り検索対象言語は日本語、1秒おきのサンプリングレート、テキスト検出対象のリージョンからビデオフレーム内の上部1/4を省く設定（検出対象をフレームトップから85 pixel以下を対象）にしている。
 
-`
-
+```json
 {
-
-    "Version":"1.0",
-
-    "Options":
-
+    "Version":"1.0", 
+    "Options": 
     {
-
-        "Language":"Japanese",
-
+        "Language":"Japanese", 
         "TimeInterval":"00:00:01.000",
-
         "DetectRegions":
-
         [
-
             {"Left":"0","Top":"85","Width":"1280","Height":"635"}
-
         ]
-
     }
-
 }
-`
+```
 
 そして、Azure Media OCRメディアプロセッサはビデオで検出された文字を下記のような表示時間に基づいてセグメント化された形で結果出力する。結果ファイルの完全版はこちら（[azuresubs.json](https://github.com/AzureMediaCognitiveDemos/Video-OCR-Search-Python/blob/master/demo/azuresubs/azuresubs.json)）を参照ください。
 
-`
-
+```json
 {
-
     "fragments": [
-
         {
-
             "start": 0
-
             "interval": 319319,
-
             "duration": 319319,
-
             "events": [
-
                 [
-
                     {
-
                         "language": "Japanese",
-
                         "text": "Azure の 契 約 内 容 を 変 更 す る Microsoft Azure"
-
                     }
-
                 ]
-
             ]
-
         },
-
         {  /* fragment1 */ },
-
         {  /* fragment2 */ },
-
         ...
-
         {  /* fragmentN */ }
-
     ],
-
-    "version": 1,
-
+    "version": 1, 
     "framerate": 29.97,
-
     "height": 720,
-
     "width": 1280,
-
     "offset": 0,
-
     "timescale": 30000
-
 }
-`
+```
 
 入力パラメータと出力形式共に詳細は[こちら](https://azure.microsoft.com/en-us/documentation/articles/media-services-video-optical-character-recognition/)のドキュメントを参照いただくとしてAzure Media OCRメディアプロセッサ利用の注意点として次の2つがある：
 
@@ -131,38 +93,30 @@ OCRとはOptical Character Recognitionの略で日本語にすると光学文字
 
 まず上記Azure Media OCRメディアプロセッサー(MP)から出力されたJSONファイルの内容を元に字幕用のデータフォーマットである[WebVTTフォーマット](https://w3c.github.io/webvtt/)ファイルを生成している。そして「[Azure Media & Cognitiveデモ:Speech-To-Text](http://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/)」でも紹介したようにHTML5のtrackタグエレメントによるビデオファイルの字幕表示機能使ってOCRの内容の字幕表示を実現している。本デモではHTML5に下記のように動画（[TransferanAzuresubscriptionJP.mp4](http://yoichikademo.blob.core.windows.net/amscogs/TransferanAzuresubscriptionJP.mp4)）をVideoソースとしてtrackエレメントにWebVTTファイル（[azuresubs.vtt](https://github.com/AzureMediaCognitiveDemos/Video-OCR-Search-Python/blob/master/demo/azuresubs/azuresubs.vtt)）を指定している。
 
-`
-
-`
+```html
+<video id="Video1" controls autoplay width="600">
+    <source src="TransferanAzuresubscriptionJP.mp4" srclang="en" type="video/mp4">
+    <track id="trackJA"  src="azuresubs.vtt"  kind="captions" srclang="ja" label="OCR Subtitle" default>
+</video>
+```
 
 ### Azure Searchによる全文検索
 
 デモページ上部にある検索窓にキーワードを入力してGoボタンを押すとビデオコンテンツからOCR抽出されたテキストを元に生成された字幕データを全文検索してキーワードにマッチしたテキストとその表示時間に絞り込むことができる。仕組みは「[Azure Media & Cognitiveデモ:Speech-To-Text](http://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/)」と全く同じで、[Azure Search](https://azure.microsoft.com/en-us/services/search/)を使用して字幕データを解析して字幕表示時間とその対応テキストを1ドキュメントレコードとしてAzure Searchにインジェストしてその生成されたインデックスに対してキーワードを元に全文検索することで実現している。検索用のインデックススキーマもまったくおなじで次のように字幕表示時間とその対応テキストをレコード単位となるように定義している。
 
-`
-
+```json
 {
-
     "name": "ocr",
-
     "fields": [
-
         { "name":"id", "type":"Edm.String", "key": true, "searchable": false, "filterable":false, "facetable":false },
-
         { "name":"contentid", "type":"Edm.String","searchable": false, "filterable":true, "facetable":false },
-
         { "name":"beginsec", "type":"Edm.Int32", "searchable": false, "filterable":false, "sortable":true, "facetable":false },
-
         { "name":"begin", "type":"Edm.String", "searchable": false, "filterable":false, "sortable":false, "facetable":false },
-
         { "name":"end", "type":"Edm.String", "searchable": false, "filterable":false, "sortable":false, "facetable":false },
-
         { "name":"caption", "type":"Edm.String", "searchable": true, "filterable":false, "sortable":false, "facetable":false, "analyzer":"ja.microsoft" }
-
      ]
-
 }
-`
+```
 
 ## デモデータ作成手順
 

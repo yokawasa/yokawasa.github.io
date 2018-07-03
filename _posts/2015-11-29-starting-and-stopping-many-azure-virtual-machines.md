@@ -5,8 +5,6 @@ published: true
 title: Azure仮想マシンの一括起動・停止 （Classic版）
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com
@@ -24,47 +22,33 @@ tags:
 - ASM
 ---
 
-Azure仮想マシンV1の一括起動・停止する方法についてのナレッジをここに整理しておく。基本的にはPowerShellや[Azure CLI](https://azure.microsoft.com/ja-jp/documentation/articles/virtual-machines-command-line-tools/)のVM起動・停止コマンドを並列で実行する方法でいけます。ただし同一クラウドサービス内に複数のVMがある場合は単純なコマンドの並列処理実行ではうまくいかない。その場合はAzureで用意されている複数ロールの一括起動・停止用REST APIを使いましょうというお話し。尚、ここでの一括処理はyoichikavm[001-100]の100VMを対象とする。
+Azure仮想マシンV1の一括起動・停止する方法についてのナレッジをここに整理しておく。基本的にはPowerShellや[Azure CLI](https://azure.microsoft.com/ja-jp/documentation/articles/virtual-machines-command-line-tools/)のVM起動・停止コマンドを並列で実行する方法でいけます。ただし同一クラウドサービス内に複数のVMがある場合は単純なコマンドの並列処理実行ではうまくいかない。その場合はAzureで用意されている複数ロールの一括起動・停止用REST APIを使いましょうというお話し。尚、ここでの一括処理は`yoichikavm[001-100]`の100VMを対象とする。
 
 ## VM起動・停止コマンドの並列実行
 
-yoichikavm[001-100]がそれぞれ別のクラウドサービスを持っている場合は、VM起動・停止コマンドを単純に並列実行するという手法で問題なく一括起動・停止ができる。例えばWindowsマシンの場合はPowershellの(Start|Stop)-AzureVMコマンドをStart-Jobを使用してバックグラウンドジョブとして実行させてやる、MacやLinuxであればvm (start|stop)コマンドをforkさせて複数故プロセスを走らせてやるなど。ここではStart-Jobでの並列実行例を紹介する。
+`yoichikavm[001-100]`がそれぞれ別のクラウドサービスを持っている場合は、VM起動・停止コマンドを単純に並列実行するという手法で問題なく一括起動・停止ができる。例えばWindowsマシンの場合はPowershellの`(Start|Stop)-AzureVM`コマンドを`Start-Job`を使用してバックグラウンドジョブとして実行させてやる、MacやLinuxであれば`vm (start|stop)`コマンドをforkさせて複数故プロセスを走らせてやるなど。ここでは`Start-Job`での並列実行例を紹介する。
 
-複数VMの一括起動: parallel-start.ps1
-`
-
+複数VMの一括起動: `parallel-start.ps1`
+```powershell
 foreach($node in $( Get-AzureVM | Where-Object{$_.Name -match "yoichikavm*"}) ) {
-
     Write-Host $node.Name
-
     Start-Job -ScriptBlock{
-
         param($node)
-
         Start-AzureVM -ServiceName $node.ServiceName -Name $node.Name
-
     } -Arg $node
-
 }
-`
+```
 
-複数VMの一括停止: parallel-stop.ps1
-`
-
+複数VMの一括停止: `parallel-stop.ps1`
+```powershell
 foreach($node in $( Get-AzureVM | Where-Object{$_.Name -match "yoichikavm*"}) ) {
-
     Write-Host $node.Name
-
     Start-Job -ScriptBlock{
-
         param($node)
-
         Stop-AzureVM -ServiceName $node.ServiceName -Name $node.Name -Force
-
     } -Arg $node
-
 }
-`
+```
 
 ## Start/Stop Roles APIの利用(同一クラウドサービス内に複数VMがある場合)
 
@@ -73,46 +57,42 @@ foreach($node in $( Get-AzureVM | Where-Object{$_.Name -match "yoichikavm*"}) ) 
 以下、APIについて簡単にご説明する。両APIともPOST先は下記同一のエントリーポイントとなっており、またBodyにそれぞれ下記のように起動VM,停止VMを記述する。
 
 POST用エントリーポイント
-`
-
+```
 https://management.core.windows.net/サブスクリプションID/services/hostedservices/クラウドサービス/deployments/デプロイ名/roles/Operations
-`
+```
 
-BODY例: 一括起動 yoichikavm[001-100]
-`
-
-StartRolesOperation
-
-yoichikavm001
-yoichikavm002
-
+BODY例: 一括起動 `yoichikavm[001-100]`
+```xml
+<StartRolesOperation xmlns="http://schemas.microsoft.com/windowsazure" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <OperationType>StartRolesOperation</OperationType>
+  <Roles>
+    <Name>yoichikavm001</Name>
+    <Name>yoichikavm002</Name>
     ... skip ...
-yoichikavm100
+    <Name>yoichikavm100</Name>
+  </Roles>
+</StartRolesOperation>
+```
 
-`
-
-BODY例) 一括停止 yoichikavm[001-100]
-`
-
-ShutdownRolesOperation
-
-yoichikavm001
-yoichikavm002
-
+BODY例) 一括停止 `yoichikavm[001-100]`
+```xml
+<ShutdownRolesOperation xmlns="http://schemas.microsoft.com/windowsazure" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <OperationType>ShutdownRolesOperation</OperationType>
+  <Roles>
+    <Name>yoichikavm001</Name>
+    <Name>yoichikavm002</Name>
     ... skip ...
-yoichikavm100
-
-StoppedDeallocated
-
-`
+    <Name>yoichikavm100</Name>
+  </Roles>
+  <PostShutdownAction>StoppedDeallocated</PostShutdownAction>
+</ShutdownRolesOperation>
+```
 
 そして、共通ヘッダとして下記の２つが必要になる。
-`
-
+```
 Content-Type: application/xml
-
 x-ms-version: 2015-04-01    << サービス管理バージョン、これは最新の2015-04-01でOK
-`
+```
 
 認証については他のサービス管理APIと同様にAzure ADの使用もしくは証明書を利用した認証を行う必要がある。詳細についてはを「[サービス管理要求の認証](https://msdn.microsoft.com/ja-jp/library/azure/ee460782.aspx)」参照いただければと思う。
 

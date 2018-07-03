@@ -30,7 +30,8 @@ tags:
 ![Video STT Demo Screenshot](https://c5.staticflickr.com/6/5818/30534876132_bfc40a475f_c.jpg)
 ](http://azure-media-cognitive-demos.azurewebsites.net/stt/build2016breakout/)
 
-( [デモサイト](http://azure-media-cognitive-demos.azurewebsites.net/stt/build2016breakout/) | [Source Code](https://github.com/AzureMediaCognitiveDemos/Video-STT-Search-Python) )
+- [demo site](http://azure-media-cognitive-demos.azurewebsites.net/stt/build2016breakout/)
+- [source code](https://github.com/AzureMediaCognitiveDemos/Video-STT-Search-Python)
 
 ## 主要テクノロジーと機能
 
@@ -46,38 +47,30 @@ tags:
 
 HTML5にはtrackタグエレメントを使ってビデオファイルに字幕を表示する機能が標準的に実装されている。本デモではHTML5に下記のように動画（Python_and_node.js_on_Visual_Studio.mp4）をVideoソースとしてtrackエレメントに字幕WebVttファイル（[build2016breakout.vtt](https://github.com/AzureMediaCognitiveDemos/Video-STT-Search-Python/blob/master/demo/build2016breakout/build2016breakout.vtt)）を指定している。
 
-`
-
-`
+```html
+<video id="Video1" controls autoplay width="600">
+    <source src="Python_and_node.js_on_Visual_Studio.mp4" srclang="en" type="video/mp4">
+    <track id="trackJA"  src="build2016breakout.vtt"  kind="captions" srclang="ja" label="Closed Captions" default>
+</video>
+```
 
 ### Azure Searchによる全文検索
 
 デモページ上部にある検索窓にキーワードを入力してGoボタンを押すとビデオコンテンツの字幕データを全文検索してキーワードにマッチしたテキストとその表示時間に絞り込むことができる。ここでは全文検索エンジンに[Azure Search](https://azure.microsoft.com/en-us/services/search/)を使用し、Azure Media Indexer 2 (Preview)より抽出された字幕データを解析して字幕表示時間とその対応テキストを1ドキュメントレコードとしてAzure Searchにインジェストしてその生成されたインデックスに対してキーワードを元に全文検索することで実現している。字幕データ検索用のインデックススキーマは次のように字幕表示時間とその対応テキストをレコード単位となるように定義している。
 
-`
-
+```json
 {
-
     "name": "stt",
-
     "fields": [
-
         { "name":"id", "type":"Edm.String", "key": true, "searchable": false, "filterable":false, "facetable":false },
-
         { "name":"contentid", "type":"Edm.String","searchable": false, "filterable":true, "facetable":false },
-
         { "name":"beginsec", "type":"Edm.Int32", "searchable": false, "filterable":false, "sortable":true, "facetable":false },
-
         { "name":"begin", "type":"Edm.String", "searchable": false, "filterable":false, "sortable":false, "facetable":false },
-
         { "name":"end", "type":"Edm.String", "searchable": false, "filterable":false, "sortable":false, "facetable":false },
-
         { "name":"caption", "type":"Edm.String", "searchable": true, "filterable":false, "sortable":false, "facetable":false, "analyzer":"en.microsoft" }
-
      ]
-
 }
-`
+```
 
 ## デモデータ作成手順
 

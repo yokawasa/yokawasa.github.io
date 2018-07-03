@@ -5,8 +5,6 @@ published: true
 title: 今一度Traffic Managerのエンドポイント監視について
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com
@@ -25,18 +23,13 @@ tags:
 Azureが提供するDNSによるトラフィックルーティングサービスであるTraffic Managerについて、既にAzure利用ユーザに使い尽くされて新鮮味に欠けるサービスではあるものの、そのエンドポイント監視はTraffic Managerを扱う上でとても重要なことなので今一度そのルールについて整理したい。
 
 Traffic managerの実態はエンドポイントの監視＋ルーティングを行うDNSサービスである。以下digの結果を見ていただいてわかる通りyoichika-demo1.trafficmanager.netという外向きの名前に対してこの時点ではwebappdemo3.cloudapp.netがCNAMEされている。Traffic Managerは利用ユーザが設定したエンドポイントを監視し、その結果に応じて適切なルーティングを行う。ルーティング方法にはフェールオーバー、ラウンドロビン、パフォーマンスの3通りがある。これについて詳しくは「[Traffic Managerのルーティング方法](https://azure.microsoft.com/ja-jp/documentation/articles/traffic-manager-routing-methods/)」を参照いただきたい。
-`
 
+```
 ; <<>> DiG 9.9.5-4.3ubuntu0.1-Ubuntu <<>> yoichika-demo1.trafficmanager.net +noall +answer
-
 ;; global options: +cmd
-
 yoichika-demo1.trafficmanager.net. 30 IN CNAME  webappdemo3.cloudapp.net.
-
 webappdemo3.cloudapp.net. 60    IN      A       70.37.93.167
-`
-
-  
+```
 
 次に肝心のエンドポイントの監視について「[Traffic Manager の監視について](https://azure.microsoft.com/ja-jp/documentation/articles/traffic-manager-monitoring/)」の監視シーケンスを使って要点を整理する。
 
