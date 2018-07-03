@@ -26,7 +26,7 @@ tags:
 - Helm
 ---
 
-先日、4月19日に開催された[Japan Container Days v18.04](https://containerdays.jp/)にて「Kubernetes x PaaS &ndash; コンテナアプリケーションのNoOpsへの挑戦」というタイトルでセッションを担当させていただいた。その名の通りメインがKubernetesで、KubernetesアプリケーションにおいてNoOps（運用レス）を目指すためのにどういった工夫ができるのか、どういったものを活用していけばよいのか、という内容です。このブログではJapan Container Daysでの発表に使用したスライドの共有とセッションに中のサンプルやデモについて補足させていただく。
+先日、4月19日に開催された[Japan Container Days v18.04](https://containerdays.jp/)にて「Kubernetes x PaaS &ndash; コンテナアプリケーションのNoOpsへの挑戦」というタイトルでセッションを担当させていただいた。その名の通りメインがKubernetesで、KubernetesアプリケーションにおいてNoOps（運用レス）を目指すためのにどういった工夫ができるのか、どういったものを活用していけばよいのか、という内容です。このブログではJapan Container Daysでの発表に使用したスライドの共有とセッションに中のサンプルやデモについて補足させていただく。
 
 # Session Slides
 [![](https://image.slidesharecdn.com/jkd201804-kubernetespassnoopsmicrosoft-kawasaki-180419045509/95/kubernetes-x-paas-noops-1-1024.jpg?cb=1527122000)](//www.slideshare.net/yokawasa/kubernetes-x-paas-noops)
