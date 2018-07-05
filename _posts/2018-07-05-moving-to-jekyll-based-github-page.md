@@ -185,14 +185,15 @@ $ dig +noall +answer unofficialism.info
 unofficialism.info.     146     IN      A       XX.XXX.XXX.XX
 ```
 
-Then, follow my DNS provider's instructions to create A records that point my custom domain to the following IP addresses:
+Then, follow my DNS provider's instructions to create A records that point my custom domain to the following IP addresses (These are fixed IPs but these IPs can be obtained simply by running dig for username.github.com):
 ```
 185.199.108.153
 185.199.109.153
 185.199.110.153
 185.199.111.153
 ```
-Confirm that your DNS record is set up correctly
+
+Confirm that the DNS record is set up correctly
 ```sh
 $ dig +noall +answer unofficialism.info
 
@@ -203,8 +204,7 @@ unofficialism.info.     430     IN      A       185.199.111.153
 ```
 In addition, add my custom domain for my GitHub Pages site in Github Page setting page by following [Adding or removing a custom domain for your GitHub Pages site](https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site/)
 
-Finally, confirm that I can access to my Github page with my custom domain
+Finally, confirm the access to my Github page with my custom domain
 ```sh
 $ curl https://unofficialism.info
 ```
-    

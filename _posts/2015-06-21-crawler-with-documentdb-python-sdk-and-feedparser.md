@@ -5,8 +5,6 @@ published: true
 title: DocumentDB Python SDKとfeedparserで作る簡易クローラー
 author:
   display_name: Yoichi Kawasaki
-  login: yoichi
-  email: yokawasa@gmail.com
   url: http://github.com/yokawasa
 author_login: yoichi
 author_email: yokawasa@gmail.com
