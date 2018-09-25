@@ -223,7 +223,7 @@ az storage account create --name $STORAGE_ACCOUNT \
 
 Give your function app name to `APP_NAME` variable, and execute az command like this.
 
-```
+```sh
 APP_NAME="yoichikaazfuncv2linux001"
 az functionapp createpreviewapp --name $APP_NAME \
     --resource-group $RESOURCE_GROUP \
