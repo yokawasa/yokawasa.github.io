@@ -13,12 +13,12 @@
         
         <tr>
           <td class="docs">
-            <p>Sometimes we&rsquo;d like our Go programs to intelligently
+            <p>Sometimes we'd like our Go programs to intelligently
 handle <a href="http://en.wikipedia.org/wiki/Unix_signal">Unix signals</a>.
 For example, we might want a server to gracefully
 shutdown when it receives a <code>SIGTERM</code>, or a command-line
 tool to stop processing input if it receives a <code>SIGINT</code>.
-Here&rsquo;s how to handle signals in Go with channels.</p>
+Here's how to handle signals in Go with channels.</p>
 
           </td>
           <td class="code empty leading">
@@ -69,8 +69,8 @@ Here&rsquo;s how to handle signals in Go with channels.</p>
         <tr>
           <td class="docs">
             <p>Go signal notification works by sending <code>os.Signal</code>
-values on a channel. We&rsquo;ll create a channel to
-receive these notifications (we&rsquo;ll also make one to
+values on a channel. We'll create a channel to
+receive these notifications (we'll also make one to
 notify us when the program can exit).</p>
 
           </td>
@@ -100,7 +100,7 @@ receive notifications of the specified signals.</p>
         <tr>
           <td class="docs">
             <p>This goroutine executes a blocking receive for
-signals. When it gets one it&rsquo;ll print it out
+signals. When it gets one it'll print it out
 and then notify the program that it can finish.</p>
 
           </td>

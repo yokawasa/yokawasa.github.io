@@ -13,10 +13,10 @@
         
         <tr>
           <td class="docs">
-            <p>Sometimes we&rsquo;ll want to sort a collection by something
+            <p>Sometimes we'll want to sort a collection by something
 other than its natural order. For example, suppose we
 wanted to sort strings by their length instead of
-alphabetically. Here&rsquo;s an example of custom sorts
+alphabetically. Here's an example of custom sorts
 in Go.</p>
 
           </td>
@@ -54,7 +54,7 @@ in Go.</p>
         <tr>
           <td class="docs">
             <p>In order to sort by a custom function in Go, we need a
-corresponding type. Here we&rsquo;ve created a <code>byLength</code>
+corresponding type. Here we've created a <code>byLength</code>
 type that is just an alias for the builtin <code>[]string</code>
 type.</p>
 
@@ -70,7 +70,7 @@ type.</p>
         <tr>
           <td class="docs">
             <p>We implement <code>sort.Interface</code> - <code>Len</code>, <code>Less</code>, and
-<code>Swap</code> - on our type so we can use the <code>sort</code> package&rsquo;s
+<code>Swap</code> - on our type so we can use the <code>sort</code> package's
 generic <code>Sort</code> function. <code>Len</code> and <code>Swap</code>
 will usually be similar across types and <code>Less</code> will
 hold the actual custom sorting logic. In our case we

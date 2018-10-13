@@ -29,7 +29,7 @@
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/6JvB0HgWkgk"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/_0Um7HD6G2A"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -51,17 +51,17 @@
         <tr>
           <td class="docs">
             <p>この関数 <code>intSeq</code>は<code>intSeq</code>の本体に無名関数として定義された別の関数を返します。
-返された関数_は、クロージャを形成する変数<code>i</code>を<em>閉包する(closes over)</em></p>
+返された関数<em>は、クロージャを形成する変数<code>i</code>を</em>閉包する(closes over)_</p>
 
           </td>
           <td class="code leading">
 	        
             <div class="highlight"><pre><span class="kd">func</span> <span class="nx">intSeq</span><span class="p">()</span> <span class="kd">func</span><span class="p">()</span> <span class="kt">int</span> <span class="p">{</span>
-	<span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span>
-	<span class="k">return</span> <span class="kd">func</span><span class="p">()</span> <span class="kt">int</span> <span class="p">{</span>
-		<span class="nx">i</span><span class="o">++</span>
-		<span class="k">return</span> <span class="nx">i</span>
-	<span class="p">}</span>
+    <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="kd">func</span><span class="p">()</span> <span class="kt">int</span> <span class="p">{</span>
+        <span class="nx">i</span><span class="o">++</span>
+        <span class="k">return</span> <span class="nx">i</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -88,7 +88,7 @@
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>	<span class="nx">nextInt</span> <span class="o">:=</span> <span class="nx">intSeq</span><span class="p">()</span>
+            <div class="highlight"><pre>    <span class="nx">nextInt</span> <span class="o">:=</span> <span class="nx">intSeq</span><span class="p">()</span>
 </pre></div>
 
           </td>
@@ -101,9 +101,9 @@
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nextInt</span><span class="p">())</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nextInt</span><span class="p">())</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nextInt</span><span class="p">())</span>
+            <div class="highlight"><pre>    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nextInt</span><span class="p">())</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nextInt</span><span class="p">())</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nextInt</span><span class="p">())</span>
 </pre></div>
 
           </td>
@@ -117,8 +117,8 @@
           </td>
           <td class="code">
 	        
-            <div class="highlight"><pre>	<span class="nx">newInts</span> <span class="o">:=</span> <span class="nx">intSeq</span><span class="p">()</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">newInts</span><span class="p">())</span>
+            <div class="highlight"><pre>    <span class="nx">newInts</span> <span class="o">:=</span> <span class="nx">intSeq</span><span class="p">()</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">newInts</span><span class="p">())</span>
 <span class="p">}</span>
 </pre></div>
 

@@ -14,9 +14,9 @@
         <tr>
           <td class="docs">
             <p>We often want to execute Go code at some point in the
-future, or repeatedly at some interval. Go&rsquo;s built-in
+future, or repeatedly at some interval. Go's built-in
 <em>timer</em> and <em>ticker</em> features make both of these tasks
-easy. We&rsquo;ll look first at timers and then
+easy. We'll look first at timers and then
 at <a href="tickers">tickers</a>.</p>
 
           </td>
@@ -81,7 +81,7 @@ time. This timer will wait 2 seconds.</p>
         
         <tr>
           <td class="docs">
-            <p>The <code>&lt;-timer1.C</code> blocks on the timer&rsquo;s channel <code>C</code>
+            <p>The <code>&lt;-timer1.C</code> blocks on the timer's channel <code>C</code>
 until it sends a value indicating that the timer
 expired.</p>
 
@@ -100,7 +100,7 @@ expired.</p>
             <p>If you just wanted to wait, you could have used
 <code>time.Sleep</code>. One reason a timer may be useful is
 that you can cancel the timer before it expires.
-Here&rsquo;s an example of that.</p>
+Here's an example of that.</p>
 
           </td>
           <td class="code">

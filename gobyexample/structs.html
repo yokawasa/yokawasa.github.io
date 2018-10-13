@@ -13,7 +13,7 @@
         
         <tr>
           <td class="docs">
-            <p>Goの_構造体(s​​tructs)_は型付きフィールドの集合です。データをグループ化してレコードを形成するのに便利です</p>
+            <p>Goの<em>構造体(s​​tructs)</em>は型付きフィールドの集合です。データをグループ化してレコードを形成するのに便利です</p>
 
           </td>
           <td class="code empty leading">
@@ -27,7 +27,7 @@
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/P3mr2Ti1omO"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/sSCe5M1Lbm3"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -54,8 +54,8 @@
           <td class="code leading">
 	        
             <div class="highlight"><pre><span class="kd">type</span> <span class="nx">person</span> <span class="kd">struct</span> <span class="p">{</span>
-	<span class="nx">name</span> <span class="kt">string</span>
-	<span class="nx">age</span>  <span class="kt">int</span>
+    <span class="nx">name</span> <span class="kt">string</span>
+    <span class="nx">age</span>  <span class="kt">int</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -81,7 +81,7 @@
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">person</span><span class="p">{</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">})</span>
+            <div class="highlight"><pre>    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">person</span><span class="p">{</span><span class="s">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">})</span>
 </pre></div>
 
           </td>
@@ -94,7 +94,7 @@
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">person</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="s">&quot;Alice&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="mi">30</span><span class="p">})</span>
+            <div class="highlight"><pre>    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">person</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="s">&quot;Alice&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="mi">30</span><span class="p">})</span>
 </pre></div>
 
           </td>
@@ -107,7 +107,7 @@
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">person</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="s">&quot;Fred&quot;</span><span class="p">})</span>
+            <div class="highlight"><pre>    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">person</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="s">&quot;Fred&quot;</span><span class="p">})</span>
 </pre></div>
 
           </td>
@@ -120,7 +120,7 @@
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">person</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="s">&quot;Ann&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="mi">40</span><span class="p">})</span>
+            <div class="highlight"><pre>    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">person</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="s">&quot;Ann&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="mi">40</span><span class="p">})</span>
 </pre></div>
 
           </td>
@@ -133,8 +133,8 @@
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>	<span class="nx">s</span> <span class="o">:=</span> <span class="nx">person</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="s">&quot;Sean&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+            <div class="highlight"><pre>    <span class="nx">s</span> <span class="o">:=</span> <span class="nx">person</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span> <span class="s">&quot;Sean&quot;</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">s</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
 </pre></div>
 
           </td>
@@ -147,8 +147,8 @@
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>	<span class="nx">sp</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">s</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">sp</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>
+            <div class="highlight"><pre>    <span class="nx">sp</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">s</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">sp</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>
 </pre></div>
 
           </td>
@@ -161,8 +161,8 @@
           </td>
           <td class="code">
 	        
-            <div class="highlight"><pre>	<span class="nx">sp</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">51</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">sp</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>
+            <div class="highlight"><pre>    <span class="nx">sp</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">51</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">sp</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
 
