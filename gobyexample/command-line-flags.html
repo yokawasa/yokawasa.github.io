@@ -40,7 +40,7 @@ command-line flag.</p>
         <tr>
           <td class="docs">
             <p>Go provides a <code>flag</code> package supporting basic
-command-line flag parsing. We'll use this package to
+command-line flag parsing. We&rsquo;ll use this package to
 implement our example command-line program.</p>
 
           </td>
@@ -72,7 +72,7 @@ integer, and boolean options. Here we declare a
 string flag <code>word</code> with a default value <code>&quot;foo&quot;</code>
 and a short description. This <code>flag.String</code> function
 returns a string pointer (not a string value);
-we'll see how to use this pointer below.</p>
+we&rsquo;ll see how to use this pointer below.</p>
 
           </td>
           <td class="code leading">
@@ -100,7 +100,7 @@ similar approach to the <code>word</code> flag.</p>
         
         <tr>
           <td class="docs">
-            <p>It's also possible to declare an option that uses an
+            <p>It&rsquo;s also possible to declare an option that uses an
 existing var declared elsewhere in the program.
 Note that we need to pass in a pointer to the flag
 declaration function.</p>
@@ -131,7 +131,7 @@ to execute the command-line parsing.</p>
         
         <tr>
           <td class="docs">
-            <p>Here we'll just dump out the parsed options and
+            <p>Here we&rsquo;ll just dump out the parsed options and
 any trailing positional arguments. Note that we
 need to dereference the pointers with e.g. <code>*wordPtr</code>
 to get the actual option values.</p>
@@ -156,7 +156,7 @@ to get the actual option values.</p>
         
         <tr>
           <td class="docs">
-            <p>To experiment with the command-line flags program it's
+            <p>To experiment with the command-line flags program it&rsquo;s
 best to first compile it and then run the resulting
 binary directly.</p>
 
@@ -265,7 +265,7 @@ generated help text for the command-line program.</p>
         
         <tr>
           <td class="docs">
-            <p>If you provide a flag that wasn't specified to the
+            <p>If you provide a flag that wasn&rsquo;t specified to the
 <code>flag</code> package, the program will print an error message
 and show the help text again.</p>
 
@@ -283,7 +283,7 @@ and show the help text again.</p>
         
         <tr>
           <td class="docs">
-            <p>Next we'll look at environment variables, another common
+            <p>Next we&rsquo;ll look at environment variables, another common
 way to parameterize programs.</p>
 
           </td>

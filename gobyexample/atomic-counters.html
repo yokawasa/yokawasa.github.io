@@ -16,7 +16,7 @@
             <p>The primary mechanism for managing state in Go is
 communication over channels. We saw this for example
 with <a href="worker-pools">worker pools</a>. There are a few other
-options for managing state though. Here we'll
+options for managing state though. Here we&rsquo;ll
 look at using the <code>sync/atomic</code> package for <em>atomic
 counters</em> accessed by multiple goroutines.</p>
 
@@ -67,7 +67,7 @@ counters</em> accessed by multiple goroutines.</p>
         
         <tr>
           <td class="docs">
-            <p>We'll use an unsigned integer to represent our
+            <p>We&rsquo;ll use an unsigned integer to represent our
 (always-positive) counter.</p>
 
           </td>
@@ -81,7 +81,7 @@ counters</em> accessed by multiple goroutines.</p>
         
         <tr>
           <td class="docs">
-            <p>To simulate concurrent updates, we'll start 50
+            <p>To simulate concurrent updates, we&rsquo;ll start 50
 goroutines that each increment the counter about
 once a millisecond.</p>
 
@@ -143,7 +143,7 @@ address of our <code>ops</code> counter with the
         
         <tr>
           <td class="docs">
-            <p>In order to safely use the counter while it's still
+            <p>In order to safely use the counter while it&rsquo;s still
 being updated by other goroutines, we extract a
 copy of the current value into <code>opsFinal</code> via
 <code>LoadUint64</code>. As above we need to give this
@@ -182,7 +182,7 @@ fetch the value.</p>
         
         <tr>
           <td class="docs">
-            <p>Next we'll look at mutexes, another tool for managing
+            <p>Next we&rsquo;ll look at mutexes, another tool for managing
 state.</p>
 
           </td>
