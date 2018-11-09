@@ -13,9 +13,8 @@
         
         <tr>
           <td class="docs">
-            <p>We can use channels to synchronize execution
-across goroutines. Here&rsquo;s an example of using a
-blocking receive to wait for a goroutine to finish.</p>
+            <p>Channelを使用して、goroutine間で実行を同期させることができます。
+ここではブロッキング受信を使用してgoroutineが終了するのを待機する例を示します</p>
 
           </td>
           <td class="code empty leading">
@@ -29,7 +28,7 @@ blocking receive to wait for a goroutine to finish.</p>
             
           </td>
           <td class="code leading">
-	        <a href="http://play.golang.org/p/0DfW-1RMqi"><img title="Run code" src="play.png" class="run" /></a>
+	        <a href="http://play.golang.org/p/u_0_WgpSnHI"><img title="Run code" src="play.png" class="run" /></a>
             <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
 </pre></div>
 
@@ -51,17 +50,16 @@ blocking receive to wait for a goroutine to finish.</p>
         
         <tr>
           <td class="docs">
-            <p>This is the function we&rsquo;ll run in a goroutine. The
-<code>done</code> channel will be used to notify another
-goroutine that this function&rsquo;s work is done.</p>
+            <p>これは、ゴルーチンで実行する関数です。
+<code>done</code> channelは、この関数の作業が完了したことを他のゴルーチンに通知するために使用されます。</p>
 
           </td>
           <td class="code leading">
 	        
             <div class="highlight"><pre><span class="kd">func</span> <span class="nx">worker</span><span class="p">(</span><span class="nx">done</span> <span class="kd">chan</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;working...&quot;</span><span class="p">)</span>
-    <span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;done&quot;</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;working...&quot;</span><span class="p">)</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;done&quot;</span><span class="p">)</span>
 </pre></div>
 
           </td>
@@ -69,12 +67,12 @@ goroutine that this function&rsquo;s work is done.</p>
         
         <tr>
           <td class="docs">
-            <p>Send a value to notify that we&rsquo;re done.</p>
+            <p>完了したことを通知するために値を送信</p>
 
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>    <span class="nx">done</span> <span class="o">&lt;-</span> <span class="kc">true</span>
+            <div class="highlight"><pre>	<span class="nx">done</span> <span class="o">&lt;-</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -95,14 +93,13 @@ goroutine that this function&rsquo;s work is done.</p>
         
         <tr>
           <td class="docs">
-            <p>Start a worker goroutine, giving it the channel to
-notify on.</p>
+            <p>ワーカー用goroutineに通知するchannelを渡してそのgoroutineを開始します。</p>
 
           </td>
           <td class="code leading">
 	        
-            <div class="highlight"><pre>    <span class="nx">done</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="k">go</span> <span class="nx">worker</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span>
+            <div class="highlight"><pre>	<span class="nx">done</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">bool</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+	<span class="k">go</span> <span class="nx">worker</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span>
 </pre></div>
 
           </td>
@@ -110,13 +107,12 @@ notify on.</p>
         
         <tr>
           <td class="docs">
-            <p>Block until we receive a notification from the
-worker on the channel.</p>
+            <p>channel上のワーカーから通知を受け取るまでブロックします。</p>
 
           </td>
           <td class="code">
 	        
-            <div class="highlight"><pre>    <span class="o">&lt;-</span><span class="nx">done</span>
+            <div class="highlight"><pre>	<span class="o">&lt;-</span><span class="nx">done</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -142,9 +138,7 @@ worker on the channel.</p>
         
         <tr>
           <td class="docs">
-            <p>If you removed the <code>&lt;- done</code> line from this program, the
-program would exit before the <code>worker</code> even
-started.</p>
+            <p>もし<code>&lt;- done</code>の行を削除すると、プログラムは<code>worker</code>が起動する前に終了するかもしれません</p>
 
           </td>
           <td class="code empty">
