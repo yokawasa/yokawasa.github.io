@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Envoy Proxy Demos 
+title: Set of Envoy Proxy features demos
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa
