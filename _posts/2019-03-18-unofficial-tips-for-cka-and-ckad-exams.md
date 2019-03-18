@@ -97,4 +97,4 @@ Good luck with your exams!
 
 ps. Here are my Certificate IDs
 
-![](../assets/20190318-cka-ckad.png)
+![]({{ site.url }}/assets/20190318-cka-ckad.png)
