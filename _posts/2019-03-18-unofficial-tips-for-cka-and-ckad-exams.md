@@ -35,7 +35,8 @@ It's very important to read and understand the exam curriculum and their relevan
   - [kubernetes.io/docs](https://kubernetes.io/docs)
   - [kubernetes.io/blog/](https://kubernetes.io/blog/)
   - [github.com/kubernetes](https://github.com/kubernetes/)
-- For both CKA and CKAD: Great Books to read: the following are books I've read and found useful for CKA and CKAD. They are defenitly helpful to understand how to manage and operate the kubernetes cluster. Pick one or two that you think good fit and read through:
+- For both CKA and CKAD: the following are books that I found useful for CKA and CKAD. They are defenitly helpful to understand how to manage and operate the kubernetes cluster. Pick one or two that you think good fit and read through:
+  - Book: [Kubernetes: Up and Running](http://shop.oreilly.com/product/0636920043874.do)
   - Book: [Managing Kubernetes](http://shop.oreilly.com/product/0636920146667.do) (Free PDF by Heptio is [here](https://go.heptio.com/rs/383-ENX-437/images/Managing_Kubernetes.pdf))
   - Book(日本語): [Kubernetes完全ガイド](https://book.impress.co.jp/books/1118101055)
   - Book(日本語): [しくみがわかるKubernetes Azureで動かしながら学ぶコンセプトと実践知識](https://www.shoeisha.co.jp/book/detail/9784798157849)
@@ -47,10 +48,10 @@ It's very important to read and understand the exam curriculum and their relevan
   - [Determine the Reason for Pod Failure](https://kubernetes.io/docs/tasks/debug-application-cluster/determine-reason-pod-failure/)
   - [Application Introspection and Debugging](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application-introspection/)
   - [Debug Services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/)
-- For CKA: these below are pages and books that I've read and thought very useful for CKA exam
-  - GitHub: [Kubernetes-Certified-Administrator](https://github.com/walidshaari/Kubernetes-Certified-Administrator)
+- For CKA: these below are Github repo that I though very useful for CKA exam preps:
+  - [Kubernetes-Certified-Administrator](https://github.com/walidshaari/Kubernetes-Certified-Administrator)
 - For CKAD: these below are Github repo that I thought very very useful for CKAD exam preps:
-  - Github: [CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
+  - [CKAD Exercises](https://github.com/dgkanatsios/CKAD-exercises)
 - For both: it's very important to know a quick way to achieve goals by using kubectl. You can lookup kubernetes.io during the exam but it's always good to know shortcut ways as the exam time is limited (CKA = 3hrs / CKAD = 2hrs)
   - [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
   - Creating template YAML using kubectl `dry-run` and edit it instead of creating YAML from scratch
@@ -61,7 +62,7 @@ It's very important to read and understand the exam curriculum and their relevan
     $ kubectl run nginx --image=nginx  --dry-run -o yaml
     # Servcie template
     $ kubectl expose deployment nginx --type=NodePort --port 8080 --dry-run -o yaml
-     
+
     # [NOTE1]
     # You can change resource to release by changing --restart option:
     # kind       |  option
