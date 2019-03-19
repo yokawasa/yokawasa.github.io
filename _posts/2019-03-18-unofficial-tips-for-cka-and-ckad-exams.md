@@ -31,7 +31,7 @@ It's very important to read and understand the exam curriculum and their relevan
 
 ## Tips for the exams
 
-- Read and understand [the exam curriculum](https://github.com/cncf/curriculum) and their relevant pages on [kubernetes.io](https://kubernetes.io). You are allowed to look up the following pages
+- Read and understand [the exam curriculum](https://github.com/cncf/curriculum) and their relevant pages on [kubernetes.io](https://kubernetes.io). You are allowed to look up the following sites during the exam
   - [kubernetes.io/docs](https://kubernetes.io/docs)
   - [kubernetes.io/blog/](https://kubernetes.io/blog/)
   - [github.com/kubernetes](https://github.com/kubernetes/)
