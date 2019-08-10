@@ -57,7 +57,7 @@ azping evalulate the median latecy of http request to Azure blob storage endpoin
 
 > NOTE
 > All blob storage endpoints are created with the following scripts (Just in case I leave the procedures):
-> ```
+> ```bash
 > git clone https://github.com/yokawasa/azping.git
 > cd setup
 > # Edit RESOURCE_GROUP and REGION_LIST variables in env.sh
