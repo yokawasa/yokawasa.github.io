@@ -2,7 +2,7 @@
 layout|post
 status|publish
 published|true
-title|Finding the lowest latency Azure Region from your place with azping
+title|Find the lowest latency Azure region from your place using azping
 author:
   display_name|Yoichi Kawasaki
   url|http://github.com/yokawasa
