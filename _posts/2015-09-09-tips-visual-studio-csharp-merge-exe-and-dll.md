@@ -2,7 +2,6 @@
 layout: post
 status: publish
 published: true
-title: C Sharpで実行ファイルにDLLをスタティックリンクさせたい
 title: Static linking DLL to EXE in C Sharp
 author:
   display_name: Yoichi Kawasaki
