@@ -21,7 +21,8 @@ tags:
 ## What does azping actually evalulate?
 
 azping evalulate the median latecy of http request to Azure blob storage endpoints located in each of Azure reagions from your place. Here are a list of Azure blob storage endpoints:
-| region | endpoint |
+
+|region|endpoints|
 |---|---|
 | eastasia|            azpingeastasia.blob.core.windows.net/ping |
 | southeastasia|       azpingsoutheastasia.blob.core.windows.net/ping |
