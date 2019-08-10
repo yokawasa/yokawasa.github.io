@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: PythonによるAzure Functions アプリ開発 - Experimental編
+title: Azure Functions Python Programming  - Experimental
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa

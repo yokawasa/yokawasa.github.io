@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Azure Cognitive Services Face APIを使ったビデオコンテンツ中の人物識別デモ
+title: Detecting faces in Video contents using Azure Cognitive Services Face API
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa

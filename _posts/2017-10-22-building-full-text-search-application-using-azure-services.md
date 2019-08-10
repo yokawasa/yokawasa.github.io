@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Azure サービスを活用して作るフルマネージドな全文検索アプリケーション
+title: Developing Full Managed Search Application in Azure
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa

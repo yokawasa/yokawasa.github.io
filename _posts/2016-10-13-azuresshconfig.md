@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: azuresshconfigの紹介 - Azure上でのSSH生活を少しだけ快適にする
+title: Making SSH lives in Azure easier with azuresshconfig
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa

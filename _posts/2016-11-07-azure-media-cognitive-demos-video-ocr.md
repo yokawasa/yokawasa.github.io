@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Azure Media & Cognitiveデモ：Video OCR
+title: Video OCR using Azure Media & Cognitive
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa

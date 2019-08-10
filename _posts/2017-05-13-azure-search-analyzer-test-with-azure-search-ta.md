@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Azure Searchのアナライザーによるテキスト解析結果を出力するツール - azure-search-ta
+title: Azure Search Text Analyzer Tools - azure-search-ta
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa

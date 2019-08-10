@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: de:code 2017 DI08 - Azure Searchセッションフォローアップ
+title: de:code 2017 Azure Search Session follow-up
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa

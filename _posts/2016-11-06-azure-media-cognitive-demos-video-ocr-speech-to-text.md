@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: Azure Media & Cognitiveデモ：Speech-To-Text
+title: Speech-To-Text with Azure Media & Cognitive Services
 author:
   display_name: Yoichi Kawasaki
   url: http://github.com/yokawasa
