@@ -1,19 +1,19 @@
 ---
-layout|post
-status|publish
-published|true
-title|azping
+layout: post
+status: publish
+published: true
+title: Find the lowest latency Azure regions from your place using azping
 author:
-  display_name|Yoichi Kawasaki
-  url|http://github.com/yokawasa
-author_login|yoichi
-author_email|yokawasa@gmail.com
-author_url|http://github.com/yokawasa
-date|'2019-08-10 10:32:40 +0900'
+  display_name: Yoichi Kawasaki
+  url: http://github.com/yokawasa
+author_login: yoichi
+author_email: yokawasa@gmail.com
+author_url: http://github.com/yokawasa
+date: '2019-08-10 10:32:40 +0900'
 tags:
-|Azure
-|ping
-|azping
+- Azure
+- ping
+- azping
 ---
 
 [azping](https://github.com/yokawasa/azping) is a command line tools that help you find the lowest latency Azure Region from your place. It acutally reports median latency to Azure regions. It is fork of [gcping](https://github.com/GoogleCloudPlatform/gcping). 
@@ -88,7 +88,8 @@ $ curl https://azpingrelease.blob.core.windows.net/azping_windows_amd64 > azping
 ```
 
 ## Usage
-```
+
+```txt
 azping [options...]
 
 Options:
@@ -109,6 +110,5 @@ Options:
 Here is an output of azping when I executed azping from my home in Tokyo
 
 ![]({{ site.url }}/assets/20190810-azping.png)
-
 
 Enjoy azping!
