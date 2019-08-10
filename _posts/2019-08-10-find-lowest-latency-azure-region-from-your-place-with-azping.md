@@ -22,6 +22,39 @@ tags:
 
 azping evalulate the median latecy of http request to Azure blob storage endpoints located in each of Azure reagions from your place. Here are a list of Azure blob storage endpoints:
 
+| region | endpoint |
+|------|------|
+| eastasia|            azpingeastasia.blob.core.windows.net/ping |
+| southeastasia|       azpingsoutheastasia.blob.core.windows.net/ping |
+| centralus|           azpingcentralus.blob.core.windows.net/ping |
+| eastus|              azpingeastus.blob.core.windows.net/ping |
+| eastus2|             azpingeastus2.blob.core.windows.net/ping |
+| westus|              azpingwestus.blob.core.windows.net/ping |
+| northcentralus|      azpingnorthcentralus.blob.core.windows.net/ping |
+| southcentralus|      azpingsouthcentralus.blob.core.windows.net/ping |
+| northeurope|         azpingnortheurope.blob.core.windows.net/ping |
+| westeurope|          azpingwesteurope.blob.core.windows.net/ping |
+|japanwest|           azpingjapanwest.blob.core.windows.net/ping |
+| japaneast|           azpingjapaneast.blob.core.windows.net/ping |
+| brazilsouth|         azpingbrazilsouth.blob.core.windows.net/ping |
+| australiaeast|       azpingaustraliaeast.blob.core.windows.net/ping |
+| australiasoutheast|  azpingaustraliasoutheast.blob.core.windows.net/ping |
+| southindia|          azpingsouthindia.blob.core.windows.net/ping |
+| centralindia|        azpingcentralindia.blob.core.windows.net/ping |
+| westindia|           azpingwestindia.blob.core.windows.net/ping |
+| canadacentral|       azpingcanadacentral.blob.core.windows.net/ping |
+| canadaeast|          azpingcanadaeast.blob.core.windows.net/ping |
+| uksouth|             azpinguksouth.blob.core.windows.net/ping |
+| ukwest|              azpingukwest.blob.core.windows.net/ping |
+| westcentralus|       azpingwestcentralus.blob.core.windows.net/ping |
+| westus2|             azpingwestus2.blob.core.windows.net/ping |
+| koreacentral|        azpingkoreacentral.blob.core.windows.net/ping |
+| koreasouth|          azpingkoreasouth.blob.core.windows.net/ping |
+| francecentral|       azpingfrancecentral.blob.core.windows.net/ping |
+| australiacentral|    azpingaustraliacentral.blob.core.windows.net/ping |
+| uaenorth|            azpinguaenorth.blob.core.windows.net/ping |
+| southafricanorth|    azpingsouthafricanorth.blob.core.windows.net/ping |
+
 > NOTE
 > All blob storage endpoints are created with the following scripts (Just in case I leave the procedures):
 > ```
