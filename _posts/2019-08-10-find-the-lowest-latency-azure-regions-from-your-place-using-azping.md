@@ -16,7 +16,7 @@ tags:
 - azping
 ---
 
-[azping](https://github.com/yokawasa/azping) is a command line tools that help you find the lowest latency Azure Region from your place. It acutally reports median latency to Azure regions. It is fork of [gcping](https://github.com/GoogleCloudPlatform/gcping). 
+[azping](https://github.com/yokawasa/azping) is a command line tools that help you find the lowest latency Azure Region from your place. It acutally reports median latency to Azure regions. It is a fork of [gcping](https://github.com/GoogleCloudPlatform/gcping). 
 
 ## What does azping actually evalulate?
 
@@ -60,18 +60,18 @@ Here is a list of Azure blob storage endpoints that azping evalulates:
 > NOTE
 > All blob storage endpoints are created with the following scripts (Just in case I leave the procedures):
 > ```bash
-> git clone https://github.com/yokawasa/azping.git
-> cd setup
+> $ git clone https://github.com/yokawasa/azping.git
+> $ cd setup
 > # Edit RESOURCE_GROUP and REGION_LIST variables in env.sh
-> cat env.sh
+> $ vi env.sh
 > # Read variables as enviroment variables
-> source env.sh
+> $ source env.sh
 > # Execute the following script that execute the following|
 > # (1) Create resource group for azping
 > # (2) Create blob storage accounts in each of Azure regions
 > # (3) Create $root container and upload ping file to the container
 > # (4) Check accessibility to all blob storage endpoints
-> ping-entrypoint.sh
+> $ ping-entrypoint.sh
 > ```
 
 ## How to install
@@ -89,10 +89,23 @@ Windows 64-bit|https://azpingrelease.blob.core.windows.net/azping_windows_amd64
 $ curl https://azpingrelease.blob.core.windows.net/azping_windows_amd64 > azping && chmod +x azping
 ```
 
+Or, you can always build the binary from the source code like this:
+```
+$ git clone https://github.com/yokawasa/azping.git
+$ cd azping
+$ make
+$ tree bin
+
+bin
+├── azping_darwin_amd64
+├── azping_linux_amd64
+└── azping_windows_amd64
+```
+
 ## Usage
 
 ```txt
-azping [options...]
+$ azping [options...]
 
 Options:
 -n   Number of requests to be made to each region.
