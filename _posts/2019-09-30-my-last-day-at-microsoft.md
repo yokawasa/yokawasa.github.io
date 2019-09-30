@@ -13,6 +13,7 @@ date: '2019-09-30 22:32:40 +0900'
 tags:
 - Microsoft
 - Career
+image: 20190930-my-last-day-at-microsoft1.jpg
 ---
 
 Today is my last day at Microsoft. 
