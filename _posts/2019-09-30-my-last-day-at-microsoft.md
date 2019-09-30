@@ -24,7 +24,8 @@ I would like to extend my sincerest thanks to all the my customers and partners 
 
 I will start a new phase of my career from tomorrow. But it is indeed a small world in our industry. I hope our paths cross again, and it would be great if we may be able to work together again somewhere. 
 
-Please reach out to me  if you ever want to catch up. 
+Please reach out to me if you ever want to catch up.  
+My personal contacts: yokawasa @ [linkedin](https://www.linkedin.com/in/yokawasa/), [twitter](https://twitter.com/yokawasa), [facebook](https://facebook.com/yokawasa) & [github](https://github.com/yokawasa)
 
-![]({{ site.url }}/assets/my-last-day-at-microsoft1.JPG)
+![]({{ site.url }}/assets/my-last-day-at-microsoft1.jpg)
 
