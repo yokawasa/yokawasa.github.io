@@ -27,5 +27,4 @@ I will start a new phase of my career from tomorrow. But it is indeed a small wo
 Please reach out to me if you ever want to catch up.  
 My personal contacts: yokawasa @ [linkedin](https://www.linkedin.com/in/yokawasa/), [twitter](https://twitter.com/yokawasa), [facebook](https://facebook.com/yokawasa) & [github](https://github.com/yokawasa)
 
-![]({{ site.url }}/assets/my-last-day-at-microsoft1.jpg)
-
+![]({{ site.url }}/assets/20190930-my-last-day-at-microsoft1.jpg)
