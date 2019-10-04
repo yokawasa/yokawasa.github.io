@@ -22,6 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://unofficialism.info" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yokawasa
 github_username:  yokawasa
+linkedin_username:  yokawasa
 slideshare_username:  yokawasa
 
 # Build settings
