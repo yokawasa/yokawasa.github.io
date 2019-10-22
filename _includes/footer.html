@@ -6,6 +6,7 @@
 {%- if site.twitter_username -%}<a href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">Twitter</span></a> &nbsp; &nbsp; {%- endif -%}
 {%- if site.linkedin_username -%}<a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg> <span class="username">Linkedin</span></a> &nbsp; &nbsp; {%- endif -%}
 {%- if site.slideshare_username -%}<a href="https://www.slideshare.net/{{ site.slideshare_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg> <span class="username">Slideshare</span></a> &nbsp; &nbsp; {%- endif -%}
+{%- if site.speakerdeck_username -%}<a href="https://speakerdeck.com/{{ site.slideshare_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ site.url }}/assets/speakerdeck.svg"></use></svg> <span class="username">Speakerdeck</span></a> &nbsp; &nbsp; {%- endif -%}
 <a href="{{ 'atom.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg> <span>RSS Feed</span></a>
 </div>
 <div class="wrapper">
