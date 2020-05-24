@@ -23,7 +23,7 @@ There are various ways to obtain Kubernetes metrics which you can use to visuali
 
 Many Kubernetes components exposes their metrics via the `/metrics` endpoint, including API server, etcd and many other add-ons. These metrics are in [Prometheus format](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exposition_formats.md), and can be defined and exposed using [Prometheus client libs](https://prometheus.io/docs/instrumenting/clientlibs/)
 
-```
+```bash
 kubectl get --raw /metrics
 ```
 
@@ -52,7 +52,7 @@ APIServiceOpenAPIAggregationControllerQueue1_work_duration_count 282663
 
 You can access Kubernetes [Metrics API](https://github.com/kubernetes/metrics) via kubectl proxy like this:
 
-```
+```bash
 kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes
 kubectl get --raw /apis/metrics.k8s.io/v1beta1/pods
 kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes/<node-name>
@@ -64,12 +64,11 @@ Outputs via metrics API are unformated JSON, thus it's good to use `jq` to parse
 
 **Sample output -  /apis/metrics.k8s.io/v1beta1/nodes**
 
-```
+```bash
 kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq
 ```
 
 ```json
-
 {
   "kind": "NodeMetricsList",
   "apiVersion": "metrics.k8s.io/v1beta1",
@@ -105,12 +104,12 @@ kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq
     }
   ]
 }
-
 ```
 
 
 **Sample output - /apis/metrics.k8s.io/v1beta1/namespaces/NAMESPACE/pods/PODNAME**
-```
+
+```bash
 kubectl get --raw /apis/metrics.k8s.io/v1beta1/namespaces/kube-system/pods/cluster-autoscaler-7d8d69668c-5rcmt | jq
 ```
 
