@@ -46,21 +46,7 @@ APIServiceOpenAPIAggregationControllerQueue1_work_duration{quantile="0.99"} 2003
 APIServiceOpenAPIAggregationControllerQueue1_work_duration_sum 2.1373689e+07
 APIServiceOpenAPIAggregationControllerQueue1_work_duration_count 282663
 ...
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="1e-08"} 0
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="1e-07"} 0
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="1e-06"} 0
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="9.999999999999999e-06"} 459
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="9.999999999999999e-05"} 473
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="0.001"} 924
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="0.01"} 927
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="0.1"} 928
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="1"} 928
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="10"} 928
-workqueue_work_duration_seconds_bucket{name="non_structural_schema_condition_controller",le="+Inf"} 928
-workqueue_work_duration_seconds_sum{name="non_structural_schema_condition_controller"} 0.09712353499999991
-...
 ```
-
 
 ## Kubernetes Raw Metrics via metrics API
 
@@ -78,8 +64,11 @@ Outputs via metrics API are unformated JSON, thus it's good to use `jq` to parse
 
 **Sample output -  /apis/metrics.k8s.io/v1beta1/nodes**
 
-```json
+```
 kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq
+```
+
+```json
 
 {
   "kind": "NodeMetricsList",
@@ -121,10 +110,11 @@ kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq
 
 
 **Sample output - /apis/metrics.k8s.io/v1beta1/namespaces/NAMESPACE/pods/PODNAME**
+```
+kubectl get --raw /apis/metrics.k8s.io/v1beta1/namespaces/kube-system/pods/cluster-autoscaler-7d8d69668c-5rcmt | jq
+```
 
 ```json
-kubectl get --raw /apis/metrics.k8s.io/v1beta1/namespaces/kube-system/pods/cluster-autoscaler-7d8d69668c-5rcmt | jq
-
 {
   "kind": "PodMetrics",
   "apiVersion": "metrics.k8s.io/v1beta1",
