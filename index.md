@@ -16,11 +16,11 @@ layout: post
     {%- if counter < 10 -%}
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h2>
+        <h1 class="post-title p-name" itemprop="name headline">
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
-        </h2>
+        </h1>
 
         <div class="post-content e-content" itemprop="articleBody">
           {{ post.content }}
