@@ -13,11 +13,11 @@ layout: post
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
   {% assign counter = 0 %}
   {%- for post in posts -%}
-    {%- if counter < 10 -%}
+    {%- if counter < 30 -%}
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h1 class="post-title p-name" itemprop="name headline">
-          <a class="post-link" href="{{ post.url | relative_url }}">
+        <h1>
+          <a href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h1>
