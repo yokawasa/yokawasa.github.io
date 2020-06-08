@@ -27,7 +27,7 @@ layout: post
         </div>
       </li>
     {%- endif -%}
-    {% increment counter %}
+    {% assign counter = counter | plus:1 %}
   {%- endfor -%}
   </ul>
 
