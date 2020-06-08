@@ -24,7 +24,7 @@ layout: post
       </h3>
 
       <div class="post-content e-content" itemprop="articleBody">
-        {{ content }}
+        {{ post.content }}
       </div>
 
     </li>
