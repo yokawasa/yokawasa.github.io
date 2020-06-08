@@ -58,4 +58,4 @@ timezone: Asia/Tokyo
 # permalink:     date
 permalink:     /posts/:title/
 # paginate_path: 'page:num'
-paginate: 10
+#paginate: 10
