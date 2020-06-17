@@ -14,6 +14,7 @@ tags:
 - event
 ---
 
+A scene at wedding ceremony of my old collage roommate.
 Jan 18, 2020 at Brooklyn NY
 
 ![]({{ site.url }}/assets/20200616-my-old-collage-roommate.jpg)
