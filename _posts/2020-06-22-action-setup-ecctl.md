@@ -9,7 +9,7 @@ author:
 author_login: yoichi
 author_email: yokawasa@gmail.com
 author_url: http://github.com/yokawasa
-date: '2020-04-30 11:00:00 +0900'
+date: '2020-06-22 01:00:00 +0900'
 tags:
 - GitHubActions
 - static-analysis
@@ -37,7 +37,7 @@ A specific version of ecctl can be setup by giving an input - `version` like thi
     version: 'v1.0.0-beta3'   # default is 'latest'
   id: setup
 - run: |
-  ecctl=${{steps.setup.outputs.ecctl-path}}
+  ecctl=$｛｛steps.setup.outputs.ecctl-path｝｝
   ${ecctl} version
 ```
 
@@ -47,7 +47,7 @@ The latest version of ecctl will be setup if you don't give an input like this:
 - uses: yokawasa/action-setup-ecctl@v0.1.0
   id: setup
 - run: |
-  ecctl=${{steps.setup.outputs.ecctl-path}}
+  ecctl=$｛｛steps.setup.outputs.ecctl-path｝｝
   ${ecctl} version
 ```
 

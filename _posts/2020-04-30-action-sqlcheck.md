@@ -25,6 +25,7 @@ I've published a new GitHub Action called [SQLCheck Action](https://github.com/y
 Supports `pull_request` event type.
 
 ### Inputs
+
 |Parameter|Required|Default Value|Description|
 |:--:|:--:|:--:|:--|
 |`post-comment`|false|true|Post comment to PR if it's true|
@@ -32,6 +33,7 @@ Supports `pull_request` event type.
 |`risk-level`|false|3|Set of SQL anti-patterns to check: 1,2, or 3<br>- 1 (all anti-patterns, default)<br>- 2 (only medium and high risk anti-patterns)<br> - 3 (only high risk anti-patterns) |
 |`verbose`|false|false|Add verbose warnings to SQLCheck analysis result|
 |`postfixes`|false|"sql"|List of file postfix to match ( separator: comma )|
+
 
 ## Sample Workflow
 
@@ -52,7 +54,7 @@ jobs:
         post-comment: true
         risk-level: 3
         verbose: false
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: $｛｛ secrets.GITHUB_TOKEN ｝｝
 ```
 
 Enjoy the action!
