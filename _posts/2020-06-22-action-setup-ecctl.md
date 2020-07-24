@@ -31,25 +31,29 @@ I've published a new GitHub Action called [action-setup-ecctl](https://github.co
 ### Sample Workflow
 
 A specific version of ecctl can be setup by giving an input - `version` like this:
+{% raw %}
 ```yaml
 - uses: yokawasa/action-setup-ecctl@v0.1.0
   with:
     version: 'v1.0.0-beta3'   # default is 'latest'
   id: setup
 - run: |
-  ecctl=$｛｛steps.setup.outputs.ecctl-path｝｝
+  ecctl=${{steps.setup.outputs.ecctl-path}}
   ${ecctl} version
 ```
+{% endraw %}
 
 The latest version of ecctl will be setup if you don't give an input like this:
 
+{% raw %}
 ```yaml
 - uses: yokawasa/action-setup-ecctl@v0.1.0
   id: setup
 - run: |
-  ecctl=$｛｛steps.setup.outputs.ecctl-path｝｝
+  ecctl=${{steps.setup.outputs.ecctl-path}}
   ${ecctl} version
 ```
+{% endraw %}
 
 ## Developing the action
 
