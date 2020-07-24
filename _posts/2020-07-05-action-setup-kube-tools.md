@@ -39,6 +39,7 @@ I've published a new GitHub Action called [action-setup-kube-tools](https://gith
 > Supported Environments: Linux
 
 ### Outputs
+
 |Parameter|Description|
 |:--:|:--|
 |`kubectl_path`| kubectl command path |
@@ -49,11 +50,11 @@ I've published a new GitHub Action called [action-setup-kube-tools](https://gith
 |`conftest_path`| conftest command path |
 |`yq_path`| yq command path |
 
-
 ### Sample Workflow
 
 Specific versions for the commands can be setup by adding inputs parameters like this:
 
+{% raw %}
 ```yaml
   test: 
     runs-on: ubuntu-latest
@@ -69,13 +70,13 @@ Specific versions for the commands can be setup by adding inputs parameters like
         conftest: '0.18.2'
       id: setup
     - run: |
-        kubectl=$｛{steps.setup.outputs.kubectl-path}｝
-        kustomize=$｛{steps.setup.outputs.kustomize-path}｝
-        helm=$｛{steps.setup.outputs.helm-path}｝
-        helmv3=$｛{steps.setup.outputs.helmv3-path}｝
-        kubeval=$｛{steps.setup.outputs.kubeval-path}｝
-        conftest=$｛{steps.setup.outputs.conftest-path}｝
-        yq=$｛{steps.setup.outputs.yq-path}}
+        kubectl=${{steps.setup.outputs.kubectl-path}}
+        kustomize=${{steps.setup.outputs.kustomize-path}}
+        helm=${{steps.setup.outputs.helm-path}}
+        helmv3=${{steps.setup.outputs.helmv3-path}}
+        kubeval=${{steps.setup.outputs.kubeval-path}}
+        conftest=${{steps.setup.outputs.conftest-path}}
+        yq=${{steps.setup.outputs.yq-path}}
 
         ${kubectl} version --client
         ${kustomize} version
@@ -84,9 +85,11 @@ Specific versions for the commands can be setup by adding inputs parameters like
         ${kubeval} --version
         ${conftest} --version
 ```
+{% endraw %}
 
 Default versions for the commands will be setup if you don't give any inputs like this:
 
+{% raw %}
 ```yaml
   test: 
     runs-on: ubuntu-latest
@@ -110,6 +113,7 @@ Default versions for the commands will be setup if you don't give any inputs lik
         ${kubeval} --version
         ${conftest} --version
 ```
+{% endraw %}
 
 
 ## Developing the action
