@@ -28,6 +28,12 @@ I've published a new GitHub Action called [action-setup-ecctl](https://github.co
 
 > Supported Environments: Linux and macOS
 
+### Outputs
+
+|Parameter|Description|
+|:--:|:--|
+|`ecctl-path`| ecctl command path |
+
 ### Sample Workflow
 
 A specific version of ecctl can be setup by giving an input - `version` like this:
@@ -38,8 +44,7 @@ A specific version of ecctl can be setup by giving an input - `version` like thi
     version: 'v1.0.0-beta3'   # default is 'latest'
   id: setup
 - run: |
-  ecctl=${{steps.setup.outputs.ecctl-path}}
-  ${ecctl} version
+  ecctl version
 ```
 {% endraw %}
 
@@ -50,8 +55,7 @@ The latest version of ecctl will be setup if you don't give an input like this:
 - uses: yokawasa/action-setup-ecctl@v0.1.0
   id: setup
 - run: |
-  ecctl=${{steps.setup.outputs.ecctl-path}}
-  ${ecctl} version
+  ecctl version
 ```
 {% endraw %}
 

@@ -70,20 +70,12 @@ Specific versions for the commands can be setup by adding inputs parameters like
         conftest: '0.18.2'
       id: setup
     - run: |
-        kubectl=${{steps.setup.outputs.kubectl-path}}
-        kustomize=${{steps.setup.outputs.kustomize-path}}
-        helm=${{steps.setup.outputs.helm-path}}
-        helmv3=${{steps.setup.outputs.helmv3-path}}
-        kubeval=${{steps.setup.outputs.kubeval-path}}
-        conftest=${{steps.setup.outputs.conftest-path}}
-        yq=${{steps.setup.outputs.yq-path}}
-
-        ${kubectl} version --client
-        ${kustomize} version
-        ${helm} version --client
-        ${helmv3} version
-        ${kubeval} --version
-        ${conftest} --version
+        kubectl version --client
+        kustomize version
+        helm version --client
+        helmv3 version
+        kubeval --version
+        conftest --version
 ```
 {% endraw %}
 
@@ -98,20 +90,12 @@ Default versions for the commands will be setup if you don't give any inputs lik
     - uses: yokawasa/action-setup-kube-tools@v0.1.0
       id: setup
     - run: |
-        kubectl=${{steps.setup.outputs.kubectl-path}}
-        kustomize=${{steps.setup.outputs.kustomize-path}}
-        helm=${{steps.setup.outputs.helm-path}}
-        helmv3=${{steps.setup.outputs.helmv3-path}}
-        kubeval=${{steps.setup.outputs.kubeval-path}}
-        conftest=${{steps.setup.outputs.conftest-path}}
-        yq=${{steps.setup.outputs.yq-path}}
-
-        ${kubectl} version --client
-        ${kustomize} version
-        ${helm} version --client
-        ${helmv3} version
-        ${kubeval} --version
-        ${conftest} --version
+        kubectl version --client
+        kustomize version
+        helm version --client
+        helmv3 version
+        kubeval --version
+        conftest --version
 ```
 {% endraw %}
 
