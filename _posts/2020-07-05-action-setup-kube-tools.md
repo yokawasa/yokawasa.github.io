@@ -19,6 +19,7 @@ tags:
 - kubeval
 - conftest
 - yq
+- rancher
 ---
 
 I've published a new GitHub Action called [action-setup-kube-tools](https://github.com/yokawasa/action-setup-kube-tools) ([View on Marketplace](https://github.com/marketplace/actions/kubernetes-toolset-installer)). The action installs Kubernetes tools (kubectl, kustomize, helm, kubeval, conftest, and yq) and cache them on the runner. This is a typescript version of [stefanprodan/kube-tools](https://github.com/stefanprodan/kube-tools) with no command input param.
@@ -35,6 +36,7 @@ I've published a new GitHub Action called [action-setup-kube-tools](https://gith
 |`helmv3`|`false`|`3.2.1`| helm v3 version. helm v3 vesion can be found [here](https://github.com/helm/helm/releases)|
 |`kubeval`|`false`|`0.15.0`| kubeval version. kubeval vesion can be found [here](https://github.com/instrumenta/kubeval/releases)|
 |`conftest`|`false`|`0.19.0`| conftest version. conftest vesion can be found [here](https://github.com/open-policy-agent/conftest/releases)|
+|`rancher`|`false`|`2.4.10`| Rancher CLI version. Rancher CLI vesion can be found [here](https://github.com/rancher/cli/releases)|
 
 > Supported Environments: Linux
 
@@ -49,6 +51,7 @@ I've published a new GitHub Action called [action-setup-kube-tools](https://gith
 |`kubeval_path`| kubeval command path |
 |`conftest_path`| conftest command path |
 |`yq_path`| yq command path |
+|`rancher_path`| rancher command path |
 
 ### Sample Workflow
 
@@ -68,6 +71,7 @@ Specific versions for the commands can be setup by adding inputs parameters like
         helmv3: '3.2.4'
         kubeval: '0.14.0'
         conftest: '0.18.2'
+        rancher: '2.4.10'
       id: setup
     - run: |
         kubectl version --client
@@ -76,6 +80,8 @@ Specific versions for the commands can be setup by adding inputs parameters like
         helmv3 version
         kubeval --version
         conftest --version
+        yq --version
+        rancher --version
 ```
 {% endraw %}
 
@@ -96,6 +102,8 @@ Default versions for the commands will be setup if you don't give any inputs lik
         helmv3 version
         kubeval --version
         conftest --version
+        yq --version
+        rancher --version
 ```
 {% endraw %}
 
