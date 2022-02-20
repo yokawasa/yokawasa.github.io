@@ -23,6 +23,4 @@ Please get it at an online bookstore!!
 - [Gihyo Online](https://gihyo.jp/magazine/SD/archive/2022/202202)
 - [Amazon](https://www.amazon.co.jp/gp/product/B09QKG3C1L/)
 
-![]({{ site.url }}/assets/20220118-software-design-cover.png)
-
 ![]({{ site.url }}/assets/20220118-software-design-gha.png)
