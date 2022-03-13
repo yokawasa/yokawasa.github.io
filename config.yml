@@ -21,6 +21,15 @@ minify:
 frontmatter:
     date: [":filename", ":default", ":fileModTime"]
 
+# Search output
+# https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
+outputs:
+    home: [HTML,RSS,JSON]
+    #home:
+    #  - HTML
+    #  - RSS
+    #  - JSON # is necessary
+
 params:
 #    env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: Yoichi Kawasaki
@@ -82,6 +91,8 @@ params:
           url: "https://github.com/yokawasa"
         - name: linkedin
           url: "https://www.linkedin.com/in/yokawasa/"
+        - name: amazon
+          url: "https://amzn.to/3J0OSgb"
         - name: rss
           url: "index.xml"
 
@@ -91,7 +102,6 @@ params:
         hiddenInSingle: true # hide on single page
 
     editPost:
-        #URL: "https://github.com/yokawasa/yokawasa.github.io/content"
         URL: "https://github.com/yokawasa/yokawasa.github.io/tree/master/content"
         Text: "Suggest Changes" # edit text
         appendFilePath: true # to append file path to Edit link
