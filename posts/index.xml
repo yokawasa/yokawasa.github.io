@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/posts/</link>
+    <description>Recent content in Posts on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions Article on Software Design 2022/02 Issue was released!</title>
+      <link>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</guid>
+      <description>A Software Design 2022/02 Issue was published in Jan 18, 2022!! I contributed the 2nd special feature article on CI/CD using GitHub Actions in it 🎉🎉🎉
+Please get it at an online bookstore!!
+『Software Design 2022年2月号』（技術評論社）/ Software Design 2022/02 Issue (gihyo)
+ Gihyo Online Amazon  </description>
+    </item>
+    
+    <item>
+      <title>kubectl plugin - SOCKS5 proxy to Services or Pods in the cluster</title>
+      <link>https://unofficialism.info/posts/kubectl-plugin-socks5-proxy/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/kubectl-plugin-socks5-proxy/</guid>
+      <description>I’ve published a new kubectl plugin called kubectl-plugin-socks5-proxy. This is a kubectl plugin that creates a local SOCKS5 proxy through which you can access to Services or Pods in a Kubernetes cluster.
+What the plugin actually does is that it create a SOCKS proxy server Pod in a Kubernetes cluster and forwards a local port (default:1080) to the proxy. So you can access to Servcies or Pods in Kuberenetes cluster by using the local port as SOCKS5 proxy like this:</description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions - Kubernetes tools installer</title>
+      <link>https://unofficialism.info/posts/action-setup-kube-tools/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/action-setup-kube-tools/</guid>
+      <description>I&amp;rsquo;ve published a new GitHub Action called action-setup-kube-tools (View on Marketplace). The action installs Kubernetes tools (kubectl, kustomize, helm, kubeval, conftest, and yq) and cache them on the runner. This is a typescript version of stefanprodan/kube-tools with no command input param.
+Usage Inputs    Parameter Required Default Value Description     kubectl false 1.18.2 kubectl version. kubectl vesion can be found here   kustomize false 3.</description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions - Elastic Cloud Control (ecctl) tool installer</title>
+      <link>https://unofficialism.info/posts/action-setup-ecctl/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/action-setup-ecctl/</guid>
+      <description>I&amp;rsquo;ve published a new GitHub Action called action-setup-ecctl (View on Marketplace). The action installs a specific version of ecctl (Elastic Cloud control tool) and cache it on the runner.
+Usage Inputs    Parameter Required Default Value Description     version false latest Ecctl tool version such as v1.0.0-beta3. Ecctl vesion can be found here.     Supported Environments: Linux and macOS
+ Outputs    Parameter Description     ecctl-path ecctl command path    Sample Workflow A specific version of ecctl can be setup by giving an input - version like this: {% raw %}</description>
+    </item>
+    
+    <item>
+      <title>College Roommate</title>
+      <link>https://unofficialism.info/posts/my-old-collage-roommate/</link>
+      <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/my-old-collage-roommate/</guid>
+      <description>A scene at wedding ceremony of my old collage roommate
+Jan 18, 2020 at Brooklyn NY</description>
+    </item>
+    
+    <item>
+      <title>Getting Kubernetes Metrics using kubectl</title>
+      <link>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</guid>
+      <description>There are various ways to obtain Kubernetes metrics which you can use to visualize, monitor and alert on your metrics. In reality you most likely use managed or unmanaged OSS metrics collection and visualization tools, but in this post, I introduce how to get raw Kubernetes metrics using kubectl.
+Kubernetes Raw Metrics via Prometheus metrics endpoint Many Kubernetes components exposes their metrics via the /metrics endpoint, including API server, etcd and many other add-ons.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio Code Textbook for programmer was published!</title>
+      <link>https://unofficialism.info/posts/visual-studio-code-textbook/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/visual-studio-code-textbook/</guid>
+      <description>A book, I co-authored with @hoisjp and @_Dr_ASA, was recently published. Today I went to a bookstore to see if it was actually displayed. It was real!! 🎉🎉🎉
+『プログラマーのためのVisual Studio Codeの教科書』（マイナビ出版）/ Visual Studio Code textbooks for programmers
+ Softcover version Kindle version  </description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions - SQLCheck Action</title>
+      <link>https://unofficialism.info/posts/action-sqlcheck/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/action-sqlcheck/</guid>
+      <description>I&amp;rsquo;ve published a new GitHub Action called SQLCheck Action (View on Marketplace). The action automatically identifies anti-patterns in SQL queries using sqlcheck when PR is requested and comment on the PR if risks are found in the queries.
+Usage Supports pull_request event type.
+Inputs    Parameter Required Default Value Description     post-comment false true Post comment to PR if it&amp;rsquo;s true   token true &amp;quot;&amp;quot; GitHub Token in order to add comment to PR   risk-level false 3 Set of SQL anti-patterns to check: 1,2, or 3- 1 (all anti-patterns, default)- 2 (only medium and high risk anti-patterns)- 3 (only high risk anti-patterns)   verbose false false Add verbose warnings to SQLCheck analysis result   postfixes false &amp;ldquo;sql&amp;rdquo; List of file postfix to match ( separator: comma )    Sample Workflow  .</description>
+    </item>
+    
+    <item>
+      <title>My last day at Microsoft</title>
+      <link>https://unofficialism.info/posts/my-last-day-at-microsoft/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/my-last-day-at-microsoft/</guid>
+      <description>Today is my last day at Microsoft. About 9 years and 2 months have passed since I joined MS. I&amp;rsquo;ve had wonderful years filled with various experiences on business.
+In the first 4 years, as FAST Search engineer &amp;amp; consultant, I specialized in Fast search and provided customers in Japan and sometimes in South East Asia &amp;amp; South Korea area with proactive consulting &amp;amp; support. For the next 3 years after that, as a part of Azure Solution Architect teams, I provided architectural guidance &amp;amp; design session, PoC and prototyping support, knowledge transfer trainings with Japanease enterprise customers, collaborating with Azure engineering teams, Azure sales teams and many other stakeholders.</description>
+    </item>
+    
+    <item>
+      <title>Find the lowest latency Azure regions from your place using azping</title>
+      <link>https://unofficialism.info/posts/find-the-lowest-latency-azure-regions-from-your-place-using-azping/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/find-the-lowest-latency-azure-regions-from-your-place-using-azping/</guid>
+      <description>azping is a command line tools that help you find the lowest latency Azure Region from your place. It acutally reports median latency to Azure regions. It is a fork of gcping.
+What does azping actually evalulate? azping evalulate the median latecy of http requests to Azure blob storage endpoints located in each of Azure reagions from your place. Number of requests to be made to each region is 5 by default, but it can be changed with -n parameter that you can give in executing azping command.</description>
+    </item>
+    
+    <item>
+      <title>Unofficial tips for CKA and CKAD exams</title>
+      <link>https://unofficialism.info/posts/unofficial-tips-for-cka-and-ckad-exams/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/unofficial-tips-for-cka-and-ckad-exams/</guid>
+      <description>I&amp;rsquo;ve taken both Certified Kubernetes Administrator (CKA) and Certified Kubernetes Application Developer (CKAD) exams in the past 2 weeks and fortunately passed both. This is a blog article on tips for both exams based on my experiences.
+About the exam and its curriculum CKA focus on managing and operating kubernetes cluster including troubleshooting while CKAD forcus on managing and deploying applicaionts to kubernetes cluster.
+It&amp;rsquo;s very important to read and understand the exam curriculum and their relevant pages on kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>Easy way to SSH into Azure Kubernetes Service cluster node VMs</title>
+      <link>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</guid>
+      <description>This is an article on how you can SSH into Azure Kubernetes Service (AKS) cluster node VMs using kubectl-plugin-ssh-jump.
+Motivation I wanted to SSH into Azure Kubernetes Service (AKS) cluster node VMs, then looking up azure docs I found a relevant page - Connect with SSH to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting. But when I first saw this procedure, I thought this was very troublesome. Lazy person like me couldn&amp;rsquo;t accept going thourgh all the steps just to SSH into AKS cluster nodes VMs.</description>
+    </item>
+    
+    <item>
+      <title>Set of Envoy Proxy features demos</title>
+      <link>https://unofficialism.info/posts/envoy-proxy-demos/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/envoy-proxy-demos/</guid>
+      <description>Set of demos to demonstrate Envoy Proxy features
+HTTP Routing: Simple Match Routing All traffic is routed by the front envoy to the service containers. Internally the traffic is routed to the service envoys, then the service envoys route the request to the flask app via the loopback address. In this demo, all traffic is routed to the service envoys like this:
+ A request (path /service/blue &amp;amp; port 8000) is routed to service_blue A request (path /service/green &amp;amp; port 8000) is routed to service_green A request (path /service/red &amp;amp; port 8000) is routed to service_red  Key definition 1 - virtual_hosts in front-envoy.</description>
+    </item>
+    
+    <item>
+      <title>Quick Start with Azure Functions V2 Python (Preview)</title>
+      <link>https://unofficialism.info/posts/quick-start-with-azure-function-v2-python-preview/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/quick-start-with-azure-function-v2-python-preview/</guid>
+      <description>Today (Sept 25, 2018 JST), Azure Functions supports Python development using Python 3.6 on the Functions v2 (cross-platform) runtime. You can now use your Python code and dependencies on Linux-based Functions. This is an article on quick start with Azure Functions V2 Python (Preview) showing how you can quickly start Python function development on Azure Function V2 runtime.
+1. Prerequisites for Buidling &amp;amp; Testing Locally  Python 3.6 (For Python function apps, you have to be running in a venv) Azure Functions Core Tools 2.</description>
+    </item>
+    
+    <item>
+      <title>Accessing RBAC enabled Kubernetes Dashboard</title>
+      <link>https://unofficialism.info/posts/accessing-rbac-enabled-kubernetes-dashboard/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/accessing-rbac-enabled-kubernetes-dashboard/</guid>
+      <description>This is an article on how you can configure Service Account and RoleBinding in order to make Dashbaord work. As of release Kubernetes v1.7, Dashboard no longer has full admin privileges granted by default. All the privileges are revoked and only minimal privileges granted, that are required to make Dashboard work. With default priviledge, you&amp;rsquo;ll see the following errors showed up on the Dashboard.
+[Azure Kubernetes Service (AKS)] RBAC is enabled by default Since Azure CLI version 2.</description>
+    </item>
+    
+    <item>
+      <title>Moving to Jekyll based Github page</title>
+      <link>https://unofficialism.info/posts/moving-to-jekyll-based-github-page/</link>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/moving-to-jekyll-based-github-page/</guid>
+      <description>I’ve moved my blog site from Wordpress to Jekyll based Github page. There are a few reasons for this:
+ I wanted to manage my blog data on Github I wanted to switch from HTML based to Markdown I wanted more static approach like generating once, not dynamically rendering for every request (for performance reason)  After a few minutes of googling, I came up with Jekyll and found it much easier to manage my blog data with Jekyll than with Wordpress.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes x PaaS コンテナアプリケーションのNoOpsへの挑戦 (Japan Container Days v18.04)</title>
+      <link>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</guid>
+      <description>先日、4月19日に開催されたJapan Container Days v18.04にて「Kubernetes x PaaS – コンテナアプリケーションのNoOpsへの挑戦」というタイトルでセッションを担当させていただいた。その名の通りメインがKubernetesで、KubernetesアプリケーションにおいてNoOps（運用レス）を目指すためのにどういった工夫ができるのか、どういったものを活用していけばよいのか、という内容です。このブログではJapan Container Daysでの発表に使用したスライドの共有とセッションに中のサンプルやデモについて補足させていただく。
+Session Slides  Kubernetes x PaaS – コンテナアプリケーションの NoOpsへの挑戦 from Yoichi Kawasaki
+補足情報 1. Open Service Broker for AzureでAzure Database for MySQLの利用 スライドでお見せした実際のファイルを使ってAzure Database for MySQLのサービスインスタンス作成、バインディング、そして実際のアプリケーションからの利用までの流れを紹介させていただく。
+Open Service Broker for AzureプロジェクトのGithubにあるサンプルファイルmysql-instance.yamlとmysql-binding.yamlを使ってそれぞれServiceInstanceとServiceBindingを作成する `
+# Provisioning the database, basic50 plan ... $ kubectl create -f mysql-instance.yaml  # Wait until ServiceInstance named example-mysql-instance get ready &amp;#39;Status =&amp;gt; Ready&amp;#39;, # then execute the following to create a binding for this new database, $ kubectl create -f mysql-binding.</description>
+    </item>
+    
+    <item>
+      <title>Controlling Azure Media Services traffic with Traffic Manager</title>
+      <link>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</guid>
+      <description>This is an article on how you can achieve Azure Media Services (AMS) streaming traffic distribution with Traffic Manager.
+The process for a client to find target AMS streaming endpoints The figure shows how a client find target AMS streaming endpoints with Traffic Manager and requests from video players are distributed to streaming endpoints in AMS:
+When AMS endpoints are added to an Azure Traffic Manager profile, Azure Traffic Manager keeps track of the status of the endpoints (running, stopped, or deleted) so that it can decide which of those endpoints should receive traffic.</description>
+    </item>
+    
+    <item>
+      <title>15分でお届けするElastic Stack on Azure設計・構築ノウハウ</title>
+      <link>https://unofficialism.info/posts/15min-elastic-stack-on-azure/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/15min-elastic-stack-on-azure/</guid>
+      <description>UPDATED on Feb 3, 2018 - Elastic社イベントサイトを追加
+イベント開催日から少々時間が経過したが、Elastic {ON} Tour 2017 東京（2017年12月14日開催）というElastic社オフィシャルのユーザーカンファレンスにて登壇させていただく機会があり、そこで「15分でお届けする Elastic Stack on Azure 設計・構築ノウハウ」というお題でお話をさせていただいた。個人的にとても大好きなプロダクトなので、そのユーザーカンファレンスでお話をさせていただいたということと、そのプロダクトのAzureでの利用促進に微力ながらも貢献できたということは光栄至極である。ここではそのElastic {ON} Tourでの発表で使用したスライドに補足解説を加えて共有させていただく。
+セッションスライド（＋デモ動画） 
+15分でお届けする Elastic Stack on Azure 設計・構築ノウハウ from Yoichi Kawasaki
+補足解説 デプロイメント AzureでのElastic Stackの利用は当然ながら仮想マシン（VM）を並べてそこにクラスタを構築することになる。残念ながら現時点でマネージドのElasticサービスはAzureには存在しない。VMベースということで特にオンプレと変わらずマニュアルであったり、ChefやAnsibleなどの構成管理ツールを使ってクラスタを組んだり柔軟な構築が可能であるものの、ここではAzureでの構築ということでARMテンプレートを使ったデプロイメントの方法を紹介している。
+ Azure Marketplaceからのデプロイ：最も手っ取り早い方法。30日のX-Packトライアルライセンスが付いていて、トライアル期間が過ぎてもBYOLでライセンスの更新が可能。テンプレートでは2017年12月時点でv2.0.2 〜 v5.6.3の選択が可能。何も考えず最新版をご利用ください。 Github上のARMテンプレートをカスタマイズしてデプロイ：Elastic社が用意したGithub上のARMテンプレートがあるのでそれを自分の要件に応じてカスタマイズしてデプロイメントをする。Azure CLIやPowerShellなどコマンドを使ったデプロイメントが可能なので構成管理ツールに組み込んで周辺環境を合わせて自動構築設定も可能。慣れてきたらこちらがよいでしょう。  推奨仮想ハードウェアとDISK Elasticクラスタ全体のパフォーマンスを引き出すためには機能別に適正なVMインスタンスとサイズを選択ください。またVMにアタッチするディスクについてはビルトインで可用性設定がされているManaged Disk、もしくはPremium Managed Diskを選択することをお忘れなく。
+可用性の設定について AzureでIaaSで可用性の設定といえばおなじみの可用性セット（Availability Set）と可用性ゾーン（Availability Zone）。当然Elastic Stackのクラスタを組む時もこれらの設定を入れましょうというお話。可用性ゾーンは、その可用性レベルの高さから将来的には可用性ゾーンが主流な設定になっていくはずであるものの、2017年12月時点でPreviewリリースであり、利用可能リージョンが米国東部第２、西ヨーロッパのみというとても限定的なものとなっている。現時点でプロダクション用途となると可用性セット一択なので何も考えずに可用性セットを組んでください。
+可用性セット（Availability Set）
+ 一つのDCの中で同一の物理ラックや電源などを配置しないようにして、障害が発生してもグループの中のどこかのVMは生きているようにする設定のこと VM SLA 99.95%で提供  可用性ゾーン（Availability Zone）
+ 各VMを別々のゾーンに配置するのでDCレベルの障害につよい（それぞれゾーンは電源、ネットワーク、冷却装置が完全に物理的に分離されたものとなっている）。ちなみに、Azureのリージョンは複数のデータセンターで構成されており、その間を高速なバックボーンで接続して1つのリージョンとして透過的に利用が可能となっているのでこのようなことができるわけだ VM SLA 99.99%で提供 【注意点】可用性ゾーンの設定ではDCが分かれて配置されるので次の２点の考慮が必要：（１）マスターは各ゾーンに分散するように各ゾーン最低１ノード配置すること（２）データノードはゾーンにまたがる通信が極力起こらないように工夫すること。これを実現するのがShard Allocation Awarenessという仕組みで、この仕組みをつかうことで 同一ゾーン内に配置されているノードだけで完全なシャードを保持するようにして、検索要求が同一ゾーン内で完結できるように設定が可能となる  ネットワークセキュリティグループの設定 AzureのIaaSにおけるネットワークフィルタリングの設定に、ネットワークセキュリティグループ（NSG）とよばれるL4フィルタリングがある。当然ながら、既にX-Packを導入していればそのセキュリティ機能の１つとしてネットワークレベルのアクセス制御についても行うことができるが、X-Packを導入していない場合は確実にNSGの設定は必要になってくる。また、Elastic Stack以外のアプリケーションとの連携の際にも必ず必要になってくる。Azure上でのシステム構築では欠かすことのできない設定の１つ。</description>
+    </item>
+    
+    <item>
+      <title>Azure Functions Python Programming  - Experimental</title>
+      <link>https://unofficialism.info/posts/azure-functions-app-development-with-python-experimental/</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azure-functions-app-development-with-python-experimental/</guid>
+      <description>今年もあと少し。ほぼ趣味の範囲を超えないレベルで今年取り組んだテーマの１つにAzure Functions with Pythonがある。あまり情報が無い中、興味本位でサンプルコードを作っては動かして試して得られた情報をシコシコとGithubに上げているうちにナレッジが溜まって来た。それほど多くはないと思うがPythonでAzure Functionsアプリを作りたいという人もいると思うのでノウハウをブログにまとめておく。いきなり水を差すようではあるが、現時点（2017年12月）ではAzure FunctionsのPythonサポータビリティはExperimental（実験的サポート）でありプロダクション向きではない状況であるので、ホントにPythonが好きな人がOn your own riskで楽しんでいただければと思う。
+Azure FunctionsのPythonサポート状況 Azure FunctionsのRuntimeには大きく1系と２系の２種類あるが、現時点でPythonは1系でのみExperimentalサポートという状況（ See also 言語サポート状況）
+Experimental（実験的サポート）なので本番での利用は非推奨であり、公式サポートはない（ベストエフォートでのサポートは得られるはず）。また、当然ながらGA言語に比べパフォーマンスは悪い。PythonはFunction呼び出し毎にpython.exeが実行される（GA言語はRuntimeと同じプロセスで実行）。
+将来的な話をすると、Azure Functions Runtime 1系でのPythonサポートについては今のExperimentalの域を超えることはないだろう。一方、Runtime 2系ではPythonが正式サポートされるように対応が進められている。ただし時期は未定。この対応については下記Github Issueが切られており、ある程度の対応状況であれば確認可能。Pythonを使う利点の１つに、強力な数理計算、自然言語解析、機械学習系モジュールがあるが、早く安定とパフォーマンスが備わったPythonサーバレスアプリ実行環境でこれら強力なモジュールを活用できたらと思うのは私だけではないだろう。今後の進展に期待。
+ Feature planning: first class Python support  Hosting Planの選択について Consumption Plan vs App Service Plan Azure FunctionsのHosting PlanにはConsumption PlanとApp Service Planの2つがあって、言語に関係なく各プランの特徴は次の通り:
+Consumption Plan
+ コード実行時にコンピューティング割り当て リソース使用量（関数実行時間、使用メモリ）で課金 自動スケール、各処理は〜10分まで  App Service Plan
+ 専用VMでリソース確保 継続処理：10分以上の処理 App Service環境でのみ可能な処理: App Service Environment, VNET/VPN接続, より大きなサイズのVM, etc  Pythonで使う上で気をつけるポイント  Python 3.</description>
+    </item>
+    
+    <item>
+      <title>Developing Full Managed Search Application in Azure</title>
+      <link>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</guid>
+      <description>これは9/29 Azure Web Seminar 「Azure サービスを活用して作るフルマネージドな全文検索アプリケーション」のフォローアップ記事です。なかなか暇ができず少々時間が経過してしまいました。
+ Azure サービスを活用して作るフルマネージドな全文検索アプリケーション from Yoichi Kawasaki
+Sample Application &amp;amp; Source Code セミナーで紹介したサンプルアプリはAzure公式サイトに載せてある代表的なサービスのFAQデータを元にしたHTML/CSS/JavascriptによるQ＆Aナレジッジベース検索のシングルページアプリケーションです。検索エンジンにAzure Searchを使い、データソースにCosmos DBを使いAzure SearchのCosmosDB Indexerでクローリングする構成にしてます。ソースコードと設定手順は以下Githubプロジェクトにアップしてあります。もしバグや設定手順等でご質問があればGithubでIssue登録いただければ時間を見つけて対応させていただきます。
+Source Code: https://github.com/yokawasa/azure-search-qna-demo/
+Demo: AI Digital Media Search セミナー中に紹介した非構造化データの全文検索デモとして紹介したAI Digital Media Searchアプリケーション。メディア x 音声認識 x 機械翻訳 x 全文検索全てを絡めた面白いアプリケーションなのでこちらでデモ動画とソースコードを共有します。またこのアプリはAzure PaaSサービスを組み合わせてプレゼンテーションレイヤー(Web App for Container)のみならずデータ生成部分（AMS, Functions, Logic App）も全てサーバレスで実現しているのでこのエリアのサンプルアプリとしてもとても良いものになっていると思います。
+ Demo Video: AI Digital Media Search Demo Source Code: https://github.com/shigeyf/ai-digitalmedia  AzureSearch.js - Azure Search UIライブラリ AzureSearch.jsはAzure SearchのUIライブラリで、Azure Searchプロダクトチーム主要開発者により開始されたOSSライブラリです。TypeScriptで書かれているのでとても読みやすく、また、ライブラリが提供するオブジェクト操作により非常に短いコードでサーチボックス、結果出力、ページネーション、ファセット、サジェスションなどで構成されるサーチ用UIを簡単に組み立てることが可能です。なかなかいけているライブラリにもかかわらず、あまり世の中に知られていないのはもったいないと思いセミナーの最後で紹介させていただきました。これ使わない手はないです。手っ取り早くは、下記のAzureSearch.jsアプリテンプレートジェネレータページで皆さんのAzure SearchアカウントのQueryKeyとインデックススキーマ（JSONフォーマット）を入力するとAzureSearch.jsアプリの雛形が生成されますので、そこから始めるのがよいかと思います。
+ AzureSearch.jsプロジェクトトップ＠Github デモアプリサイト AzureSearch.</description>
+    </item>
+    
+    <item>
+      <title>Azure Search Text Analyzer Tools - azure-search-ta</title>
+      <link>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</guid>
+      <description>Azure Searchのアナライザーによるテキスト解析結果を出力する（だけの）ツールを作ってみたのでここで紹介します。その名もazure-search-ta（ta=Test Analyzer）。中身はAzure SearchのAnalyzer APIの出力結果を整形して表示させていているだけの単純なものでありますが、Azure Searchの全文検索チューニングやキーワードにヒットしない原因調査をする際には役に立つと思ってます。「どうしてこのキーワードがひっかからないの？」を突き詰めるには最終的にアナライザのテキスト解析結果と突き合わせる必要があるのと、アナライザーを選択する際にテキスト解析が視覚化されていると判断しやすいだろうと。ツールは2種類で （１）Web UIツールと（２）コマンドラインツール
+Web UI Tool https://github.com/yokawasa/azure-search-ta
+インストールは超簡単。（１）Githubからazure-search-taをclone （２）azure-search-ta/ui 配下のファイルをPHPが動くWebサーバにコピー （３）analyze-api.phpをエディタで開いてお使いのAzure Searchカウント名とAzure Search API Adminキーの値を設定ください。あとはazure-search-ta-ui.htmlにアクセスいただければ上記のようなUIが出力されるはずです。なぜHTML/JSだけではなく間にPHPを挟んでいるのかについて、Azure SearchのAnalyze APIや管理系APIリクエストに位置付けられており、管理系APIはvia CORSでのリクエストを受け付けていないからである。
+$ git clone https://github.com/yokawasa/azure-search-ta.git` $ vi azure-search-ta/ui/analyze-api.php  $azureSearchAccount=&amp;#34;&amp;#34;; $azureSearchApiKey = &amp;#34;&amp;#34;; Command-Line Tool 1. インストールと設定 pipでazure-search-taパッケージをインストール。既に古いバージョンをインストール済みでアップデートする際は――upgradeをつけて実行ください。
+$ pip install --user azure-search-ta 次に、search.confにお使いのAzure Searchカウント名とAzure Search API Adminキーの値を設定ください。
+# Azure Search Service Name ( never put space before and after = ) SEARCH_SERVICE_NAME= # Azure Search API Admin Key ( never put space before and after = ) SEARCH_API_KEY= 2.</description>
+    </item>
+    
+    <item>
+      <title>Python Easter Egg</title>
+      <link>https://unofficialism.info/posts/python-easter-egg/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/python-easter-egg/</guid>
+      <description>Python Easter Egg = Pythonの隠しクレジットとはいってもPython基礎本などでよく紹介されているものなので既にご存知かもしれないが背景が面白いのでここで紹介。
+Pythonにはthisモジュールという「The Zen of Python」(Note 1)を出力するだけのモジュールがある。このモジュール、中身(Note 2)を見てみると分かるが、総ステップにしてわずか28行、ROT13暗号化(Note 3)された文字列を復号化するだけの単純で取るに足らないものかもしれないがこのモジュールが作られた背景は面白い。Barry Warsaw氏が記事「import this and The Zen of Python」でthisモジュールが誕生にまつわる面白い話を紹介している。
+「import this and The Zen of Python」の一部簡訳
+ 2001年秋、Foretec Seminar社はのInternational Python Conference #10(以下IPC10、Pyconの前身となるカンファレンス)の準備をしておりPythonコミュニティからそのカンファレンスのスローガンを求めていた。スローガンはTシャツにもプリントされる予定だった。Guideや、Fred、Jeremyや著者達はかつてはForetec Seminar社に所属していたがPythonlabsを結成する2000年に同社を去っている。そしてPythonlabsはPythonコミュニティからのスローガン応募の審査と勝者の選定を担当することになった。応募は500くらいあったが、どれもひどいものだった。Timと著者は1つに絞られるまで何度となく選別作業を行い
+最終的に&amp;quot;import this&amp;quot;を選んだ。理由は&amp;quot;import this&amp;quot;という言葉の持つふざけた、小バカにしたようなトーンが好きだったからという。
+著者たちはこの&amp;quot;import this&amp;quot;をスローガンに選んですぐにthisモジュール(this.py)を実装した。モジュールは「The Zen of Python」を出力するだけのものだったが途中TimやGuidoの提案でrot13で暗号化して内容を少し難読化する工夫がされたりもした。IPC10が終わってすぐ、彼らはこのイベントを記念してthisモジュールをPython2.2.1ブランチにコミットした。この時、著者の提案で他の誰にも知られないようにするためにソース管理システムのチェックイン通知機能を停止し、こっそりこのモジュールをPython2.2.1のブランチに含めたのだ。これらのことは彼ら以外に誰にも知らせず内緒で行われた。著者いわく、この彼らの仕込んだeaster egg（thisモジュールのこと。ソフトウェアでいうeaster eggとは隠しコマンドとか、隠しクレジットのようなもの）が誰かに見つかるまではしばらく時間がかかったそうだ。
+ Barry Warsaw氏が同記事を「That was all back in the day when the Python community had a sense of humor」という一文で締めくくっているように、この記事を読むと当時のPythonコミュニティがいかにユーモア溢れたものだったのかが感じられる。phython-2.2.1がリリースされたのは2002年4月10日で、それからどれくらい経ってこのthisモジュールが発見されたのか分からないが初めて発見した人は絶対ほっこりしたことだろう。
+Note 1: import this 「The Zen of Python」はPythonハッカー、Tim Petersによって書かれた有名な文章でPython設計哲学を要約したようなものと言われている。 Barry Warsaw氏の記事によると起源はTim Peters氏による1999年6月4日のPython-listへのこの投稿のようだ。以下、Pythonインタラクティクモードでimport thisを実行し「The Zen of Python」を表示させた内容：</description>
+    </item>
+    
+    <item>
+      <title>azuresshconfig has been dockerized</title>
+      <link>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</link>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</guid>
+      <description>UPDATED 2017-02-15: changed docker run command example due to Issue#4
+以前「azuresshconfigの紹介 – Azure上でのSSH生活を少しだけ快適にする」の投稿でazuresshconfigの紹介をさせていただいたが、ツールをリリースして以来、数少ない貴重な利用者様からインストールがコケるんだけど何とかしろというクレームをいただいていた。そこでインストールマニュアルを充実させようかとか、インストーラーをプラットフォーム別に充実させようかとか考えたものの、ここは流行りのコンテナ実行できるようしたほうがいいだろうということでDocker対応することにした。
+今回の対応によりpipインストールや、プラットフォーム別にprerequisiteなランタイム、ヘッダファイル、ライブラリといった面倒なインストールが不要となり、Mac、Windows、Linux(Ubuntu、CentOS、その他distro)関係なくシンプルにdocker runコマンドでの実行が可能となった。
+しかも超軽量LinuxディストリビューションであるAlpine Linuxの上にPythonランタイムとツールを載せているだけであるためサイズはたったの155MBとかなり軽め
+$ docker images azuresshconfig  REPOSITORY TAG IMAGE ID CREATED SIZE azuresshconfig latest 7488bef4343f 7 minutes ago 155 MB 実行例 $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \  --output stdout --user yoichika --identityfile ~/.ssh/id_rsa &amp;gt; $HOME/.ssh/config Dockerfileをダウンロードしてビルド・実行はこちら
+$ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Dockerfile -o Dockerfile $ docker build -t azuresshconfig . $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \ --output stdout --user yoichika --identityfile ~/.</description>
+    </item>
+    
+    <item>
+      <title>Logstash plugins for Microsoft Azure Services</title>
+      <link>https://unofficialism.info/posts/logstash-plugins-for-azure-services/</link>
+      <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/logstash-plugins-for-azure-services/</guid>
+      <description>Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite destinations. Here is a list of logstash plugins for Microsoft Azure Services.
+   Plugin Name Target Azure Services Note     logstash-input-azureeventhub EventHub Logstash input plugin reads data from specified Azure Event Hubs   logstash-input-azureblob Blob Storage Logstash input plugin that reads and parses data from Azure Storage Blobs   logstash-input-azuretopic Service Bus Topic Logstash input plugin reads messages from Azure Service Bus Topics   logstash-input-azuretopicthreadable Service Bus Topic Logstash input plugin reads messages from Azure Service Bus Topics using multiple threads   logstash-output-applicationinsights Application Insights Logstash output plugin that store events to Application Insights   logstash-input-azurewadtable  Table Storage Logstash input plugin for Azure Diagnostics.</description>
+    </item>
+    
+    <item>
+      <title>Detecting faces in Video contents using Azure Cognitive Services Face API</title>
+      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-frames-face-recognition/</link>
+      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-frames-face-recognition/</guid>
+      <description>過去に本ブログでビデオコンテンツを切り口とした音声認識やOCR技術を利用したデモを紹介したが、ここではビデオコンテンツの中の人物出現箇所に連動して人物名を字幕で表示させるデモとその実装方法を紹介したい。人物識別にはAzureのCognitive ServicesのFace APIを使っていて、これで動画の中に出現する顔の検出を行い、予め登録している人物リストとのマッチングにより実現している。 Cognitive Serivcesとは視覚、音声、言語、知識などマイクロソフトがこれまで研究を通じて開発してきたさまざまな要素技術をAPIとして提供しているサービスのことで、最近巷で人工知能（AI）だとかインテリジェンスとかいうキーワードをよく耳にするのではないかと思うがAzure利用シナリオでそういったインテリジェンス（知能/知性）を兼ね備えたアプリを作る場合は間違いなく中核となるサービスの1つである。Face APIはその中でも顔の検出・識別や、顔にまつわる感情、特徴などメタデータ抽出に特化したAPIである。
+
+ demo site source code  主要テクノロジーと機能 下図は今回のデモ作成のために行っている処理フローと主要テクノロジーを表している。やっていることは大きく分けて3つ: (1) 動画コンテンツをAzure Media Encoder Standardを使ってフレームごとの静止画像の作成, (2) Cognitive ServicesのFace APIを使って1より得られた静止画像から顔の検出を行い予め登録している人物リストとマッチング（最も類似度が高いものを本人とみなす）して人物を識別, (3) 2で得られた各フレーム中の人物情報を時間順に並べて字幕(Closed Caption)用のデータファイルを生成。以下、各処理の詳細について説明する。
+1. Azure Media Encoder Standardでフレームごとの静止画生成 残念ながらFace APIはビデオコンテンツから直接顔検出することができないため、一旦ビデオコンテンツから各フレームごとの静止画を生成してその静止画を対象に処理を行う必要がある。ここでは各フレームごとの静止画生成にAzure Media Encoder Standard（MES）を利用する。MESを使うことでエンコードタスクとしてビデオコンテンツに対して様々な処理を行うことができるのだが、MESにはそのエンコードタスクの１つとしてサムネイル生成のためのタスクが用意されており、今回はこのサムネール生成タスクを利用する。他のエンコードタスク同様にサムネイル生成タスクについてもプリセットと呼ばれるエンコードに必要な情報を記述した XML または JSON形式ファイルを用意する必要がある。今回は1秒フレームごとにJPEG形式の静止画（サムネイル）を生成するために次のようなプリセット（amsmp-thumbnail-config.json）を用意した。
+{  &amp;#34;Version&amp;#34;: 1.0,  &amp;#34;Codecs&amp;#34;: [  {  &amp;#34;Start&amp;#34;: &amp;#34;00:00:00&amp;#34;,  &amp;#34;Step&amp;#34;: &amp;#34;00:00:01&amp;#34;,  &amp;#34;Type&amp;#34;: &amp;#34;JpgImage&amp;#34;,  &amp;#34;JpgLayers&amp;#34;: [  {  &amp;#34;Quality&amp;#34;: 90,  &amp;#34;Type&amp;#34;: &amp;#34;JpgLayer&amp;#34;,  &amp;#34;Width&amp;#34;: 640,  &amp;#34;Height&amp;#34;: 360  }  ]  }  ],  &amp;#34;Outputs&amp;#34;: [  {  &amp;#34;FileName&amp;#34;: &amp;#34;{Basename}_{Index}{Extension}&amp;#34;,  &amp;#34;Format&amp;#34;: {  &amp;#34;Type&amp;#34;: &amp;#34;JpgFormat&amp;#34;  }  }  ] } MESによるサムネイル処理実行方法やプリセットの詳細については「Media Encoder Standard を使用した高度なエンコード」や同ページの「サムネイルを生成する」項を参照ください。尚、今回のサムネイル生成のためのエンコーディング処理は小生自作の「azure-media-processor-java」を利用してバッチ実行している。</description>
+    </item>
+    
+    <item>
+      <title>Collecting events into Azure Functions and triggering your custom code using fluent-plugin-azurefunctions</title>
+      <link>https://unofficialism.info/posts/fluent-plugin-azurefunctions/</link>
+      <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluent-plugin-azurefunctions/</guid>
+      <description>In this article, I’d like to introduces a solution to collect events from various sources and send them into HTTP Trigger function in Azure Functions using fluent-plugin-azurefunctions. Triggers in Azure Functions are event responses used to trigger your custom code. HTTP Trigger functions allow you to respond to HTTP events sent from fluentd and cook them into whatever you want!
+[note] Azure Functions is a (&amp;ldquo;serverless&amp;rdquo;) solution for easily running small pieces of code, or &amp;ldquo;functions,&amp;rdquo; in Azure.</description>
+    </item>
+    
+    <item>
+      <title>Video OCR using Azure Media &amp; Cognitive</title>
+      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr/</link>
+      <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr/</guid>
+      <description>OCRとはOptical Character Recognitionの略で日本語にすると光学文字認識と訳されており、ざっくりと画像の中の文字をテキストに変換する技術のことを指す。テキストに変換されるということは勘が鋭い皆さんはお気づきだと思うが、テキストの全文検索であったり、テキストから音声への変換、さらには機械翻訳を使って多言語への変換といった展開が考えられる。そんな可能性を秘めたOCRであるが、ここではそのOCRの技術を使ってビデオファイルから抽出したテキストデータを元にビデオに字幕表示したり、動画中に表示される文字を全文検索をするデモを紹介したい。内容的には「Azure Media &amp;amp; Cognitiveデモ:Speech-To-Text」で紹介したデモのOCR版といったところ。
+
+ demo site source code  主要テクノロジーと機能 Azure Media OCRメディアプロセッサによるテキスト抽出 このデモではAzure Media OCRメディアプロセッサー(MP)を使用してビデオファイル内のテキストコンテンツを検出してテキストファイルを生成している。OCRメディアプロセッサーは入力パラメータによりビデオ解析の挙動を調整することができる。主なパラメータとしては検索対象テキストの言語（日本語もサポート）、テキストの向き、サンプリングレート、ビデオフレーム内のテキスト検出対象のリージョンがあるが、本デモでの入力パラメータ（Video-OCR-Search-Python/src/ocr-detectregion.json）は以下の通り検索対象言語は日本語、1秒おきのサンプリングレート、テキスト検出対象のリージョンからビデオフレーム内の上部1/4を省く設定（検出対象をフレームトップから85 pixel以下を対象）にしている。
+{  &amp;#34;Version&amp;#34;:&amp;#34;1.0&amp;#34;,  &amp;#34;Options&amp;#34;:  {  &amp;#34;Language&amp;#34;:&amp;#34;Japanese&amp;#34;,  &amp;#34;TimeInterval&amp;#34;:&amp;#34;00:00:01.000&amp;#34;,  &amp;#34;DetectRegions&amp;#34;:  [  {&amp;#34;Left&amp;#34;:&amp;#34;0&amp;#34;,&amp;#34;Top&amp;#34;:&amp;#34;85&amp;#34;,&amp;#34;Width&amp;#34;:&amp;#34;1280&amp;#34;,&amp;#34;Height&amp;#34;:&amp;#34;635&amp;#34;}  ]  } } そして、Azure Media OCRメディアプロセッサはビデオで検出された文字を下記のような表示時間に基づいてセグメント化された形で結果出力する。結果ファイルの完全版はこちら（azuresubs.json）を参照ください。
+{  &amp;#34;fragments&amp;#34;: [  {  &amp;#34;start&amp;#34;: 0  &amp;#34;interval&amp;#34;: 319319,  &amp;#34;duration&amp;#34;: 319319,  &amp;#34;events&amp;#34;: [  [  {  &amp;#34;language&amp;#34;: &amp;#34;Japanese&amp;#34;,  &amp;#34;text&amp;#34;: &amp;#34;Azure の 契 約 内 容 を 変 更 す る Microsoft Azure&amp;#34;  }  ]  ]  },  { /* fragment1 */ },  { /* fragment2 */ },  .</description>
+    </item>
+    
+    <item>
+      <title>Speech-To-Text with Azure Media &amp; Cognitive Services</title>
+      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</link>
+      <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</guid>
+      <description>ビデオコンテンツを音声認識エンジンでテキスト化してそれを元にスピーチ検索するデモコンテンツを紹介したい。これは過去にde:code2016というマイクロソフトの開発者向けイベントで行ったブレイクアウトセッション「DEV-18: Azure Search Deep Dive」にて紹介したビデオコンテンツのスピーチ検索デモを簡略化して再利用しやすいものにしたものである。
+
+ demo site source code  主要テクノロジーと機能 Azure Media Indexer 2 Previewによる音声からテキスト抽出 このデモではAzure Media Indexer 2 Preview メディア プロセッサー (MP)を使用してビデオコンテンツからテキストを抽出している。このAzure Media Indexer 2 Previewは自然言語処理(NLP)や音声認識エンジンを駆使してビデオコンテンツより字幕用データ（時間やテキスト）や検索可能にするためのメタデータを抽出することができる。Indexer 2という名前の通り前のバージョンであるAzure Media Indexerが存在するが、これと比較すると、Azure Media Indexer 2 Previewは、インデックス作成が高速化され、より多くの言語をサポートしていることが特徴である。2016年11月6日時点で英語、スペイン語、フランス語、ドイツ語、イタリア語、中国語、ポルトガル語、アラビア語などがサポートされている（残念ながら日本語はまだ未サポート）。
+下イメージはAzure Media Indexer 2 (Preview)で生成されるTTMLとWebVTTという代表的な字幕データフォーマット。
+HTML5と字幕(Closed Caption) HTML5にはtrackタグエレメントを使ってビデオファイルに字幕を表示する機能が標準的に実装されている。本デモではHTML5に下記のように動画（Python_and_node.js_on_Visual_Studio.mp4）をVideoソースとしてtrackエレメントに字幕WebVttファイル（build2016breakout.vtt）を指定している。
+&amp;lt;video id=&amp;#34;Video1&amp;#34; controls autoplay width=&amp;#34;600&amp;#34;&amp;gt;  &amp;lt;source src=&amp;#34;Python_and_node.js_on_Visual_Studio.mp4&amp;#34; srclang=&amp;#34;en&amp;#34; type=&amp;#34;video/mp4&amp;#34;&amp;gt;  &amp;lt;track id=&amp;#34;trackJA&amp;#34; src=&amp;#34;build2016breakout.vtt&amp;#34; kind=&amp;#34;captions&amp;#34; srclang=&amp;#34;ja&amp;#34; label=&amp;#34;Closed Captions&amp;#34; default&amp;gt; &amp;lt;/video&amp;gt; Azure Searchによる全文検索 デモページ上部にある検索窓にキーワードを入力してGoボタンを押すとビデオコンテンツの字幕データを全文検索してキーワードにマッチしたテキストとその表示時間に絞り込むことができる。ここでは全文検索エンジンにAzure Searchを使用し、Azure Media Indexer 2 (Preview)より抽出された字幕データを解析して字幕表示時間とその対応テキストを1ドキュメントレコードとしてAzure Searchにインジェストしてその生成されたインデックスに対してキーワードを元に全文検索することで実現している。字幕データ検索用のインデックススキーマは次のように字幕表示時間とその対応テキストをレコード単位となるように定義している。</description>
+    </item>
+    
+    <item>
+      <title>Making SSH lives in Azure easier with azuresshconfig</title>
+      <link>https://unofficialism.info/posts/azuresshconfig/</link>
+      <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azuresshconfig/</guid>
+      <description>UPDATED 2016-10-31: paramsオプション + Bash Completion追加
+みんな大好きSSHとAzureのお話し。物理サーバ、EC2/仮想マシン、コンテナなどなんでもよいがその上にLinuxサーバをたてたらまずやることの1つにSSHログインのためにそのIPアドレス調べて~/.ssh/configにそのエントリーを追加してやることがあるんじゃないかと思います。この作業、エントリー数が少なければ大したことはないものの、追加対象のホストが大量にある場合はかなり面倒な作業になってきます。さらにDHCPなどでアドレスを動的に取得するような設定であればサーバの上げ下げのたびにIPアドレスが変わってくるので~/.ssh/configの更新が必要になってきて、どうしようもなく面倒になってきます。こういった単純でどうしようもなくつまらない作業は自動化したいですよね？ ここではそんな皆さんのためにazuresshconfigというツールを紹介させていただきます。
+これは皆さんのAzureサブスクリプション下に作られた仮想マシン一覧（ARMに限る）の情報を取得して各仮想マシンごとのエントリー情報（マシン名とIPアドレス）を~/.ssh/configに追加・更新してくれるツール。新規に仮想マシンを追加した際や、仮想マシンのIPアドレスが追加した際にはazuresshconfigを実行してあげることで~/.ssh/configが最新のエントリー情報でアップデートされ、各マシンにマシン名でSSHログインできるようになります。
+ちなみに、~/.ssh/configとは何ですか？という人はQiitaの記事「~/.ssh/configについて」がとても分かりやすく書かれているので参考になるかと。
+インストール Pythonパッケージ管理ツールpipを使ってazuresshconfigをインストールしてください。インストール時に何かエラーが発生した場合は、こちらのページを参照いただき特に該当する事象がないか確認ください。
+$ pip install azuresshconfig 設定ファイルの編集（サービスプリンシパル） $ vi $HOME/.azure/azuresshconfig.json  {  &amp;#34;subscription_id&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;client_id&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;client_scret&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;tenant_id&amp;#34;: &amp;#34;&amp;#34; } サービスプリンシパルを作る必要があります。サービスプリンシパルの作り方が分からない人、とってもよいドキュメントがあります。こちらを参照ください：「Use Azure CLI to create a service principal to access resources」
+使い方 azuresshconfig --help usage: azuresshconfig.py [-h] [--version] [--init] [--profile PROFILE] [--user USER] [--identityfile IDENTITYFILE] [--private] [--resourcegroups RESOURCEGROUPS] [--params PARAMS] This program generates SSH config from Azure ARM VM inventry in subscription optional arguments: -h, --help show this help message and exit --version show program&amp;#39;s version number and exit --init Create template client profile at $HOME/.</description>
+    </item>
+    
+    <item>
+      <title>embulk plugins for Microsoft Azure Services</title>
+      <link>https://unofficialism.info/posts/embulk-plugins-for-microsoft-azure-services/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/embulk-plugins-for-microsoft-azure-services/</guid>
+      <description>Here is a list of embulk plugins that you can leverage to transfer your data between Microsoft Azure Services and various other databases/storages/cloud services.
+   Plugin Name Target Azure Services Note     embulk-output-azure_blob_storage Blob Storage Embulk output plugin that stores files onto Microsoft Azure Blob Storage   embulk-input-azure_blob_storage Blob Storage Embulk input plugin that reads files stored on Microsoft Azure Blob Storage   embulk-output-sqlserver SQL Databases, SQL DWH Embulk output plugin that Inserts or updates records to SQL server type of services like SQL DB/SQL DWH   embulk-input-sqlserver SQL Databases, SQL DWH Embulk input plugin that selects records from SQL type of services like SQL DB/SQL DWH   embulk-output-documentdb Comos DB Embulk output plugin that dumps records to Azure Cosmos DB   embulk-output-azuresearch Azure Search Embulk output plugin that dumps records to Azure Search    (as of Aug 30, 2016)</description>
+    </item>
+    
+    <item>
+      <title>fluent-plugin-documentdb supports Partitioned collections</title>
+      <link>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</guid>
+      <description>I’d like to announce fluent-plugin-documentdb finally supports Azure DocumentDB Partitioned collections for higher storage and throughput. If you&amp;rsquo;re not familiar with fluent-plugin-documentdb, read my previous article before move on.
+Partitioned collections is kick-ass feature that I had wanted to support in fluent-plugin-documentdb since the feature came out public (see the announcement). For big fan of fluent-plugin-documentdb, sorry for keeping you waiting for such a long time :-) If I may make excuses, I would say I haven&amp;rsquo;t had as much time on the project, and I had to do ruby client implementation of Partitioned collections by myself as there is no official DocumentDB Ruby SDK that supports it (As a result I&amp;rsquo;ve created tiny Ruby DocumentDB client libraries that support the feature.</description>
+    </item>
+    
+    <item>
+      <title>Collecting logs into Azure DocumentDB using fluent-plugin-documentdb</title>
+      <link>https://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</link>
+      <pubDate>Sun, 21 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</guid>
+      <description>In this article, I&amp;rsquo;d like to introduces a solution to collect logs and store them into Azure DocumentDB using fluentd and its plugin, fluent-plugin-documentdb.
+Azure DocumentDB is a managed NoSQL database service provided by Microsoft Azure. It&amp;rsquo;s schemaless, natively support JSON, very easy-to-use, very fast, highly reliable, and enables rapid deployment, you name it. Fluentd is an open source data collector, which lets you unify the data collection and consumption for a better use and understanding of data.</description>
+    </item>
+    
+    <item>
+      <title>fluentd plugins for Microsoft Azure Services</title>
+      <link>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</guid>
+      <description>UPDATED:
+ 2016-12-10: Added fluent-plugin-azure-loganalytics to the list 2016-11-23: Added fluent-plugin-azurefunctions to the list  Here is a list of fluentd plugins for Microsoft Azure Services.
+   Plugin Name Target Azure Services Note     fluent-plugin-azurestorage Blob Storage Azure Storate output plugin buffers logs in local file and upload them to Azure Storage periodicall   fluent-plugin-azureeventhubs Event Hubs Azure Event Hubs buffered output plugin for Fluentd.</description>
+    </item>
+    
+    <item>
+      <title>My patents</title>
+      <link>https://unofficialism.info/posts/patents/</link>
+      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/patents/</guid>
+      <description>I&amp;rsquo;ve just noticed that some of patents, which I was involved in for its publishing process, have been granted. Good news!
+ My patents list ( English translated ) My patents list ( Japanese )  </description>
+    </item>
+    
+    <item>
+      <title>ARMテンプレートを使って3分でAzure上にElasticsearchクラスタを構築する</title>
+      <link>https://unofficialism.info/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</guid>
+      <description>これはElasticsearch Advent Calendar 2015の17日目のエントリー
+ARMテンプレートと呼ばれるデプロイ手法を使ってAzure上にElasticsearchクラスタをさくっと構築する方法についてのお話で、主にAzure界隈のElasticsearchユーザ向けの内容となっている。タイトルにある3分でというのは実際に計ったわけではないがそれくらい簡単且つ短時間でできることを強調したく使わせていただいている・・・ということを前もって補足しておく（汗）。
+ARMテンプレートとは？ ARMテンプレートの前にARMについて少し解説する。ARMはAzure Resource Managerの略で、アプリケーション構築に必要な
+リソース（ストレージ、ネットワーク、コンピュート/仮想マシンなど）をデプロイし管理するための仕組みである。どんなソリューションのデプロイにおいても少なからず仮想ネットワーク、仮想マシン、ストレージ、LBなどのインフラの構築が必要で旧来のやり方ではこれらを１つ１つデプロイしていたかと思う。一方ARMの世界では必要な構築要素をリソースという単位にして、これらリソースを個別にデプロイするのではなく全てのリソースをグループ化してまとめてデプロイし、それらを管理・監視することができる。そして、それら複数のリソースはJSON形式のテンプレートで表現・展開できるようになっていて、このテンプレートのことをARMテンプレートと呼ぶ。Infrastructure as Codeなんて言葉がはやっていたりするが、まさにそれをAzureで実現するための公式な仕組みがARMであり、ARMテンプレートなのである。
+ちなみにこのARMテンプレート、手でいちから作る必要はなく、Azureクイックスタートテンプレートにさまざまなテンプレートが公開されているのでまずは自分の目的に似たようなことを実現しているテンプレートを選んでデプロイしてみることをお勧めする。完成されたものを見ることでお作法が学べるし、それをベースにカスタマイズしていくのが効率的である。
+ https://azure.microsoft.com/ja-jp/documentation/templates/ https://github.com/Azure/azure-quickstart-templates  Elasticsearchクラスタのデプロイ 上記で説明したARMテンプレートを利用してElasticsearchクラスタのデプロイを行う。ここで使うARMテンプレートはAzureクイック・スタートテンプレートギャラリーにあるElasticsearchテンプレートを利用する。ARMテンプレートを使ったデプロイには複数の方法があるがここではLinux上でAzure CLIを使った方法で行う。ここでの実行OSはUbuntu 14.10。
+最新版のAzure CLIをインストールしてからAzureサブスクリプションに接続する
+$ sudo npm install -g azure-cli $ azure --version $ azure login 「Azure コマンド ライン インターフェイス (Azure CLI) からの Azure サブスクリプションへの接続」に書かれているように、Azure CLI バージョン 0.9.10 以降では、対話型の azure login コマンドを使用して、任意の ID でアカウントにログインできる。尚、バージョン 0.9.9 以降は、多要素認証をサポートしている。
+デプロイ用のリソースグループを作成する
+ここでは西日本（Japan West）リージョンにResource-ES-JapanWestという名前のリソースグループを作成する。
+# azure group create -n &amp;#34;&amp;lt;リソースグループ名&amp;gt;&amp;#34; -l &amp;#34;&amp;lt;リージョン名&amp;gt;&amp;#34; $ azure group create -n &amp;#34;Resource-ES-JapanWest&amp;#34; -l &amp;#34;Japan West&amp;#34; ARMテンプレートのダウンロードとパラメータの編集</description>
+    </item>
+    
+    <item>
+      <title>今一度Traffic Managerのエンドポイント監視について</title>
+      <link>https://unofficialism.info/posts/traffic-manager-endpoint-monitoring/</link>
+      <pubDate>Sun, 29 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/traffic-manager-endpoint-monitoring/</guid>
+      <description>Azureが提供するDNSによるトラフィックルーティングサービスであるTraffic Managerについて、既にAzure利用ユーザに使い尽くされて新鮮味に欠けるサービスではあるものの、そのエンドポイント監視はTraffic Managerを扱う上でとても重要なことなので今一度そのルールについて整理したい。
+Traffic managerの実態はエンドポイントの監視＋ルーティングを行うDNSサービスである。以下digの結果を見ていただいてわかる通りyoichika-demo1.trafficmanager.netという外向きの名前に対してこの時点ではwebappdemo3.cloudapp.netがCNAMEされている。Traffic Managerは利用ユーザが設定したエンドポイントを監視し、その結果に応じて適切なルーティングを行う。ルーティング方法にはフェールオーバー、ラウンドロビン、パフォーマンスの3通りがある。これについて詳しくは「Traffic Managerのルーティング方法」を参照いただきたい。
+; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4.3ubuntu0.1-Ubuntu &amp;lt;&amp;lt;&amp;gt;&amp;gt; yoichika-demo1.trafficmanager.net +noall +answer ;; global options: +cmd yoichika-demo1.trafficmanager.net. 30 IN CNAME webappdemo3.cloudapp.net. webappdemo3.cloudapp.net. 60 IN A 70.37.93.167 次に肝心のエンドポイントの監視について「Traffic Manager の監視について」の監視シーケンスを使って要点を整理する。
+      つまり、エンドポイントがダウンした場合、Probeにより使用不可とみなすのに最大120秒(30秒 x 4)、さらにDNSのTTLの期間（既定値は300秒）を加えると、完全に問題のあったエンドポイントへのトラフィックが停止するまでに標準的に420秒、約7分は見ておく必要があるということになる。当然ながらこの7分間トラフィックがロスする可能性があるため、俊敏なフェールオーバーを期待する場合は別の仕掛けを用意する必要がある。ご注意ください。</description>
+    </item>
+    
+    <item>
+      <title>Static linking DLL to EXE in C Sharp</title>
+      <link>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</guid>
+      <description>Q1. C Sharpでexeに複数DLLをスタティックリンクさせて１ファイルにすることはできますか？
+C、C++ではおなじみのスタティックリンクだが、そもそもC Sharpではスタティックリンクができない。ただし
+MS Research謹製のILMergeを使えば実行ファイル(exe)に対して複数のクラスアセンブリ(DLL)を１つのアセンブリにマージすることはできる。使い方はこちらが参考になる。また、ILMerge-GUIというGUIツールもある。
+Q2. Visual Studioのビルドでも自動的に複数ファイルを１つにまとめることはできますか？
+パッケージマネージャーでILMerge.MSBuild.Tasksをインストールして*.csprojファイルに自動アセンブリ生成するための設定を追記するとVSのビルドで複数ファイルが１つのアセンブリにマージされたファイルが自動的にできあがる。参考: StackOverflow 「How to Integrate ILMerge into Visual Studio Build Process to Merge Assemblies?」
+ ILMerge.MSBuild.Tasksをインストール  Install-Package ILMerge.MSBuild.Tasks *.csprojファイルに下記設定を追記   &amp;lt;!-- Code to merge the assemblies into one --&amp;gt;  &amp;lt;UsingTask TaskName=&amp;#34;ILMerge.MSBuild.Tasks.ILMerge&amp;#34; AssemblyFile=&amp;#34;$(SolutionDir)\packages\ILMerge.MSBuild.Tasks.1.0.0.3\tools\ILMerge.MSBuild.Tasks.dll&amp;#34; /&amp;gt;  &amp;lt;Target Name=&amp;#34;AfterBuild&amp;#34;&amp;gt;  &amp;lt;ItemGroup&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)$(TargetFileName)&amp;#34; /&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名1&amp;#34; /&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名2&amp;#34; /&amp;gt;  ...  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名N&amp;#34; /&amp;gt;  &amp;lt;/ItemGroup&amp;gt;  &amp;lt;PropertyGroup&amp;gt;  &amp;lt;MergedAssembly&amp;gt;出力する結果アセンブリファイル名（フルパス）&amp;lt;/MergedAssembly&amp;gt;  &amp;lt;/PropertyGroup&amp;gt;  &amp;lt;Message Text=&amp;#34;ILMerge @(MergeAsm) -&amp;amp;gt; $(MergedAssembly)&amp;#34; Importance=&amp;#34;high&amp;#34; /&amp;gt;  &amp;lt;ILMerge InputAssemblies=&amp;#34;@(MergeAsm)&amp;#34; OutputFile=&amp;#34;$(MergedAssembly)&amp;#34; TargetKind=&amp;#34;SameAsPrimaryAssembly&amp;#34; /&amp;gt;  &amp;lt;/Target&amp;gt; &amp;lt;/Project&amp;gt; VSビルド実行で、マージされたファイルが生成（*.</description>
+    </item>
+    
+    <item>
+      <title>SOCKSプロキシを経由したAzure VNETプライベートリソースへのアクセス</title>
+      <link>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</guid>
+      <description>UPDATED 2017-03-22: Added SOCKS Proxy Configuration for Internet Explorer
+外部からの接続（SSH、HTTPなど）を受け付けていないAzure 仮想ネットワーク(以下VNET)内のリソースにSOCKSプロキシを経由して外部からアクセスしましょうというお話。本記事ではAzure VNET内の外部からのアクセス許可していないVMへのSSHログインとHTTPサーバコンテンツへのブラウジングの2つの方法を紹介する。
+SOCKS(RFC1928) とはさまざまなアプリケーションが間にファイアーウォールを挟んでいても安全に快適にやり取りができるようにすることを目的として作られたプロトコルのことで、SOCKSプロキシはSOCKSプロトコルを受け取りファイアウォール内外との接続を可能にするものである。エンドポイントやNetwork Security Group (NSG)によりネットーワーク分離設定されたAzure VNET内のリソースに対して一時的に本来直接アクセス許可しないネットワークからアクセスが必要な状況はあるかと思う。そのような時に毎回設定変更で必要なプロトコル、アクセス先に対して穴をあけるのは非常に面倒であり、またサイト間VPN、ポイント対サイトVPNとなるとさらに手間がかかる。お手軽に、もしくは定常的ではないが一時的に内部リソースにアクセスしたい場合にSOCKSプロキシ経由でのアクセスを検討してみてはいかがだろうか。以下はSOCKSプロキシ経由によるAzure VNET内のプライベートリソースへのアクセスイメージである。
+SOCKSプロキシの作成 まずはOpenSSHのダイナミックポートフォワード機能を使ってSOCKSプロキシを作成する。ダイナミックポートフォワードはSSHをSOCKSプロキシとして振舞うことを可能にする。SSHでアクセス先ホストと DynamicFoward(-D)でポートを指定することでlocalhostにSOCKSプロキシが立ち上がり指定のTCPポート(SOCKSプロキシサーバは基本的は1080だが、割り当て可能なポートであればどのポートでもOK)をlocalhost側からログイン先ホストのSSHサーバに転送することができるようになる。もちろん経路は暗号化される。現状のサポートプロトコルはSOCKS4とSOCKS5。
+例えば上図でいうとJump Server(踏み台)にDynamicFoward(-D)1080でログインすると、Jump Serverにポート1080を転送するSOCKSプロキシが localhostに立ち上がり、そのlocalhost:1080に対してSOCKS4またはSOCKS5プロトコルで接続することでJump Serverを経由して通信を行うことができるようになる。
+localhostポート1080のJump Serverへのダイナミックフォワードは次のように-Dオプションで行う。
+$ ssh -2 -D 1080 -l [Account] [Jump Server] 毎回-Dオプション指定が面倒な場合は、次のようにconfg(ssh_config)にDynamicForwardの記述することも可能。
+~/.ssh/config
+Host JumpServer  User [Account名]  HostName/IP [Jump Serverホスト/IPアドレス]  Protocol 2  ForwardAgent yes  DynamicForward 1080 上記OpenSSHの設定は、Linux/Macの場合は標準Terminalを使えばよいが、Windowsの場合はCygwin、XmingなどX端末エミュレータソフトをインストールしていただく必要がある。またX端末エミュレーターをインストールしなくともWindowsでは有名なSSHクライアントソフトPuttyがダイナミックポートフォワードに対応しているためPuttyを使ってSOCKSプロキシ作成することも可能。詳しくは「Dynamic Port Forwarding with SOCKS over SSH」が参考になるかと。
+SOCKSプロキシを使ったSSH接続 次に上記で作成したSOCKSプロキシを経由してVNET内のサーバにSSH接続をする。 netcatでSOCKSプロキシを経由してlocalhostから目的のVNET内サーバ（ServerX）間にnetcatトンネルを作成してServerXにはそのnetcatトンネルを通じて接続する。
+local$ ssh -2 -l [Account] -o &amp;#39;ProxyCommand nc -x localhost:1080 %h %p&amp;#39; [ServerX] netcat のプロキシ指定は-xオプションで行う。 ここでは事前に作成したSOCKSプロキシ(localhost:1080)を指定。 netcatトンネルの作成コマンドはProxyCommandに記述する。こちらも毎回長いオプション入力を避けるために config（ssh_config）設定すると便利である。</description>
+    </item>
+    
+    <item>
+      <title>Azure Insights REST APIを使ってAzure各リソースのメトリックを抽出する</title>
+      <link>https://unofficialism.info/posts/getting-resource-metrics-with-azure-insights-rest-api/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/getting-resource-metrics-with-azure-insights-rest-api/</guid>
+      <description>ARMとAzure Insights API Azure上のさまざまなサービスのメトリック情報をAPI経由で取得したい。そういうことであればAzure Service Management APIを使えばいいじゃないかという声が聞こえてきそうなところだが実は既にこのやり方は時代遅れとなっていることをご存じだろうか？ 2014年5月ごろ？に登場したAzureの新しい考え方にResource、ResourceGroup、Azure Resource Managerというものがある。簡単な説明すると、Azure上のPaaSインスタンス、仮想マシンなどすべての管理可能な資源をリソース(Resource)とよばれる単位に細分化し、それらをグループ化したものがResourceGroup、そして全てのリソースはAzure Resource Manager（以下ARM）というもので管理可能になっている。そしてこのARMで管理可能な世界のリソース群に紐づくメトリックデータはAzure Insights APIで取得可能となっている。本記事ではさまざまなリソースの中でもWeb Appsに絞って、Azure Insights REST API (Metric)を使ってそのメトリックを取得する方法について紹介する。
+ARM Explorerでどのメトリックが取得可能なのか確認する ARM Explorer (https://resources.azure.com/) をご存じだろうか？　これはその名の通りAzure上の全てのリソース（ご利用のサブスクリプションに紐づく全てのリソース）のエクスプローラーであり、これを使うことでこのARM管理下の世界のすべてのリソースをエクスプローラービューで閲覧することができる。このARM Explorerで閲覧可能な各リソースの情報の中にmetricdefinitionsというものがあって、これにはそのリソースに対して指定可能なメトリックの種類やその定義情報などが格納されている。リソースのメトリック取得をする際は、まずはARM Explorerで目的のリソースのmetricdefinitionsから指定可能なメトリックの種類を把握してからAPIリクエストを組み立てていただければと思う。ARM Explorerを使って本記事で取得対象としているWeb Apps（ここではサイト名yoichikademoを対象）のmetricdefinitionsを閲覧しているのが以下のスクリーンショットになる。
+Azure Insights REST APIメトリック取得インターフェース Azure Insights APIには次のような(1)メトリック定義一覧の取得と(2)対象リソースのメトリック情報取得の2つのインターフェースがある。当然ながらメトリックの取得には(2)のインターフェースを使用する。
+(1)メトリック定義一覧取得
+GET https://management.azure.com /subscriptions/{-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/{resource-type}/{resource-name}/metricDefinitions [Parameters] api-version={api-version} $filter={filter} (2)メトリック情報取得
+GET https://management.azure.com /subscriptions/{-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/sites/{sitename}/metrics [Parameters] api-version={api-version} $filter={filter} APIの共通部分は下記の通り。Azure Insights APIへの全ての要求はAzure Active Directoryを使用して認証する必要があり、この認証により得られたトークンを各APIリクエストのAuthorizationヘッダに指定する必要がある。トークン取得の方法にはPowerShellを使用した方法とAzure管理ポータルを使用して認証する2つの方法がある。詳しくは「Azure インサイト要求を認証する」を参照ください。
+ {api-version}：&amp;ldquo;2014-04-01&amp;rdquo; {subscription-id} ： サブスクリプションID {resource-group-name}： リソースグループを指定。詳細は「リソースグループを使用した Azure リソースの管理」を参照ください Acceptヘッダー：&amp;quot;application/json&amp;quot;を指定。これを指定しない場合、結果はXMLで返却される AuthorizationヘッダーにAzure Active Directory から取得する JSON Web Token（JWT） に設定する。詳細は「Azure インサイト要求を認証する」を参照ください  実際のメトリクス取得APIでは$filterパラメータの付与が必要となる。$filterには主にメトリックの種類(name.</description>
+    </item>
+    
+    <item>
+      <title>DocumentDBをAzure Searchのデータソースとして利用する</title>
+      <link>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</link>
+      <pubDate>Sun, 28 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</guid>
+      <description>Azure Searchのインデックス更新方法には大きく分けてPUSHとPULLの２種類ある。PUSHは直接Indexing APIを使ってAzure SearchにコンテンツをPOSTして更新。PULLは特定データソースに対してポーリングして更新で、Azure Searchの場合、DocumentDBとSQL Databaseの2種類のデータソースを対象にワンタイムもしくは定期的なスケジュール実行が可能となっている。ここではDocumentDBをデータソースとしてインデックスを更新する方法を紹介する。
+サンプル構成と処理フローの説明 データソースにDocumentDBを利用する。データ「DOCUMENTDB PYTHON SDKとFEEDPARSERで作る簡易クローラー」においてクローリングされDocumentDBに保存されたブログ記事データを使用する。そしてDocumentDBを定期的にポーリングを行い更新があったレコードのみをAzure Searchインデックスに反映するためにDocumentDBインデクサーを設定する。全体構成としては下記の通りとなる。
+DocumentDBと更新先検索インデックスのフィールドのマッピング DocumentDBをデータソースとしてAzure Searchインデックスに更新を行うためDocumentDBの参照先コレクションのフィールドと更新先Azure Searchインデックスのフィールドをマッピングを行う。マッピングはデータソース定義中のDocumentDB参照用Queryで行う。Azure SearchインデックスにインジェストするフィールドをDocumentDBのSELECTクエリー指定するのだが、Azure SearchとDocumentDBのフィールドが異なる場合は下図のようにSELECT &amp;ldquo;Docdbフィールド名&amp;rdquo; AS &amp;ldquo;Searchフィールド名&amp;quot;でインジェスト先フィールド名を指定する。データソース定義については後述の設定内容を確認ください。
+Configuration 以下１～４のステップでデータソースの作成、検索インデックスの作成、インデクサーの作成、インデクサーの実行を行う。
+(1) データソースの作成
+credential.connectionStringで接続先DocumentDB文字列と対象データベースの指定を行う。container.(name|query)で対象コレクション名と参照用SELECT文を指定する。SELECT文はDocumentDBとインジェスト先Azure Searchのフィールドセット（フィールド名と数）が同じであれば省略可。詳細はこちらを参照。
+#!/bin/sh SERVICE_NAME=&amp;#39;&amp;lt;Azure Search Service Name&amp;gt;&amp;#39; API_VER=&amp;#39;2015-02-28-Preview&amp;#39; ADMIN_KEY=&amp;#39;&amp;lt;API KEY&amp;gt;&amp;#39; CONTENT_TYPE=&amp;#39;application/json&amp;#39; URL=&amp;#34;https://$SERVICE_NAME.search.windows.net/datasources?api-version=$API_VER&amp;#34;  curl -s\  -H &amp;#34;Content-Type: $CONTENT_TYPE&amp;#34;\  -H &amp;#34;api-key: $ADMIN_KEY&amp;#34;\  -XPOST $URL -d&amp;#39;{ &amp;#34;name&amp;#34;: &amp;#34;docdbds-article&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;documentdb&amp;#34;, &amp;#34;credentials&amp;#34;: { &amp;#34;connectionString&amp;#34;: &amp;#34;AccountEndpoint=https://&amp;lt;DOCUMENTDB_ACCOUNT&amp;gt;.documents.azure.com;AccountKey=&amp;lt;DOCUMENTDB_MASTER_KEY_STRING&amp;gt;;Database=&amp;lt;DOCUMENTDB_DBNAME&amp;gt;&amp;#34; }, &amp;#34;container&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;article_collection&amp;#34;, &amp;#34;query&amp;#34;: &amp;#34;SELECT s.id AS itemno, s.title AS subject, s.</description>
+    </item>
+    
+    <item>
+      <title>DocumentDB Python SDKとfeedparserで作る簡易クローラー</title>
+      <link>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</link>
+      <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</guid>
+      <description>DocumentDB Python SDKとfeedparserを使って簡易クローラーを作りましょうというお話。ここではDocumentDBをクローリング結果の格納先データストアとして使用する。クロール対象はAzure日本語ブログのRSSフィード、これをfeedparserを使ってドキュメント解析、必要データの抽出、そしてその結果を今回使用するpydocumentdbというDocumentDB Python SDKを使ってDocumentDBに格納するというワークフローになっている。
+DocumentDB Python SDK - pydocumentdb Azureで提供されているどのサービスにもあてはまることであるが、DocumentDBを操作するための全てのインターフェースはREST APIとして提供されておりREST APIを内部的に使用してマイクロソフト謹製もしくは個人のコントリビューションによる複数の言語のSDKが用意されている。その中でもpydocumentdbはPython用のDocumentDB SDKであり、オープンソースとしてソースコードは全てGithubで公開されている。
+ pydocumentdbプロジェクトトップ(Github) pydocumentdbサンプルコード(Github) Azure DocumentDB REST API Reference  Pre-Requirementsその１: Python実行環境とライブラリ 実行環境としてPython2.7系が必要となる。また、今回クローラーが使用しているDocumentDB Python SDKであるpydocumentdbとRSSフィード解析ライブラリfeedparserの２つのライブラリのインストールが必要となる。
+pydocumentdbインストール
+$ sudo pip install pydocumentdb feedparserインストール
+$ sudo pip install feedparser ちなみにpipがインストールされていない場合は下記の通りマニュアルもしくはインストーラーを使用してpipをインストールが必要となる
+pip マニュアルインストール
+# download get-pip.py $ wget https://bootstrap.pypa.io/get-pip.py # run the following (which may require administrator access) $ sudo python get-pip.py # upgrade pip $ sudo pip install -U pip インストーラーを使用</description>
+    </item>
+    
+    <item>
+      <title>Wikipediaデータベースを元にAzure Searchインデックスを生成する</title>
+      <link>https://unofficialism.info/posts/putting-wikipedia-data-into-azure-search/</link>
+      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/putting-wikipedia-data-into-azure-search/</guid>
+      <description>Wikipediaのコンテンツは Creative Commons Licenseおよび GNU Free Documentation Licenseの下にライセンスされておりWikipedia財団は再配布や再利用のために惜しげもなくこの貴重なデータベースのダンプファイル（XMLファイル）を一般提供している。全文検索の検証で大量のデータが必要なときこのWikipediaのような生きたデータを使えるのは非常に有りがたい。これはこのWikipediaデータベースダンプ（日本語）を元にAzure Searchインデックスを生成してみましょうというお話。
+ Wikipedia:データベースダウンロード ウィキメディア財団による全プロジェクトのデータベース・ダンプ Wikipedia日本語版のダンプデータレポジトリ(日本語最新版)  利用するWikipedia XMLファイルとその定義 最新版日本語レポジトリには複数のXMLファイルが用意されているがここでは全ページのタイトル、ディスクリプションといった要約データを集約しているファイルjawiki-latest-abstract.xmlを利用する。XMLのフォーマットは次のとおり。この中からtitle, url, abstractを抽出してAzure Searchに投入する。
+&amp;lt;doc&amp;gt; &amp;lt;title&amp;gt;Wikipedia: 自然言語&amp;lt;/title&amp;gt; &amp;lt;url&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E&amp;lt;/url&amp;gt; &amp;lt;abstract&amp;gt;自然言語（しぜんげんご、）とは、人間によって日常の意思疎通のために用いられる、文化的背景を持って自然に発展してきた記号体系である。大別すると音声に&amp;gt;よる話し言葉と文字や記号として書かれる書き言葉がある。&amp;lt;/abstract&amp;gt; &amp;lt;links&amp;gt; &amp;lt;sublink linktype=&amp;#34;nav&amp;#34;&amp;gt;&amp;lt;anchor&amp;gt;概要&amp;lt;/anchor&amp;gt;&amp;lt;link&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E#.E6.A6.82.E8.A6.81&amp;lt;/link&amp;gt;&amp;lt;/sublink&amp;gt; &amp;lt;sublink linktype=&amp;#34;nav&amp;#34;&amp;gt;&amp;lt;anchor&amp;gt;関連項目&amp;lt;/anchor&amp;gt;&amp;lt;link&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E#.E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE&amp;lt;/link&amp;gt;&amp;lt;/sublink&amp;gt; &amp;lt;/links&amp;gt; &amp;lt;/doc&amp;gt; 尚、実際にダウンロードしてみるとわかると思うがこのファイルはサイズが比較的大きく集約されているドキュメント数も実に多い。カウントしてみたところ現時点（2015/06/09）で969541　件あった。Azure Searchの料金プランのうちFreeプランは最大ドキュメント数が10,000であることからここで利用する料金プランはFreeではなく標準プランを選択する必要がある。
+Index Schema インデックス名はwikipedia、フィールドはキーフィールドのためのitemidフィールドと上記wikipedia XMLファイルのtitle, url, abstractを格納するための3フィールドを定義。
+{  &amp;#34;name&amp;#34;: &amp;#34;wikipedia&amp;#34;,  &amp;#34;fields&amp;#34;: [  { &amp;#34;name&amp;#34;:&amp;#34;itemid&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;key&amp;#34;: true, &amp;#34;searchable&amp;#34;: false },  { &amp;#34;name&amp;#34;:&amp;#34;title&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;filterable&amp;#34;:false, &amp;#34;sortable&amp;#34;:false, &amp;#34;facetable&amp;#34;:false},  { &amp;#34;name&amp;#34;:&amp;#34;abstract&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;filterable&amp;#34;:false, &amp;#34;sortable&amp;#34;:false, &amp;#34;facetable&amp;#34;:false, &amp;#34;analyzer&amp;#34;:&amp;#34;ja.</description>
+    </item>
+    
+    <item>
+      <title>cUrlコマンドで始める簡単Azure Search</title>
+      <link>https://unofficialism.info/posts/getting-started-azure-search-with-curl/</link>
+      <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/getting-started-azure-search-with-curl/</guid>
+      <description>cUrlはUNIX/Linux系では有名なURLを使ったデータ送受信コマンドで手軽にREST系処理を実行するときにとても重宝している。そんなcUrlコマンドを使ってAzure Searchをお手軽に使ってみようというお話。
+はじめに まだの人はAzureポータルよりAzure Searchサービスを作成してください。「ポータルでの Azure Search サービスの作成」に優しく手順が書かれているのでご参考に。料金プランは無料と標準プランがあるがテストであれば無料プランで十分。まずはAPIキーまで取得ください。API実行のためにはAPIキーが必要。
+cURLでSearch Service REST APIを実行 Search Service REST APIの中からいくつか代表的なAPIをピックアップしてcUrlでクエリを組み立ててみる。ここではインデックス新規作成、そこにいくつかドキュメントを追加、そしてドキュメントを検索する・・といった基本的なシナリオを実行する。ポイントとしてはcUrlの-Hオプションでヘッダ定義、-XオプションでHTTPメソッド指定、-dオプションでリクエストボディを指定する・・・といったところ。尚、下記サンプルでは現時点（2015-06-05）で最新のAPIバージョン2015-02-28-Previewを使用している。
+1. インデックス新規作成 articlesという名前のブログ記事を格納するためのインデックスを作成する。インデックス生成にはCreate Index (Azure Search Service REST API)を利用する。
+#!/bin/sh SERVICE_NAME=&amp;#39;&amp;lt;Azure Search Service Name&amp;gt;&amp;#39; API_VER=&amp;#39;2015-02-28-Preview&amp;#39; ADMIN_KEY=&amp;#39;&amp;lt;API KEY&amp;gt;&amp;#39; CONTENT_TYPE=&amp;#39;application/json&amp;#39; URL=&amp;#34;https://$SERVICE_NAME.search.windows.net/indexes?api-version=$API_VER&amp;#34;  curl -s\  -H &amp;#34;Content-Type: $CONTENT_TYPE&amp;#34;\  -H &amp;#34;api-key: $ADMIN_KEY&amp;#34;\  -XPOST $URL -d&amp;#39;{ &amp;#34;name&amp;#34;: &amp;#34;articles&amp;#34;, &amp;#34;fields&amp;#34;: [ { &amp;#34;name&amp;#34;:&amp;#34;itemid&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;key&amp;#34;: true, &amp;#34;searchable&amp;#34;: false }, { &amp;#34;name&amp;#34;:&amp;#34;title&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;filterable&amp;#34;:false, &amp;#34;sortable&amp;#34;:false, &amp;#34;facetable&amp;#34;:false}, { &amp;#34;name&amp;#34;:&amp;#34;content&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.</description>
+    </item>
+    
+  </channel>
+</rss>

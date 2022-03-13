@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>prometheus on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/prometheus/</link>
+    <description>Recent content in prometheus on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Kubernetes Metrics using kubectl</title>
+      <link>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</guid>
+      <description>There are various ways to obtain Kubernetes metrics which you can use to visualize, monitor and alert on your metrics. In reality you most likely use managed or unmanaged OSS metrics collection and visualization tools, but in this post, I introduce how to get raw Kubernetes metrics using kubectl.
+Kubernetes Raw Metrics via Prometheus metrics endpoint Many Kubernetes components exposes their metrics via the /metrics endpoint, including API server, etcd and many other add-ons.</description>
+    </item>
+    
+  </channel>
+</rss>

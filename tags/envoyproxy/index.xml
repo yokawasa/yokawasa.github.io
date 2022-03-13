@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>envoyproxy on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/envoyproxy/</link>
+    <description>Recent content in envoyproxy on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/envoyproxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set of Envoy Proxy features demos</title>
+      <link>https://unofficialism.info/posts/envoy-proxy-demos/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/envoy-proxy-demos/</guid>
+      <description>Set of demos to demonstrate Envoy Proxy features
+HTTP Routing: Simple Match Routing All traffic is routed by the front envoy to the service containers. Internally the traffic is routed to the service envoys, then the service envoys route the request to the flask app via the loopback address. In this demo, all traffic is routed to the service envoys like this:
+ A request (path /service/blue &amp;amp; port 8000) is routed to service_blue A request (path /service/green &amp;amp; port 8000) is routed to service_green A request (path /service/red &amp;amp; port 8000) is routed to service_red  Key definition 1 - virtual_hosts in front-envoy.</description>
+    </item>
+    
+  </channel>
+</rss>

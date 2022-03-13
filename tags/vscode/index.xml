@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>vscode on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/vscode/</link>
+    <description>Recent content in vscode on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions Article on Software Design 2022/02 Issue was released!</title>
+      <link>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</guid>
+      <description>A Software Design 2022/02 Issue was published in Jan 18, 2022!! I contributed the 2nd special feature article on CI/CD using GitHub Actions in it 🎉🎉🎉
+Please get it at an online bookstore!!
+『Software Design 2022年2月号』（技術評論社）/ Software Design 2022/02 Issue (gihyo)
+ Gihyo Online Amazon  </description>
+    </item>
+    
+    <item>
+      <title>Visual Studio Code Textbook for programmer was published!</title>
+      <link>https://unofficialism.info/posts/visual-studio-code-textbook/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/visual-studio-code-textbook/</guid>
+      <description>A book, I co-authored with @hoisjp and @_Dr_ASA, was recently published. Today I went to a bookstore to see if it was actually displayed. It was real!! 🎉🎉🎉
+『プログラマーのためのVisual Studio Codeの教科書』（マイナビ出版）/ Visual Studio Code textbooks for programmers
+ Softcover version Kindle version  </description>
+    </item>
+    
+  </channel>
+</rss>

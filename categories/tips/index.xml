@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TIPS on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/categories/tips/</link>
+    <description>Recent content in TIPS on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 13 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Easter Egg</title>
+      <link>https://unofficialism.info/posts/python-easter-egg/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/python-easter-egg/</guid>
+      <description>Python Easter Egg = Pythonの隠しクレジットとはいってもPython基礎本などでよく紹介されているものなので既にご存知かもしれないが背景が面白いのでここで紹介。
+Pythonにはthisモジュールという「The Zen of Python」(Note 1)を出力するだけのモジュールがある。このモジュール、中身(Note 2)を見てみると分かるが、総ステップにしてわずか28行、ROT13暗号化(Note 3)された文字列を復号化するだけの単純で取るに足らないものかもしれないがこのモジュールが作られた背景は面白い。Barry Warsaw氏が記事「import this and The Zen of Python」でthisモジュールが誕生にまつわる面白い話を紹介している。
+「import this and The Zen of Python」の一部簡訳
+ 2001年秋、Foretec Seminar社はのInternational Python Conference #10(以下IPC10、Pyconの前身となるカンファレンス)の準備をしておりPythonコミュニティからそのカンファレンスのスローガンを求めていた。スローガンはTシャツにもプリントされる予定だった。Guideや、Fred、Jeremyや著者達はかつてはForetec Seminar社に所属していたがPythonlabsを結成する2000年に同社を去っている。そしてPythonlabsはPythonコミュニティからのスローガン応募の審査と勝者の選定を担当することになった。応募は500くらいあったが、どれもひどいものだった。Timと著者は1つに絞られるまで何度となく選別作業を行い
+最終的に&amp;quot;import this&amp;quot;を選んだ。理由は&amp;quot;import this&amp;quot;という言葉の持つふざけた、小バカにしたようなトーンが好きだったからという。
+著者たちはこの&amp;quot;import this&amp;quot;をスローガンに選んですぐにthisモジュール(this.py)を実装した。モジュールは「The Zen of Python」を出力するだけのものだったが途中TimやGuidoの提案でrot13で暗号化して内容を少し難読化する工夫がされたりもした。IPC10が終わってすぐ、彼らはこのイベントを記念してthisモジュールをPython2.2.1ブランチにコミットした。この時、著者の提案で他の誰にも知られないようにするためにソース管理システムのチェックイン通知機能を停止し、こっそりこのモジュールをPython2.2.1のブランチに含めたのだ。これらのことは彼ら以外に誰にも知らせず内緒で行われた。著者いわく、この彼らの仕込んだeaster egg（thisモジュールのこと。ソフトウェアでいうeaster eggとは隠しコマンドとか、隠しクレジットのようなもの）が誰かに見つかるまではしばらく時間がかかったそうだ。
+ Barry Warsaw氏が同記事を「That was all back in the day when the Python community had a sense of humor」という一文で締めくくっているように、この記事を読むと当時のPythonコミュニティがいかにユーモア溢れたものだったのかが感じられる。phython-2.2.1がリリースされたのは2002年4月10日で、それからどれくらい経ってこのthisモジュールが発見されたのか分からないが初めて発見した人は絶対ほっこりしたことだろう。
+Note 1: import this 「The Zen of Python」はPythonハッカー、Tim Petersによって書かれた有名な文章でPython設計哲学を要約したようなものと言われている。 Barry Warsaw氏の記事によると起源はTim Peters氏による1999年6月4日のPython-listへのこの投稿のようだ。以下、Pythonインタラクティクモードでimport thisを実行し「The Zen of Python」を表示させた内容：</description>
+    </item>
+    
+    <item>
+      <title>Static linking DLL to EXE in C Sharp</title>
+      <link>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</guid>
+      <description>Q1. C Sharpでexeに複数DLLをスタティックリンクさせて１ファイルにすることはできますか？
+C、C++ではおなじみのスタティックリンクだが、そもそもC Sharpではスタティックリンクができない。ただし
+MS Research謹製のILMergeを使えば実行ファイル(exe)に対して複数のクラスアセンブリ(DLL)を１つのアセンブリにマージすることはできる。使い方はこちらが参考になる。また、ILMerge-GUIというGUIツールもある。
+Q2. Visual Studioのビルドでも自動的に複数ファイルを１つにまとめることはできますか？
+パッケージマネージャーでILMerge.MSBuild.Tasksをインストールして*.csprojファイルに自動アセンブリ生成するための設定を追記するとVSのビルドで複数ファイルが１つのアセンブリにマージされたファイルが自動的にできあがる。参考: StackOverflow 「How to Integrate ILMerge into Visual Studio Build Process to Merge Assemblies?」
+ ILMerge.MSBuild.Tasksをインストール  Install-Package ILMerge.MSBuild.Tasks *.csprojファイルに下記設定を追記   &amp;lt;!-- Code to merge the assemblies into one --&amp;gt;  &amp;lt;UsingTask TaskName=&amp;#34;ILMerge.MSBuild.Tasks.ILMerge&amp;#34; AssemblyFile=&amp;#34;$(SolutionDir)\packages\ILMerge.MSBuild.Tasks.1.0.0.3\tools\ILMerge.MSBuild.Tasks.dll&amp;#34; /&amp;gt;  &amp;lt;Target Name=&amp;#34;AfterBuild&amp;#34;&amp;gt;  &amp;lt;ItemGroup&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)$(TargetFileName)&amp;#34; /&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名1&amp;#34; /&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名2&amp;#34; /&amp;gt;  ...  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名N&amp;#34; /&amp;gt;  &amp;lt;/ItemGroup&amp;gt;  &amp;lt;PropertyGroup&amp;gt;  &amp;lt;MergedAssembly&amp;gt;出力する結果アセンブリファイル名（フルパス）&amp;lt;/MergedAssembly&amp;gt;  &amp;lt;/PropertyGroup&amp;gt;  &amp;lt;Message Text=&amp;#34;ILMerge @(MergeAsm) -&amp;amp;gt; $(MergedAssembly)&amp;#34; Importance=&amp;#34;high&amp;#34; /&amp;gt;  &amp;lt;ILMerge InputAssemblies=&amp;#34;@(MergeAsm)&amp;#34; OutputFile=&amp;#34;$(MergedAssembly)&amp;#34; TargetKind=&amp;#34;SameAsPrimaryAssembly&amp;#34; /&amp;gt;  &amp;lt;/Target&amp;gt; &amp;lt;/Project&amp;gt; VSビルド実行で、マージされたファイルが生成（*.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JSON on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/json/</link>
+    <description>Recent content in JSON on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cUrlコマンドで始める簡単Azure Search</title>
+      <link>https://unofficialism.info/posts/getting-started-azure-search-with-curl/</link>
+      <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/getting-started-azure-search-with-curl/</guid>
+      <description>cUrlはUNIX/Linux系では有名なURLを使ったデータ送受信コマンドで手軽にREST系処理を実行するときにとても重宝している。そんなcUrlコマンドを使ってAzure Searchをお手軽に使ってみようというお話。
+はじめに まだの人はAzureポータルよりAzure Searchサービスを作成してください。「ポータルでの Azure Search サービスの作成」に優しく手順が書かれているのでご参考に。料金プランは無料と標準プランがあるがテストであれば無料プランで十分。まずはAPIキーまで取得ください。API実行のためにはAPIキーが必要。
+cURLでSearch Service REST APIを実行 Search Service REST APIの中からいくつか代表的なAPIをピックアップしてcUrlでクエリを組み立ててみる。ここではインデックス新規作成、そこにいくつかドキュメントを追加、そしてドキュメントを検索する・・といった基本的なシナリオを実行する。ポイントとしてはcUrlの-Hオプションでヘッダ定義、-XオプションでHTTPメソッド指定、-dオプションでリクエストボディを指定する・・・といったところ。尚、下記サンプルでは現時点（2015-06-05）で最新のAPIバージョン2015-02-28-Previewを使用している。
+1. インデックス新規作成 articlesという名前のブログ記事を格納するためのインデックスを作成する。インデックス生成にはCreate Index (Azure Search Service REST API)を利用する。
+#!/bin/sh SERVICE_NAME=&amp;#39;&amp;lt;Azure Search Service Name&amp;gt;&amp;#39; API_VER=&amp;#39;2015-02-28-Preview&amp;#39; ADMIN_KEY=&amp;#39;&amp;lt;API KEY&amp;gt;&amp;#39; CONTENT_TYPE=&amp;#39;application/json&amp;#39; URL=&amp;#34;https://$SERVICE_NAME.search.windows.net/indexes?api-version=$API_VER&amp;#34;  curl -s\  -H &amp;#34;Content-Type: $CONTENT_TYPE&amp;#34;\  -H &amp;#34;api-key: $ADMIN_KEY&amp;#34;\  -XPOST $URL -d&amp;#39;{ &amp;#34;name&amp;#34;: &amp;#34;articles&amp;#34;, &amp;#34;fields&amp;#34;: [ { &amp;#34;name&amp;#34;:&amp;#34;itemid&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;key&amp;#34;: true, &amp;#34;searchable&amp;#34;: false }, { &amp;#34;name&amp;#34;:&amp;#34;title&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;filterable&amp;#34;:false, &amp;#34;sortable&amp;#34;:false, &amp;#34;facetable&amp;#34;:false}, { &amp;#34;name&amp;#34;:&amp;#34;content&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.</description>
+    </item>
+    
+  </channel>
+</rss>

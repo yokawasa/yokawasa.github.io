@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kubectl-plugins on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/kubectl-plugins/</link>
+    <description>Recent content in kubectl-plugins on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 08 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/kubectl-plugins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kubectl plugin - SOCKS5 proxy to Services or Pods in the cluster</title>
+      <link>https://unofficialism.info/posts/kubectl-plugin-socks5-proxy/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/kubectl-plugin-socks5-proxy/</guid>
+      <description>I’ve published a new kubectl plugin called kubectl-plugin-socks5-proxy. This is a kubectl plugin that creates a local SOCKS5 proxy through which you can access to Services or Pods in a Kubernetes cluster.
+What the plugin actually does is that it create a SOCKS proxy server Pod in a Kubernetes cluster and forwards a local port (default:1080) to the proxy. So you can access to Servcies or Pods in Kuberenetes cluster by using the local port as SOCKS5 proxy like this:</description>
+    </item>
+    
+  </channel>
+</rss>

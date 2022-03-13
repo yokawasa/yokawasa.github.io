@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DocumentDB on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/documentdb/</link>
+    <description>Recent content in DocumentDB on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 22 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/documentdb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Developing Full Managed Search Application in Azure</title>
+      <link>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</guid>
+      <description>これは9/29 Azure Web Seminar 「Azure サービスを活用して作るフルマネージドな全文検索アプリケーション」のフォローアップ記事です。なかなか暇ができず少々時間が経過してしまいました。
+ Azure サービスを活用して作るフルマネージドな全文検索アプリケーション from Yoichi Kawasaki
+Sample Application &amp;amp; Source Code セミナーで紹介したサンプルアプリはAzure公式サイトに載せてある代表的なサービスのFAQデータを元にしたHTML/CSS/JavascriptによるQ＆Aナレジッジベース検索のシングルページアプリケーションです。検索エンジンにAzure Searchを使い、データソースにCosmos DBを使いAzure SearchのCosmosDB Indexerでクローリングする構成にしてます。ソースコードと設定手順は以下Githubプロジェクトにアップしてあります。もしバグや設定手順等でご質問があればGithubでIssue登録いただければ時間を見つけて対応させていただきます。
+Source Code: https://github.com/yokawasa/azure-search-qna-demo/
+Demo: AI Digital Media Search セミナー中に紹介した非構造化データの全文検索デモとして紹介したAI Digital Media Searchアプリケーション。メディア x 音声認識 x 機械翻訳 x 全文検索全てを絡めた面白いアプリケーションなのでこちらでデモ動画とソースコードを共有します。またこのアプリはAzure PaaSサービスを組み合わせてプレゼンテーションレイヤー(Web App for Container)のみならずデータ生成部分（AMS, Functions, Logic App）も全てサーバレスで実現しているのでこのエリアのサンプルアプリとしてもとても良いものになっていると思います。
+ Demo Video: AI Digital Media Search Demo Source Code: https://github.com/shigeyf/ai-digitalmedia  AzureSearch.js - Azure Search UIライブラリ AzureSearch.jsはAzure SearchのUIライブラリで、Azure Searchプロダクトチーム主要開発者により開始されたOSSライブラリです。TypeScriptで書かれているのでとても読みやすく、また、ライブラリが提供するオブジェクト操作により非常に短いコードでサーチボックス、結果出力、ページネーション、ファセット、サジェスションなどで構成されるサーチ用UIを簡単に組み立てることが可能です。なかなかいけているライブラリにもかかわらず、あまり世の中に知られていないのはもったいないと思いセミナーの最後で紹介させていただきました。これ使わない手はないです。手っ取り早くは、下記のAzureSearch.jsアプリテンプレートジェネレータページで皆さんのAzure SearchアカウントのQueryKeyとインデックススキーマ（JSONフォーマット）を入力するとAzureSearch.jsアプリの雛形が生成されますので、そこから始めるのがよいかと思います。
+ AzureSearch.jsプロジェクトトップ＠Github デモアプリサイト AzureSearch.</description>
+    </item>
+    
+    <item>
+      <title>fluent-plugin-documentdb supports Partitioned collections</title>
+      <link>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</guid>
+      <description>I’d like to announce fluent-plugin-documentdb finally supports Azure DocumentDB Partitioned collections for higher storage and throughput. If you&amp;rsquo;re not familiar with fluent-plugin-documentdb, read my previous article before move on.
+Partitioned collections is kick-ass feature that I had wanted to support in fluent-plugin-documentdb since the feature came out public (see the announcement). For big fan of fluent-plugin-documentdb, sorry for keeping you waiting for such a long time :-) If I may make excuses, I would say I haven&amp;rsquo;t had as much time on the project, and I had to do ruby client implementation of Partitioned collections by myself as there is no official DocumentDB Ruby SDK that supports it (As a result I&amp;rsquo;ve created tiny Ruby DocumentDB client libraries that support the feature.</description>
+    </item>
+    
+    <item>
+      <title>Collecting logs into Azure DocumentDB using fluent-plugin-documentdb</title>
+      <link>https://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</link>
+      <pubDate>Sun, 21 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</guid>
+      <description>In this article, I&amp;rsquo;d like to introduces a solution to collect logs and store them into Azure DocumentDB using fluentd and its plugin, fluent-plugin-documentdb.
+Azure DocumentDB is a managed NoSQL database service provided by Microsoft Azure. It&amp;rsquo;s schemaless, natively support JSON, very easy-to-use, very fast, highly reliable, and enables rapid deployment, you name it. Fluentd is an open source data collector, which lets you unify the data collection and consumption for a better use and understanding of data.</description>
+    </item>
+    
+    <item>
+      <title>fluentd plugins for Microsoft Azure Services</title>
+      <link>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</guid>
+      <description>UPDATED:
+ 2016-12-10: Added fluent-plugin-azure-loganalytics to the list 2016-11-23: Added fluent-plugin-azurefunctions to the list  Here is a list of fluentd plugins for Microsoft Azure Services.
+   Plugin Name Target Azure Services Note     fluent-plugin-azurestorage Blob Storage Azure Storate output plugin buffers logs in local file and upload them to Azure Storage periodicall   fluent-plugin-azureeventhubs Event Hubs Azure Event Hubs buffered output plugin for Fluentd.</description>
+    </item>
+    
+    <item>
+      <title>DocumentDBをAzure Searchのデータソースとして利用する</title>
+      <link>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</link>
+      <pubDate>Sun, 28 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</guid>
+      <description>Azure Searchのインデックス更新方法には大きく分けてPUSHとPULLの２種類ある。PUSHは直接Indexing APIを使ってAzure SearchにコンテンツをPOSTして更新。PULLは特定データソースに対してポーリングして更新で、Azure Searchの場合、DocumentDBとSQL Databaseの2種類のデータソースを対象にワンタイムもしくは定期的なスケジュール実行が可能となっている。ここではDocumentDBをデータソースとしてインデックスを更新する方法を紹介する。
+サンプル構成と処理フローの説明 データソースにDocumentDBを利用する。データ「DOCUMENTDB PYTHON SDKとFEEDPARSERで作る簡易クローラー」においてクローリングされDocumentDBに保存されたブログ記事データを使用する。そしてDocumentDBを定期的にポーリングを行い更新があったレコードのみをAzure Searchインデックスに反映するためにDocumentDBインデクサーを設定する。全体構成としては下記の通りとなる。
+DocumentDBと更新先検索インデックスのフィールドのマッピング DocumentDBをデータソースとしてAzure Searchインデックスに更新を行うためDocumentDBの参照先コレクションのフィールドと更新先Azure Searchインデックスのフィールドをマッピングを行う。マッピングはデータソース定義中のDocumentDB参照用Queryで行う。Azure SearchインデックスにインジェストするフィールドをDocumentDBのSELECTクエリー指定するのだが、Azure SearchとDocumentDBのフィールドが異なる場合は下図のようにSELECT &amp;ldquo;Docdbフィールド名&amp;rdquo; AS &amp;ldquo;Searchフィールド名&amp;quot;でインジェスト先フィールド名を指定する。データソース定義については後述の設定内容を確認ください。
+Configuration 以下１～４のステップでデータソースの作成、検索インデックスの作成、インデクサーの作成、インデクサーの実行を行う。
+(1) データソースの作成
+credential.connectionStringで接続先DocumentDB文字列と対象データベースの指定を行う。container.(name|query)で対象コレクション名と参照用SELECT文を指定する。SELECT文はDocumentDBとインジェスト先Azure Searchのフィールドセット（フィールド名と数）が同じであれば省略可。詳細はこちらを参照。
+#!/bin/sh SERVICE_NAME=&amp;#39;&amp;lt;Azure Search Service Name&amp;gt;&amp;#39; API_VER=&amp;#39;2015-02-28-Preview&amp;#39; ADMIN_KEY=&amp;#39;&amp;lt;API KEY&amp;gt;&amp;#39; CONTENT_TYPE=&amp;#39;application/json&amp;#39; URL=&amp;#34;https://$SERVICE_NAME.search.windows.net/datasources?api-version=$API_VER&amp;#34;  curl -s\  -H &amp;#34;Content-Type: $CONTENT_TYPE&amp;#34;\  -H &amp;#34;api-key: $ADMIN_KEY&amp;#34;\  -XPOST $URL -d&amp;#39;{ &amp;#34;name&amp;#34;: &amp;#34;docdbds-article&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;documentdb&amp;#34;, &amp;#34;credentials&amp;#34;: { &amp;#34;connectionString&amp;#34;: &amp;#34;AccountEndpoint=https://&amp;lt;DOCUMENTDB_ACCOUNT&amp;gt;.documents.azure.com;AccountKey=&amp;lt;DOCUMENTDB_MASTER_KEY_STRING&amp;gt;;Database=&amp;lt;DOCUMENTDB_DBNAME&amp;gt;&amp;#34; }, &amp;#34;container&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;article_collection&amp;#34;, &amp;#34;query&amp;#34;: &amp;#34;SELECT s.id AS itemno, s.title AS subject, s.</description>
+    </item>
+    
+    <item>
+      <title>DocumentDB Python SDKとfeedparserで作る簡易クローラー</title>
+      <link>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</link>
+      <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</guid>
+      <description>DocumentDB Python SDKとfeedparserを使って簡易クローラーを作りましょうというお話。ここではDocumentDBをクローリング結果の格納先データストアとして使用する。クロール対象はAzure日本語ブログのRSSフィード、これをfeedparserを使ってドキュメント解析、必要データの抽出、そしてその結果を今回使用するpydocumentdbというDocumentDB Python SDKを使ってDocumentDBに格納するというワークフローになっている。
+DocumentDB Python SDK - pydocumentdb Azureで提供されているどのサービスにもあてはまることであるが、DocumentDBを操作するための全てのインターフェースはREST APIとして提供されておりREST APIを内部的に使用してマイクロソフト謹製もしくは個人のコントリビューションによる複数の言語のSDKが用意されている。その中でもpydocumentdbはPython用のDocumentDB SDKであり、オープンソースとしてソースコードは全てGithubで公開されている。
+ pydocumentdbプロジェクトトップ(Github) pydocumentdbサンプルコード(Github) Azure DocumentDB REST API Reference  Pre-Requirementsその１: Python実行環境とライブラリ 実行環境としてPython2.7系が必要となる。また、今回クローラーが使用しているDocumentDB Python SDKであるpydocumentdbとRSSフィード解析ライブラリfeedparserの２つのライブラリのインストールが必要となる。
+pydocumentdbインストール
+$ sudo pip install pydocumentdb feedparserインストール
+$ sudo pip install feedparser ちなみにpipがインストールされていない場合は下記の通りマニュアルもしくはインストーラーを使用してpipをインストールが必要となる
+pip マニュアルインストール
+# download get-pip.py $ wget https://bootstrap.pypa.io/get-pip.py # run the following (which may require administrator access) $ sudo python get-pip.py # upgrade pip $ sudo pip install -U pip インストーラーを使用</description>
+    </item>
+    
+  </channel>
+</rss>

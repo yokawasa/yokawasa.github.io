@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>analyzer on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/analyzer/</link>
+    <description>Recent content in analyzer on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 13 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/analyzer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Search Text Analyzer Tools - azure-search-ta</title>
+      <link>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</guid>
+      <description>Azure Searchのアナライザーによるテキスト解析結果を出力する（だけの）ツールを作ってみたのでここで紹介します。その名もazure-search-ta（ta=Test Analyzer）。中身はAzure SearchのAnalyzer APIの出力結果を整形して表示させていているだけの単純なものでありますが、Azure Searchの全文検索チューニングやキーワードにヒットしない原因調査をする際には役に立つと思ってます。「どうしてこのキーワードがひっかからないの？」を突き詰めるには最終的にアナライザのテキスト解析結果と突き合わせる必要があるのと、アナライザーを選択する際にテキスト解析が視覚化されていると判断しやすいだろうと。ツールは2種類で （１）Web UIツールと（２）コマンドラインツール
+Web UI Tool https://github.com/yokawasa/azure-search-ta
+インストールは超簡単。（１）Githubからazure-search-taをclone （２）azure-search-ta/ui 配下のファイルをPHPが動くWebサーバにコピー （３）analyze-api.phpをエディタで開いてお使いのAzure Searchカウント名とAzure Search API Adminキーの値を設定ください。あとはazure-search-ta-ui.htmlにアクセスいただければ上記のようなUIが出力されるはずです。なぜHTML/JSだけではなく間にPHPを挟んでいるのかについて、Azure SearchのAnalyze APIや管理系APIリクエストに位置付けられており、管理系APIはvia CORSでのリクエストを受け付けていないからである。
+$ git clone https://github.com/yokawasa/azure-search-ta.git` $ vi azure-search-ta/ui/analyze-api.php  $azureSearchAccount=&amp;#34;&amp;#34;; $azureSearchApiKey = &amp;#34;&amp;#34;; Command-Line Tool 1. インストールと設定 pipでazure-search-taパッケージをインストール。既に古いバージョンをインストール済みでアップデートする際は――upgradeをつけて実行ください。
+$ pip install --user azure-search-ta 次に、search.confにお使いのAzure Searchカウント名とAzure Search API Adminキーの値を設定ください。
+# Azure Search Service Name ( never put space before and after = ) SEARCH_SERVICE_NAME= # Azure Search API Admin Key ( never put space before and after = ) SEARCH_API_KEY= 2.</description>
+    </item>
+    
+  </channel>
+</rss>

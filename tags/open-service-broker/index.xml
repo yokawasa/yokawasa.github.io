@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Open Service Broker on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/open-service-broker/</link>
+    <description>Recent content in Open Service Broker on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/open-service-broker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes x PaaS コンテナアプリケーションのNoOpsへの挑戦 (Japan Container Days v18.04)</title>
+      <link>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</guid>
+      <description>先日、4月19日に開催されたJapan Container Days v18.04にて「Kubernetes x PaaS – コンテナアプリケーションのNoOpsへの挑戦」というタイトルでセッションを担当させていただいた。その名の通りメインがKubernetesで、KubernetesアプリケーションにおいてNoOps（運用レス）を目指すためのにどういった工夫ができるのか、どういったものを活用していけばよいのか、という内容です。このブログではJapan Container Daysでの発表に使用したスライドの共有とセッションに中のサンプルやデモについて補足させていただく。
+Session Slides  Kubernetes x PaaS – コンテナアプリケーションの NoOpsへの挑戦 from Yoichi Kawasaki
+補足情報 1. Open Service Broker for AzureでAzure Database for MySQLの利用 スライドでお見せした実際のファイルを使ってAzure Database for MySQLのサービスインスタンス作成、バインディング、そして実際のアプリケーションからの利用までの流れを紹介させていただく。
+Open Service Broker for AzureプロジェクトのGithubにあるサンプルファイルmysql-instance.yamlとmysql-binding.yamlを使ってそれぞれServiceInstanceとServiceBindingを作成する `
+# Provisioning the database, basic50 plan ... $ kubectl create -f mysql-instance.yaml  # Wait until ServiceInstance named example-mysql-instance get ready &amp;#39;Status =&amp;gt; Ready&amp;#39;, # then execute the following to create a binding for this new database, $ kubectl create -f mysql-binding.</description>
+    </item>
+    
+  </channel>
+</rss>

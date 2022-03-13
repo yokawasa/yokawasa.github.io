@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>rbac on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/rbac/</link>
+    <description>Recent content in rbac on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 11 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/rbac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accessing RBAC enabled Kubernetes Dashboard</title>
+      <link>https://unofficialism.info/posts/accessing-rbac-enabled-kubernetes-dashboard/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/accessing-rbac-enabled-kubernetes-dashboard/</guid>
+      <description>This is an article on how you can configure Service Account and RoleBinding in order to make Dashbaord work. As of release Kubernetes v1.7, Dashboard no longer has full admin privileges granted by default. All the privileges are revoked and only minimal privileges granted, that are required to make Dashboard work. With default priviledge, you&amp;rsquo;ll see the following errors showed up on the Dashboard.
+[Azure Kubernetes Service (AKS)] RBAC is enabled by default Since Azure CLI version 2.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AzureFunctions on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/azurefunctions/</link>
+    <description>Recent content in AzureFunctions on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azurefunctions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Functions Python Programming  - Experimental</title>
+      <link>https://unofficialism.info/posts/azure-functions-app-development-with-python-experimental/</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azure-functions-app-development-with-python-experimental/</guid>
+      <description>今年もあと少し。ほぼ趣味の範囲を超えないレベルで今年取り組んだテーマの１つにAzure Functions with Pythonがある。あまり情報が無い中、興味本位でサンプルコードを作っては動かして試して得られた情報をシコシコとGithubに上げているうちにナレッジが溜まって来た。それほど多くはないと思うがPythonでAzure Functionsアプリを作りたいという人もいると思うのでノウハウをブログにまとめておく。いきなり水を差すようではあるが、現時点（2017年12月）ではAzure FunctionsのPythonサポータビリティはExperimental（実験的サポート）でありプロダクション向きではない状況であるので、ホントにPythonが好きな人がOn your own riskで楽しんでいただければと思う。
+Azure FunctionsのPythonサポート状況 Azure FunctionsのRuntimeには大きく1系と２系の２種類あるが、現時点でPythonは1系でのみExperimentalサポートという状況（ See also 言語サポート状況）
+Experimental（実験的サポート）なので本番での利用は非推奨であり、公式サポートはない（ベストエフォートでのサポートは得られるはず）。また、当然ながらGA言語に比べパフォーマンスは悪い。PythonはFunction呼び出し毎にpython.exeが実行される（GA言語はRuntimeと同じプロセスで実行）。
+将来的な話をすると、Azure Functions Runtime 1系でのPythonサポートについては今のExperimentalの域を超えることはないだろう。一方、Runtime 2系ではPythonが正式サポートされるように対応が進められている。ただし時期は未定。この対応については下記Github Issueが切られており、ある程度の対応状況であれば確認可能。Pythonを使う利点の１つに、強力な数理計算、自然言語解析、機械学習系モジュールがあるが、早く安定とパフォーマンスが備わったPythonサーバレスアプリ実行環境でこれら強力なモジュールを活用できたらと思うのは私だけではないだろう。今後の進展に期待。
+ Feature planning: first class Python support  Hosting Planの選択について Consumption Plan vs App Service Plan Azure FunctionsのHosting PlanにはConsumption PlanとApp Service Planの2つがあって、言語に関係なく各プランの特徴は次の通り:
+Consumption Plan
+ コード実行時にコンピューティング割り当て リソース使用量（関数実行時間、使用メモリ）で課金 自動スケール、各処理は〜10分まで  App Service Plan
+ 専用VMでリソース確保 継続処理：10分以上の処理 App Service環境でのみ可能な処理: App Service Environment, VNET/VPN接続, より大きなサイズのVM, etc  Pythonで使う上で気をつけるポイント  Python 3.</description>
+    </item>
+    
+    <item>
+      <title>Collecting events into Azure Functions and triggering your custom code using fluent-plugin-azurefunctions</title>
+      <link>https://unofficialism.info/posts/fluent-plugin-azurefunctions/</link>
+      <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluent-plugin-azurefunctions/</guid>
+      <description>In this article, I’d like to introduces a solution to collect events from various sources and send them into HTTP Trigger function in Azure Functions using fluent-plugin-azurefunctions. Triggers in Azure Functions are event responses used to trigger your custom code. HTTP Trigger functions allow you to respond to HTTP events sent from fluentd and cook them into whatever you want!
+[note] Azure Functions is a (&amp;ldquo;serverless&amp;rdquo;) solution for easily running small pieces of code, or &amp;ldquo;functions,&amp;rdquo; in Azure.</description>
+    </item>
+    
+    <item>
+      <title>fluentd plugins for Microsoft Azure Services</title>
+      <link>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</guid>
+      <description>UPDATED:
+ 2016-12-10: Added fluent-plugin-azure-loganalytics to the list 2016-11-23: Added fluent-plugin-azurefunctions to the list  Here is a list of fluentd plugins for Microsoft Azure Services.
+   Plugin Name Target Azure Services Note     fluent-plugin-azurestorage Blob Storage Azure Storate output plugin buffers logs in local file and upload them to Azure Storage periodicall   fluent-plugin-azureeventhubs Event Hubs Azure Event Hubs buffered output plugin for Fluentd.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kustomize on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/kustomize/</link>
+    <description>Recent content in kustomize on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/kustomize/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions - Kubernetes tools installer</title>
+      <link>https://unofficialism.info/posts/action-setup-kube-tools/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/action-setup-kube-tools/</guid>
+      <description>I&amp;rsquo;ve published a new GitHub Action called action-setup-kube-tools (View on Marketplace). The action installs Kubernetes tools (kubectl, kustomize, helm, kubeval, conftest, and yq) and cache them on the runner. This is a typescript version of stefanprodan/kube-tools with no command input param.
+Usage Inputs    Parameter Required Default Value Description     kubectl false 1.18.2 kubectl version. kubectl vesion can be found here   kustomize false 3.</description>
+    </item>
+    
+  </channel>
+</rss>

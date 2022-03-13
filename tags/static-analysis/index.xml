@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>static-analysis on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/static-analysis/</link>
+    <description>Recent content in static-analysis on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/static-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions - Elastic Cloud Control (ecctl) tool installer</title>
+      <link>https://unofficialism.info/posts/action-setup-ecctl/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/action-setup-ecctl/</guid>
+      <description>I&amp;rsquo;ve published a new GitHub Action called action-setup-ecctl (View on Marketplace). The action installs a specific version of ecctl (Elastic Cloud control tool) and cache it on the runner.
+Usage Inputs    Parameter Required Default Value Description     version false latest Ecctl tool version such as v1.0.0-beta3. Ecctl vesion can be found here.     Supported Environments: Linux and macOS
+ Outputs    Parameter Description     ecctl-path ecctl command path    Sample Workflow A specific version of ecctl can be setup by giving an input - version like this: {% raw %}</description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions - SQLCheck Action</title>
+      <link>https://unofficialism.info/posts/action-sqlcheck/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/action-sqlcheck/</guid>
+      <description>I&amp;rsquo;ve published a new GitHub Action called SQLCheck Action (View on Marketplace). The action automatically identifies anti-patterns in SQL queries using sqlcheck when PR is requested and comment on the PR if risks are found in the queries.
+Usage Supports pull_request event type.
+Inputs    Parameter Required Default Value Description     post-comment false true Post comment to PR if it&amp;rsquo;s true   token true &amp;quot;&amp;quot; GitHub Token in order to add comment to PR   risk-level false 3 Set of SQL anti-patterns to check: 1,2, or 3- 1 (all anti-patterns, default)- 2 (only medium and high risk anti-patterns)- 3 (only high risk anti-patterns)   verbose false false Add verbose warnings to SQLCheck analysis result   postfixes false &amp;ldquo;sql&amp;rdquo; List of file postfix to match ( separator: comma )    Sample Workflow  .</description>
+    </item>
+    
+  </channel>
+</rss>

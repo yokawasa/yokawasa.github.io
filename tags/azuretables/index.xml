@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AzureTables on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/azuretables/</link>
+    <description>Recent content in AzureTables on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 Feb 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azuretables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fluentd plugins for Microsoft Azure Services</title>
+      <link>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</guid>
+      <description>UPDATED:
+ 2016-12-10: Added fluent-plugin-azure-loganalytics to the list 2016-11-23: Added fluent-plugin-azurefunctions to the list  Here is a list of fluentd plugins for Microsoft Azure Services.
+   Plugin Name Target Azure Services Note     fluent-plugin-azurestorage Blob Storage Azure Storate output plugin buffers logs in local file and upload them to Azure Storage periodicall   fluent-plugin-azureeventhubs Event Hubs Azure Event Hubs buffered output plugin for Fluentd.</description>
+    </item>
+    
+  </channel>
+</rss>

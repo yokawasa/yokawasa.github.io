@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CKA on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/cka/</link>
+    <description>Recent content in CKA on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/cka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unofficial tips for CKA and CKAD exams</title>
+      <link>https://unofficialism.info/posts/unofficial-tips-for-cka-and-ckad-exams/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/unofficial-tips-for-cka-and-ckad-exams/</guid>
+      <description>I&amp;rsquo;ve taken both Certified Kubernetes Administrator (CKA) and Certified Kubernetes Application Developer (CKAD) exams in the past 2 weeks and fortunately passed both. This is a blog article on tips for both exams based on my experiences.
+About the exam and its curriculum CKA focus on managing and operating kubernetes cluster including troubleshooting while CKAD forcus on managing and deploying applicaionts to kubernetes cluster.
+It&amp;rsquo;s very important to read and understand the exam curriculum and their relevant pages on kubernetes.</description>
+    </item>
+    
+  </channel>
+</rss>

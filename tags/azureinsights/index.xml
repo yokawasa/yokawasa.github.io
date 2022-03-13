@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AzureInsights on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/azureinsights/</link>
+    <description>Recent content in AzureInsights on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azureinsights/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Insights REST APIを使ってAzure各リソースのメトリックを抽出する</title>
+      <link>https://unofficialism.info/posts/getting-resource-metrics-with-azure-insights-rest-api/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/getting-resource-metrics-with-azure-insights-rest-api/</guid>
+      <description>ARMとAzure Insights API Azure上のさまざまなサービスのメトリック情報をAPI経由で取得したい。そういうことであればAzure Service Management APIを使えばいいじゃないかという声が聞こえてきそうなところだが実は既にこのやり方は時代遅れとなっていることをご存じだろうか？ 2014年5月ごろ？に登場したAzureの新しい考え方にResource、ResourceGroup、Azure Resource Managerというものがある。簡単な説明すると、Azure上のPaaSインスタンス、仮想マシンなどすべての管理可能な資源をリソース(Resource)とよばれる単位に細分化し、それらをグループ化したものがResourceGroup、そして全てのリソースはAzure Resource Manager（以下ARM）というもので管理可能になっている。そしてこのARMで管理可能な世界のリソース群に紐づくメトリックデータはAzure Insights APIで取得可能となっている。本記事ではさまざまなリソースの中でもWeb Appsに絞って、Azure Insights REST API (Metric)を使ってそのメトリックを取得する方法について紹介する。
+ARM Explorerでどのメトリックが取得可能なのか確認する ARM Explorer (https://resources.azure.com/) をご存じだろうか？　これはその名の通りAzure上の全てのリソース（ご利用のサブスクリプションに紐づく全てのリソース）のエクスプローラーであり、これを使うことでこのARM管理下の世界のすべてのリソースをエクスプローラービューで閲覧することができる。このARM Explorerで閲覧可能な各リソースの情報の中にmetricdefinitionsというものがあって、これにはそのリソースに対して指定可能なメトリックの種類やその定義情報などが格納されている。リソースのメトリック取得をする際は、まずはARM Explorerで目的のリソースのmetricdefinitionsから指定可能なメトリックの種類を把握してからAPIリクエストを組み立てていただければと思う。ARM Explorerを使って本記事で取得対象としているWeb Apps（ここではサイト名yoichikademoを対象）のmetricdefinitionsを閲覧しているのが以下のスクリーンショットになる。
+Azure Insights REST APIメトリック取得インターフェース Azure Insights APIには次のような(1)メトリック定義一覧の取得と(2)対象リソースのメトリック情報取得の2つのインターフェースがある。当然ながらメトリックの取得には(2)のインターフェースを使用する。
+(1)メトリック定義一覧取得
+GET https://management.azure.com /subscriptions/{-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/{resource-type}/{resource-name}/metricDefinitions [Parameters] api-version={api-version} $filter={filter} (2)メトリック情報取得
+GET https://management.azure.com /subscriptions/{-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/sites/{sitename}/metrics [Parameters] api-version={api-version} $filter={filter} APIの共通部分は下記の通り。Azure Insights APIへの全ての要求はAzure Active Directoryを使用して認証する必要があり、この認証により得られたトークンを各APIリクエストのAuthorizationヘッダに指定する必要がある。トークン取得の方法にはPowerShellを使用した方法とAzure管理ポータルを使用して認証する2つの方法がある。詳しくは「Azure インサイト要求を認証する」を参照ください。
+ {api-version}：&amp;ldquo;2014-04-01&amp;rdquo; {subscription-id} ： サブスクリプションID {resource-group-name}： リソースグループを指定。詳細は「リソースグループを使用した Azure リソースの管理」を参照ください Acceptヘッダー：&amp;quot;application/json&amp;quot;を指定。これを指定しない場合、結果はXMLで返却される AuthorizationヘッダーにAzure Active Directory から取得する JSON Web Token（JWT） に設定する。詳細は「Azure インサイト要求を認証する」を参照ください  実際のメトリクス取得APIでは$filterパラメータの付与が必要となる。$filterには主にメトリックの種類(name.</description>
+    </item>
+    
+  </channel>
+</rss>

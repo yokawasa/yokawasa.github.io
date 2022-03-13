@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>openssh on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/openssh/</link>
+    <description>Recent content in openssh on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 05 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/openssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>azuresshconfig has been dockerized</title>
+      <link>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</link>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</guid>
+      <description>UPDATED 2017-02-15: changed docker run command example due to Issue#4
+以前「azuresshconfigの紹介 – Azure上でのSSH生活を少しだけ快適にする」の投稿でazuresshconfigの紹介をさせていただいたが、ツールをリリースして以来、数少ない貴重な利用者様からインストールがコケるんだけど何とかしろというクレームをいただいていた。そこでインストールマニュアルを充実させようかとか、インストーラーをプラットフォーム別に充実させようかとか考えたものの、ここは流行りのコンテナ実行できるようしたほうがいいだろうということでDocker対応することにした。
+今回の対応によりpipインストールや、プラットフォーム別にprerequisiteなランタイム、ヘッダファイル、ライブラリといった面倒なインストールが不要となり、Mac、Windows、Linux(Ubuntu、CentOS、その他distro)関係なくシンプルにdocker runコマンドでの実行が可能となった。
+しかも超軽量LinuxディストリビューションであるAlpine Linuxの上にPythonランタイムとツールを載せているだけであるためサイズはたったの155MBとかなり軽め
+$ docker images azuresshconfig  REPOSITORY TAG IMAGE ID CREATED SIZE azuresshconfig latest 7488bef4343f 7 minutes ago 155 MB 実行例 $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \  --output stdout --user yoichika --identityfile ~/.ssh/id_rsa &amp;gt; $HOME/.ssh/config Dockerfileをダウンロードしてビルド・実行はこちら
+$ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Dockerfile -o Dockerfile $ docker build -t azuresshconfig . $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \ --output stdout --user yoichika --identityfile ~/.</description>
+    </item>
+    
+    <item>
+      <title>Making SSH lives in Azure easier with azuresshconfig</title>
+      <link>https://unofficialism.info/posts/azuresshconfig/</link>
+      <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azuresshconfig/</guid>
+      <description>UPDATED 2016-10-31: paramsオプション + Bash Completion追加
+みんな大好きSSHとAzureのお話し。物理サーバ、EC2/仮想マシン、コンテナなどなんでもよいがその上にLinuxサーバをたてたらまずやることの1つにSSHログインのためにそのIPアドレス調べて~/.ssh/configにそのエントリーを追加してやることがあるんじゃないかと思います。この作業、エントリー数が少なければ大したことはないものの、追加対象のホストが大量にある場合はかなり面倒な作業になってきます。さらにDHCPなどでアドレスを動的に取得するような設定であればサーバの上げ下げのたびにIPアドレスが変わってくるので~/.ssh/configの更新が必要になってきて、どうしようもなく面倒になってきます。こういった単純でどうしようもなくつまらない作業は自動化したいですよね？ ここではそんな皆さんのためにazuresshconfigというツールを紹介させていただきます。
+これは皆さんのAzureサブスクリプション下に作られた仮想マシン一覧（ARMに限る）の情報を取得して各仮想マシンごとのエントリー情報（マシン名とIPアドレス）を~/.ssh/configに追加・更新してくれるツール。新規に仮想マシンを追加した際や、仮想マシンのIPアドレスが追加した際にはazuresshconfigを実行してあげることで~/.ssh/configが最新のエントリー情報でアップデートされ、各マシンにマシン名でSSHログインできるようになります。
+ちなみに、~/.ssh/configとは何ですか？という人はQiitaの記事「~/.ssh/configについて」がとても分かりやすく書かれているので参考になるかと。
+インストール Pythonパッケージ管理ツールpipを使ってazuresshconfigをインストールしてください。インストール時に何かエラーが発生した場合は、こちらのページを参照いただき特に該当する事象がないか確認ください。
+$ pip install azuresshconfig 設定ファイルの編集（サービスプリンシパル） $ vi $HOME/.azure/azuresshconfig.json  {  &amp;#34;subscription_id&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;client_id&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;client_scret&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;tenant_id&amp;#34;: &amp;#34;&amp;#34; } サービスプリンシパルを作る必要があります。サービスプリンシパルの作り方が分からない人、とってもよいドキュメントがあります。こちらを参照ください：「Use Azure CLI to create a service principal to access resources」
+使い方 azuresshconfig --help usage: azuresshconfig.py [-h] [--version] [--init] [--profile PROFILE] [--user USER] [--identityfile IDENTITYFILE] [--private] [--resourcegroups RESOURCEGROUPS] [--params PARAMS] This program generates SSH config from Azure ARM VM inventry in subscription optional arguments: -h, --help show this help message and exit --version show program&amp;#39;s version number and exit --init Create template client profile at $HOME/.</description>
+    </item>
+    
+    <item>
+      <title>SOCKSプロキシを経由したAzure VNETプライベートリソースへのアクセス</title>
+      <link>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</guid>
+      <description>UPDATED 2017-03-22: Added SOCKS Proxy Configuration for Internet Explorer
+外部からの接続（SSH、HTTPなど）を受け付けていないAzure 仮想ネットワーク(以下VNET)内のリソースにSOCKSプロキシを経由して外部からアクセスしましょうというお話。本記事ではAzure VNET内の外部からのアクセス許可していないVMへのSSHログインとHTTPサーバコンテンツへのブラウジングの2つの方法を紹介する。
+SOCKS(RFC1928) とはさまざまなアプリケーションが間にファイアーウォールを挟んでいても安全に快適にやり取りができるようにすることを目的として作られたプロトコルのことで、SOCKSプロキシはSOCKSプロトコルを受け取りファイアウォール内外との接続を可能にするものである。エンドポイントやNetwork Security Group (NSG)によりネットーワーク分離設定されたAzure VNET内のリソースに対して一時的に本来直接アクセス許可しないネットワークからアクセスが必要な状況はあるかと思う。そのような時に毎回設定変更で必要なプロトコル、アクセス先に対して穴をあけるのは非常に面倒であり、またサイト間VPN、ポイント対サイトVPNとなるとさらに手間がかかる。お手軽に、もしくは定常的ではないが一時的に内部リソースにアクセスしたい場合にSOCKSプロキシ経由でのアクセスを検討してみてはいかがだろうか。以下はSOCKSプロキシ経由によるAzure VNET内のプライベートリソースへのアクセスイメージである。
+SOCKSプロキシの作成 まずはOpenSSHのダイナミックポートフォワード機能を使ってSOCKSプロキシを作成する。ダイナミックポートフォワードはSSHをSOCKSプロキシとして振舞うことを可能にする。SSHでアクセス先ホストと DynamicFoward(-D)でポートを指定することでlocalhostにSOCKSプロキシが立ち上がり指定のTCPポート(SOCKSプロキシサーバは基本的は1080だが、割り当て可能なポートであればどのポートでもOK)をlocalhost側からログイン先ホストのSSHサーバに転送することができるようになる。もちろん経路は暗号化される。現状のサポートプロトコルはSOCKS4とSOCKS5。
+例えば上図でいうとJump Server(踏み台)にDynamicFoward(-D)1080でログインすると、Jump Serverにポート1080を転送するSOCKSプロキシが localhostに立ち上がり、そのlocalhost:1080に対してSOCKS4またはSOCKS5プロトコルで接続することでJump Serverを経由して通信を行うことができるようになる。
+localhostポート1080のJump Serverへのダイナミックフォワードは次のように-Dオプションで行う。
+$ ssh -2 -D 1080 -l [Account] [Jump Server] 毎回-Dオプション指定が面倒な場合は、次のようにconfg(ssh_config)にDynamicForwardの記述することも可能。
+~/.ssh/config
+Host JumpServer  User [Account名]  HostName/IP [Jump Serverホスト/IPアドレス]  Protocol 2  ForwardAgent yes  DynamicForward 1080 上記OpenSSHの設定は、Linux/Macの場合は標準Terminalを使えばよいが、Windowsの場合はCygwin、XmingなどX端末エミュレータソフトをインストールしていただく必要がある。またX端末エミュレーターをインストールしなくともWindowsでは有名なSSHクライアントソフトPuttyがダイナミックポートフォワードに対応しているためPuttyを使ってSOCKSプロキシ作成することも可能。詳しくは「Dynamic Port Forwarding with SOCKS over SSH」が参考になるかと。
+SOCKSプロキシを使ったSSH接続 次に上記で作成したSOCKSプロキシを経由してVNET内のサーバにSSH接続をする。 netcatでSOCKSプロキシを経由してlocalhostから目的のVNET内サーバ（ServerX）間にnetcatトンネルを作成してServerXにはそのnetcatトンネルを通じて接続する。
+local$ ssh -2 -l [Account] -o &amp;#39;ProxyCommand nc -x localhost:1080 %h %p&amp;#39; [ServerX] netcat のプロキシ指定は-xオプションで行う。 ここでは事前に作成したSOCKSプロキシ(localhost:1080)を指定。 netcatトンネルの作成コマンドはProxyCommandに記述する。こちらも毎回長いオプション入力を避けるために config（ssh_config）設定すると便利である。</description>
+    </item>
+    
+  </channel>
+</rss>

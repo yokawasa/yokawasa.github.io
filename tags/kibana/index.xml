@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kibana on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/kibana/</link>
+    <description>Recent content in Kibana on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Dec 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/kibana/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARMテンプレートを使って3分でAzure上にElasticsearchクラスタを構築する</title>
+      <link>https://unofficialism.info/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</guid>
+      <description>これはElasticsearch Advent Calendar 2015の17日目のエントリー
+ARMテンプレートと呼ばれるデプロイ手法を使ってAzure上にElasticsearchクラスタをさくっと構築する方法についてのお話で、主にAzure界隈のElasticsearchユーザ向けの内容となっている。タイトルにある3分でというのは実際に計ったわけではないがそれくらい簡単且つ短時間でできることを強調したく使わせていただいている・・・ということを前もって補足しておく（汗）。
+ARMテンプレートとは？ ARMテンプレートの前にARMについて少し解説する。ARMはAzure Resource Managerの略で、アプリケーション構築に必要な
+リソース（ストレージ、ネットワーク、コンピュート/仮想マシンなど）をデプロイし管理するための仕組みである。どんなソリューションのデプロイにおいても少なからず仮想ネットワーク、仮想マシン、ストレージ、LBなどのインフラの構築が必要で旧来のやり方ではこれらを１つ１つデプロイしていたかと思う。一方ARMの世界では必要な構築要素をリソースという単位にして、これらリソースを個別にデプロイするのではなく全てのリソースをグループ化してまとめてデプロイし、それらを管理・監視することができる。そして、それら複数のリソースはJSON形式のテンプレートで表現・展開できるようになっていて、このテンプレートのことをARMテンプレートと呼ぶ。Infrastructure as Codeなんて言葉がはやっていたりするが、まさにそれをAzureで実現するための公式な仕組みがARMであり、ARMテンプレートなのである。
+ちなみにこのARMテンプレート、手でいちから作る必要はなく、Azureクイックスタートテンプレートにさまざまなテンプレートが公開されているのでまずは自分の目的に似たようなことを実現しているテンプレートを選んでデプロイしてみることをお勧めする。完成されたものを見ることでお作法が学べるし、それをベースにカスタマイズしていくのが効率的である。
+ https://azure.microsoft.com/ja-jp/documentation/templates/ https://github.com/Azure/azure-quickstart-templates  Elasticsearchクラスタのデプロイ 上記で説明したARMテンプレートを利用してElasticsearchクラスタのデプロイを行う。ここで使うARMテンプレートはAzureクイック・スタートテンプレートギャラリーにあるElasticsearchテンプレートを利用する。ARMテンプレートを使ったデプロイには複数の方法があるがここではLinux上でAzure CLIを使った方法で行う。ここでの実行OSはUbuntu 14.10。
+最新版のAzure CLIをインストールしてからAzureサブスクリプションに接続する
+$ sudo npm install -g azure-cli $ azure --version $ azure login 「Azure コマンド ライン インターフェイス (Azure CLI) からの Azure サブスクリプションへの接続」に書かれているように、Azure CLI バージョン 0.9.10 以降では、対話型の azure login コマンドを使用して、任意の ID でアカウントにログインできる。尚、バージョン 0.9.9 以降は、多要素認証をサポートしている。
+デプロイ用のリソースグループを作成する
+ここでは西日本（Japan West）リージョンにResource-ES-JapanWestという名前のリソースグループを作成する。
+# azure group create -n &amp;#34;&amp;lt;リソースグループ名&amp;gt;&amp;#34; -l &amp;#34;&amp;lt;リージョン名&amp;gt;&amp;#34; $ azure group create -n &amp;#34;Resource-ES-JapanWest&amp;#34; -l &amp;#34;Japan West&amp;#34; ARMテンプレートのダウンロードとパラメータの編集</description>
+    </item>
+    
+  </channel>
+</rss>

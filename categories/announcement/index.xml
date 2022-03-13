@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Announcement on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/categories/announcement/</link>
+    <description>Recent content in Announcement on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 05 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/categories/announcement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>azuresshconfig has been dockerized</title>
+      <link>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</link>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</guid>
+      <description>UPDATED 2017-02-15: changed docker run command example due to Issue#4
+以前「azuresshconfigの紹介 – Azure上でのSSH生活を少しだけ快適にする」の投稿でazuresshconfigの紹介をさせていただいたが、ツールをリリースして以来、数少ない貴重な利用者様からインストールがコケるんだけど何とかしろというクレームをいただいていた。そこでインストールマニュアルを充実させようかとか、インストーラーをプラットフォーム別に充実させようかとか考えたものの、ここは流行りのコンテナ実行できるようしたほうがいいだろうということでDocker対応することにした。
+今回の対応によりpipインストールや、プラットフォーム別にprerequisiteなランタイム、ヘッダファイル、ライブラリといった面倒なインストールが不要となり、Mac、Windows、Linux(Ubuntu、CentOS、その他distro)関係なくシンプルにdocker runコマンドでの実行が可能となった。
+しかも超軽量LinuxディストリビューションであるAlpine Linuxの上にPythonランタイムとツールを載せているだけであるためサイズはたったの155MBとかなり軽め
+$ docker images azuresshconfig  REPOSITORY TAG IMAGE ID CREATED SIZE azuresshconfig latest 7488bef4343f 7 minutes ago 155 MB 実行例 $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \  --output stdout --user yoichika --identityfile ~/.ssh/id_rsa &amp;gt; $HOME/.ssh/config Dockerfileをダウンロードしてビルド・実行はこちら
+$ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Dockerfile -o Dockerfile $ docker build -t azuresshconfig . $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \ --output stdout --user yoichika --identityfile ~/.</description>
+    </item>
+    
+    <item>
+      <title>fluent-plugin-documentdb supports Partitioned collections</title>
+      <link>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</guid>
+      <description>I’d like to announce fluent-plugin-documentdb finally supports Azure DocumentDB Partitioned collections for higher storage and throughput. If you&amp;rsquo;re not familiar with fluent-plugin-documentdb, read my previous article before move on.
+Partitioned collections is kick-ass feature that I had wanted to support in fluent-plugin-documentdb since the feature came out public (see the announcement). For big fan of fluent-plugin-documentdb, sorry for keeping you waiting for such a long time :-) If I may make excuses, I would say I haven&amp;rsquo;t had as much time on the project, and I had to do ruby client implementation of Partitioned collections by myself as there is no official DocumentDB Ruby SDK that supports it (As a result I&amp;rsquo;ve created tiny Ruby DocumentDB client libraries that support the feature.</description>
+    </item>
+    
+    <item>
+      <title>My patents</title>
+      <link>https://unofficialism.info/posts/patents/</link>
+      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/patents/</guid>
+      <description>I&amp;rsquo;ve just noticed that some of patents, which I was involved in for its publishing process, have been granted. Good news!
+ My patents list ( English translated ) My patents list ( Japanese )  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Container on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/container/</link>
+    <description>Recent content in Container on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes x PaaS コンテナアプリケーションのNoOpsへの挑戦 (Japan Container Days v18.04)</title>
+      <link>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</guid>
+      <description>先日、4月19日に開催されたJapan Container Days v18.04にて「Kubernetes x PaaS – コンテナアプリケーションのNoOpsへの挑戦」というタイトルでセッションを担当させていただいた。その名の通りメインがKubernetesで、KubernetesアプリケーションにおいてNoOps（運用レス）を目指すためのにどういった工夫ができるのか、どういったものを活用していけばよいのか、という内容です。このブログではJapan Container Daysでの発表に使用したスライドの共有とセッションに中のサンプルやデモについて補足させていただく。
+Session Slides  Kubernetes x PaaS – コンテナアプリケーションの NoOpsへの挑戦 from Yoichi Kawasaki
+補足情報 1. Open Service Broker for AzureでAzure Database for MySQLの利用 スライドでお見せした実際のファイルを使ってAzure Database for MySQLのサービスインスタンス作成、バインディング、そして実際のアプリケーションからの利用までの流れを紹介させていただく。
+Open Service Broker for AzureプロジェクトのGithubにあるサンプルファイルmysql-instance.yamlとmysql-binding.yamlを使ってそれぞれServiceInstanceとServiceBindingを作成する `
+# Provisioning the database, basic50 plan ... $ kubectl create -f mysql-instance.yaml  # Wait until ServiceInstance named example-mysql-instance get ready &amp;#39;Status =&amp;gt; Ready&amp;#39;, # then execute the following to create a binding for this new database, $ kubectl create -f mysql-binding.</description>
+    </item>
+    
+    <item>
+      <title>azuresshconfig has been dockerized</title>
+      <link>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</link>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</guid>
+      <description>UPDATED 2017-02-15: changed docker run command example due to Issue#4
+以前「azuresshconfigの紹介 – Azure上でのSSH生活を少しだけ快適にする」の投稿でazuresshconfigの紹介をさせていただいたが、ツールをリリースして以来、数少ない貴重な利用者様からインストールがコケるんだけど何とかしろというクレームをいただいていた。そこでインストールマニュアルを充実させようかとか、インストーラーをプラットフォーム別に充実させようかとか考えたものの、ここは流行りのコンテナ実行できるようしたほうがいいだろうということでDocker対応することにした。
+今回の対応によりpipインストールや、プラットフォーム別にprerequisiteなランタイム、ヘッダファイル、ライブラリといった面倒なインストールが不要となり、Mac、Windows、Linux(Ubuntu、CentOS、その他distro)関係なくシンプルにdocker runコマンドでの実行が可能となった。
+しかも超軽量LinuxディストリビューションであるAlpine Linuxの上にPythonランタイムとツールを載せているだけであるためサイズはたったの155MBとかなり軽め
+$ docker images azuresshconfig  REPOSITORY TAG IMAGE ID CREATED SIZE azuresshconfig latest 7488bef4343f 7 minutes ago 155 MB 実行例 $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \  --output stdout --user yoichika --identityfile ~/.ssh/id_rsa &amp;gt; $HOME/.ssh/config Dockerfileをダウンロードしてビルド・実行はこちら
+$ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Dockerfile -o Dockerfile $ docker build -t azuresshconfig . $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \ --output stdout --user yoichika --identityfile ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

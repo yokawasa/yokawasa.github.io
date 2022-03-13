@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>firefox on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/firefox/</link>
+    <description>Recent content in firefox on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SOCKSプロキシを経由したAzure VNETプライベートリソースへのアクセス</title>
+      <link>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</guid>
+      <description>UPDATED 2017-03-22: Added SOCKS Proxy Configuration for Internet Explorer
+外部からの接続（SSH、HTTPなど）を受け付けていないAzure 仮想ネットワーク(以下VNET)内のリソースにSOCKSプロキシを経由して外部からアクセスしましょうというお話。本記事ではAzure VNET内の外部からのアクセス許可していないVMへのSSHログインとHTTPサーバコンテンツへのブラウジングの2つの方法を紹介する。
+SOCKS(RFC1928) とはさまざまなアプリケーションが間にファイアーウォールを挟んでいても安全に快適にやり取りができるようにすることを目的として作られたプロトコルのことで、SOCKSプロキシはSOCKSプロトコルを受け取りファイアウォール内外との接続を可能にするものである。エンドポイントやNetwork Security Group (NSG)によりネットーワーク分離設定されたAzure VNET内のリソースに対して一時的に本来直接アクセス許可しないネットワークからアクセスが必要な状況はあるかと思う。そのような時に毎回設定変更で必要なプロトコル、アクセス先に対して穴をあけるのは非常に面倒であり、またサイト間VPN、ポイント対サイトVPNとなるとさらに手間がかかる。お手軽に、もしくは定常的ではないが一時的に内部リソースにアクセスしたい場合にSOCKSプロキシ経由でのアクセスを検討してみてはいかがだろうか。以下はSOCKSプロキシ経由によるAzure VNET内のプライベートリソースへのアクセスイメージである。
+SOCKSプロキシの作成 まずはOpenSSHのダイナミックポートフォワード機能を使ってSOCKSプロキシを作成する。ダイナミックポートフォワードはSSHをSOCKSプロキシとして振舞うことを可能にする。SSHでアクセス先ホストと DynamicFoward(-D)でポートを指定することでlocalhostにSOCKSプロキシが立ち上がり指定のTCPポート(SOCKSプロキシサーバは基本的は1080だが、割り当て可能なポートであればどのポートでもOK)をlocalhost側からログイン先ホストのSSHサーバに転送することができるようになる。もちろん経路は暗号化される。現状のサポートプロトコルはSOCKS4とSOCKS5。
+例えば上図でいうとJump Server(踏み台)にDynamicFoward(-D)1080でログインすると、Jump Serverにポート1080を転送するSOCKSプロキシが localhostに立ち上がり、そのlocalhost:1080に対してSOCKS4またはSOCKS5プロトコルで接続することでJump Serverを経由して通信を行うことができるようになる。
+localhostポート1080のJump Serverへのダイナミックフォワードは次のように-Dオプションで行う。
+$ ssh -2 -D 1080 -l [Account] [Jump Server] 毎回-Dオプション指定が面倒な場合は、次のようにconfg(ssh_config)にDynamicForwardの記述することも可能。
+~/.ssh/config
+Host JumpServer  User [Account名]  HostName/IP [Jump Serverホスト/IPアドレス]  Protocol 2  ForwardAgent yes  DynamicForward 1080 上記OpenSSHの設定は、Linux/Macの場合は標準Terminalを使えばよいが、Windowsの場合はCygwin、XmingなどX端末エミュレータソフトをインストールしていただく必要がある。またX端末エミュレーターをインストールしなくともWindowsでは有名なSSHクライアントソフトPuttyがダイナミックポートフォワードに対応しているためPuttyを使ってSOCKSプロキシ作成することも可能。詳しくは「Dynamic Port Forwarding with SOCKS over SSH」が参考になるかと。
+SOCKSプロキシを使ったSSH接続 次に上記で作成したSOCKSプロキシを経由してVNET内のサーバにSSH接続をする。 netcatでSOCKSプロキシを経由してlocalhostから目的のVNET内サーバ（ServerX）間にnetcatトンネルを作成してServerXにはそのnetcatトンネルを通じて接続する。
+local$ ssh -2 -l [Account] -o &amp;#39;ProxyCommand nc -x localhost:1080 %h %p&amp;#39; [ServerX] netcat のプロキシ指定は-xオプションで行う。 ここでは事前に作成したSOCKSプロキシ(localhost:1080)を指定。 netcatトンネルの作成コマンドはProxyCommandに記述する。こちらも毎回長いオプション入力を避けるために config（ssh_config）設定すると便利である。</description>
+    </item>
+    
+  </channel>
+</rss>

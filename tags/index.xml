@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/</link>
+    <description>Recent content in Tags on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>event</title>
+      <link>https://unofficialism.info/tags/event/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/event/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://unofficialism.info/tags/vscode/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>krew-plugin</title>
+      <link>https://unofficialism.info/tags/krew-plugin/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/krew-plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubectl</title>
+      <link>https://unofficialism.info/tags/kubectl/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/kubectl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubectl-plugins</title>
+      <link>https://unofficialism.info/tags/kubectl-plugins/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/kubectl-plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://unofficialism.info/tags/kubernetes/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>socks5</title>
+      <link>https://unofficialism.info/tags/socks5/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/socks5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conftest</title>
+      <link>https://unofficialism.info/tags/conftest/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/conftest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHubActions</title>
+      <link>https://unofficialism.info/tags/githubactions/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/githubactions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Helm</title>
+      <link>https://unofficialism.info/tags/helm/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/helm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubeval</title>
+      <link>https://unofficialism.info/tags/kubeval/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/kubeval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kustomize</title>
+      <link>https://unofficialism.info/tags/kustomize/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/kustomize/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rancher</title>
+      <link>https://unofficialism.info/tags/rancher/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/rancher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yq</title>
+      <link>https://unofficialism.info/tags/yq/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/yq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqlcheck</title>
+      <link>https://unofficialism.info/tags/sqlcheck/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/sqlcheck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static-analysis</title>
+      <link>https://unofficialism.info/tags/static-analysis/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/static-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metricsAPI</title>
+      <link>https://unofficialism.info/tags/metricsapi/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/metricsapi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prometheus</title>
+      <link>https://unofficialism.info/tags/prometheus/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Career</title>
+      <link>https://unofficialism.info/tags/career/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/career/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft</title>
+      <link>https://unofficialism.info/tags/microsoft/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azping</title>
+      <link>https://unofficialism.info/tags/azping/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azure</title>
+      <link>https://unofficialism.info/tags/azure/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ping</title>
+      <link>https://unofficialism.info/tags/ping/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/ping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CKA</title>
+      <link>https://unofficialism.info/tags/cka/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/cka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CKAD</title>
+      <link>https://unofficialism.info/tags/ckad/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/ckad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CNCF</title>
+      <link>https://unofficialism.info/tags/cncf/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/cncf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azure-kubernetes-services</title>
+      <link>https://unofficialism.info/tags/azure-kubernetes-services/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azure-kubernetes-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubectl-plugin</title>
+      <link>https://unofficialism.info/tags/kubectl-plugin/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/kubectl-plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://unofficialism.info/tags/ssh/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>https://unofficialism.info/tags/docker-compose/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>envoy</title>
+      <link>https://unofficialism.info/tags/envoy/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/envoy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>envoyproxy</title>
+      <link>https://unofficialism.info/tags/envoyproxy/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/envoyproxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Istio</title>
+      <link>https://unofficialism.info/tags/istio/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/istio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>servicemesh</title>
+      <link>https://unofficialism.info/tags/servicemesh/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/servicemesh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Functions</title>
+      <link>https://unofficialism.info/tags/azure-functions/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azure-functions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://unofficialism.info/tags/python/</link>
+      <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rbac</title>
+      <link>https://unofficialism.info/tags/rbac/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/rbac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jekyll</title>
+      <link>https://unofficialism.info/tags/jekyll/</link>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress</title>
+      <link>https://unofficialism.info/tags/wordpress/</link>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AKS</title>
+      <link>https://unofficialism.info/tags/aks/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/aks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Container Instances</title>
+      <link>https://unofficialism.info/tags/azure-container-instances/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azure-container-instances/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Container</title>
+      <link>https://unofficialism.info/tags/container/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Service Broker</title>
+      <link>https://unofficialism.info/tags/open-service-broker/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/open-service-broker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureMediaServices</title>
+      <link>https://unofficialism.info/tags/azuremediaservices/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azuremediaservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resiliency</title>
+      <link>https://unofficialism.info/tags/resiliency/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/resiliency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TrafficManager</title>
+      <link>https://unofficialism.info/tags/trafficmanager/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/trafficmanager/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureDiagnostics</title>
+      <link>https://unofficialism.info/tags/azurediagnostics/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azurediagnostics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>beats</title>
+      <link>https://unofficialism.info/tags/beats/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/beats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>https://unofficialism.info/tags/elasticsearch/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ElasticStack</title>
+      <link>https://unofficialism.info/tags/elasticstack/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/elasticstack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logstash</title>
+      <link>https://unofficialism.info/tags/logstash/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/logstash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureFunctions</title>
+      <link>https://unofficialism.info/tags/azurefunctions/</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azurefunctions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Serverless</title>
+      <link>https://unofficialism.info/tags/serverless/</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureSearch</title>
+      <link>https://unofficialism.info/tags/azuresearch/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azuresearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CosmosDB</title>
+      <link>https://unofficialism.info/tags/cosmosdb/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/cosmosdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DocumentDB</title>
+      <link>https://unofficialism.info/tags/documentdb/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/documentdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://unofficialism.info/tags/javascript/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SPA</title>
+      <link>https://unofficialism.info/tags/spa/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/spa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>analyzer</title>
+      <link>https://unofficialism.info/tags/analyzer/</link>
+      <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/analyzer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://unofficialism.info/tags/docker/</link>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openssh</title>
+      <link>https://unofficialism.info/tags/openssh/</link>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/openssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>https://unofficialism.info/tags/ruby/</link>
+      <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureMediaAnalytics</title>
+      <link>https://unofficialism.info/tags/azuremediaanalytics/</link>
+      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azuremediaanalytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CognitiveServices</title>
+      <link>https://unofficialism.info/tags/cognitiveservices/</link>
+      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/cognitiveservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fluent-plugin-azurefunctions</title>
+      <link>https://unofficialism.info/tags/fluent-plugin-azurefunctions/</link>
+      <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/fluent-plugin-azurefunctions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fluentd</title>
+      <link>https://unofficialism.info/tags/fluentd/</link>
+      <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/fluentd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OCR</title>
+      <link>https://unofficialism.info/tags/ocr/</link>
+      <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/ocr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureMediaIndexer</title>
+      <link>https://unofficialism.info/tags/azuremediaindexer/</link>
+      <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azuremediaindexer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Speech-to-Text</title>
+      <link>https://unofficialism.info/tags/speech-to-text/</link>
+      <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/speech-to-text/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>embulk</title>
+      <link>https://unofficialism.info/tags/embulk/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/embulk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fluent-plugin-documentdb</title>
+      <link>https://unofficialism.info/tags/fluent-plugin-documentdb/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/fluent-plugin-documentdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureBlobStorage</title>
+      <link>https://unofficialism.info/tags/azureblobstorage/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azureblobstorage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureTables</title>
+      <link>https://unofficialism.info/tags/azuretables/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azuretables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EventHubs</title>
+      <link>https://unofficialism.info/tags/eventhubs/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/eventhubs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LogAnalytics</title>
+      <link>https://unofficialism.info/tags/loganalytics/</link>
+      <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/loganalytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>patents</title>
+      <link>https://unofficialism.info/tags/patents/</link>
+      <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/patents/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ARM</title>
+      <link>https://unofficialism.info/tags/arm/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/arm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureCLI</title>
+      <link>https://unofficialism.info/tags/azurecli/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azurecli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kibana</title>
+      <link>https://unofficialism.info/tags/kibana/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/kibana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DNS</title>
+      <link>https://unofficialism.info/tags/dns/</link>
+      <pubDate>Sun, 29 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSharp</title>
+      <link>https://unofficialism.info/tags/csharp/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ILMerge</title>
+      <link>https://unofficialism.info/tags/ilmerge/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/ilmerge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VisualStduio</title>
+      <link>https://unofficialism.info/tags/visualstduio/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/visualstduio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureVNET</title>
+      <link>https://unofficialism.info/tags/azurevnet/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azurevnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>https://unofficialism.info/tags/chrome/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firefox</title>
+      <link>https://unofficialism.info/tags/firefox/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SOCKS</title>
+      <link>https://unofficialism.info/tags/socks/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/socks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VPN</title>
+      <link>https://unofficialism.info/tags/vpn/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>API</title>
+      <link>https://unofficialism.info/tags/api/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AppServices</title>
+      <link>https://unofficialism.info/tags/appservices/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/appservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AzureInsights</title>
+      <link>https://unofficialism.info/tags/azureinsights/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/azureinsights/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metrics</title>
+      <link>https://unofficialism.info/tags/metrics/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/metrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitoring</title>
+      <link>https://unofficialism.info/tags/monitoring/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ResourceGroup</title>
+      <link>https://unofficialism.info/tags/resourcegroup/</link>
+      <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/resourcegroup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crawler</title>
+      <link>https://unofficialism.info/tags/crawler/</link>
+      <pubDate>Sun, 28 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/crawler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>feedparser</title>
+      <link>https://unofficialism.info/tags/feedparser/</link>
+      <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/feedparser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NoSQL</title>
+      <link>https://unofficialism.info/tags/nosql/</link>
+      <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/nosql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pydocumentdb</title>
+      <link>https://unofficialism.info/tags/pydocumentdb/</link>
+      <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/pydocumentdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>perl</title>
+      <link>https://unofficialism.info/tags/perl/</link>
+      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wikipedia</title>
+      <link>https://unofficialism.info/tags/wikipedia/</link>
+      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/wikipedia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>curl</title>
+      <link>https://unofficialism.info/tags/curl/</link>
+      <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/curl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JSON</title>
+      <link>https://unofficialism.info/tags/json/</link>
+      <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/json/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

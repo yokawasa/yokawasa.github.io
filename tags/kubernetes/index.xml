@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kubernetes on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 08 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kubectl plugin - SOCKS5 proxy to Services or Pods in the cluster</title>
+      <link>https://unofficialism.info/posts/kubectl-plugin-socks5-proxy/</link>
+      <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/kubectl-plugin-socks5-proxy/</guid>
+      <description>I’ve published a new kubectl plugin called kubectl-plugin-socks5-proxy. This is a kubectl plugin that creates a local SOCKS5 proxy through which you can access to Services or Pods in a Kubernetes cluster.
+What the plugin actually does is that it create a SOCKS proxy server Pod in a Kubernetes cluster and forwards a local port (default:1080) to the proxy. So you can access to Servcies or Pods in Kuberenetes cluster by using the local port as SOCKS5 proxy like this:</description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions - Kubernetes tools installer</title>
+      <link>https://unofficialism.info/posts/action-setup-kube-tools/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/action-setup-kube-tools/</guid>
+      <description>I&amp;rsquo;ve published a new GitHub Action called action-setup-kube-tools (View on Marketplace). The action installs Kubernetes tools (kubectl, kustomize, helm, kubeval, conftest, and yq) and cache them on the runner. This is a typescript version of stefanprodan/kube-tools with no command input param.
+Usage Inputs    Parameter Required Default Value Description     kubectl false 1.18.2 kubectl version. kubectl vesion can be found here   kustomize false 3.</description>
+    </item>
+    
+    <item>
+      <title>Getting Kubernetes Metrics using kubectl</title>
+      <link>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</guid>
+      <description>There are various ways to obtain Kubernetes metrics which you can use to visualize, monitor and alert on your metrics. In reality you most likely use managed or unmanaged OSS metrics collection and visualization tools, but in this post, I introduce how to get raw Kubernetes metrics using kubectl.
+Kubernetes Raw Metrics via Prometheus metrics endpoint Many Kubernetes components exposes their metrics via the /metrics endpoint, including API server, etcd and many other add-ons.</description>
+    </item>
+    
+    <item>
+      <title>Unofficial tips for CKA and CKAD exams</title>
+      <link>https://unofficialism.info/posts/unofficial-tips-for-cka-and-ckad-exams/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/unofficial-tips-for-cka-and-ckad-exams/</guid>
+      <description>I&amp;rsquo;ve taken both Certified Kubernetes Administrator (CKA) and Certified Kubernetes Application Developer (CKAD) exams in the past 2 weeks and fortunately passed both. This is a blog article on tips for both exams based on my experiences.
+About the exam and its curriculum CKA focus on managing and operating kubernetes cluster including troubleshooting while CKAD forcus on managing and deploying applicaionts to kubernetes cluster.
+It&amp;rsquo;s very important to read and understand the exam curriculum and their relevant pages on kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>Easy way to SSH into Azure Kubernetes Service cluster node VMs</title>
+      <link>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</guid>
+      <description>This is an article on how you can SSH into Azure Kubernetes Service (AKS) cluster node VMs using kubectl-plugin-ssh-jump.
+Motivation I wanted to SSH into Azure Kubernetes Service (AKS) cluster node VMs, then looking up azure docs I found a relevant page - Connect with SSH to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting. But when I first saw this procedure, I thought this was very troublesome. Lazy person like me couldn&amp;rsquo;t accept going thourgh all the steps just to SSH into AKS cluster nodes VMs.</description>
+    </item>
+    
+    <item>
+      <title>Accessing RBAC enabled Kubernetes Dashboard</title>
+      <link>https://unofficialism.info/posts/accessing-rbac-enabled-kubernetes-dashboard/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/accessing-rbac-enabled-kubernetes-dashboard/</guid>
+      <description>This is an article on how you can configure Service Account and RoleBinding in order to make Dashbaord work. As of release Kubernetes v1.7, Dashboard no longer has full admin privileges granted by default. All the privileges are revoked and only minimal privileges granted, that are required to make Dashboard work. With default priviledge, you&amp;rsquo;ll see the following errors showed up on the Dashboard.
+[Azure Kubernetes Service (AKS)] RBAC is enabled by default Since Azure CLI version 2.</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes x PaaS コンテナアプリケーションのNoOpsへの挑戦 (Japan Container Days v18.04)</title>
+      <link>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</guid>
+      <description>先日、4月19日に開催されたJapan Container Days v18.04にて「Kubernetes x PaaS – コンテナアプリケーションのNoOpsへの挑戦」というタイトルでセッションを担当させていただいた。その名の通りメインがKubernetesで、KubernetesアプリケーションにおいてNoOps（運用レス）を目指すためのにどういった工夫ができるのか、どういったものを活用していけばよいのか、という内容です。このブログではJapan Container Daysでの発表に使用したスライドの共有とセッションに中のサンプルやデモについて補足させていただく。
+Session Slides  Kubernetes x PaaS – コンテナアプリケーションの NoOpsへの挑戦 from Yoichi Kawasaki
+補足情報 1. Open Service Broker for AzureでAzure Database for MySQLの利用 スライドでお見せした実際のファイルを使ってAzure Database for MySQLのサービスインスタンス作成、バインディング、そして実際のアプリケーションからの利用までの流れを紹介させていただく。
+Open Service Broker for AzureプロジェクトのGithubにあるサンプルファイルmysql-instance.yamlとmysql-binding.yamlを使ってそれぞれServiceInstanceとServiceBindingを作成する `
+# Provisioning the database, basic50 plan ... $ kubectl create -f mysql-instance.yaml  # Wait until ServiceInstance named example-mysql-instance get ready &amp;#39;Status =&amp;gt; Ready&amp;#39;, # then execute the following to create a binding for this new database, $ kubectl create -f mysql-binding.</description>
+    </item>
+    
+  </channel>
+</rss>

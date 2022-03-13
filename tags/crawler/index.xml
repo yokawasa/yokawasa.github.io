@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Crawler on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/crawler/</link>
+    <description>Recent content in Crawler on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 28 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/crawler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DocumentDBをAzure Searchのデータソースとして利用する</title>
+      <link>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</link>
+      <pubDate>Sun, 28 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</guid>
+      <description>Azure Searchのインデックス更新方法には大きく分けてPUSHとPULLの２種類ある。PUSHは直接Indexing APIを使ってAzure SearchにコンテンツをPOSTして更新。PULLは特定データソースに対してポーリングして更新で、Azure Searchの場合、DocumentDBとSQL Databaseの2種類のデータソースを対象にワンタイムもしくは定期的なスケジュール実行が可能となっている。ここではDocumentDBをデータソースとしてインデックスを更新する方法を紹介する。
+サンプル構成と処理フローの説明 データソースにDocumentDBを利用する。データ「DOCUMENTDB PYTHON SDKとFEEDPARSERで作る簡易クローラー」においてクローリングされDocumentDBに保存されたブログ記事データを使用する。そしてDocumentDBを定期的にポーリングを行い更新があったレコードのみをAzure Searchインデックスに反映するためにDocumentDBインデクサーを設定する。全体構成としては下記の通りとなる。
+DocumentDBと更新先検索インデックスのフィールドのマッピング DocumentDBをデータソースとしてAzure Searchインデックスに更新を行うためDocumentDBの参照先コレクションのフィールドと更新先Azure Searchインデックスのフィールドをマッピングを行う。マッピングはデータソース定義中のDocumentDB参照用Queryで行う。Azure SearchインデックスにインジェストするフィールドをDocumentDBのSELECTクエリー指定するのだが、Azure SearchとDocumentDBのフィールドが異なる場合は下図のようにSELECT &amp;ldquo;Docdbフィールド名&amp;rdquo; AS &amp;ldquo;Searchフィールド名&amp;quot;でインジェスト先フィールド名を指定する。データソース定義については後述の設定内容を確認ください。
+Configuration 以下１～４のステップでデータソースの作成、検索インデックスの作成、インデクサーの作成、インデクサーの実行を行う。
+(1) データソースの作成
+credential.connectionStringで接続先DocumentDB文字列と対象データベースの指定を行う。container.(name|query)で対象コレクション名と参照用SELECT文を指定する。SELECT文はDocumentDBとインジェスト先Azure Searchのフィールドセット（フィールド名と数）が同じであれば省略可。詳細はこちらを参照。
+#!/bin/sh SERVICE_NAME=&amp;#39;&amp;lt;Azure Search Service Name&amp;gt;&amp;#39; API_VER=&amp;#39;2015-02-28-Preview&amp;#39; ADMIN_KEY=&amp;#39;&amp;lt;API KEY&amp;gt;&amp;#39; CONTENT_TYPE=&amp;#39;application/json&amp;#39; URL=&amp;#34;https://$SERVICE_NAME.search.windows.net/datasources?api-version=$API_VER&amp;#34;  curl -s\  -H &amp;#34;Content-Type: $CONTENT_TYPE&amp;#34;\  -H &amp;#34;api-key: $ADMIN_KEY&amp;#34;\  -XPOST $URL -d&amp;#39;{ &amp;#34;name&amp;#34;: &amp;#34;docdbds-article&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;documentdb&amp;#34;, &amp;#34;credentials&amp;#34;: { &amp;#34;connectionString&amp;#34;: &amp;#34;AccountEndpoint=https://&amp;lt;DOCUMENTDB_ACCOUNT&amp;gt;.documents.azure.com;AccountKey=&amp;lt;DOCUMENTDB_MASTER_KEY_STRING&amp;gt;;Database=&amp;lt;DOCUMENTDB_DBNAME&amp;gt;&amp;#34; }, &amp;#34;container&amp;#34;: { &amp;#34;name&amp;#34;: &amp;#34;article_collection&amp;#34;, &amp;#34;query&amp;#34;: &amp;#34;SELECT s.id AS itemno, s.title AS subject, s.</description>
+    </item>
+    
+    <item>
+      <title>DocumentDB Python SDKとfeedparserで作る簡易クローラー</title>
+      <link>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</link>
+      <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</guid>
+      <description>DocumentDB Python SDKとfeedparserを使って簡易クローラーを作りましょうというお話。ここではDocumentDBをクローリング結果の格納先データストアとして使用する。クロール対象はAzure日本語ブログのRSSフィード、これをfeedparserを使ってドキュメント解析、必要データの抽出、そしてその結果を今回使用するpydocumentdbというDocumentDB Python SDKを使ってDocumentDBに格納するというワークフローになっている。
+DocumentDB Python SDK - pydocumentdb Azureで提供されているどのサービスにもあてはまることであるが、DocumentDBを操作するための全てのインターフェースはREST APIとして提供されておりREST APIを内部的に使用してマイクロソフト謹製もしくは個人のコントリビューションによる複数の言語のSDKが用意されている。その中でもpydocumentdbはPython用のDocumentDB SDKであり、オープンソースとしてソースコードは全てGithubで公開されている。
+ pydocumentdbプロジェクトトップ(Github) pydocumentdbサンプルコード(Github) Azure DocumentDB REST API Reference  Pre-Requirementsその１: Python実行環境とライブラリ 実行環境としてPython2.7系が必要となる。また、今回クローラーが使用しているDocumentDB Python SDKであるpydocumentdbとRSSフィード解析ライブラリfeedparserの２つのライブラリのインストールが必要となる。
+pydocumentdbインストール
+$ sudo pip install pydocumentdb feedparserインストール
+$ sudo pip install feedparser ちなみにpipがインストールされていない場合は下記の通りマニュアルもしくはインストーラーを使用してpipをインストールが必要となる
+pip マニュアルインストール
+# download get-pip.py $ wget https://bootstrap.pypa.io/get-pip.py # run the following (which may require administrator access) $ sudo python get-pip.py # upgrade pip $ sudo pip install -U pip インストーラーを使用</description>
+    </item>
+    
+  </channel>
+</rss>

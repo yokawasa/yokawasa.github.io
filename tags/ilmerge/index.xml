@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ILMerge on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/ilmerge/</link>
+    <description>Recent content in ILMerge on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 09 Sep 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/ilmerge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Static linking DLL to EXE in C Sharp</title>
+      <link>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</link>
+      <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</guid>
+      <description>Q1. C Sharpでexeに複数DLLをスタティックリンクさせて１ファイルにすることはできますか？
+C、C++ではおなじみのスタティックリンクだが、そもそもC Sharpではスタティックリンクができない。ただし
+MS Research謹製のILMergeを使えば実行ファイル(exe)に対して複数のクラスアセンブリ(DLL)を１つのアセンブリにマージすることはできる。使い方はこちらが参考になる。また、ILMerge-GUIというGUIツールもある。
+Q2. Visual Studioのビルドでも自動的に複数ファイルを１つにまとめることはできますか？
+パッケージマネージャーでILMerge.MSBuild.Tasksをインストールして*.csprojファイルに自動アセンブリ生成するための設定を追記するとVSのビルドで複数ファイルが１つのアセンブリにマージされたファイルが自動的にできあがる。参考: StackOverflow 「How to Integrate ILMerge into Visual Studio Build Process to Merge Assemblies?」
+ ILMerge.MSBuild.Tasksをインストール  Install-Package ILMerge.MSBuild.Tasks *.csprojファイルに下記設定を追記   &amp;lt;!-- Code to merge the assemblies into one --&amp;gt;  &amp;lt;UsingTask TaskName=&amp;#34;ILMerge.MSBuild.Tasks.ILMerge&amp;#34; AssemblyFile=&amp;#34;$(SolutionDir)\packages\ILMerge.MSBuild.Tasks.1.0.0.3\tools\ILMerge.MSBuild.Tasks.dll&amp;#34; /&amp;gt;  &amp;lt;Target Name=&amp;#34;AfterBuild&amp;#34;&amp;gt;  &amp;lt;ItemGroup&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)$(TargetFileName)&amp;#34; /&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名1&amp;#34; /&amp;gt;  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名2&amp;#34; /&amp;gt;  ...  &amp;lt;MergeAsm Include=&amp;#34;$(OutputPath)追加するDLLファイル名N&amp;#34; /&amp;gt;  &amp;lt;/ItemGroup&amp;gt;  &amp;lt;PropertyGroup&amp;gt;  &amp;lt;MergedAssembly&amp;gt;出力する結果アセンブリファイル名（フルパス）&amp;lt;/MergedAssembly&amp;gt;  &amp;lt;/PropertyGroup&amp;gt;  &amp;lt;Message Text=&amp;#34;ILMerge @(MergeAsm) -&amp;amp;gt; $(MergedAssembly)&amp;#34; Importance=&amp;#34;high&amp;#34; /&amp;gt;  &amp;lt;ILMerge InputAssemblies=&amp;#34;@(MergeAsm)&amp;#34; OutputFile=&amp;#34;$(MergedAssembly)&amp;#34; TargetKind=&amp;#34;SameAsPrimaryAssembly&amp;#34; /&amp;gt;  &amp;lt;/Target&amp;gt; &amp;lt;/Project&amp;gt; VSビルド実行で、マージされたファイルが生成（*.</description>
+    </item>
+    
+  </channel>
+</rss>

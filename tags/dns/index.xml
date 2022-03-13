@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DNS on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/dns/</link>
+    <description>Recent content in DNS on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 29 Nov 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>今一度Traffic Managerのエンドポイント監視について</title>
+      <link>https://unofficialism.info/posts/traffic-manager-endpoint-monitoring/</link>
+      <pubDate>Sun, 29 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/traffic-manager-endpoint-monitoring/</guid>
+      <description>Azureが提供するDNSによるトラフィックルーティングサービスであるTraffic Managerについて、既にAzure利用ユーザに使い尽くされて新鮮味に欠けるサービスではあるものの、そのエンドポイント監視はTraffic Managerを扱う上でとても重要なことなので今一度そのルールについて整理したい。
+Traffic managerの実態はエンドポイントの監視＋ルーティングを行うDNSサービスである。以下digの結果を見ていただいてわかる通りyoichika-demo1.trafficmanager.netという外向きの名前に対してこの時点ではwebappdemo3.cloudapp.netがCNAMEされている。Traffic Managerは利用ユーザが設定したエンドポイントを監視し、その結果に応じて適切なルーティングを行う。ルーティング方法にはフェールオーバー、ラウンドロビン、パフォーマンスの3通りがある。これについて詳しくは「Traffic Managerのルーティング方法」を参照いただきたい。
+; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4.3ubuntu0.1-Ubuntu &amp;lt;&amp;lt;&amp;gt;&amp;gt; yoichika-demo1.trafficmanager.net +noall +answer ;; global options: +cmd yoichika-demo1.trafficmanager.net. 30 IN CNAME webappdemo3.cloudapp.net. webappdemo3.cloudapp.net. 60 IN A 70.37.93.167 次に肝心のエンドポイントの監視について「Traffic Manager の監視について」の監視シーケンスを使って要点を整理する。
+      つまり、エンドポイントがダウンした場合、Probeにより使用不可とみなすのに最大120秒(30秒 x 4)、さらにDNSのTTLの期間（既定値は300秒）を加えると、完全に問題のあったエンドポイントへのトラフィックが停止するまでに標準的に420秒、約7分は見ておく必要があるということになる。当然ながらこの7分間トラフィックがロスする可能性があるため、俊敏なフェールオーバーを期待する場合は別の仕掛けを用意する必要がある。ご注意ください。</description>
+    </item>
+    
+  </channel>
+</rss>

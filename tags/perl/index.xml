@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>perl on Yoichi Kawasaki</title>
+    <link>https://unofficialism.info/tags/perl/</link>
+    <description>Recent content in perl on Yoichi Kawasaki</description>
+    <image>
+      <url>https://unofficialism.info/profile.jpg</url>
+      <link>https://unofficialism.info/profile.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wikipediaデータベースを元にAzure Searchインデックスを生成する</title>
+      <link>https://unofficialism.info/posts/putting-wikipedia-data-into-azure-search/</link>
+      <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/putting-wikipedia-data-into-azure-search/</guid>
+      <description>Wikipediaのコンテンツは Creative Commons Licenseおよび GNU Free Documentation Licenseの下にライセンスされておりWikipedia財団は再配布や再利用のために惜しげもなくこの貴重なデータベースのダンプファイル（XMLファイル）を一般提供している。全文検索の検証で大量のデータが必要なときこのWikipediaのような生きたデータを使えるのは非常に有りがたい。これはこのWikipediaデータベースダンプ（日本語）を元にAzure Searchインデックスを生成してみましょうというお話。
+ Wikipedia:データベースダウンロード ウィキメディア財団による全プロジェクトのデータベース・ダンプ Wikipedia日本語版のダンプデータレポジトリ(日本語最新版)  利用するWikipedia XMLファイルとその定義 最新版日本語レポジトリには複数のXMLファイルが用意されているがここでは全ページのタイトル、ディスクリプションといった要約データを集約しているファイルjawiki-latest-abstract.xmlを利用する。XMLのフォーマットは次のとおり。この中からtitle, url, abstractを抽出してAzure Searchに投入する。
+&amp;lt;doc&amp;gt; &amp;lt;title&amp;gt;Wikipedia: 自然言語&amp;lt;/title&amp;gt; &amp;lt;url&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E&amp;lt;/url&amp;gt; &amp;lt;abstract&amp;gt;自然言語（しぜんげんご、）とは、人間によって日常の意思疎通のために用いられる、文化的背景を持って自然に発展してきた記号体系である。大別すると音声に&amp;gt;よる話し言葉と文字や記号として書かれる書き言葉がある。&amp;lt;/abstract&amp;gt; &amp;lt;links&amp;gt; &amp;lt;sublink linktype=&amp;#34;nav&amp;#34;&amp;gt;&amp;lt;anchor&amp;gt;概要&amp;lt;/anchor&amp;gt;&amp;lt;link&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E#.E6.A6.82.E8.A6.81&amp;lt;/link&amp;gt;&amp;lt;/sublink&amp;gt; &amp;lt;sublink linktype=&amp;#34;nav&amp;#34;&amp;gt;&amp;lt;anchor&amp;gt;関連項目&amp;lt;/anchor&amp;gt;&amp;lt;link&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E#.E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE&amp;lt;/link&amp;gt;&amp;lt;/sublink&amp;gt; &amp;lt;/links&amp;gt; &amp;lt;/doc&amp;gt; 尚、実際にダウンロードしてみるとわかると思うがこのファイルはサイズが比較的大きく集約されているドキュメント数も実に多い。カウントしてみたところ現時点（2015/06/09）で969541　件あった。Azure Searchの料金プランのうちFreeプランは最大ドキュメント数が10,000であることからここで利用する料金プランはFreeではなく標準プランを選択する必要がある。
+Index Schema インデックス名はwikipedia、フィールドはキーフィールドのためのitemidフィールドと上記wikipedia XMLファイルのtitle, url, abstractを格納するための3フィールドを定義。
+{  &amp;#34;name&amp;#34;: &amp;#34;wikipedia&amp;#34;,  &amp;#34;fields&amp;#34;: [  { &amp;#34;name&amp;#34;:&amp;#34;itemid&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;key&amp;#34;: true, &amp;#34;searchable&amp;#34;: false },  { &amp;#34;name&amp;#34;:&amp;#34;title&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;filterable&amp;#34;:false, &amp;#34;sortable&amp;#34;:false, &amp;#34;facetable&amp;#34;:false},  { &amp;#34;name&amp;#34;:&amp;#34;abstract&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.String&amp;#34;, &amp;#34;filterable&amp;#34;:false, &amp;#34;sortable&amp;#34;:false, &amp;#34;facetable&amp;#34;:false, &amp;#34;analyzer&amp;#34;:&amp;#34;ja.</description>
+    </item>
+    
+  </channel>
+</rss>
