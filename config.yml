@@ -75,7 +75,7 @@ params:
     profileMode:
         enabled: true # needs to be explicitly set
         title: "Yoichi Kawasaki"
-        subtitle: "Software Eengineer, NoOps Practitioner"
+        subtitle: "Software Engineer, NoOps Practitioner"
         imageUrl: "profile.jpg"
         imageWidth: 250
         imageHeight: 250
