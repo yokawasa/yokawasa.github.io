@@ -1,0 +1,125 @@
+baseURL: "https://unofficialism.info"
+canonifyurls: true
+publishDir : "public"
+title: "Yoichi Kawasaki"
+paginate: 5
+theme: PaperMod
+
+enableEmoji : true
+enableRobotsTXT: true
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+# Jekyll-style date and slug from filename
+# https://gohugo.io/getting-started/configuration/#configure-front-matter
+frontmatter:
+    date: [":filename", ":default", ":fileModTime"]
+
+params:
+#    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: Yoichi Kawasaki
+    description: "Yoichi Kawasaki yokawasa.github.io"
+    keywords: [Blog, Portfolio, PaperMod]
+    author: Yoichi Kawasaki 
+    # author: ["Me", "You"] # multiple authors
+    images: ["profile.jpg"]
+    DateFormat: "January 2, 2006"
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: true
+    ShowShareButtons: true
+    ShareButtons: [twitter,linkedin,reddit,facebook]
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    showtoc: false
+    tocopen: false
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "Thinking_Face_Emoji_large.png"
+        favicon16x16: "Thinking_Face_Emoji_large.png"
+        favicon32x32: "Thinking_Face_Emoji_large.png"
+        apple_touch_icon: "Thinking_Face_Emoji_large.png"
+        safari_pinned_tab: "Thinking_Face_Emoji_large.png"
+
+    label:
+        text: "unofficialism"
+        # icon: Thinking_Face_Emoji_large.png
+        iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: true # needs to be explicitly set
+        title: "Yoichi Kawasaki"
+        subtitle: "Software Eengineer, NoOps Practitioner"
+        imageUrl: "profile.jpg"
+        imageWidth: 250
+        imageHeight: 250
+        imageTitle: my image
+        # buttons:
+        #     - name: Posts
+        #       url: posts
+
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/yokawasa"
+        - name: github
+          url: "https://github.com/yokawasa"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/yokawasa/"
+        - name: rss
+          url: "index.xml"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    editPost:
+        #URL: "https://github.com/yokawasa/yokawasa.github.io/content"
+        URL: "https://github.com/yokawasa/yokawasa.github.io/tree/master/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: posts
+          name: posts
+          url: posts
+          weight: 5
+        - name: works
+          url: works
+          weight: 10
+        - name: search
+          url: search/
+          weight: 15
+        - identifier: tags
+          name: tags
+          url: tags/
+          weight: 20
+
