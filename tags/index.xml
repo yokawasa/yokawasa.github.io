@@ -9,13 +9,22 @@
       <link>https://unofficialism.info/profile.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>event</title>
       <link>https://unofficialism.info/tags/event/</link>
-      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://unofficialism.info/tags/event/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Istio</title>
+      <link>https://unofficialism.info/tags/istio/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/tags/istio/</guid>
       <description></description>
     </item>
     
@@ -295,15 +304,6 @@
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://unofficialism.info/tags/envoyproxy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Istio</title>
-      <link>https://unofficialism.info/tags/istio/</link>
-      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://unofficialism.info/tags/istio/</guid>
       <description></description>
     </item>
     
