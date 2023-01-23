@@ -7,7 +7,7 @@ ShowBreadCrumbs: false
 ShowPostNavLinks: false
 ---
 
-# Publications
+# Recent Publications
 
 | Publication Name  | Publish Day |
 | -------------------------------- | --------- |
@@ -17,7 +17,7 @@ ShowPostNavLinks: false
 | [ZOZO TECH BOOK VOL.1 - 第3章 速習GitHub Actions 〜 明日からの充実GitHub自動化ライフのための凝縮ポイント 〜](https://zozotechnologies.booth.pm/items/1979460)| April, 2020 |
 
 
-# Presentations at public events
+# Recent Talks 
 
 Past talks and presentations by [@yokawasa](https://github.com/yokawasa) (twitter:[@yokawasa](https://twitter.com/yokawasa))
 
