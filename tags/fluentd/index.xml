@@ -47,8 +47,8 @@ Azure DocumentDB is a managed NoSQL database service provided by Microsoft Azure
       
       <guid>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</guid>
       <description>UPDATED:
- 2016-12-10: Added fluent-plugin-azure-loganalytics to the list 2016-11-23: Added fluent-plugin-azurefunctions to the list  Here is a list of fluentd plugins for Microsoft Azure Services.
-   Plugin Name Target Azure Services Note     fluent-plugin-azurestorage Blob Storage Azure Storate output plugin buffers logs in local file and upload them to Azure Storage periodicall   fluent-plugin-azureeventhubs Event Hubs Azure Event Hubs buffered output plugin for Fluentd.</description>
+2016-12-10: Added fluent-plugin-azure-loganalytics to the list 2016-11-23: Added fluent-plugin-azurefunctions to the list Here is a list of fluentd plugins for Microsoft Azure Services.
+Plugin Name Target Azure Services Note fluent-plugin-azurestorage Blob Storage Azure Storate output plugin buffers logs in local file and upload them to Azure Storage periodicall fluent-plugin-azureeventhubs Event Hubs Azure Event Hubs buffered output plugin for Fluentd. Currently it supports only HTTPS (not AMQP) fluent-plugin-azuretables Azure Tables Fluent plugin to add event record into Azure Tables Storage fluent-plugin-azuresearch Azure Search Fluent plugin to add event record into Azure Search fluent-plugin-documentdb Cosmos DB Fluent plugin to add event record into Azure Cosmos DB fluent-plugin-azurefunctions Azure Functions Azure Functions (HTTP Trigger) output plugin for Fluentd.</description>
     </item>
     
   </channel>

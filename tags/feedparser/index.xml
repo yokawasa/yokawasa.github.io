@@ -18,7 +18,7 @@
       <guid>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</guid>
       <description>DocumentDB Python SDKとfeedparserを使って簡易クローラーを作りましょうというお話。ここではDocumentDBをクローリング結果の格納先データストアとして使用する。クロール対象はAzure日本語ブログのRSSフィード、これをfeedparserを使ってドキュメント解析、必要データの抽出、そしてその結果を今回使用するpydocumentdbというDocumentDB Python SDKを使ってDocumentDBに格納するというワークフローになっている。
 DocumentDB Python SDK - pydocumentdb Azureで提供されているどのサービスにもあてはまることであるが、DocumentDBを操作するための全てのインターフェースはREST APIとして提供されておりREST APIを内部的に使用してマイクロソフト謹製もしくは個人のコントリビューションによる複数の言語のSDKが用意されている。その中でもpydocumentdbはPython用のDocumentDB SDKであり、オープンソースとしてソースコードは全てGithubで公開されている。
- pydocumentdbプロジェクトトップ(Github) pydocumentdbサンプルコード(Github) Azure DocumentDB REST API Reference  Pre-Requirementsその１: Python実行環境とライブラリ 実行環境としてPython2.7系が必要となる。また、今回クローラーが使用しているDocumentDB Python SDKであるpydocumentdbとRSSフィード解析ライブラリfeedparserの２つのライブラリのインストールが必要となる。
+pydocumentdbプロジェクトトップ(Github) pydocumentdbサンプルコード(Github) Azure DocumentDB REST API Reference Pre-Requirementsその１: Python実行環境とライブラリ 実行環境としてPython2.7系が必要となる。また、今回クローラーが使用しているDocumentDB Python SDKであるpydocumentdbとRSSフィード解析ライブラリfeedparserの２つのライブラリのインストールが必要となる。
 pydocumentdbインストール
 $ sudo pip install pydocumentdb feedparserインストール
 $ sudo pip install feedparser ちなみにpipがインストールされていない場合は下記の通りマニュアルもしくはインストーラーを使用してpipをインストールが必要となる

@@ -20,7 +20,7 @@
 以前「azuresshconfigの紹介 – Azure上でのSSH生活を少しだけ快適にする」の投稿でazuresshconfigの紹介をさせていただいたが、ツールをリリースして以来、数少ない貴重な利用者様からインストールがコケるんだけど何とかしろというクレームをいただいていた。そこでインストールマニュアルを充実させようかとか、インストーラーをプラットフォーム別に充実させようかとか考えたものの、ここは流行りのコンテナ実行できるようしたほうがいいだろうということでDocker対応することにした。
 今回の対応によりpipインストールや、プラットフォーム別にprerequisiteなランタイム、ヘッダファイル、ライブラリといった面倒なインストールが不要となり、Mac、Windows、Linux(Ubuntu、CentOS、その他distro)関係なくシンプルにdocker runコマンドでの実行が可能となった。
 しかも超軽量LinuxディストリビューションであるAlpine Linuxの上にPythonランタイムとツールを載せているだけであるためサイズはたったの155MBとかなり軽め
-$ docker images azuresshconfig  REPOSITORY TAG IMAGE ID CREATED SIZE azuresshconfig latest 7488bef4343f 7 minutes ago 155 MB 実行例 $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \  --output stdout --user yoichika --identityfile ~/.ssh/id_rsa &amp;gt; $HOME/.ssh/config Dockerfileをダウンロードしてビルド・実行はこちら
+$ docker images azuresshconfig REPOSITORY TAG IMAGE ID CREATED SIZE azuresshconfig latest 7488bef4343f 7 minutes ago 155 MB 実行例 $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \ --output stdout --user yoichika --identityfile ~/.ssh/id_rsa &amp;gt; $HOME/.ssh/config Dockerfileをダウンロードしてビルド・実行はこちら
 $ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Dockerfile -o Dockerfile $ docker build -t azuresshconfig . $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \ --output stdout --user yoichika --identityfile ~/.</description>
     </item>
     

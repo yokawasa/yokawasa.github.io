@@ -21,7 +21,7 @@ ARMテンプレートと呼ばれるデプロイ手法を使ってAzure上にEla
 ARMテンプレートとは？ ARMテンプレートの前にARMについて少し解説する。ARMはAzure Resource Managerの略で、アプリケーション構築に必要な
 リソース（ストレージ、ネットワーク、コンピュート/仮想マシンなど）をデプロイし管理するための仕組みである。どんなソリューションのデプロイにおいても少なからず仮想ネットワーク、仮想マシン、ストレージ、LBなどのインフラの構築が必要で旧来のやり方ではこれらを１つ１つデプロイしていたかと思う。一方ARMの世界では必要な構築要素をリソースという単位にして、これらリソースを個別にデプロイするのではなく全てのリソースをグループ化してまとめてデプロイし、それらを管理・監視することができる。そして、それら複数のリソースはJSON形式のテンプレートで表現・展開できるようになっていて、このテンプレートのことをARMテンプレートと呼ぶ。Infrastructure as Codeなんて言葉がはやっていたりするが、まさにそれをAzureで実現するための公式な仕組みがARMであり、ARMテンプレートなのである。
 ちなみにこのARMテンプレート、手でいちから作る必要はなく、Azureクイックスタートテンプレートにさまざまなテンプレートが公開されているのでまずは自分の目的に似たようなことを実現しているテンプレートを選んでデプロイしてみることをお勧めする。完成されたものを見ることでお作法が学べるし、それをベースにカスタマイズしていくのが効率的である。
- https://azure.microsoft.com/ja-jp/documentation/templates/ https://github.com/Azure/azure-quickstart-templates  Elasticsearchクラスタのデプロイ 上記で説明したARMテンプレートを利用してElasticsearchクラスタのデプロイを行う。ここで使うARMテンプレートはAzureクイック・スタートテンプレートギャラリーにあるElasticsearchテンプレートを利用する。ARMテンプレートを使ったデプロイには複数の方法があるがここではLinux上でAzure CLIを使った方法で行う。ここでの実行OSはUbuntu 14.10。
+https://azure.microsoft.com/ja-jp/documentation/templates/ https://github.com/Azure/azure-quickstart-templates Elasticsearchクラスタのデプロイ 上記で説明したARMテンプレートを利用してElasticsearchクラスタのデプロイを行う。ここで使うARMテンプレートはAzureクイック・スタートテンプレートギャラリーにあるElasticsearchテンプレートを利用する。ARMテンプレートを使ったデプロイには複数の方法があるがここではLinux上でAzure CLIを使った方法で行う。ここでの実行OSはUbuntu 14.10。
 最新版のAzure CLIをインストールしてからAzureサブスクリプションに接続する
 $ sudo npm install -g azure-cli $ azure --version $ azure login 「Azure コマンド ライン インターフェイス (Azure CLI) からの Azure サブスクリプションへの接続」に書かれているように、Azure CLI バージョン 0.9.10 以降では、対話型の azure login コマンドを使用して、任意の ID でアカウントにログインできる。尚、バージョン 0.9.9 以降は、多要素認証をサポートしている。
 デプロイ用のリソースグループを作成する
@@ -41,7 +41,7 @@ Azure Insights REST APIメトリック取得インターフェース Azure Insig
 (1)メトリック定義一覧取得
 GET https://management.azure.com /subscriptions/{-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/{resource-type}/{resource-name}/metricDefinitions [Parameters] api-version={api-version} $filter={filter} (2)メトリック情報取得
 GET https://management.azure.com /subscriptions/{-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/sites/{sitename}/metrics [Parameters] api-version={api-version} $filter={filter} APIの共通部分は下記の通り。Azure Insights APIへの全ての要求はAzure Active Directoryを使用して認証する必要があり、この認証により得られたトークンを各APIリクエストのAuthorizationヘッダに指定する必要がある。トークン取得の方法にはPowerShellを使用した方法とAzure管理ポータルを使用して認証する2つの方法がある。詳しくは「Azure インサイト要求を認証する」を参照ください。
- {api-version}：&amp;ldquo;2014-04-01&amp;rdquo; {subscription-id} ： サブスクリプションID {resource-group-name}： リソースグループを指定。詳細は「リソースグループを使用した Azure リソースの管理」を参照ください Acceptヘッダー：&amp;quot;application/json&amp;quot;を指定。これを指定しない場合、結果はXMLで返却される AuthorizationヘッダーにAzure Active Directory から取得する JSON Web Token（JWT） に設定する。詳細は「Azure インサイト要求を認証する」を参照ください  実際のメトリクス取得APIでは$filterパラメータの付与が必要となる。$filterには主にメトリックの種類(name.</description>
+{api-version}：&amp;ldquo;2014-04-01&amp;rdquo; {subscription-id} ： サブスクリプションID {resource-group-name}： リソースグループを指定。詳細は「リソースグループを使用した Azure リソースの管理」を参照ください Acceptヘッダー：&amp;quot;application/json&amp;quot;を指定。これを指定しない場合、結果はXMLで返却される AuthorizationヘッダーにAzure Active Directory から取得する JSON Web Token（JWT） に設定する。詳細は「Azure インサイト要求を認証する」を参照ください 実際のメトリクス取得APIでは$filterパラメータの付与が必要となる。$filterには主にメトリックの種類(name.</description>
     </item>
     
   </channel>

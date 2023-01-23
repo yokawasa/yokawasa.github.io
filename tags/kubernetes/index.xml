@@ -27,7 +27,7 @@ What the plugin actually does is that it create a SOCKS proxy server Pod in a Ku
       
       <guid>https://unofficialism.info/posts/action-setup-kube-tools/</guid>
       <description>I&amp;rsquo;ve published a new GitHub Action called action-setup-kube-tools (View on Marketplace). The action installs Kubernetes tools (kubectl, kustomize, helm, kubeval, conftest, and yq) and cache them on the runner. This is a typescript version of stefanprodan/kube-tools with no command input param.
-Usage Inputs    Parameter Required Default Value Description     kubectl false 1.18.2 kubectl version. kubectl vesion can be found here   kustomize false 3.</description>
+Usage Inputs Parameter Required Default Value Description kubectl false 1.18.2 kubectl version. kubectl vesion can be found here kustomize false 3.5.5 kustomize version. kustomize vesion can be found here helm false 2.</description>
     </item>
     
     <item>
@@ -78,10 +78,10 @@ Motivation I wanted to SSH into Azure Kubernetes Service (AKS) cluster node VMs,
       
       <guid>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</guid>
       <description>先日、4月19日に開催されたJapan Container Days v18.04にて「Kubernetes x PaaS – コンテナアプリケーションのNoOpsへの挑戦」というタイトルでセッションを担当させていただいた。その名の通りメインがKubernetesで、KubernetesアプリケーションにおいてNoOps（運用レス）を目指すためのにどういった工夫ができるのか、どういったものを活用していけばよいのか、という内容です。このブログではJapan Container Daysでの発表に使用したスライドの共有とセッションに中のサンプルやデモについて補足させていただく。
-Session Slides  Kubernetes x PaaS – コンテナアプリケーションの NoOpsへの挑戦 from Yoichi Kawasaki
+Session Slides Kubernetes x PaaS – コンテナアプリケーションの NoOpsへの挑戦 from Yoichi Kawasaki
 補足情報 1. Open Service Broker for AzureでAzure Database for MySQLの利用 スライドでお見せした実際のファイルを使ってAzure Database for MySQLのサービスインスタンス作成、バインディング、そして実際のアプリケーションからの利用までの流れを紹介させていただく。
 Open Service Broker for AzureプロジェクトのGithubにあるサンプルファイルmysql-instance.yamlとmysql-binding.yamlを使ってそれぞれServiceInstanceとServiceBindingを作成する `
-# Provisioning the database, basic50 plan ... $ kubectl create -f mysql-instance.yaml  # Wait until ServiceInstance named example-mysql-instance get ready &amp;#39;Status =&amp;gt; Ready&amp;#39;, # then execute the following to create a binding for this new database, $ kubectl create -f mysql-binding.</description>
+# Provisioning the database, basic50 plan ... $ kubectl create -f mysql-instance.yaml # Wait until ServiceInstance named example-mysql-instance get ready &amp;#39;Status =&amp;gt; Ready&amp;#39;, # then execute the following to create a binding for this new database, $ kubectl create -f mysql-binding.</description>
     </item>
     
   </channel>

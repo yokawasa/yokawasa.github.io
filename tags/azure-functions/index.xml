@@ -17,7 +17,7 @@
       
       <guid>https://unofficialism.info/posts/quick-start-with-azure-function-v2-python-preview/</guid>
       <description>Today (Sept 25, 2018 JST), Azure Functions supports Python development using Python 3.6 on the Functions v2 (cross-platform) runtime. You can now use your Python code and dependencies on Linux-based Functions. This is an article on quick start with Azure Functions V2 Python (Preview) showing how you can quickly start Python function development on Azure Function V2 runtime.
-1. Prerequisites for Buidling &amp;amp; Testing Locally  Python 3.6 (For Python function apps, you have to be running in a venv) Azure Functions Core Tools 2.</description>
+1. Prerequisites for Buidling &amp;amp; Testing Locally Python 3.6 (For Python function apps, you have to be running in a venv) Azure Functions Core Tools 2.</description>
     </item>
     
   </channel>

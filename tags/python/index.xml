@@ -17,7 +17,7 @@
       
       <guid>https://unofficialism.info/posts/quick-start-with-azure-function-v2-python-preview/</guid>
       <description>Today (Sept 25, 2018 JST), Azure Functions supports Python development using Python 3.6 on the Functions v2 (cross-platform) runtime. You can now use your Python code and dependencies on Linux-based Functions. This is an article on quick start with Azure Functions V2 Python (Preview) showing how you can quickly start Python function development on Azure Function V2 runtime.
-1. Prerequisites for Buidling &amp;amp; Testing Locally  Python 3.6 (For Python function apps, you have to be running in a venv) Azure Functions Core Tools 2.</description>
+1. Prerequisites for Buidling &amp;amp; Testing Locally Python 3.6 (For Python function apps, you have to be running in a venv) Azure Functions Core Tools 2.</description>
     </item>
     
     <item>
@@ -30,10 +30,10 @@
 Azure FunctionsのPythonサポート状況 Azure FunctionsのRuntimeには大きく1系と２系の２種類あるが、現時点でPythonは1系でのみExperimentalサポートという状況（ See also 言語サポート状況）
 Experimental（実験的サポート）なので本番での利用は非推奨であり、公式サポートはない（ベストエフォートでのサポートは得られるはず）。また、当然ながらGA言語に比べパフォーマンスは悪い。PythonはFunction呼び出し毎にpython.exeが実行される（GA言語はRuntimeと同じプロセスで実行）。
 将来的な話をすると、Azure Functions Runtime 1系でのPythonサポートについては今のExperimentalの域を超えることはないだろう。一方、Runtime 2系ではPythonが正式サポートされるように対応が進められている。ただし時期は未定。この対応については下記Github Issueが切られており、ある程度の対応状況であれば確認可能。Pythonを使う利点の１つに、強力な数理計算、自然言語解析、機械学習系モジュールがあるが、早く安定とパフォーマンスが備わったPythonサーバレスアプリ実行環境でこれら強力なモジュールを活用できたらと思うのは私だけではないだろう。今後の進展に期待。
- Feature planning: first class Python support  Hosting Planの選択について Consumption Plan vs App Service Plan Azure FunctionsのHosting PlanにはConsumption PlanとApp Service Planの2つがあって、言語に関係なく各プランの特徴は次の通り:
+Feature planning: first class Python support Hosting Planの選択について Consumption Plan vs App Service Plan Azure FunctionsのHosting PlanにはConsumption PlanとApp Service Planの2つがあって、言語に関係なく各プランの特徴は次の通り:
 Consumption Plan
- コード実行時にコンピューティング割り当て リソース使用量（関数実行時間、使用メモリ）で課金 自動スケール、各処理は〜10分まで  App Service Plan
- 専用VMでリソース確保 継続処理：10分以上の処理 App Service環境でのみ可能な処理: App Service Environment, VNET/VPN接続, より大きなサイズのVM, etc  Pythonで使う上で気をつけるポイント  Python 3.</description>
+コード実行時にコンピューティング割り当て リソース使用量（関数実行時間、使用メモリ）で課金 自動スケール、各処理は〜10分まで App Service Plan
+専用VMでリソース確保 継続処理：10分以上の処理 App Service環境でのみ可能な処理: App Service Environment, VNET/VPN接続, より大きなサイズのVM, etc Pythonで使う上で気をつけるポイント Python 3.XなどRuntimeの変更を行う場合は、専用環境である必要があってApp Service Plan必須 Consumption Planの場合、Pythonに限らずColdスタート問題という休眠したFunctionの起動が極端に遅くなる問題があるのだが、Pythonの場合は、GA言語に比べてパフォーマンスが悪く、SciPyなど重めのモジュールを利用すると絶望的に遅くなることからConsumption Planでの問題が特に顕著にでてくる。これまでの経験から、小さいインスタンスを並べるConsumption Planよりも比較的大きなサイズのVMが選べるApp Service Planの方が向いていることが多い。Pythonの場合は、予測可能なワークロードに対してApp Service Planで使うほうが問題が少ない。Consumption Planの魅力であるMicro Billing（使った分だけ課金）やリクエストに応じたオートスケーリングといった真のサーバレスに期待される要件は既に正式サポートしているC#、Nodeでやっていただくのがよいかと。 [参考] Coldスタート問題 Consumption Planにおける問題 Azure Functions Cold Start Workaround The only downside is that the consumption model that keeps the cost so dirt-cheap means that unless you are using your Function constantly (in which case, you might be better off with the non-consumption options anyway), you will often be hit with a long delay as your Function wakes up from hibernation 休眠したFunctionをどう起こすかがポイント。事前に空リクエストを送ることが考えられるが問題はタイミング（フォーム開いた時とか） Python 3.</description>
     </item>
     
     <item>
@@ -45,10 +45,10 @@ Consumption Plan
       <description>Python Easter Egg = Pythonの隠しクレジットとはいってもPython基礎本などでよく紹介されているものなので既にご存知かもしれないが背景が面白いのでここで紹介。
 Pythonにはthisモジュールという「The Zen of Python」(Note 1)を出力するだけのモジュールがある。このモジュール、中身(Note 2)を見てみると分かるが、総ステップにしてわずか28行、ROT13暗号化(Note 3)された文字列を復号化するだけの単純で取るに足らないものかもしれないがこのモジュールが作られた背景は面白い。Barry Warsaw氏が記事「import this and The Zen of Python」でthisモジュールが誕生にまつわる面白い話を紹介している。
 「import this and The Zen of Python」の一部簡訳
- 2001年秋、Foretec Seminar社はのInternational Python Conference #10(以下IPC10、Pyconの前身となるカンファレンス)の準備をしておりPythonコミュニティからそのカンファレンスのスローガンを求めていた。スローガンはTシャツにもプリントされる予定だった。Guideや、Fred、Jeremyや著者達はかつてはForetec Seminar社に所属していたがPythonlabsを結成する2000年に同社を去っている。そしてPythonlabsはPythonコミュニティからのスローガン応募の審査と勝者の選定を担当することになった。応募は500くらいあったが、どれもひどいものだった。Timと著者は1つに絞られるまで何度となく選別作業を行い
+2001年秋、Foretec Seminar社はのInternational Python Conference #10(以下IPC10、Pyconの前身となるカンファレンス)の準備をしておりPythonコミュニティからそのカンファレンスのスローガンを求めていた。スローガンはTシャツにもプリントされる予定だった。Guideや、Fred、Jeremyや著者達はかつてはForetec Seminar社に所属していたがPythonlabsを結成する2000年に同社を去っている。そしてPythonlabsはPythonコミュニティからのスローガン応募の審査と勝者の選定を担当することになった。応募は500くらいあったが、どれもひどいものだった。Timと著者は1つに絞られるまで何度となく選別作業を行い
 最終的に&amp;quot;import this&amp;quot;を選んだ。理由は&amp;quot;import this&amp;quot;という言葉の持つふざけた、小バカにしたようなトーンが好きだったからという。
 著者たちはこの&amp;quot;import this&amp;quot;をスローガンに選んですぐにthisモジュール(this.py)を実装した。モジュールは「The Zen of Python」を出力するだけのものだったが途中TimやGuidoの提案でrot13で暗号化して内容を少し難読化する工夫がされたりもした。IPC10が終わってすぐ、彼らはこのイベントを記念してthisモジュールをPython2.2.1ブランチにコミットした。この時、著者の提案で他の誰にも知られないようにするためにソース管理システムのチェックイン通知機能を停止し、こっそりこのモジュールをPython2.2.1のブランチに含めたのだ。これらのことは彼ら以外に誰にも知らせず内緒で行われた。著者いわく、この彼らの仕込んだeaster egg（thisモジュールのこと。ソフトウェアでいうeaster eggとは隠しコマンドとか、隠しクレジットのようなもの）が誰かに見つかるまではしばらく時間がかかったそうだ。
- Barry Warsaw氏が同記事を「That was all back in the day when the Python community had a sense of humor」という一文で締めくくっているように、この記事を読むと当時のPythonコミュニティがいかにユーモア溢れたものだったのかが感じられる。phython-2.2.1がリリースされたのは2002年4月10日で、それからどれくらい経ってこのthisモジュールが発見されたのか分からないが初めて発見した人は絶対ほっこりしたことだろう。
+Barry Warsaw氏が同記事を「That was all back in the day when the Python community had a sense of humor」という一文で締めくくっているように、この記事を読むと当時のPythonコミュニティがいかにユーモア溢れたものだったのかが感じられる。phython-2.2.1がリリースされたのは2002年4月10日で、それからどれくらい経ってこのthisモジュールが発見されたのか分からないが初めて発見した人は絶対ほっこりしたことだろう。
 Note 1: import this 「The Zen of Python」はPythonハッカー、Tim Petersによって書かれた有名な文章でPython設計哲学を要約したようなものと言われている。 Barry Warsaw氏の記事によると起源はTim Peters氏による1999年6月4日のPython-listへのこの投稿のようだ。以下、Pythonインタラクティクモードでimport thisを実行し「The Zen of Python」を表示させた内容：</description>
     </item>
     
@@ -62,7 +62,7 @@ Note 1: import this 「The Zen of Python」はPythonハッカー、Tim Petersに
 以前「azuresshconfigの紹介 – Azure上でのSSH生活を少しだけ快適にする」の投稿でazuresshconfigの紹介をさせていただいたが、ツールをリリースして以来、数少ない貴重な利用者様からインストールがコケるんだけど何とかしろというクレームをいただいていた。そこでインストールマニュアルを充実させようかとか、インストーラーをプラットフォーム別に充実させようかとか考えたものの、ここは流行りのコンテナ実行できるようしたほうがいいだろうということでDocker対応することにした。
 今回の対応によりpipインストールや、プラットフォーム別にprerequisiteなランタイム、ヘッダファイル、ライブラリといった面倒なインストールが不要となり、Mac、Windows、Linux(Ubuntu、CentOS、その他distro)関係なくシンプルにdocker runコマンドでの実行が可能となった。
 しかも超軽量LinuxディストリビューションであるAlpine Linuxの上にPythonランタイムとツールを載せているだけであるためサイズはたったの155MBとかなり軽め
-$ docker images azuresshconfig  REPOSITORY TAG IMAGE ID CREATED SIZE azuresshconfig latest 7488bef4343f 7 minutes ago 155 MB 実行例 $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \  --output stdout --user yoichika --identityfile ~/.ssh/id_rsa &amp;gt; $HOME/.ssh/config Dockerfileをダウンロードしてビルド・実行はこちら
+$ docker images azuresshconfig REPOSITORY TAG IMAGE ID CREATED SIZE azuresshconfig latest 7488bef4343f 7 minutes ago 155 MB 実行例 $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \ --output stdout --user yoichika --identityfile ~/.ssh/id_rsa &amp;gt; $HOME/.ssh/config Dockerfileをダウンロードしてビルド・実行はこちら
 $ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Dockerfile -o Dockerfile $ docker build -t azuresshconfig . $ docker run -v $HOME:/root --rm -it yoichikawasaki/azuresshconfig \ --output stdout --user yoichika --identityfile ~/.</description>
     </item>
     
@@ -73,10 +73,9 @@ $ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Docker
       
       <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-frames-face-recognition/</guid>
       <description>過去に本ブログでビデオコンテンツを切り口とした音声認識やOCR技術を利用したデモを紹介したが、ここではビデオコンテンツの中の人物出現箇所に連動して人物名を字幕で表示させるデモとその実装方法を紹介したい。人物識別にはAzureのCognitive ServicesのFace APIを使っていて、これで動画の中に出現する顔の検出を行い、予め登録している人物リストとのマッチングにより実現している。 Cognitive Serivcesとは視覚、音声、言語、知識などマイクロソフトがこれまで研究を通じて開発してきたさまざまな要素技術をAPIとして提供しているサービスのことで、最近巷で人工知能（AI）だとかインテリジェンスとかいうキーワードをよく耳にするのではないかと思うがAzure利用シナリオでそういったインテリジェンス（知能/知性）を兼ね備えたアプリを作る場合は間違いなく中核となるサービスの1つである。Face APIはその中でも顔の検出・識別や、顔にまつわる感情、特徴などメタデータ抽出に特化したAPIである。
-
- demo site source code  主要テクノロジーと機能 下図は今回のデモ作成のために行っている処理フローと主要テクノロジーを表している。やっていることは大きく分けて3つ: (1) 動画コンテンツをAzure Media Encoder Standardを使ってフレームごとの静止画像の作成, (2) Cognitive ServicesのFace APIを使って1より得られた静止画像から顔の検出を行い予め登録している人物リストとマッチング（最も類似度が高いものを本人とみなす）して人物を識別, (3) 2で得られた各フレーム中の人物情報を時間順に並べて字幕(Closed Caption)用のデータファイルを生成。以下、各処理の詳細について説明する。
+demo site source code 主要テクノロジーと機能 下図は今回のデモ作成のために行っている処理フローと主要テクノロジーを表している。やっていることは大きく分けて3つ: (1) 動画コンテンツをAzure Media Encoder Standardを使ってフレームごとの静止画像の作成, (2) Cognitive ServicesのFace APIを使って1より得られた静止画像から顔の検出を行い予め登録している人物リストとマッチング（最も類似度が高いものを本人とみなす）して人物を識別, (3) 2で得られた各フレーム中の人物情報を時間順に並べて字幕(Closed Caption)用のデータファイルを生成。以下、各処理の詳細について説明する。
 1. Azure Media Encoder Standardでフレームごとの静止画生成 残念ながらFace APIはビデオコンテンツから直接顔検出することができないため、一旦ビデオコンテンツから各フレームごとの静止画を生成してその静止画を対象に処理を行う必要がある。ここでは各フレームごとの静止画生成にAzure Media Encoder Standard（MES）を利用する。MESを使うことでエンコードタスクとしてビデオコンテンツに対して様々な処理を行うことができるのだが、MESにはそのエンコードタスクの１つとしてサムネイル生成のためのタスクが用意されており、今回はこのサムネール生成タスクを利用する。他のエンコードタスク同様にサムネイル生成タスクについてもプリセットと呼ばれるエンコードに必要な情報を記述した XML または JSON形式ファイルを用意する必要がある。今回は1秒フレームごとにJPEG形式の静止画（サムネイル）を生成するために次のようなプリセット（amsmp-thumbnail-config.json）を用意した。
-{  &amp;#34;Version&amp;#34;: 1.0,  &amp;#34;Codecs&amp;#34;: [  {  &amp;#34;Start&amp;#34;: &amp;#34;00:00:00&amp;#34;,  &amp;#34;Step&amp;#34;: &amp;#34;00:00:01&amp;#34;,  &amp;#34;Type&amp;#34;: &amp;#34;JpgImage&amp;#34;,  &amp;#34;JpgLayers&amp;#34;: [  {  &amp;#34;Quality&amp;#34;: 90,  &amp;#34;Type&amp;#34;: &amp;#34;JpgLayer&amp;#34;,  &amp;#34;Width&amp;#34;: 640,  &amp;#34;Height&amp;#34;: 360  }  ]  }  ],  &amp;#34;Outputs&amp;#34;: [  {  &amp;#34;FileName&amp;#34;: &amp;#34;{Basename}_{Index}{Extension}&amp;#34;,  &amp;#34;Format&amp;#34;: {  &amp;#34;Type&amp;#34;: &amp;#34;JpgFormat&amp;#34;  }  }  ] } MESによるサムネイル処理実行方法やプリセットの詳細については「Media Encoder Standard を使用した高度なエンコード」や同ページの「サムネイルを生成する」項を参照ください。尚、今回のサムネイル生成のためのエンコーディング処理は小生自作の「azure-media-processor-java」を利用してバッチ実行している。</description>
+{ &amp;#34;Version&amp;#34;: 1.0, &amp;#34;Codecs&amp;#34;: [ { &amp;#34;Start&amp;#34;: &amp;#34;00:00:00&amp;#34;, &amp;#34;Step&amp;#34;: &amp;#34;00:00:01&amp;#34;, &amp;#34;Type&amp;#34;: &amp;#34;JpgImage&amp;#34;, &amp;#34;JpgLayers&amp;#34;: [ { &amp;#34;Quality&amp;#34;: 90, &amp;#34;Type&amp;#34;: &amp;#34;JpgLayer&amp;#34;, &amp;#34;Width&amp;#34;: 640, &amp;#34;Height&amp;#34;: 360 } ] } ], &amp;#34;Outputs&amp;#34;: [ { &amp;#34;FileName&amp;#34;: &amp;#34;{Basename}_{Index}{Extension}&amp;#34;, &amp;#34;Format&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;JpgFormat&amp;#34; } } ] } MESによるサムネイル処理実行方法やプリセットの詳細については「Media Encoder Standard を使用した高度なエンコード」や同ページの「サムネイルを生成する」項を参照ください。尚、今回のサムネイル生成のためのエンコーディング処理は小生自作の「azure-media-processor-java」を利用してバッチ実行している。</description>
     </item>
     
     <item>
@@ -86,10 +85,9 @@ $ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Docker
       
       <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr/</guid>
       <description>OCRとはOptical Character Recognitionの略で日本語にすると光学文字認識と訳されており、ざっくりと画像の中の文字をテキストに変換する技術のことを指す。テキストに変換されるということは勘が鋭い皆さんはお気づきだと思うが、テキストの全文検索であったり、テキストから音声への変換、さらには機械翻訳を使って多言語への変換といった展開が考えられる。そんな可能性を秘めたOCRであるが、ここではそのOCRの技術を使ってビデオファイルから抽出したテキストデータを元にビデオに字幕表示したり、動画中に表示される文字を全文検索をするデモを紹介したい。内容的には「Azure Media &amp;amp; Cognitiveデモ:Speech-To-Text」で紹介したデモのOCR版といったところ。
-
- demo site source code  主要テクノロジーと機能 Azure Media OCRメディアプロセッサによるテキスト抽出 このデモではAzure Media OCRメディアプロセッサー(MP)を使用してビデオファイル内のテキストコンテンツを検出してテキストファイルを生成している。OCRメディアプロセッサーは入力パラメータによりビデオ解析の挙動を調整することができる。主なパラメータとしては検索対象テキストの言語（日本語もサポート）、テキストの向き、サンプリングレート、ビデオフレーム内のテキスト検出対象のリージョンがあるが、本デモでの入力パラメータ（Video-OCR-Search-Python/src/ocr-detectregion.json）は以下の通り検索対象言語は日本語、1秒おきのサンプリングレート、テキスト検出対象のリージョンからビデオフレーム内の上部1/4を省く設定（検出対象をフレームトップから85 pixel以下を対象）にしている。
-{  &amp;#34;Version&amp;#34;:&amp;#34;1.0&amp;#34;,  &amp;#34;Options&amp;#34;:  {  &amp;#34;Language&amp;#34;:&amp;#34;Japanese&amp;#34;,  &amp;#34;TimeInterval&amp;#34;:&amp;#34;00:00:01.000&amp;#34;,  &amp;#34;DetectRegions&amp;#34;:  [  {&amp;#34;Left&amp;#34;:&amp;#34;0&amp;#34;,&amp;#34;Top&amp;#34;:&amp;#34;85&amp;#34;,&amp;#34;Width&amp;#34;:&amp;#34;1280&amp;#34;,&amp;#34;Height&amp;#34;:&amp;#34;635&amp;#34;}  ]  } } そして、Azure Media OCRメディアプロセッサはビデオで検出された文字を下記のような表示時間に基づいてセグメント化された形で結果出力する。結果ファイルの完全版はこちら（azuresubs.json）を参照ください。
-{  &amp;#34;fragments&amp;#34;: [  {  &amp;#34;start&amp;#34;: 0  &amp;#34;interval&amp;#34;: 319319,  &amp;#34;duration&amp;#34;: 319319,  &amp;#34;events&amp;#34;: [  [  {  &amp;#34;language&amp;#34;: &amp;#34;Japanese&amp;#34;,  &amp;#34;text&amp;#34;: &amp;#34;Azure の 契 約 内 容 を 変 更 す る Microsoft Azure&amp;#34;  }  ]  ]  },  { /* fragment1 */ },  { /* fragment2 */ },  .</description>
+demo site source code 主要テクノロジーと機能 Azure Media OCRメディアプロセッサによるテキスト抽出 このデモではAzure Media OCRメディアプロセッサー(MP)を使用してビデオファイル内のテキストコンテンツを検出してテキストファイルを生成している。OCRメディアプロセッサーは入力パラメータによりビデオ解析の挙動を調整することができる。主なパラメータとしては検索対象テキストの言語（日本語もサポート）、テキストの向き、サンプリングレート、ビデオフレーム内のテキスト検出対象のリージョンがあるが、本デモでの入力パラメータ（Video-OCR-Search-Python/src/ocr-detectregion.json）は以下の通り検索対象言語は日本語、1秒おきのサンプリングレート、テキスト検出対象のリージョンからビデオフレーム内の上部1/4を省く設定（検出対象をフレームトップから85 pixel以下を対象）にしている。
+{ &amp;#34;Version&amp;#34;:&amp;#34;1.0&amp;#34;, &amp;#34;Options&amp;#34;: { &amp;#34;Language&amp;#34;:&amp;#34;Japanese&amp;#34;, &amp;#34;TimeInterval&amp;#34;:&amp;#34;00:00:01.000&amp;#34;, &amp;#34;DetectRegions&amp;#34;: [ {&amp;#34;Left&amp;#34;:&amp;#34;0&amp;#34;,&amp;#34;Top&amp;#34;:&amp;#34;85&amp;#34;,&amp;#34;Width&amp;#34;:&amp;#34;1280&amp;#34;,&amp;#34;Height&amp;#34;:&amp;#34;635&amp;#34;} ] } } そして、Azure Media OCRメディアプロセッサはビデオで検出された文字を下記のような表示時間に基づいてセグメント化された形で結果出力する。結果ファイルの完全版はこちら（azuresubs.json）を参照ください。
+{ &amp;#34;fragments&amp;#34;: [ { &amp;#34;start&amp;#34;: 0 &amp;#34;interval&amp;#34;: 319319, &amp;#34;duration&amp;#34;: 319319, &amp;#34;events&amp;#34;: [ [ { &amp;#34;language&amp;#34;: &amp;#34;Japanese&amp;#34;, &amp;#34;text&amp;#34;: &amp;#34;Azure の 契 約 内 容 を 変 更 す る Microsoft Azure&amp;#34; } ] ] }, { /* fragment1 */ }, { /* fragment2 */ }, .</description>
     </item>
     
     <item>
@@ -99,11 +97,11 @@ $ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Docker
       
       <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</guid>
       <description>ビデオコンテンツを音声認識エンジンでテキスト化してそれを元にスピーチ検索するデモコンテンツを紹介したい。これは過去にde:code2016というマイクロソフトの開発者向けイベントで行ったブレイクアウトセッション「DEV-18: Azure Search Deep Dive」にて紹介したビデオコンテンツのスピーチ検索デモを簡略化して再利用しやすいものにしたものである。
-
- demo site source code  主要テクノロジーと機能 Azure Media Indexer 2 Previewによる音声からテキスト抽出 このデモではAzure Media Indexer 2 Preview メディア プロセッサー (MP)を使用してビデオコンテンツからテキストを抽出している。このAzure Media Indexer 2 Previewは自然言語処理(NLP)や音声認識エンジンを駆使してビデオコンテンツより字幕用データ（時間やテキスト）や検索可能にするためのメタデータを抽出することができる。Indexer 2という名前の通り前のバージョンであるAzure Media Indexerが存在するが、これと比較すると、Azure Media Indexer 2 Previewは、インデックス作成が高速化され、より多くの言語をサポートしていることが特徴である。2016年11月6日時点で英語、スペイン語、フランス語、ドイツ語、イタリア語、中国語、ポルトガル語、アラビア語などがサポートされている（残念ながら日本語はまだ未サポート）。
+demo site source code 主要テクノロジーと機能 Azure Media Indexer 2 Previewによる音声からテキスト抽出 このデモではAzure Media Indexer 2 Preview メディア プロセッサー (MP)を使用してビデオコンテンツからテキストを抽出している。このAzure Media Indexer 2 Previewは自然言語処理(NLP)や音声認識エンジンを駆使してビデオコンテンツより字幕用データ（時間やテキスト）や検索可能にするためのメタデータを抽出することができる。Indexer 2という名前の通り前のバージョンであるAzure Media Indexerが存在するが、これと比較すると、Azure Media Indexer 2 Previewは、インデックス作成が高速化され、より多くの言語をサポートしていることが特徴である。2016年11月6日時点で英語、スペイン語、フランス語、ドイツ語、イタリア語、中国語、ポルトガル語、アラビア語などがサポートされている（残念ながら日本語はまだ未サポート）。
 下イメージはAzure Media Indexer 2 (Preview)で生成されるTTMLとWebVTTという代表的な字幕データフォーマット。
 HTML5と字幕(Closed Caption) HTML5にはtrackタグエレメントを使ってビデオファイルに字幕を表示する機能が標準的に実装されている。本デモではHTML5に下記のように動画（Python_and_node.js_on_Visual_Studio.mp4）をVideoソースとしてtrackエレメントに字幕WebVttファイル（build2016breakout.vtt）を指定している。
-&amp;lt;video id=&amp;#34;Video1&amp;#34; controls autoplay width=&amp;#34;600&amp;#34;&amp;gt;  &amp;lt;source src=&amp;#34;Python_and_node.js_on_Visual_Studio.mp4&amp;#34; srclang=&amp;#34;en&amp;#34; type=&amp;#34;video/mp4&amp;#34;&amp;gt;  &amp;lt;track id=&amp;#34;trackJA&amp;#34; src=&amp;#34;build2016breakout.vtt&amp;#34; kind=&amp;#34;captions&amp;#34; srclang=&amp;#34;ja&amp;#34; label=&amp;#34;Closed Captions&amp;#34; default&amp;gt; &amp;lt;/video&amp;gt; Azure Searchによる全文検索 デモページ上部にある検索窓にキーワードを入力してGoボタンを押すとビデオコンテンツの字幕データを全文検索してキーワードにマッチしたテキストとその表示時間に絞り込むことができる。ここでは全文検索エンジンにAzure Searchを使用し、Azure Media Indexer 2 (Preview)より抽出された字幕データを解析して字幕表示時間とその対応テキストを1ドキュメントレコードとしてAzure Searchにインジェストしてその生成されたインデックスに対してキーワードを元に全文検索することで実現している。字幕データ検索用のインデックススキーマは次のように字幕表示時間とその対応テキストをレコード単位となるように定義している。</description>
+&amp;lt;video id=&amp;#34;Video1&amp;#34; controls autoplay width=&amp;#34;600&amp;#34;&amp;gt; &amp;lt;source src=&amp;#34;Python_and_node.js_on_Visual_Studio.mp4&amp;#34; srclang=&amp;#34;en&amp;#34; type=&amp;#34;video/mp4&amp;#34;&amp;gt; &amp;lt;track id=&amp;#34;trackJA&amp;#34; src=&amp;#34;build2016breakout.vtt&amp;#34; kind=&amp;#34;captions&amp;#34; srclang=&amp;#34;ja&amp;#34; label=&amp;#34;Closed Captions&amp;#34; default&amp;gt; &amp;lt;/video&amp;gt; Azure Searchによる全文検索 デモページ上部にある検索窓にキーワードを入力してGoボタンを押すとビデオコンテンツの字幕データを全文検索してキーワードにマッチしたテキストとその表示時間に絞り込むことができる。ここでは全文検索エンジンにAzure Searchを使用し、Azure Media Indexer 2 (Preview)より抽出された字幕データを解析して字幕表示時間とその対応テキストを1ドキュメントレコードとしてAzure Searchにインジェストしてその生成されたインデックスに対してキーワードを元に全文検索することで実現している。字幕データ検索用のインデックススキーマは次のように字幕表示時間とその対応テキストをレコード単位となるように定義している。
+{ &amp;#34;name&amp;#34;: &amp;#34;stt&amp;#34;, &amp;#34;fields&amp;#34;: [ { &amp;#34;name&amp;#34;:&amp;#34;id&amp;#34;, &amp;#34;type&amp;#34;:&amp;#34;Edm.</description>
     </item>
     
     <item>
@@ -117,7 +115,7 @@ HTML5と字幕(Closed Caption) HTML5にはtrackタグエレメントを使って
 これは皆さんのAzureサブスクリプション下に作られた仮想マシン一覧（ARMに限る）の情報を取得して各仮想マシンごとのエントリー情報（マシン名とIPアドレス）を~/.ssh/configに追加・更新してくれるツール。新規に仮想マシンを追加した際や、仮想マシンのIPアドレスが追加した際にはazuresshconfigを実行してあげることで~/.ssh/configが最新のエントリー情報でアップデートされ、各マシンにマシン名でSSHログインできるようになります。
 ちなみに、~/.ssh/configとは何ですか？という人はQiitaの記事「~/.ssh/configについて」がとても分かりやすく書かれているので参考になるかと。
 インストール Pythonパッケージ管理ツールpipを使ってazuresshconfigをインストールしてください。インストール時に何かエラーが発生した場合は、こちらのページを参照いただき特に該当する事象がないか確認ください。
-$ pip install azuresshconfig 設定ファイルの編集（サービスプリンシパル） $ vi $HOME/.azure/azuresshconfig.json  {  &amp;#34;subscription_id&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;client_id&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;client_scret&amp;#34;: &amp;#34;&amp;#34;,  &amp;#34;tenant_id&amp;#34;: &amp;#34;&amp;#34; } サービスプリンシパルを作る必要があります。サービスプリンシパルの作り方が分からない人、とってもよいドキュメントがあります。こちらを参照ください：「Use Azure CLI to create a service principal to access resources」
+$ pip install azuresshconfig 設定ファイルの編集（サービスプリンシパル） $ vi $HOME/.azure/azuresshconfig.json { &amp;#34;subscription_id&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;client_id&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;client_scret&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;tenant_id&amp;#34;: &amp;#34;&amp;#34; } サービスプリンシパルを作る必要があります。サービスプリンシパルの作り方が分からない人、とってもよいドキュメントがあります。こちらを参照ください：「Use Azure CLI to create a service principal to access resources」
 使い方 azuresshconfig --help usage: azuresshconfig.py [-h] [--version] [--init] [--profile PROFILE] [--user USER] [--identityfile IDENTITYFILE] [--private] [--resourcegroups RESOURCEGROUPS] [--params PARAMS] This program generates SSH config from Azure ARM VM inventry in subscription optional arguments: -h, --help show this help message and exit --version show program&amp;#39;s version number and exit --init Create template client profile at $HOME/.</description>
     </item>
     
@@ -129,7 +127,7 @@ $ pip install azuresshconfig 設定ファイルの編集（サービスプリン
       <guid>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</guid>
       <description>DocumentDB Python SDKとfeedparserを使って簡易クローラーを作りましょうというお話。ここではDocumentDBをクローリング結果の格納先データストアとして使用する。クロール対象はAzure日本語ブログのRSSフィード、これをfeedparserを使ってドキュメント解析、必要データの抽出、そしてその結果を今回使用するpydocumentdbというDocumentDB Python SDKを使ってDocumentDBに格納するというワークフローになっている。
 DocumentDB Python SDK - pydocumentdb Azureで提供されているどのサービスにもあてはまることであるが、DocumentDBを操作するための全てのインターフェースはREST APIとして提供されておりREST APIを内部的に使用してマイクロソフト謹製もしくは個人のコントリビューションによる複数の言語のSDKが用意されている。その中でもpydocumentdbはPython用のDocumentDB SDKであり、オープンソースとしてソースコードは全てGithubで公開されている。
- pydocumentdbプロジェクトトップ(Github) pydocumentdbサンプルコード(Github) Azure DocumentDB REST API Reference  Pre-Requirementsその１: Python実行環境とライブラリ 実行環境としてPython2.7系が必要となる。また、今回クローラーが使用しているDocumentDB Python SDKであるpydocumentdbとRSSフィード解析ライブラリfeedparserの２つのライブラリのインストールが必要となる。
+pydocumentdbプロジェクトトップ(Github) pydocumentdbサンプルコード(Github) Azure DocumentDB REST API Reference Pre-Requirementsその１: Python実行環境とライブラリ 実行環境としてPython2.7系が必要となる。また、今回クローラーが使用しているDocumentDB Python SDKであるpydocumentdbとRSSフィード解析ライブラリfeedparserの２つのライブラリのインストールが必要となる。
 pydocumentdbインストール
 $ sudo pip install pydocumentdb feedparserインストール
 $ sudo pip install feedparser ちなみにpipがインストールされていない場合は下記の通りマニュアルもしくはインストーラーを使用してpipをインストールが必要となる

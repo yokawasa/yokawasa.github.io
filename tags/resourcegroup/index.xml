@@ -22,7 +22,7 @@ Azure Insights REST APIメトリック取得インターフェース Azure Insig
 (1)メトリック定義一覧取得
 GET https://management.azure.com /subscriptions/{-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/{resource-type}/{resource-name}/metricDefinitions [Parameters] api-version={api-version} $filter={filter} (2)メトリック情報取得
 GET https://management.azure.com /subscriptions/{-id}/resourceGroups/{resource-group-name}/providers/{resource-provider-namespace}/sites/{sitename}/metrics [Parameters] api-version={api-version} $filter={filter} APIの共通部分は下記の通り。Azure Insights APIへの全ての要求はAzure Active Directoryを使用して認証する必要があり、この認証により得られたトークンを各APIリクエストのAuthorizationヘッダに指定する必要がある。トークン取得の方法にはPowerShellを使用した方法とAzure管理ポータルを使用して認証する2つの方法がある。詳しくは「Azure インサイト要求を認証する」を参照ください。
- {api-version}：&amp;ldquo;2014-04-01&amp;rdquo; {subscription-id} ： サブスクリプションID {resource-group-name}： リソースグループを指定。詳細は「リソースグループを使用した Azure リソースの管理」を参照ください Acceptヘッダー：&amp;quot;application/json&amp;quot;を指定。これを指定しない場合、結果はXMLで返却される AuthorizationヘッダーにAzure Active Directory から取得する JSON Web Token（JWT） に設定する。詳細は「Azure インサイト要求を認証する」を参照ください  実際のメトリクス取得APIでは$filterパラメータの付与が必要となる。$filterには主にメトリックの種類(name.</description>
+{api-version}：&amp;ldquo;2014-04-01&amp;rdquo; {subscription-id} ： サブスクリプションID {resource-group-name}： リソースグループを指定。詳細は「リソースグループを使用した Azure リソースの管理」を参照ください Acceptヘッダー：&amp;quot;application/json&amp;quot;を指定。これを指定しない場合、結果はXMLで返却される AuthorizationヘッダーにAzure Active Directory から取得する JSON Web Token（JWT） に設定する。詳細は「Azure インサイト要求を認証する」を参照ください 実際のメトリクス取得APIでは$filterパラメータの付与が必要となる。$filterには主にメトリックの種類(name.</description>
     </item>
     
   </channel>
