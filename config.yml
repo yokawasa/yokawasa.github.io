@@ -2,7 +2,7 @@ baseURL: "https://unofficialism.info"
 canonifyurls: true
 publishDir : "public"
 title: "Yoichi Kawasaki"
-paginate: 5
+paginate: 10
 theme: PaperMod
 
 enableEmoji : true
