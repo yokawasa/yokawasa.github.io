@@ -75,14 +75,21 @@ params:
     profileMode:
         enabled: true # needs to be explicitly set
         title: "Yoichi Kawasaki"
-        subtitle: "Software Engineer, NoOps Practitioner"
+        # subtitle: "Software Engineer, NoOps Practitioner"
+        subtitle: "Software Engineer, NoOps Practitioner, loving 🧖 🍺 ⛺"
         imageUrl: "profile.jpg"
-        imageWidth: 250
-        imageHeight: 250
+        imageWidth: 200
+        imageHeight: 200
         imageTitle: my image
-        # buttons:
-        #     - name: Posts
-        #       url: posts
+        #buttons:
+        #  - name: posts
+        #    url: posts
+        #  - name: works
+        #    url: works
+        #  - name: slides
+        #    url: https://speakerdeck.com/yokawasa
+        #  - name: books
+        #    url: "https://amzn.to/3J0OSgb"
 
     socialIcons:
         - name: twitter
@@ -91,8 +98,10 @@ params:
           url: "https://github.com/yokawasa"
         - name: linkedin
           url: "https://www.linkedin.com/in/yokawasa/"
-        - name: amazon
+        - name: cv
           url: "https://amzn.to/3J0OSgb"
+        - name: email
+          url: "mailto:yokawasa@gmail.com"
         - name: rss
           url: "index.xml"
 
