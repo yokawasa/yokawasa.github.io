@@ -31,7 +31,7 @@ outputs:
     #  - JSON # is necessary
 
 params:
-#    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: Yoichi Kawasaki
     description: "Yoichi Kawasaki yokawasa.github.io"
     keywords: [Blog, Portfolio, PaperMod]
