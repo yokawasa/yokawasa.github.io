@@ -12,6 +12,16 @@
     <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>About</title>
+      <link>https://unofficialism.info/about/</link>
+      <pubDate>Tue, 24 Jan 2023 23:12:10 +0900</pubDate>
+      
+      <guid>https://unofficialism.info/about/</guid>
+      <description>Yoichi Kawasaki Software Engineer, NoOps Practitioner, loving 🧖 🍺 ⛺
+Bio Yoichi Kawasaki (川崎 庸市 in Japanese) is currently a tech lead site reliability engineer at ZOZO, inc. He is responsible for leading ZOZOTOWN microservice platform SRE team and delivering service reliability. Prior to joining ZOZO, inc., he worked as a solutions architect at Microsoft and responsible for leading technical engagements to win based on solutions leveraging the Microsoft Azure and OSS with a specialization in cloud native application architecture and development.</description>
+    </item>
+    
+    <item>
       <title>My presentation at IstioCon 2022</title>
       <link>https://unofficialism.info/posts/istiocon2022/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
@@ -33,13 +43,12 @@ Event Name Session Title Materials &amp;amp; Relevant links Event Day IstioCon 2
     </item>
     
     <item>
-      <title>GitHub Actions Article on Software Design 2022/02 Issue was released!</title>
+      <title>GitHub Actions Article on Software Design magazine (2022/02 Issue)</title>
       <link>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</guid>
-      <description> A Software Design 2022/02 Issue was published in Jan 18, 2022!! I contributed the 2nd special feature article on CI/CD using GitHub Actions in it 🎉🎉🎉
-Please get it at an online bookstore!!
+      <description> A Software Design 2022/02 Issue was published in Jan 18, 2022, in which I contributed the 2nd special feature article on CI/CD using GitHub Actions.
 『Software Design 2022年2月号』（技術評論社）/ Software Design 2022/02 Issue (gihyo)
 Gihyo Online Amazon </description>
     </item>
@@ -83,16 +92,6 @@ Outputs Parameter Description ecctl-path ecctl command path Sample Workflow A sp
       <guid>https://unofficialism.info/posts/my-old-collage-roommate/</guid>
       <description>A scene at wedding ceremony of my old collage roommate
 Jan 18, 2020 at Brooklyn NY</description>
-    </item>
-    
-    <item>
-      <title>Getting Kubernetes Metrics using kubectl</title>
-      <link>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</guid>
-      <description>There are various ways to obtain Kubernetes metrics which you can use to visualize, monitor and alert on your metrics. In reality you most likely use managed or unmanaged OSS metrics collection and visualization tools, but in this post, I introduce how to get raw Kubernetes metrics using kubectl.
-Kubernetes Raw Metrics via Prometheus metrics endpoint Many Kubernetes components exposes their metrics via the /metrics endpoint, including API server, etcd and many other add-ons.</description>
     </item>
     
     <item>

@@ -4,6 +4,9 @@
   <url>
     <loc>https://unofficialism.info/search/</loc>
   </url><url>
+    <loc>https://unofficialism.info/about/</loc>
+    <lastmod>2023-01-24T23:12:10+09:00</lastmod>
+  </url><url>
     <loc>https://unofficialism.info/tags/event/</loc>
     <lastmod>2022-05-01T09:00:00+00:00</lastmod>
   </url><url>
@@ -84,15 +87,6 @@
   </url><url>
     <loc>https://unofficialism.info/posts/my-old-collage-roommate/</loc>
     <lastmod>2020-06-16T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</loc>
-    <lastmod>2020-05-24T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://unofficialism.info/tags/metricsapi/</loc>
-    <lastmod>2020-05-24T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://unofficialism.info/tags/prometheus/</loc>
-    <lastmod>2020-05-24T11:00:00+00:00</lastmod>
   </url><url>
     <loc>https://unofficialism.info/posts/visual-studio-code-textbook/</loc>
     <lastmod>2020-05-01T11:00:00+00:00</lastmod>

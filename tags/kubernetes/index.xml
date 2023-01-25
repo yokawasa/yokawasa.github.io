@@ -31,16 +31,6 @@ Usage Inputs Parameter Required Default Value Description kubectl false 1.18.2 k
     </item>
     
     <item>
-      <title>Getting Kubernetes Metrics using kubectl</title>
-      <link>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</guid>
-      <description>There are various ways to obtain Kubernetes metrics which you can use to visualize, monitor and alert on your metrics. In reality you most likely use managed or unmanaged OSS metrics collection and visualization tools, but in this post, I introduce how to get raw Kubernetes metrics using kubectl.
-Kubernetes Raw Metrics via Prometheus metrics endpoint Many Kubernetes components exposes their metrics via the /metrics endpoint, including API server, etcd and many other add-ons.</description>
-    </item>
-    
-    <item>
       <title>Unofficial tips for CKA and CKAD exams</title>
       <link>https://unofficialism.info/posts/unofficial-tips-for-cka-and-ckad-exams/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>

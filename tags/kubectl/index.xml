@@ -30,15 +30,5 @@ What the plugin actually does is that it create a SOCKS proxy server Pod in a Ku
 Usage Inputs Parameter Required Default Value Description kubectl false 1.18.2 kubectl version. kubectl vesion can be found here kustomize false 3.5.5 kustomize version. kustomize vesion can be found here helm false 2.</description>
     </item>
     
-    <item>
-      <title>Getting Kubernetes Metrics using kubectl</title>
-      <link>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</link>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://unofficialism.info/posts/getting-kubernetes-metrics-using-kubectl/</guid>
-      <description>There are various ways to obtain Kubernetes metrics which you can use to visualize, monitor and alert on your metrics. In reality you most likely use managed or unmanaged OSS metrics collection and visualization tools, but in this post, I introduce how to get raw Kubernetes metrics using kubectl.
-Kubernetes Raw Metrics via Prometheus metrics endpoint Many Kubernetes components exposes their metrics via the /metrics endpoint, including API server, etcd and many other add-ons.</description>
-    </item>
-    
   </channel>
 </rss>
