@@ -5,6 +5,7 @@ draft: false
 hideMeta: true
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
+showtoc: false
 ---
 
 # Yoichi Kawasaki
