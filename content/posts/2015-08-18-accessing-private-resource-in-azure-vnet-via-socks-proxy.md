@@ -6,6 +6,7 @@ date: "2015-08-18T11:16:03Z"
 date_gmt: 2015-08-18 02:16:03 +0900
 published: true
 status: publish
+images: ["/assets/20150818-Accessing-AzureVNET-via-SOCKSProxy.jpg"]
 tags:
 - openssh
 - chrome
@@ -22,7 +23,7 @@ UPDATED 2017-03-22: Added SOCKS Proxy Configuration for Internet Explorer
 
 SOCKS([RFC1928](http://www.ietf.org/rfc/rfc1928.txt)) とはさまざまなアプリケーションが間にファイアーウォールを挟んでいても安全に快適にやり取りができるようにすることを目的として作られたプロトコルのことで、`SOCKSプロキシ`は`SOCKSプロトコル`を受け取りファイアウォール内外との接続を可能にするものである。エンドポイントや`Network Security Group (NSG)`によりネットーワーク分離設定されたAzure VNET内のリソースに対して一時的に本来直接アクセス許可しないネットワークからアクセスが必要な状況はあるかと思う。そのような時に毎回設定変更で必要なプロトコル、アクセス先に対して穴をあけるのは非常に面倒であり、またサイト間VPN、ポイント対サイトVPNとなるとさらに手間がかかる。お手軽に、もしくは定常的ではないが一時的に内部リソースにアクセスしたい場合にSOCKSプロキシ経由でのアクセスを検討してみてはいかがだろうか。以下は`SOCKSプロキシ`経由によるAzure VNET内のプライベートリソースへのアクセスイメージである。
 
-![Accessing-AzureVNET-via-SOCKSProxy](https://farm6.staticflickr.com/5759/20658569122_72324d9ed9_c.jpg)
+![Accessing-AzureVNET-via-SOCKSProxy](/assets/20150818-Accessing-AzureVNET-via-SOCKSProxy.jpg)
 
 ## SOCKSプロキシの作成
 
@@ -85,11 +86,11 @@ local$ ssh -2 -o 'ProxyCommand ssh [Jump Server] nc -w1 %h %p' [ServerX]
 
 Google Chrome - SwitchySharp
 
-![GoogleChrome-SwitcySharp](https://farm1.staticflickr.com/718/20049113383_587178705c_c.jpg)
+![GoogleChrome-SwitcySharp](/assets/20150818-GoogleChrome-SwitcySharp.jpg)
 
 Firefox - Foxyproxy
 
-![Firefox-FoxyProxyStandard](https://farm6.staticflickr.com/5781/20482135210_b770135d92_c.jpg)
+![Firefox-FoxyProxyStandard](/assets/20150818-Firefox-FoxyProxyStandard.jpg)
 
 Internet Explorer - Out-of-box feature
 
@@ -97,6 +98,6 @@ As answered in [Stack Overflow](http://stackoverflow.com/questions/18375234/enab
 ```
 Tools > Internet Options > Connections > LAN Settings > Proxy Server > Advanced
 ```
-![IE-SOCKS-PROXY](https://c1.staticflickr.com/3/2824/32766799853_46c7abab12_n.jpg)
+![IE-SOCKS-PROXY](/assets/20150818-IE-SOCKS-PROXY.jpg)
 
 Enjoy Accessing private resources with SOCKS Proxy!

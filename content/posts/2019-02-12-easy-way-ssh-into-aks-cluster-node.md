@@ -3,6 +3,7 @@ author: Yoichi Kawasaki
 date: "2019-02-12T08:32:40Z"
 published: true
 status: publish
+images: ["/assets/20190212-arch-ssh-jumphost.png"]
 tags:
 - ssh
 - azure
@@ -22,7 +23,7 @@ I wanted to SSH into Azure Kubernetes Service (AKS) cluster node VMs, then looki
 
 By default, AKS nodes are not exposed to the internet, and they are completely isolated to their own virtual network. This is why I took a strategy to go through a jump host Pod to connect to the Kubernetes nodes. I believe this is pretty a general strategy in dealing with firewalling, access privileges, etc.
 
-![](https://github.com/yokawasa/kubectl-plugin-ssh-jump/blob/master/assets/arch-ssh-jumphost.png?raw=true)
+![](/assets/20190212-arch-ssh-jumphost.png)
 
 Regarding SSH key with which you access the nodes via SSH, you need to use the SSH key that you chosen in creating your AKS cluster. Or in the case that you lose the key, you can update SSH Key by using az command like this (See [this](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/vmaccess#update-ssh-key) for more detail):
 ```

@@ -6,6 +6,7 @@ date: "2016-11-06T17:13:12Z"
 date_gmt: 2016-11-06 08:13:12 +0900
 published: true
 status: publish
+images: ["/assets/20161106-VideoSTTDemoScreenshot.jpg"]
 tags:
 - AzureSearch
 - Python
@@ -18,9 +19,7 @@ title: Speech-To-Text with Azure Media & Cognitive Services
 
 ビデオコンテンツを音声認識エンジンでテキスト化してそれを元にスピーチ検索するデモコンテンツを紹介したい。これは過去にde:code2016というマイクロソフトの開発者向けイベントで行ったブレイクアウトセッション「[DEV-18: Azure Search Deep Dive](https://channel9.msdn.com/Events/de-code/2016/DEV-018)」にて紹介したビデオコンテンツのスピーチ検索デモを簡略化して再利用しやすいものにしたものである。
 
-[
-![Video STT Demo Screenshot](https://c5.staticflickr.com/6/5818/30534876132_bfc40a475f_c.jpg)
-](http://azure-media-cognitive-demos.azurewebsites.net/stt/build2016breakout/)
+[![Video STT Demo Screenshot](/assets/20161106-VideoSTTDemoScreenshot.jpg)](http://azure-media-cognitive-demos.azurewebsites.net/stt/build2016breakout/)
 
 - [demo site](http://azure-media-cognitive-demos.azurewebsites.net/stt/build2016breakout/)
 - [source code](https://github.com/AzureMediaCognitiveDemos/Video-STT-Search-Python)
@@ -33,7 +32,7 @@ title: Speech-To-Text with Azure Media & Cognitive Services
 
 下イメージはAzure Media Indexer 2 (Preview)で生成される[TTML](https://www.w3.org/TR/ttml10-sdp-us/)と[WebVTT](https://w3c.github.io/webvtt/)という代表的な字幕データフォーマット。
 
-![AzureMediaIndexer-ClosedCaption](https://c3.staticflickr.com/6/5792/30176422194_1e8a778a9b_c.jpg)
+![AzureMediaIndexer-ClosedCaption](/assets/20161106-AzureMediaIndexer-ClosedCaption.jpg)
 
 ### HTML5と字幕(Closed Caption)
 

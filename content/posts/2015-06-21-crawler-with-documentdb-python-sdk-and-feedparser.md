@@ -6,6 +6,7 @@ date: "2015-06-21T17:32:40Z"
 date_gmt: 2015-06-21 08:32:40 +0900
 published: true
 status: publish
+images: ["/assets/20150621-documentdb-account-create.jpg"] 
 tags:
 - DocumentDB
 - NoSQL
@@ -63,7 +64,7 @@ $ sudo yum install python-pip
 
 Azure新ポータルより下記イメージのフローでDocumentDBアカウントを作成する。
 
-![DocumentDB-Account-Create](https://c1.staticflickr.com/1/345/18984569836_dcbd5e82b7_z.jpg)
+![DocumentDB-Account-Create](/assets/20150621-documentdb-account-create.jpg)
 
 DocumentDBアカウントを作成したら今度はデータを格納するためのDocumentDBデータベースとコレクションを作成する必要がある。DocumentDBデータベースとコレクションはAzure新ポータルから作成可能であるが、今回のクローラープログラムではpydocumentdbを使って作成するようにしている。
 

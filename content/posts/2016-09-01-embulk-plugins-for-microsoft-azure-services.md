@@ -7,6 +7,7 @@ date: "2016-09-01T06:05:05Z"
 date_gmt: 2016-08-31 21:05:05 +0900
 published: true
 status: publish
+images: ["/assets/20160901-embulk-screenshot.jpg"]
 tags:
 - embulk
 title: embulk plugins for Microsoft Azure Services
@@ -27,5 +28,4 @@ Here is a list of embulk plugins that you can leverage to transfer your data bet
 
 For embulk, check this site: [https://github.com/embulk/embulk](https://github.com/embulk/embulk)
 
-[![embulk-screenshot](https://c1.staticflickr.com/9/8283/29081871880_b9a4338fbf_b.jpg)
-](https://github.com/embulk/embulk)
+[![embulk-screenshot](/assets/20160901-embulk-screenshot.jpg)](https://github.com/embulk/embulk)

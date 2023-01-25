@@ -7,6 +7,7 @@ date: "2018-01-06T23:05:28Z"
 date_gmt: 2018-01-06 14:05:28 +0900
 published: true
 status: publish
+images: ["/assets/20180106-control-ams-traffic-with-traffic-manager.jpg"]
 tags:
 - AzureMediaServices
 - TrafficManager
@@ -20,7 +21,7 @@ This is an article on how you can achieve Azure Media Services (AMS) streaming t
 
 The figure shows how a client find target AMS streaming endpoints with Traffic Manager and requests from video players are distributed to streaming endpoints in AMS:
 
-![Controling Azure Media Services Traffic with Traffic Manager](https://farm5.staticflickr.com/4645/25663550048_4f106e0f5e_c.jpg)
+![Controling Azure Media Services Traffic with Traffic Manager](/assets/20180106-control-ams-traffic-with-traffic-manager.jpg)
 
 When AMS endpoints are added to an Azure Traffic Manager profile, Azure Traffic Manager keeps track of the status of the endpoints (running, stopped, or deleted) so that it can decide which of those endpoints should receive traffic. You can configure the way to route network traffic to the endpoints by choosing [traffic routing methods](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods) available in Traffic Manager.
 
@@ -48,7 +49,7 @@ Useful Link for this step: [Point a company Internet domain to an Azure Traffic 
 
 Add AMS endpoints to an Azure Traffic Manager profile as "External Endpoint" via either Azure Portal or Azure CLI / PowerShell. Here is an image of adding endpoints in Azure portal: 
 
-![Add endpoints to Traffic Manager](https://farm5.staticflickr.com/4637/38826321084_edb7bcdac6_c.jpg)
+![Add endpoints to Traffic Manager](/assets/20180106-add-endpoints-to-traffic-manager.jpg)
 
 Useful Link for this step: [Add, disable, enable, or delete endpoints](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-manage-endpoints)
 
@@ -77,7 +78,7 @@ Refer to CustomHostNames section of [StreamingEndpoint document](https://docs.mi
 
 Once you completed "Custom domain name ownership verification" configuration, you then need to configure to add custom host name to each Azure Media Service streaming endpoint. Unfortunately new portal doesn't include capability to add custom domain to the streaming endpoint. You can set it either using [REST API](https://docs.microsoft.com/en-us/rest/api/media/operations/streamingendpoint) directly or using [Azure Media Explorer](https://github.com/Azure/Azure-Media-Services-Explorer). Here is how you add custom host name to the streaming endpoint in Azure Media Explorer:
 
-![azure-media-explorer-custom-host-streaming-endpoint](https://farm5.staticflickr.com/4658/40310439831_0354721aa0_c.jpg)
+![azure-media-explorer-custom-host-streaming-endpoint](/assets/20180106-azure-media-explorer-custom-host-streaming-endpoint.jpg)
 
 Choose "Streaming endpoint" in the top menu, right click on your streaming endpoint, and select "Streaming endpoint information and settings". In Streaming endpoint information form, type in your custom host name for the endpoint, and click "Update settings and close". That's it.
 

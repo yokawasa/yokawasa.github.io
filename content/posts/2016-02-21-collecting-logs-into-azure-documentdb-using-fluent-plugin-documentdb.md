@@ -7,6 +7,7 @@ date: "2016-02-21T19:35:09Z"
 date_gmt: 2016-02-21 10:35:09 +0900
 published: true
 status: publish
+images: ["/assets/20160221-fluentd-azure-documentdb.jpg"]
 tags:
 - DocumentDB
 - fluentd
@@ -26,7 +27,7 @@ This article shows how to
 - Store the collected logs into DocumentDB
 - Utilize the collected log data stored on Document DB for advanced scenarios - like archiving the data to Azure Storage, doing Big data analysis, visualizing the data with PowerBI, and so forth
 
-![fluentd-azure-documentdb](https://farm2.staticflickr.com/1462/24772450149_472e770ca8_c.jpg)
+![fluentd-azure-documentdb](/assets/20160221-fluentd-azure-documentdb.jpg)
 
 ## Pre-requisites
 
@@ -160,7 +161,7 @@ $ ab -n 5 -c 2 http://<targetserver>/foo/bar/test.html
 
 If logs are collected successfully, you can see the logs stored in DocumentDB easily by using Document DB's query explorer. Go to Azure Portal > Display your DocumentDB dashboard > Query Explorer.
 
-![DocumentDB-QueryExplorer](https://farm2.staticflickr.com/1706/24533782173_4e562b7fa3_c.jpg)
+![DocumentDB-QueryExplorer](/assets/20160221-DocumentDB-QueryExplorer.jpg)
 
 ## More log collections from external sources
 

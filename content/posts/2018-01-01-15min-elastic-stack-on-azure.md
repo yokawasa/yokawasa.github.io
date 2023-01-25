@@ -6,6 +6,7 @@ date: "2018-01-01T11:14:17Z"
 date_gmt: 2018-01-01 02:14:17 +0900
 published: true
 status: publish
+images: ["/assets/20180101-elastic-stack-on-azure-metrics-diagnostics-logs.jpg"]
 tags:
 - Elasticsearch
 - logstash
@@ -37,7 +38,7 @@ AzureでのElastic Stackの利用は当然ながら仮想マシン（VM）を並
 
 Elasticクラスタ全体のパフォーマンスを引き出すためには機能別に適正なVMインスタンスとサイズを選択ください。またVMにアタッチするディスクについてはビルトインで可用性設定がされているManaged Disk、もしくはPremium Managed Diskを選択することをお忘れなく。
 
-![elastic-stack-on-azure-vm-size](https://farm5.staticflickr.com/4640/39402351461_e8cb26862d_z.jpg)
+![elastic-stack-on-azure-vm-size](/assets/20180101-elastic-stack-on-azure-vm-size.jpg)
 
 ### 可用性の設定について
 
@@ -60,7 +61,7 @@ AzureのIaaSにおけるネットワークフィルタリングの設定に、�
 
 ### Azureサービスからのデータコレクション
 
-![elastic-stack-on-azure-data-injestion](https://farm5.staticflickr.com/4690/25532299548_a2c6e3be73_z.jpg)
+![elastic-stack-on-azure-data-injestion](/assets/20180101-elastic-stack-on-azure-data-injestion.jpg)
 
 Azure VMについては、オンプレ同様に、ビルトインのBeatsやlogstashとの連携により、そのログやMetricsなどのデータコレクションを実現することができる。一方、Azureが特に力を入れているPaaS（Platform as a Services）からのデータコレクションについてはどうかというと、下記のサービスについては既にビルトインで用意されている機能や、コミュニティ製Logstash Input プラグインを利用することでデータコレクションを実現することができる。
 H2M_LI_HEADER Azure Blob Storage: [logstash-input-azureblob](https://github.com/Azure/azure-diagnostics-tools/tree/master/Logstash/logstash-input-azureblob)
@@ -75,7 +76,7 @@ H2M_LI_HEADER Azure HDInsight: [ES-Hadoop](https://www.elastic.co/products/hadoo
 
 ### Azure Diagnostics、Activities、Metricsログのコレクション
 
-![elastic-stack-on-azure-metrics-diagnostics-logs](https://farm5.staticflickr.com/4680/39402351921_fd44d2560b_z.jpg)
+![elastic-stack-on-azure-metrics-diagnostics-logs](/assets/20180101-elastic-stack-on-azure-metrics-diagnostics-logs.jpg)
 
 基本的にIaaS、PaaS問わずAzureのほとんどのサービスから下記の情報が出力され、これらの情報はBlobストレージまたはEvent Hubに出力設定が可能となっている。
 H2M_LI_HEADER [診断ログ（Diagnostics log）](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-of-diagnostic-logs)

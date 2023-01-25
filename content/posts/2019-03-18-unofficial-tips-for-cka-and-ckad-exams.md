@@ -3,6 +3,7 @@ author: Yoichi Kawasaki
 date: "2019-03-18T08:32:40Z"
 published: true
 status: publish
+images: ["/assets/20190318-cka-ckad.png"]
 tags:
 - CKA
 - CKAD

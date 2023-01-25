@@ -6,6 +6,7 @@ date: "2015-06-28T16:13:45Z"
 date_gmt: 2015-06-28 07:13:45 +0900
 published: true
 status: publish
+images: ["/assets/20150628-documentdb-indexer.jpg"]
 tags:
 - AzureSearch
 - DocumentDB
@@ -19,13 +20,13 @@ Azure Searchのインデックス更新方法には大きく分けてPUSHとPULL
 
 データソースにDocumentDBを利用する。データ「[DOCUMENTDB PYTHON SDKとFEEDPARSERで作る簡易クローラー](http://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/)」においてクローリングされDocumentDBに保存されたブログ記事データを使用する。そしてDocumentDBを定期的にポーリングを行い更新があったレコードのみをAzure Searchインデックスに反映するためにDocumentDBインデクサーを設定する。全体構成としては下記の通りとなる。
 
-![documentdb-indexer](https://farm1.staticflickr.com/421/19163174486_c26a523730_c.jpg)
+![documentdb-indexer](/assets/20150628-documentdb-indexer.jpg)
 
 ## DocumentDBと更新先検索インデックスのフィールドのマッピング
 
 DocumentDBをデータソースとしてAzure Searchインデックスに更新を行うためDocumentDBの参照先コレクションのフィールドと更新先Azure Searchインデックスのフィールドをマッピングを行う。マッピングはデータソース定義中のDocumentDB参照用Queryで行う。Azure SearchインデックスにインジェストするフィールドをDocumentDBのSELECTクエリー指定するのだが、Azure SearchとDocumentDBのフィールドが異なる場合は下図のようにSELECT "Docdbフィールド名" AS "Searchフィールド名"でインジェスト先フィールド名を指定する。データソース定義については後述の設定内容を確認ください。
 
-![documentdb-azuresearch-mapping](https://c1.staticflickr.com/1/376/19036611840_5486c2e1f8_z.jpg)
+![documentdb-azuresearch-mapping](/assets/20150628-documentdb-azuresearch-mapping.jpg)
 
 ## Configuration
 
@@ -122,7 +123,7 @@ api-key: [Search service admin key]
 
 ## 実行結果確認方法
 
-![AzureSearchIndexerStatus](https://c4.staticflickr.com/4/3693/19198973716_feb1f94aff_z.jpg)
+![AzureSearchIndexerStatus](/assets/20150628-AzureSearchIndexerStatus.jpg)
 
 上記イメージの通りAzureポータル(preview)よりAzure Search &rarr; indexersタイルをたどることでインデクサーの実行結果や過去の履歴を確認することができる。ただし、ここではAPI経由で取得する方法を紹介する。
 

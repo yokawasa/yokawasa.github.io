@@ -6,6 +6,7 @@ date: "2016-11-07T04:46:11Z"
 date_gmt: 2016-11-06 19:46:11 +0900
 published: true
 status: publish
+images: ["/assets/20161107-VideoOCRDemoScreenshot.jpg"]
 tags:
 - AzureSearch
 - Python
@@ -17,8 +18,7 @@ title: Video OCR using Azure Media & Cognitive
 
 OCRとはOptical Character Recognitionの略で日本語にすると光学文字認識と訳されており、ざっくりと画像の中の文字をテキストに変換する技術のことを指す。テキストに変換されるということは勘が鋭い皆さんはお気づきだと思うが、テキストの全文検索であったり、テキストから音声への変換、さらには機械翻訳を使って多言語への変換といった展開が考えられる。そんな可能性を秘めたOCRであるが、ここではそのOCRの技術を使ってビデオファイルから抽出したテキストデータを元にビデオに字幕表示したり、動画中に表示される文字を全文検索をするデモを紹介したい。内容的には「[Azure Media & Cognitiveデモ:Speech-To-Text](http://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/)」で紹介したデモのOCR版といったところ。
 
-[
-![Video OCR Demo Screenshot](https://c5.staticflickr.com/6/5337/30534876532_4b2269fc57_c.jpg)](http://azure-media-cognitive-demos.azurewebsites.net/ocr/azuresubs/)
+[![Video OCR Demo Screenshot](/assets/20161107-VideoOCRDemoScreenshot.jpg)](http://azure-media-cognitive-demos.azurewebsites.net/ocr/azuresubs/)
 
 - [demo site](http://azure-media-cognitive-demos.azurewebsites.net/ocr/azuresubs/)
 - [source code](https://github.com/AzureMediaCognitiveDemos/Video-OCR-Search-Python)

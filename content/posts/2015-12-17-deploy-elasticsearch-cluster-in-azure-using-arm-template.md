@@ -6,6 +6,7 @@ date: "2015-12-17T13:18:28Z"
 date_gmt: 2015-12-17 04:18:28 +0900
 published: true
 status: publish
+images: ["/assets/20151217-ES-cluster-deployment.jpg"]
 tags:
 - ARM
 - AzureCLI
@@ -131,7 +132,7 @@ $ azure group deployment show  "Resource-ES-JapanWest" "Deploy-ES-JapanWest"
 
 上記コマンドの処理が完了すればデプロイ完了。たったこれだけ。出来上がった構成だが、手っ取り早くは[Azureポータル](http://portal.azure.com)で確認することができる。デプロイ用に作成したリソースグループ（ここではResource-ES-JapanWest）の中身を見ていただくとデプロイされた様々なリソース一覧（ストレージ、仮想ネットワーク、ロードバランサー、仮想マシン、ネットワークセキュリティグループ、パブリック用IP・・・など）が出来上がっていることが分かる。尚、出来上がったESクラスタは合計8VMで構成されており、ESマスターノード用に3つ、ESデータノード用に3つ、Kibana用に１つ、踏み台サーバ用に１つとなっている。仮想ネットワーク内のVMの配置状況を図にすると次のようになる。
 
-![ES-cluster-deployment](https://farm6.staticflickr.com/5813/23169037754_56a40e37f0_c.jpg)
+![ES-cluster-deployment](/assets/20151217-ES-cluster-deployment.jpg)
 
 ## テスト実行
 
@@ -213,7 +214,7 @@ $ curl -s '<ESノードのアドレス>:9200/shakespeare/_search?q=*&size=1' | \
 
 さらにKibanaにアクセスしてESクラスタとの連携に問題がないか確認する。念のためにKibanaのエントリポイントはhttp://Kibanaアドレス:5601。特に問題なければKibana上で検索すると次のようにテストロードしたデータセットが閲覧できるはず。
 
-![Kibana-Page](https://farm1.staticflickr.com/697/23771814526_eed65c0106_c.jpg)
+![Kibana-Page](/assets/20151217-kibana-page.jpg)
 
 elasticsearch-headでクラスタノードの状態を確認
 
@@ -225,11 +226,11 @@ $ sudo /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head
 
 elasticsearch-headのエントリーポイントはhttp://:9200/_plugin/headで結果は次のとおり。
 
-![elasticsearch-head-snapshot-shakespeare](https://farm6.staticflickr.com/5673/23521556850_9a2b442a85_z.jpg)
+![elasticsearch-head-snapshot-shakespeare](/assets/20151217-elasticsearch-head-snapshot-shakespeare.jpg)
 
 これを分かりやすくトポロジーにしてみたのが下図。緑の太枠のところがプライマリーシャードで細枠がレプリカシャードを表す。
 
-![ES-Cluster-Topology](https://farm6.staticflickr.com/5766/23791138406_7df9ac9294_c.jpg)
+![ES-Cluster-Topology](/assets/20151217-ES-Cluster-Topology.jpg)
 
 ## ノードdiscoveryについて
 

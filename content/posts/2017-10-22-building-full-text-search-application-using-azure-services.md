@@ -6,6 +6,7 @@ date: "2017-10-22T13:35:42Z"
 date_gmt: 2017-10-22 04:35:42 +0900
 published: true
 status: publish
+images: ["/assets/20171022-build-search-app.png"]
 tags:
 - AzureSearch
 - DocumentDB
@@ -24,7 +25,7 @@ title: Developing Full Managed Search Application in Azure
 
 セミナーで紹介したサンプルアプリはAzure公式サイトに載せてある代表的なサービスのFAQデータを元にしたHTML/CSS/JavascriptによるQ＆Aナレジッジベース検索のシングルページアプリケーションです。検索エンジンにAzure Searchを使い、データソースにCosmos DBを使いAzure SearchのCosmosDB Indexerでクローリングする構成にしてます。ソースコードと設定手順は以下Githubプロジェクトにアップしてあります。もしバグや設定手順等でご質問があればGithubでIssue登録いただければ時間を見つけて対応させていただきます。
 
-![](https://raw.githubusercontent.com/yokawasa/azure-search-qna-demo/master/img/screenshots.png)
+![](/assets/20171022-build-search-app.png)
 
 Source Code: [https://github.com/yokawasa/azure-search-qna-demo/](https://github.com/yokawasa/azure-search-qna-demo/)
 

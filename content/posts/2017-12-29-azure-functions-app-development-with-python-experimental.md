@@ -6,6 +6,7 @@ date: "2017-12-29T17:13:02Z"
 date_gmt: 2017-12-29 08:13:02 +0900
 published: true
 status: publish
+images: ["/assets/20171229-serverless-app-with-python.jpg"]
 tags:
 - Python
 - AzureFunctions
@@ -19,7 +20,7 @@ title: Azure Functions Python Programming  - Experimental
 
 Azure FunctionsのRuntimeには大きく1系と２系の２種類あるが、現時点でPythonは1系でのみExperimentalサポートという状況（ See also [言語サポート状況](https://docs.microsoft.com/en-us/azure/azure-functions/supported-languages)）
 
-![azure-functions-runtime-version](https://farm5.staticflickr.com/4638/38482890335_8c5083192d_z.jpg)
+![azure-functions-runtime-version](/assets/20171229-azure-functions-runtime-version.jpg)
 
 Experimental（実験的サポート）なので本番での利用は非推奨であり、公式サポートはない（ベストエフォートでのサポートは得られるはず）。また、当然ながらGA言語に比べパフォーマンスは悪い。PythonはFunction呼び出し毎にpython.exeが実行される（GA言語はRuntimeと同じプロセスで実行）。
 
@@ -79,7 +80,7 @@ pipとKudu DebugConsole/UIを利用した２種類のモジュールインスト
 
 [Azure Antenna](https://azure.connpass.com/)にて[2017年11月20日](https://azure.connpass.com/event/72312/)と[11月28日](https://azure.connpass.com/event/72125/)に実施したセッション資料:
 
-[![](https://image.slidesharecdn.com/serverlessappdevelopmentpythonja-171128085250/95/pythonazure-serverless-application-development-with-python-1-1024.jpg)](//www.slideshare.net/yokawasa/pythonazure-serverless-application-development-with-python-82884446)
+[![](/assets/20171229-serverless-app-with-python.jpg)](//www.slideshare.net/yokawasa/pythonazure-serverless-application-development-with-python-82884446)
 **[PythonによるAzureサーバレスアプリケーション開発 / Serverless Application Development with Python](//www.slideshare.net/yokawasa/pythonazure-serverless-application-development-with-python-82884446)** from **[Yoichi Kawasaki](https://www.slideshare.net/yokawasa)**
 
 Hands-onマテリアル：

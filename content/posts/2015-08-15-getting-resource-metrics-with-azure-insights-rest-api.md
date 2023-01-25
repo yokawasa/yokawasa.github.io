@@ -6,6 +6,7 @@ date: "2015-08-15T01:57:57Z"
 date_gmt: 2015-08-14 16:57:57 +0900
 published: true
 status: publish
+images: ["/assets/20150815-ARMExplorer.jpg"]
 tags:
 - API
 - ResourceGroup
@@ -26,7 +27,7 @@ Azure上のさまざまなサービスのメトリック情報をAPI経由で取
 
 ARM Explorer ([https://resources.azure.com/](https://resources.azure.com/)) をご存じだろうか？　これはその名の通りAzure上の全てのリソース（ご利用のサブスクリプションに紐づく全てのリソース）のエクスプローラーであり、これを使うことでこのARM管理下の世界のすべてのリソースをエクスプローラービューで閲覧することができる。このARM Explorerで閲覧可能な各リソースの情報の中にmetricdefinitionsというものがあって、これにはそのリソースに対して指定可能なメトリックの種類やその定義情報などが格納されている。リソースのメトリック取得をする際は、まずはARM Explorerで目的のリソースのmetricdefinitionsから指定可能なメトリックの種類を把握してからAPIリクエストを組み立てていただければと思う。ARM Explorerを使って本記事で取得対象としているWeb Apps（ここではサイト名yoichikademoを対象）のmetricdefinitionsを閲覧しているのが以下のスクリーンショットになる。
 
-![ARMExplorer](https://farm6.staticflickr.com/5670/20566807955_dbc0bd1ab7_c.jpg)
+![ARMExplorer](/assets/20150815-ARMExplorer.jpg)
 
 ## Azure Insights REST APIメトリック取得インターフェース
 

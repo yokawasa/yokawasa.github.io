@@ -7,6 +7,7 @@ date: "2016-11-27T08:27:46Z"
 date_gmt: 2016-11-26 23:27:46 +0900
 published: true
 status: publish
+images: ["/asset/20161127-fluent-plugin-azurefunctions.jpgs"]
 tags:
 - fluentd
 - Ruby
@@ -18,7 +19,7 @@ title: Collecting events into Azure Functions and triggering your custom code us
 
 In this article, I&rsquo;d like to introduces a solution to collect events from various sources and send them into HTTP Trigger function in Azure Functions using [fluent-plugin-azurefunctions](https://github.com/yokawasa/fluent-plugin-azurefunctions). Triggers in Azure Functions are event responses used to trigger your custom code. [HTTP Trigger functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook) allow you to respond to HTTP events sent from fluentd and cook them into whatever you want! 
 
-![fluent-plugin-azurefunctions](https://c6.staticflickr.com/6/5747/31080973501_83e854eb4a_c.jpg)
+![fluent-plugin-azurefunctions](/asset/20161127-fluent-plugin-azurefunctions.jpgs)
 
 [note] [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview) is a ("serverless") solution for easily running small pieces of code, or "functions," in Azure. [Fluentd](http://www.fluentd.org/) is an open source data collector, which lets you unify the data collection and consumption for a better use and understanding of data. [fluent-plugin-azurefunctions](https://github.com/yokawasa/fluent-plugin-azurefunctions) is a fluentd output plugin that enables to collect events into Azure Functions.
 

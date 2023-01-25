@@ -6,6 +6,7 @@ date: "2016-12-18T22:21:16Z"
 date_gmt: 2016-12-18 13:21:16 +0900
 published: true
 status: publish
+images: ["/assets/20161218-VideoFramesFaceFecognition_case2.jpg"]
 tags:
 - Python
 - AzureMediaServices
@@ -18,7 +19,7 @@ title: Detecting faces in Video contents using Azure Cognitive Services Face API
 [Cognitive Serivces](https://azure.microsoft.com/ja-jp/services/cognitive-services/)とは視覚、音声、言語、知識などマイクロソフトがこれまで研究を通じて開発してきたさまざまな要素技術をAPIとして提供しているサービスのことで、最近巷で人工知能（AI）だとかインテリジェンスとかいうキーワードをよく耳にするのではないかと思うがAzure利用シナリオでそういったインテリジェンス（知能/知性）を兼ね備えたアプリを作る場合は間違いなく中核となるサービスの1つである。Face APIはその中でも顔の検出・識別や、顔にまつわる感情、特徴などメタデータ抽出に特化したAPIである。
 
 [
-![Video Summarization and Face Detection Demo Screenshot](https://c1.staticflickr.com/6/5484/30351964320_dc0b3400ca_b.jpg)
+![Video Summarization and Face Detection Demo Screenshot](/assets/20161218-VideoSummarizationFaceDetectionDemoScreenshot.jpg)
 ](http://azure-media-cognitive-demos.azurewebsites.net/faceapi/build2016keynote/)
 
 - [demo site](http://azure-media-cognitive-demos.azurewebsites.net/faceapi/build2016keynote/) 
@@ -28,7 +29,7 @@ title: Detecting faces in Video contents using Azure Cognitive Services Face API
 
 下図は今回のデモ作成のために行っている処理フローと主要テクノロジーを表している。やっていることは大きく分けて3つ: (1) 動画コンテンツをAzure Media Encoder Standardを使ってフレームごとの静止画像の作成,  (2) Cognitive ServicesのFace APIを使って1より得られた静止画像から顔の検出を行い予め登録している人物リストとマッチング（最も類似度が高いものを本人とみなす）して人物を識別, (3) 2で得られた各フレーム中の人物情報を時間順に並べて字幕(Closed Caption)用のデータファイルを生成。以下、各処理の詳細について説明する。
 
-![VideoFramesFaceFecognition_case1](https://c6.staticflickr.com/1/590/31711341965_fe98683a31_b.jpg)
+![VideoFramesFaceFecognition_case1](/assets/20161218-VideoFramesFaceFecognition_case1.jpg)
 
 ### 1. Azure Media Encoder Standardでフレームごとの静止画生成
 
@@ -125,7 +126,7 @@ Githubプロジェクトページ[VideoFramesFaceRecognition-Python](https://git
 
 Azure Media Face DetectorはAzure Media Servicesのメディアプロセッサ(MP)の１つで、ビデオコンテンツから顔の検出や感情の検出をすることができる。残念ながらAzure Media Face DetectorはFace APIのように顔の識別を行うことはできないものの、ビデオコンテンツから直接顔を検出することができる、即ちビデオコンテンツから直接顔が存在するフレームを特定することができる。よって、この機能を利用して一旦Azure Media Face Detectorで顔が検出されたフレームのみに絞り込んでからFace APIを使ってフレームの静止画像に対して顔検出・顔識別を行うことで無駄なFace APIリクエストを減らして処理の効率化を図ることができる。処理フローとしては次のようなイメージ。
 
-![VideoFramesFaceFecognition_case2](https://c5.staticflickr.com/1/604/31338431900_ff47cbb4d9_b.jpg)
+![VideoFramesFaceFecognition_case2](/assets/20161218-VideoFramesFaceFecognition_case2.jpg)
 
 ## おまけ: Video Summarization
 

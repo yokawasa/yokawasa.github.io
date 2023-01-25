@@ -6,6 +6,7 @@ date: "2017-05-13T12:19:24Z"
 date_gmt: 2017-05-13 03:19:24 +0900
 published: true
 status: publish
+images: ["/assets/20170513-azure-search-ta-capture.jpg"]
 tags:
 - AzureSearch
 - analyzer
@@ -16,7 +17,7 @@ Azure Searchのアナライザーによるテキスト解析結果を出力す�
 
 ## Web UI Tool
 
-![azure-search-ta-capture](https://c1.staticflickr.com/5/4169/33813518873_c2d72f5094_c.jpg)
+![azure-search-ta-capture](/assets/20170513-azure-search-ta-capture.jpg)
 [https://github.com/yokawasa/azure-search-ta](https://github.com/yokawasa/azure-search-ta)
 
 インストールは超簡単。（１）[Github](https://github.com/yokawasa/azure-search-ta)からazure-search-taをclone （２）[azure-search-ta/ui](https://github.com/yokawasa/azure-search-ta/tree/master/ui) 配下のファイルをPHPが動くWebサーバにコピー （３）analyze-api.phpをエディタで開いてお使いのAzure Searchカウント名とAzure Search API Adminキーの値を設定ください。あとはazure-search-ta-ui.htmlにアクセスいただければ上記のようなUIが出力されるはずです。なぜHTML/JSだけではなく間にPHPを挟んでいるのかについて、Azure SearchのAnalyze APIや管理系APIリクエストに位置付けられており、管理系APIはvia CORSでのリクエストを受け付けていないからである。

@@ -7,6 +7,7 @@ date: "2016-12-29T23:25:36Z"
 date_gmt: 2016-12-29 14:25:36 +0900
 published: true
 status: publish
+images: ["/assets/20161229-logstash.jpg"]
 tags:
 - Ruby
 - logstash
@@ -34,5 +35,5 @@ title: Logstash plugins for Microsoft Azure Services
 (as of Dec 29, 2016)
 
 [
-![logstash](https://c3.staticflickr.com/1/328/31922043426_9cc1d85992_c.jpg)
+![logstash](/assets/20161229-logstash.jpg)
 ](https://www.elastic.co/products/logstash)

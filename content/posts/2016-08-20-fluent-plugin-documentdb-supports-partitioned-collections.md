@@ -8,6 +8,7 @@ date: "2016-08-20T15:55:21Z"
 date_gmt: 2016-08-20 06:55:21 +0900
 published: true
 status: publish
+images: ["/assets/20160820-fluentd-azure-documentdb-collection.jpg"]
 tags:
 - DocumentDB
 - fluentd
@@ -20,7 +21,7 @@ I&rsquo;d like to announce [fluent-plugin-documentdb](https://github.com/yokawas
 
 Partitioned collections is kick-ass feature that I had wanted to support in fluent-plugin-documentdb since the feature came out public (see [the announcement](https://azure.microsoft.com/ja-jp/updates/documentdb-partitioned-collections-for-higher-storage-and-throughput/)). For big fan of fluent-plugin-documentdb, sorry for keeping you waiting for such a long time :-) If I may make excuses, I would say I haven't had as much time on the project, and I had to do ruby client implementation of Partitioned collections by myself as there is no official DocumentDB Ruby SDK that supports it (As a result I've created tiny Ruby DocumentDB client libraries that support the feature. Check [this](https://github.com/yokawasa/fluent-plugin-documentdb/tree/master/lib/fluent/plugin/documentdb) out if you're interested). 
 
-![fluentd-azure-documentdb-collection](https://c3.staticflickr.com/9/8178/28479238194_845ca59186_c.jpg)
+![fluentd-azure-documentdb-collection](/assets/20160820-fluentd-azure-documentdb-collection.jpg)
 
 ## What are Partitioned collections?
 

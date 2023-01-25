@@ -3,6 +3,7 @@ author: Yoichi Kawasaki
 date: "2019-01-14T19:32:40Z"
 published: true
 status: publish
+images: ["assets/20190114-envoy-proxy.png"]
 tags:
 - envoy
 - envoyproxy

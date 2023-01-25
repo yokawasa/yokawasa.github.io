@@ -7,6 +7,7 @@ date: "2016-02-16T09:56:03Z"
 date_gmt: 2016-02-16 00:56:03 +0900
 published: true
 status: publish
+images: ["/assets/20160216-fluentd.jpg"]
 tags:
 - AzureSearch
 - DocumentDB
@@ -38,5 +39,4 @@ Here is a list of [fluentd](http://www.fluentd.org/) plugins for Microsoft Azure
 
 (as of Nov 23, 2016)
 
-[![fluentd](https://farm2.staticflickr.com/1471/24937329432_69aa1c6983_c.jpg)
-](http://www.fluentd.org/)
+![fluentd](/assets/20160216-fluentd.jpg)
