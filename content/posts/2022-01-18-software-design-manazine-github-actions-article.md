@@ -3,6 +3,7 @@ author: Yoichi Kawasaki
 date: "2022-01-18T11:00:00Z"
 published: true
 status: publish
+image: /assets/20220118-software-design-gha.png
 tags:
 - vscode
 - event
