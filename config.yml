@@ -98,10 +98,6 @@ params:
           url: "https://github.com/yokawasa"
         - name: linkedin
           url: "https://www.linkedin.com/in/yokawasa/"
-        - name: cv
-          url: "https://amzn.to/3J0OSgb"
-        - name: email
-          url: "mailto:yokawasa@gmail.com"
         - name: rss
           url: "index.xml"
 
@@ -127,18 +123,21 @@ params:
         keys: ["title", "permalink", "summary", "content"]
 menu:
     main:
+        - name: about
+          url: about
+          weight: 5
         - identifier: posts
           name: posts
           url: posts
-          weight: 5
+          weight: 10
         - name: works
           url: works
-          weight: 10
+          weight: 15
         - name: search
           url: search/
-          weight: 15
+          weight: 20 
         - identifier: tags
           name: tags
           url: tags/
-          weight: 20
+          weight: 25
 
