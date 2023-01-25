@@ -3,6 +3,7 @@ author: Yoichi Kawasaki
 date: "2020-05-01T11:00:00Z"
 published: true
 status: publish
+images: ["/assets/20200501-vscodetextbook2.jpg"]
 tags:
 - vscode
 - event

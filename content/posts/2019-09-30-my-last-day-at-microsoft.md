@@ -3,6 +3,7 @@ author: Yoichi Kawasaki
 date: "2019-09-30T22:32:40Z"
 published: true
 status: publish
+images: ["/assets/20190930-my-last-day-at-microsoft1.jpg"]
 tags:
 - Microsoft
 - Career

@@ -34,7 +34,7 @@ params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: Yoichi Kawasaki
     description: "Yoichi Kawasaki yokawasa.github.io"
-    keywords: [Blog, Portfolio, PaperMod]
+    keywords: [Blog, Yoichi Kawasaki]
     author: Yoichi Kawasaki 
     # author: ["Me", "You"] # multiple authors
     images: ["profile.jpg"]
@@ -54,8 +54,8 @@ params:
     comments: false
     hidemeta: false
     hideSummary: false
-    showtoc: false
-    tocopen: false
+    showtoc: true
+    tocopen: true
 
     assets:
         # disableHLJS: true # to disable highlight.js
