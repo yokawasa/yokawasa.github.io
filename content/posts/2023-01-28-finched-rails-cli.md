@@ -38,6 +38,8 @@ alias finched='finch run --rm -it -v ${PWD}:/rails -v ruby-bundle-cache:/bundle 
 
 Now you're ready to start develop Rails app using `finched`, the alias you've just created.
 
+Let's create a Rails project named `weblog` and start the Rails server as follows:
+
 ```bash
 finched rails new weblog
 cd weblog
