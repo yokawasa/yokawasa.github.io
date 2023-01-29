@@ -8,13 +8,13 @@ tags:
 - finch
 - docker
 - rails
-title: Finched Rails CLI makes it a breeze to try out Rails withough installing anything but finch
+title: Finched Rails CLI makes it a breeze to try out Rails withough installing anything but Finch
 ---
 
 ![](/assets/20230128-finched-rails.png)
 
 ## Preface
-In this article, I’d like to introduces [Finched Rails CLI](https://github.com/yokawasa/finched-rails-cli) that makes it a breeze to try out Rails without installing anything but [finch](https://github.com/runfinch/finch). Finch is an OSS CLI for building, running, and publishing Linux containers create by AWS. As long as you have Finch, you can quick start a Rails app only by copying and pasting a few commands. Finched Rails CLI is a fork of [Docked Rails CLI](https://github.com/rails/docked) and simply a Finch version of it.
+In this article, I’d like to introduces [Finched Rails CLI](https://github.com/yokawasa/finched-rails-cli) that makes it a breeze to try out Rails without installing anything but [Finch](https://github.com/runfinch/finch). Finch is an OSS CLI for building, running, and publishing Linux containers create by AWS. As long as you have Finch, you can quick start a Rails app only by copying and pasting a few commands. Finched Rails CLI is a fork of [Docked Rails CLI](https://github.com/rails/docked) and simply a Finch version of it.
 > NOTE: As of Jan 2023, Finch only supports macOS (on all Mac CPU architectures). For its future supportability of any other architectures, please watch [Finch repo](https://github.com/runfinch/finch)
 
 Why I created Finched Rails CLI? It's very simple. I don't currenlty use Docker Desktop for managing Linux containers on my Desktop for its complexity and high resource consuming resason. I use Finch instead for it. 
@@ -22,7 +22,7 @@ Why I created Finched Rails CLI? It's very simple. I don't currenlty use Docker 
 
 ## Quickstart
 
-Please install finch if you don't have on your desktop
+Please install Finch if you don't have on your desktop
 
 ```bash
 brew install --cask finch
@@ -36,7 +36,7 @@ finch volume create ruby-bundle-cache
 alias finched='finch run --rm -it -v ${PWD}:/rails -v ruby-bundle-cache:/bundle -p 3000:3000 --entrypoint "" ghcr.io/yokawasa/rails/cli'
 ```
 
-Now you're ready to start develop Rails app using finched, the alias you've created.
+Now you're ready to start develop Rails app using `finched`, the alias you've just created.
 
 ```bash
 finched rails new weblog
@@ -57,4 +57,4 @@ open http://localhost:3000/posts
 
 That's it!
 
-Enjoy developing Rails app with finch!
+Enjoy developing Rails app with Finch!
