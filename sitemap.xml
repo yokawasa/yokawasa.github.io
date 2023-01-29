@@ -4,6 +4,27 @@
   <url>
     <loc>https://unofficialism.info/search/</loc>
   </url><url>
+    <loc>https://unofficialism.info/tags/docker/</loc>
+    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://unofficialism.info/tags/finch/</loc>
+    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://unofficialism.info/posts/finched-rails-cli/</loc>
+    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://unofficialism.info/posts/</loc>
+    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://unofficialism.info/tags/rails/</loc>
+    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://unofficialism.info/tags/</loc>
+    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://unofficialism.info/</loc>
+    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://unofficialism.info/about/</loc>
     <lastmod>2023-01-24T23:12:10+09:00</lastmod>
   </url><url>
@@ -14,15 +35,6 @@
     <lastmod>2022-05-01T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://unofficialism.info/posts/istiocon2022/</loc>
-    <lastmod>2022-05-01T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://unofficialism.info/posts/</loc>
-    <lastmod>2022-05-01T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://unofficialism.info/tags/</loc>
-    <lastmod>2022-05-01T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://unofficialism.info/</loc>
     <lastmod>2022-05-01T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://unofficialism.info/works/</loc>
@@ -278,9 +290,6 @@
     <lastmod>2017-02-05T16:12:24+00:00</lastmod>
   </url><url>
     <loc>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</loc>
-    <lastmod>2017-02-05T16:12:24+00:00</lastmod>
-  </url><url>
-    <loc>https://unofficialism.info/tags/docker/</loc>
     <lastmod>2017-02-05T16:12:24+00:00</lastmod>
   </url><url>
     <loc>https://unofficialism.info/tags/openssh/</loc>

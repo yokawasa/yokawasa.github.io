@@ -9,7 +9,16 @@
       <link>https://unofficialism.info/profile.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Finched Rails CLI makes it a breeze to try out Rails withough installing anything but finch</title>
+      <link>https://unofficialism.info/posts/finched-rails-cli/</link>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://unofficialism.info/posts/finched-rails-cli/</guid>
+      <description>Preface In this article, I’d like to introduces Finched Rails CLI that makes it a breeze to try out Rails without installing anything but finch. Finch is an OSS CLI for building, running, and publishing Linux containers create by AWS. As long as you have Finch, you can quick start a Rails app only by copying and pasting a few commands. Finched Rails CLI is a fork of Docked Rails CLI and simply a Finch version of it.</description>
+    </item>
+    
     <item>
       <title>My presentation at IstioCon 2022</title>
       <link>https://unofficialism.info/posts/istiocon2022/</link>
