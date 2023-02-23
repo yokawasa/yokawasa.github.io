@@ -35,7 +35,7 @@ Past talks and presentations by [@yokawasa](https://github.com/yokawasa) (twitte
 | [今Serverlessが面白いわけ v19.09](https://www.slideshare.net/yokawasa/serverless-v1909-173712712) (Serverless Meetup Tokyo #14) | Sept 19, 2019 |
 | [今Serverlessが面白いわけ](https://www.slideshare.net/yokawasa/serverless-151261322) (DevLOVE X) |June 22, 2019 |
 | [Azure Functions 2.0 Deep Dive - デベロッパーのための最新開発ガイド](https://www.slideshare.net/yokawasa/azure-functions-20-deep-dive) (de:code 2019) | May 29, 2019 |
-| [クラウドネイティブ時代の分散トレーシング - Distributed Tracing in a Cloud Native Age](https://www.slideshare.net/yokawasa/distributed-tracing-in-a-cloud-native-age-148757740) (de:code 2019)| May 30, 2019 |
+| [クラウドネイティブ時代の分散トレーシング](https://www.slideshare.net/yokawasa/distributed-tracing-in-a-cloud-native-age-148757740) (de:code 2019)| May 30, 2019 |
 |[デベロッパーのためのAzureクラウドネイティブスタック](https://www.slideshare.net/yokawasa/azure-cloud-native-stack-for-developers-azure) (Developers Summit 2019 Tokyo) | Feb 15, 2019 |
 | [Service Mesh Status Quo 2018: 2019年に向けたService Meshの現状課題の整理と考察](https://www.slideshare.net/yokawasa/service-mesh-status-quo-2018-126171897) (Container X mas Party with flexy) | Dec 18, 2018 |
 | [NoOpsが目指す未来とコンテナ技術](https://www.slideshare.net/hiromasaoka/noops-125109991) ( Co-presentation with Hiromasa Oka at [Japan Container Days V18.12](https://containerdays.jp/), [Video](https://www.youtube.com/watch?v=5WJmBjRfZag)) | Dec 5, 2018 |
