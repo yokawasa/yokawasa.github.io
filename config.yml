@@ -32,12 +32,10 @@ outputs:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: Yoichi Kawasaki
     description: "Yoichi Kawasaki yokawasa.github.io"
     keywords: [Blog, Yoichi Kawasaki]
     author: Yoichi Kawasaki 
     # author: ["Me", "You"] # multiple authors
-    images: ["profile.jpg"]
     DateFormat: "January 2, 2006"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
