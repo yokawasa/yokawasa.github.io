@@ -5,6 +5,7 @@
     <link>https://unofficialism.info/tags/docker/</link>
     <description>Recent content in docker on Yoichi Kawasaki</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Finched Rails CLI makes it a breeze to try out Rails withough installing anything but Finch</title>

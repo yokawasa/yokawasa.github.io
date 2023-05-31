@@ -5,6 +5,7 @@
     <link>https://unofficialism.info/tags/helm/</link>
     <description>Recent content in Helm on Yoichi Kawasaki</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/helm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHub Actions - Kubernetes tools installer</title>

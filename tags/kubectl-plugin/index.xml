@@ -5,6 +5,7 @@
     <link>https://unofficialism.info/tags/kubectl-plugin/</link>
     <description>Recent content in kubectl-plugin on Yoichi Kawasaki</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Tue, 12 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/kubectl-plugin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Easy way to SSH into Azure Kubernetes Service cluster node VMs</title>

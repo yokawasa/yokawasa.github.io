@@ -5,6 +5,7 @@
     <link>https://unofficialism.info/tags/crawler/</link>
     <description>Recent content in Crawler on Yoichi Kawasaki</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 28 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/crawler/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DocumentDBをAzure Searchのデータソースとして利用する</title>

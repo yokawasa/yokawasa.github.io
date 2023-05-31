@@ -5,6 +5,7 @@
     <link>https://unofficialism.info/tags/fluent-plugin-azurefunctions/</link>
     <description>Recent content in fluent-plugin-azurefunctions on Yoichi Kawasaki</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sun, 27 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/fluent-plugin-azurefunctions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Collecting events into Azure Functions and triggering your custom code using fluent-plugin-azurefunctions</title>

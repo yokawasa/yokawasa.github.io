@@ -5,6 +5,7 @@
     <link>https://unofficialism.info/tags/api/</link>
     <description>Recent content in API on Yoichi Kawasaki</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Insights REST APIを使ってAzure各リソースのメトリックを抽出する</title>

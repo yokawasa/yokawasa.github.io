@@ -5,6 +5,7 @@
     <link>https://unofficialism.info/categories/kubernetes/</link>
     <description>Recent content in Kubernetes on Yoichi Kawasaki</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes x PaaS コンテナアプリケーションのNoOpsへの挑戦 (Japan Container Days v18.04)</title>
