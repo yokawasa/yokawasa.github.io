@@ -23,8 +23,8 @@ My recent publications and talks can be found at [this page](/works)
 
 - Codes on [GitHub](https://github.com/yokawasa)
 - Tweets on [Twitter](https://twitter.com/yokawasa)
-- Profile on [LinkedIn](https://www.linkedin.com/in/yokawasa/), [Amazon](http://amzn.to/3J0OSgb)
-- Slides on [SpeakerDeck](https://speakerdeck.com/yokawasa), [Slideshare](https://www.slideshare.net/yokawasa) (old)
+- Profile on [LinkedIn](https://www.linkedin.com/in/yokawasa/)
+- Slides on [SpeakerDeck](https://speakerdeck.com/yokawasa), [Slideshare](https://www.slideshare.net/yokawasa/presentations)
 - Articles on this [Blog](/posts), [Qitta](https://qiita.com/yokawasa)
 - Email: `yokawasa [at] gmail.com`
 
