@@ -63,11 +63,11 @@ params:
         #favicon32x32: "Thinking_Face_Emoji_large.png"
         #apple_touch_icon: "Thinking_Face_Emoji_large.png"
         #safari_pinned_tab: "Thinking_Face_Emoji_large.png"
-        favicon: "profile.jpg"
-        favicon16x16: "profile.jpg"
-        favicon32x32: "profile.jpg"
-        apple_touch_icon: "profile.jpg"
-        safari_pinned_tab: "profile.jpg"
+        favicon: "profile.png"
+        favicon16x16: "profile.png"
+        favicon32x32: "profile.png"
+        apple_touch_icon: "profile.png"
+        safari_pinned_tab: "profile.png"
 
     labe:
         text: "unofficialism"
@@ -79,8 +79,8 @@ params:
         enabled: true # needs to be explicitly set
         title: "Yoichi Kawasaki"
         # subtitle: "Software Engineer, NoOps Practitioner"
-        subtitle: "Software Engineer, NoOps Practitioner, loving 🧖 🍺 ⛺"
-        imageUrl: "profile.jpg"
+        subtitle: "Software Engineer, NoOps Practitioner"
+        imageUrl: "profile.png"
         imageWidth: 200
         imageHeight: 200
         imageTitle: my image
