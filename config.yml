@@ -1,8 +1,8 @@
 baseURL: "https://unofficialism.info"
 canonifyurls: true
 publishDir : "public"
-title: "Yoichi Kawasaki"
-paginate: 10
+title: "unofficialism"
+paginate: 20
 theme: PaperMod
 
 enableEmoji : true
@@ -77,9 +77,10 @@ params:
     # profile-mode
     profileMode:
         enabled: true # needs to be explicitly set
-        title: "Yoichi Kawasaki"
+        # title: "Yoichi Kawasaki"
         # subtitle: "Software Engineer, NoOps Practitioner"
-        subtitle: "Software Engineer, NoOps Practitioner"
+        title: "unofficialism"
+        subtitle: "Random notes by Yoichi Kawasaki"
         imageUrl: "profile.png"
         imageWidth: 200
         imageHeight: 200
