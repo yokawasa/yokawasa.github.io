@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Yoichi Kawasaki</title>
+    <title>Tags on unofficialism</title>
     <link>https://unofficialism.info/tags/</link>
-    <description>Recent content in Tags on Yoichi Kawasaki</description>
+    <description>Recent content in Tags on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://unofficialism.info/tags/docker/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title>finch</title>
+      <title>Finch</title>
       <link>https://unofficialism.info/tags/finch/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title>rails</title>
+      <title>Rails</title>
       <link>https://unofficialism.info/tags/rails/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>event</title>
+      <title>Event</title>
       <link>https://unofficialism.info/tags/event/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
@@ -53,7 +53,7 @@
     </item>
     
     <item>
-      <title>vscode</title>
+      <title>Vscode</title>
       <link>https://unofficialism.info/tags/vscode/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -62,7 +62,7 @@
     </item>
     
     <item>
-      <title>krew-plugin</title>
+      <title>Krew-Plugin</title>
       <link>https://unofficialism.info/tags/krew-plugin/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
@@ -71,7 +71,7 @@
     </item>
     
     <item>
-      <title>kubectl</title>
+      <title>Kubectl</title>
       <link>https://unofficialism.info/tags/kubectl/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
@@ -80,7 +80,7 @@
     </item>
     
     <item>
-      <title>kubectl-plugins</title>
+      <title>Kubectl-Plugins</title>
       <link>https://unofficialism.info/tags/kubectl-plugins/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
@@ -98,7 +98,7 @@
     </item>
     
     <item>
-      <title>socks5</title>
+      <title>Socks5</title>
       <link>https://unofficialism.info/tags/socks5/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
@@ -107,7 +107,7 @@
     </item>
     
     <item>
-      <title>conftest</title>
+      <title>Conftest</title>
       <link>https://unofficialism.info/tags/conftest/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -134,7 +134,7 @@
     </item>
     
     <item>
-      <title>kubeval</title>
+      <title>Kubeval</title>
       <link>https://unofficialism.info/tags/kubeval/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -143,7 +143,7 @@
     </item>
     
     <item>
-      <title>kustomize</title>
+      <title>Kustomize</title>
       <link>https://unofficialism.info/tags/kustomize/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -152,7 +152,7 @@
     </item>
     
     <item>
-      <title>rancher</title>
+      <title>Rancher</title>
       <link>https://unofficialism.info/tags/rancher/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -161,7 +161,7 @@
     </item>
     
     <item>
-      <title>yq</title>
+      <title>Yq</title>
       <link>https://unofficialism.info/tags/yq/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -170,7 +170,7 @@
     </item>
     
     <item>
-      <title>sqlcheck</title>
+      <title>Sqlcheck</title>
       <link>https://unofficialism.info/tags/sqlcheck/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -179,7 +179,7 @@
     </item>
     
     <item>
-      <title>static-analysis</title>
+      <title>Static-Analysis</title>
       <link>https://unofficialism.info/tags/static-analysis/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -206,7 +206,7 @@
     </item>
     
     <item>
-      <title>azping</title>
+      <title>Azping</title>
       <link>https://unofficialism.info/tags/azping/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
@@ -215,7 +215,7 @@
     </item>
     
     <item>
-      <title>azure</title>
+      <title>Azure</title>
       <link>https://unofficialism.info/tags/azure/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
@@ -224,7 +224,7 @@
     </item>
     
     <item>
-      <title>ping</title>
+      <title>Ping</title>
       <link>https://unofficialism.info/tags/ping/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
@@ -260,7 +260,7 @@
     </item>
     
     <item>
-      <title>azure-kubernetes-services</title>
+      <title>Azure-Kubernetes-Services</title>
       <link>https://unofficialism.info/tags/azure-kubernetes-services/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
@@ -269,7 +269,7 @@
     </item>
     
     <item>
-      <title>kubectl-plugin</title>
+      <title>Kubectl-Plugin</title>
       <link>https://unofficialism.info/tags/kubectl-plugin/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
@@ -278,7 +278,7 @@
     </item>
     
     <item>
-      <title>ssh</title>
+      <title>Ssh</title>
       <link>https://unofficialism.info/tags/ssh/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
@@ -287,7 +287,7 @@
     </item>
     
     <item>
-      <title>docker-compose</title>
+      <title>Docker-Compose</title>
       <link>https://unofficialism.info/tags/docker-compose/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -296,7 +296,7 @@
     </item>
     
     <item>
-      <title>envoy</title>
+      <title>Envoy</title>
       <link>https://unofficialism.info/tags/envoy/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -305,7 +305,7 @@
     </item>
     
     <item>
-      <title>envoyproxy</title>
+      <title>Envoyproxy</title>
       <link>https://unofficialism.info/tags/envoyproxy/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -314,7 +314,7 @@
     </item>
     
     <item>
-      <title>servicemesh</title>
+      <title>Servicemesh</title>
       <link>https://unofficialism.info/tags/servicemesh/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -341,7 +341,7 @@
     </item>
     
     <item>
-      <title>rbac</title>
+      <title>Rbac</title>
       <link>https://unofficialism.info/tags/rbac/</link>
       <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
       
@@ -350,7 +350,7 @@
     </item>
     
     <item>
-      <title>jekyll</title>
+      <title>Jekyll</title>
       <link>https://unofficialism.info/tags/jekyll/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
@@ -359,7 +359,7 @@
     </item>
     
     <item>
-      <title>wordpress</title>
+      <title>Wordpress</title>
       <link>https://unofficialism.info/tags/wordpress/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
@@ -440,7 +440,7 @@
     </item>
     
     <item>
-      <title>beats</title>
+      <title>Beats</title>
       <link>https://unofficialism.info/tags/beats/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
@@ -467,7 +467,7 @@
     </item>
     
     <item>
-      <title>logstash</title>
+      <title>Logstash</title>
       <link>https://unofficialism.info/tags/logstash/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
@@ -539,7 +539,7 @@
     </item>
     
     <item>
-      <title>analyzer</title>
+      <title>Analyzer</title>
       <link>https://unofficialism.info/tags/analyzer/</link>
       <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
       
@@ -548,7 +548,7 @@
     </item>
     
     <item>
-      <title>openssh</title>
+      <title>Openssh</title>
       <link>https://unofficialism.info/tags/openssh/</link>
       <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
       
@@ -584,7 +584,7 @@
     </item>
     
     <item>
-      <title>fluent-plugin-azurefunctions</title>
+      <title>Fluent-Plugin-Azurefunctions</title>
       <link>https://unofficialism.info/tags/fluent-plugin-azurefunctions/</link>
       <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
       
@@ -593,7 +593,7 @@
     </item>
     
     <item>
-      <title>fluentd</title>
+      <title>Fluentd</title>
       <link>https://unofficialism.info/tags/fluentd/</link>
       <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
       
@@ -629,7 +629,7 @@
     </item>
     
     <item>
-      <title>embulk</title>
+      <title>Embulk</title>
       <link>https://unofficialism.info/tags/embulk/</link>
       <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
       
@@ -638,7 +638,7 @@
     </item>
     
     <item>
-      <title>fluent-plugin-documentdb</title>
+      <title>Fluent-Plugin-Documentdb</title>
       <link>https://unofficialism.info/tags/fluent-plugin-documentdb/</link>
       <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
       
@@ -683,7 +683,7 @@
     </item>
     
     <item>
-      <title>patents</title>
+      <title>Patents</title>
       <link>https://unofficialism.info/tags/patents/</link>
       <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
       
@@ -764,7 +764,7 @@
     </item>
     
     <item>
-      <title>chrome</title>
+      <title>Chrome</title>
       <link>https://unofficialism.info/tags/chrome/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
@@ -773,7 +773,7 @@
     </item>
     
     <item>
-      <title>firefox</title>
+      <title>Firefox</title>
       <link>https://unofficialism.info/tags/firefox/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
@@ -827,7 +827,7 @@
     </item>
     
     <item>
-      <title>metrics</title>
+      <title>Metrics</title>
       <link>https://unofficialism.info/tags/metrics/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
@@ -836,7 +836,7 @@
     </item>
     
     <item>
-      <title>monitoring</title>
+      <title>Monitoring</title>
       <link>https://unofficialism.info/tags/monitoring/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
@@ -863,7 +863,7 @@
     </item>
     
     <item>
-      <title>feedparser</title>
+      <title>Feedparser</title>
       <link>https://unofficialism.info/tags/feedparser/</link>
       <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
       
@@ -881,7 +881,7 @@
     </item>
     
     <item>
-      <title>pydocumentdb</title>
+      <title>Pydocumentdb</title>
       <link>https://unofficialism.info/tags/pydocumentdb/</link>
       <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
       
@@ -890,7 +890,7 @@
     </item>
     
     <item>
-      <title>perl</title>
+      <title>Perl</title>
       <link>https://unofficialism.info/tags/perl/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
@@ -899,7 +899,7 @@
     </item>
     
     <item>
-      <title>wikipedia</title>
+      <title>Wikipedia</title>
       <link>https://unofficialism.info/tags/wikipedia/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
@@ -908,7 +908,7 @@
     </item>
     
     <item>
-      <title>curl</title>
+      <title>Curl</title>
       <link>https://unofficialism.info/tags/curl/</link>
       <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Yoichi Kawasaki</title>
+    <title>unofficialism</title>
     <link>https://unofficialism.info/</link>
-    <description>Recent content on Yoichi Kawasaki</description>
+    <description>Recent content on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Apr 2024 23:42:32 +0000</lastBuildDate><atom:link href="https://unofficialism.info/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Finched Rails CLI makes it a breeze to try out Rails withough installing anything but Finch</title>
@@ -23,8 +23,8 @@
       <pubDate>Tue, 24 Jan 2023 23:12:10 +0900</pubDate>
       
       <guid>https://unofficialism.info/about/</guid>
-      <description>Yoichi Kawasaki Software Engineer, NoOps Practitioner, loving 🧖 🍺 ⛺
-Bio Yoichi Kawasaki (川崎 庸市 in Japanese) is currently a tech lead site reliability engineer at ZOZO, inc. He is responsible for leading ZOZOTOWN microservice platform SRE team and delivering service reliability. Prior to joining ZOZO, inc., he worked as a solutions architect at Microsoft and responsible for leading technical engagements to win based on solutions leveraging the Microsoft Azure and OSS with a specialization in cloud native application architecture and development.</description>
+      <description>Random notes by Yoichi Kawasaki
+Author&amp;rsquo;s Bio Yoichi Kawasaki (川崎 庸市 in Japanese) is currently a tech lead site reliability engineer at ZOZO, inc. He is responsible for leading ZOZOTOWN microservice platform SRE team and delivering service reliability. Prior to joining ZOZO, inc., he worked as a solutions architect at Microsoft and responsible for leading technical engagements to win based on solutions leveraging the Microsoft Azure and OSS with a specialization in cloud native application architecture and development.</description>
     </item>
     
     <item>
