@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ResourceGroup on unofficialism</title>
-    <link>https://unofficialism.info/tags/resourcegroup/</link>
+    <link>https://yokawasa.github.io/tags/resourcegroup/</link>
     <description>Recent content in ResourceGroup on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/resourcegroup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/resourcegroup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Insights REST APIを使ってAzure各リソースのメトリックを抽出する</title>
-      <link>https://unofficialism.info/posts/getting-resource-metrics-with-azure-insights-rest-api/</link>
+      <link>https://yokawasa.github.io/posts/getting-resource-metrics-with-azure-insights-rest-api/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/getting-resource-metrics-with-azure-insights-rest-api/</guid>
+      <guid>https://yokawasa.github.io/posts/getting-resource-metrics-with-azure-insights-rest-api/</guid>
       <description>ARMとAzure Insights API Azure上のさまざまなサービスのメトリック情報をAPI経由で取得したい。そういうことであればAzure Service Management APIを使えばいいじゃないかという声が聞こえてきそうなところだが実は既にこのやり方は時代遅れとなっていることをご存じだろうか？ 2014年5月ごろ？に登場したAzureの新しい考え方にResource、ResourceGroup、Azure Resource Managerというものがある。簡単な説明すると、Azure上のPaaSインスタンス、仮想マシンなどすべての管理可能な資源をリソース(Resource)とよばれる単位に細分化し、それらをグループ化したものがResourceGroup、そして全てのリソースはAzure Resource Manager（以下ARM）というもので管理可能になっている。そしてこのARMで管理可能な世界のリソース群に紐づくメトリックデータはAzure Insights APIで取得可能となっている。本記事ではさまざまなリソースの中でもWeb Appsに絞って、Azure Insights REST API (Metric)を使ってそのメトリックを取得する方法について紹介する。
 ARM Explorerでどのメトリックが取得可能なのか確認する ARM Explorer (https://resources.azure.com/) をご存じだろうか？　これはその名の通りAzure上の全てのリソース（ご利用のサブスクリプションに紐づく全てのリソース）のエクスプローラーであり、これを使うことでこのARM管理下の世界のすべてのリソースをエクスプローラービューで閲覧することができる。このARM Explorerで閲覧可能な各リソースの情報の中にmetricdefinitionsというものがあって、これにはそのリソースに対して指定可能なメトリックの種類やその定義情報などが格納されている。リソースのメトリック取得をする際は、まずはARM Explorerで目的のリソースのmetricdefinitionsから指定可能なメトリックの種類を把握してからAPIリクエストを組み立てていただければと思う。ARM Explorerを使って本記事で取得対象としているWeb Apps（ここではサイト名yoichikademoを対象）のmetricdefinitionsを閲覧しているのが以下のスクリーンショットになる。
 Azure Insights REST APIメトリック取得インターフェース Azure Insights APIには次のような(1)メトリック定義一覧の取得と(2)対象リソースのメトリック情報取得の2つのインターフェースがある。当然ながらメトリックの取得には(2)のインターフェースを使用する。

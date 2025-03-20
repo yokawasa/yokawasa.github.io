@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://unofficialism.info/sitemap.xml
+Sitemap: https://yokawasa.github.io/sitemap.xml

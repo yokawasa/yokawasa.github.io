@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AzureVNET on unofficialism</title>
-    <link>https://unofficialism.info/tags/azurevnet/</link>
+    <link>https://yokawasa.github.io/tags/azurevnet/</link>
     <description>Recent content in AzureVNET on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azurevnet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Aug 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/azurevnet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SOCKSプロキシを経由したAzure VNETプライベートリソースへのアクセス</title>
-      <link>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</link>
+      <link>https://yokawasa.github.io/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</guid>
+      <guid>https://yokawasa.github.io/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</guid>
       <description>UPDATED 2017-03-22: Added SOCKS Proxy Configuration for Internet Explorer
 外部からの接続（SSH、HTTPなど）を受け付けていないAzure 仮想ネットワーク(以下VNET)内のリソースにSOCKSプロキシを経由して外部からアクセスしましょうというお話。本記事ではAzure VNET内の外部からのアクセス許可していないVMへのSSHログインとHTTPサーバコンテンツへのブラウジングの2つの方法を紹介する。
 SOCKS(RFC1928) とはさまざまなアプリケーションが間にファイアーウォールを挟んでいても安全に快適にやり取りができるようにすることを目的として作られたプロトコルのことで、SOCKSプロキシはSOCKSプロトコルを受け取りファイアウォール内外との接続を可能にするものである。エンドポイントやNetwork Security Group (NSG)によりネットーワーク分離設定されたAzure VNET内のリソースに対して一時的に本来直接アクセス許可しないネットワークからアクセスが必要な状況はあるかと思う。そのような時に毎回設定変更で必要なプロトコル、アクセス先に対して穴をあけるのは非常に面倒であり、またサイト間VPN、ポイント対サイトVPNとなるとさらに手間がかかる。お手軽に、もしくは定常的ではないが一時的に内部リソースにアクセスしたい場合にSOCKSプロキシ経由でのアクセスを検討してみてはいかがだろうか。以下はSOCKSプロキシ経由によるAzure VNET内のプライベートリソースへのアクセスイメージである。

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ssh on unofficialism</title>
-    <link>https://unofficialism.info/tags/ssh/</link>
+    <link>https://yokawasa.github.io/tags/ssh/</link>
     <description>Recent content in Ssh on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Easy way to SSH into Azure Kubernetes Service cluster node VMs</title>
-      <link>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</link>
+      <link>https://yokawasa.github.io/posts/easy-way-ssh-into-aks-cluster-node/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</guid>
+      <guid>https://yokawasa.github.io/posts/easy-way-ssh-into-aks-cluster-node/</guid>
       <description>This is an article on how you can SSH into Azure Kubernetes Service (AKS) cluster node VMs using kubectl-plugin-ssh-jump.
 Motivation I wanted to SSH into Azure Kubernetes Service (AKS) cluster node VMs, then looking up azure docs I found a relevant page - Connect with SSH to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting. But when I first saw this procedure, I thought this was very troublesome. Lazy person like me couldn&amp;rsquo;t accept going thourgh all the steps just to SSH into AKS cluster nodes VMs.</description>
     </item>

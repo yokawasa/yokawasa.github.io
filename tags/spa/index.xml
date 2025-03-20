@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SPA on unofficialism</title>
-    <link>https://unofficialism.info/tags/spa/</link>
+    <link>https://yokawasa.github.io/tags/spa/</link>
     <description>Recent content in SPA on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/spa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/spa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Developing Full Managed Search Application in Azure</title>
-      <link>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</link>
+      <link>https://yokawasa.github.io/posts/building-full-text-search-application-using-azure-services/</link>
       <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</guid>
+      <guid>https://yokawasa.github.io/posts/building-full-text-search-application-using-azure-services/</guid>
       <description>これは9/29 Azure Web Seminar 「Azure サービスを活用して作るフルマネージドな全文検索アプリケーション」のフォローアップ記事です。なかなか暇ができず少々時間が経過してしまいました。
 Azure サービスを活用して作るフルマネージドな全文検索アプリケーション from Yoichi Kawasaki
 Sample Application &amp;amp; Source Code セミナーで紹介したサンプルアプリはAzure公式サイトに載せてある代表的なサービスのFAQデータを元にしたHTML/CSS/JavascriptによるQ＆Aナレジッジベース検索のシングルページアプリケーションです。検索エンジンにAzure Searchを使い、データソースにCosmos DBを使いAzure SearchのCosmosDB Indexerでクローリングする構成にしてます。ソースコードと設定手順は以下Githubプロジェクトにアップしてあります。もしバグや設定手順等でご質問があればGithubでIssue登録いただければ時間を見つけて対応させていただきます。

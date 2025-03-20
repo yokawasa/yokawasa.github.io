@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Microsoft on unofficialism</title>
-    <link>https://unofficialism.info/tags/microsoft/</link>
+    <link>https://yokawasa.github.io/tags/microsoft/</link>
     <description>Recent content in Microsoft on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My last day at Microsoft</title>
-      <link>https://unofficialism.info/posts/my-last-day-at-microsoft/</link>
+      <link>https://yokawasa.github.io/posts/my-last-day-at-microsoft/</link>
       <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/my-last-day-at-microsoft/</guid>
+      <guid>https://yokawasa.github.io/posts/my-last-day-at-microsoft/</guid>
       <description>Today is my last day at Microsoft. About 9 years and 2 months have passed since I joined MS. I&amp;rsquo;ve had wonderful years filled with various experiences on business.
 In the first 4 years, as FAST Search engineer &amp;amp; consultant, I specialized in Fast search and provided customers in Japan and sometimes in South East Asia &amp;amp; South Korea area with proactive consulting &amp;amp; support. For the next 3 years after that, as a part of Azure Solution Architect teams, I provided architectural guidance &amp;amp; design session, PoC and prototyping support, knowledge transfer trainings with Japanease enterprise customers, collaborating with Azure engineering teams, Azure sales teams and many other stakeholders.</description>
     </item>

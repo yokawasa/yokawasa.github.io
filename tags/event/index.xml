@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Event on unofficialism</title>
-    <link>https://unofficialism.info/tags/event/</link>
+    <link>https://yokawasa.github.io/tags/event/</link>
     <description>Recent content in Event on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/event/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/event/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My presentation at IstioCon 2022</title>
-      <link>https://unofficialism.info/posts/istiocon2022/</link>
+      <link>https://yokawasa.github.io/posts/istiocon2022/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/istiocon2022/</guid>
+      <guid>https://yokawasa.github.io/posts/istiocon2022/</guid>
       <description>I presented on Apri 28th (April 29th JST): &amp;ldquo;Accelerating ZOZOTOWN Modernization with Istio&amp;rdquo; at IstioCon 2022. It was an awesome experience for me to present for the global technology conference like IsitoCon.
 ⛵️Istio is a synonym of acceleration &amp;amp; modernization. Register for #IstioCon to learn about &amp;quot;Accelerating ZOZOTOWN Modernization process with #Istio&amp;quot; by @yokawasa 🤓👉 https://t.co/SWyXAsfqcO #Istio #CloudNative #ServiceMesh pic.twitter.com/BNyeLsAVHI
 &amp;mdash; Istio (@IstioMesh) April 25, 2022 You can find the slides for my presentation: https://speakerdeck.</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>GitHub Actions Article on Software Design magazine (2022/02 Issue)</title>
-      <link>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</link>
+      <link>https://yokawasa.github.io/posts/software-design-manazine-github-actions-article/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</guid>
+      <guid>https://yokawasa.github.io/posts/software-design-manazine-github-actions-article/</guid>
       <description> A Software Design 2022/02 Issue was published in Jan 18, 2022, in which I contributed the 2nd special feature article on CI/CD using GitHub Actions.
 『Software Design 2022年2月号』（技術評論社）/ Software Design 2022/02 Issue (gihyo)
 Gihyo Online Amazon </description>
@@ -31,20 +31,20 @@ Gihyo Online Amazon </description>
     
     <item>
       <title>College Roommate</title>
-      <link>https://unofficialism.info/posts/my-old-collage-roommate/</link>
+      <link>https://yokawasa.github.io/posts/my-old-collage-roommate/</link>
       <pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/my-old-collage-roommate/</guid>
+      <guid>https://yokawasa.github.io/posts/my-old-collage-roommate/</guid>
       <description>A scene at wedding ceremony of my old collage roommate
 Jan 18, 2020 at Brooklyn NY</description>
     </item>
     
     <item>
       <title>Visual Studio Code Textbook for programmer was published!</title>
-      <link>https://unofficialism.info/posts/visual-studio-code-textbook/</link>
+      <link>https://yokawasa.github.io/posts/visual-studio-code-textbook/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/visual-studio-code-textbook/</guid>
+      <guid>https://yokawasa.github.io/posts/visual-studio-code-textbook/</guid>
       <description>A book, I co-authored with @hoisjp and @_Dr_ASA, was recently published. Today I went to a bookstore to see if it was actually displayed. It was real!! 🎉🎉🎉
 『プログラマーのためのVisual Studio Codeの教科書』（マイナビ出版）/ Visual Studio Code textbooks for programmers
 Softcover version Kindle version </description>

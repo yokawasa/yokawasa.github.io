@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AzureSearch on unofficialism</title>
-    <link>https://unofficialism.info/tags/azuresearch/</link>
+    <link>https://yokawasa.github.io/tags/azuresearch/</link>
     <description>Recent content in AzureSearch on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azuresearch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/azuresearch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Developing Full Managed Search Application in Azure</title>
-      <link>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</link>
+      <link>https://yokawasa.github.io/posts/building-full-text-search-application-using-azure-services/</link>
       <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</guid>
+      <guid>https://yokawasa.github.io/posts/building-full-text-search-application-using-azure-services/</guid>
       <description>これは9/29 Azure Web Seminar 「Azure サービスを活用して作るフルマネージドな全文検索アプリケーション」のフォローアップ記事です。なかなか暇ができず少々時間が経過してしまいました。
 Azure サービスを活用して作るフルマネージドな全文検索アプリケーション from Yoichi Kawasaki
 Sample Application &amp;amp; Source Code セミナーで紹介したサンプルアプリはAzure公式サイトに載せてある代表的なサービスのFAQデータを元にしたHTML/CSS/JavascriptによるQ＆Aナレジッジベース検索のシングルページアプリケーションです。検索エンジンにAzure Searchを使い、データソースにCosmos DBを使いAzure SearchのCosmosDB Indexerでクローリングする構成にしてます。ソースコードと設定手順は以下Githubプロジェクトにアップしてあります。もしバグや設定手順等でご質問があればGithubでIssue登録いただければ時間を見つけて対応させていただきます。
@@ -24,10 +24,10 @@ AzureSearch.jsプロジェクトトップ＠Github デモアプリサイト Azur
     
     <item>
       <title>Azure Search Text Analyzer Tools - azure-search-ta</title>
-      <link>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</link>
+      <link>https://yokawasa.github.io/posts/azure-search-analyzer-test-with-azure-search-ta/</link>
       <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-search-analyzer-test-with-azure-search-ta/</guid>
       <description>Azure Searchのアナライザーによるテキスト解析結果を出力する（だけの）ツールを作ってみたのでここで紹介します。その名もazure-search-ta（ta=Test Analyzer）。中身はAzure SearchのAnalyzer APIの出力結果を整形して表示させていているだけの単純なものでありますが、Azure Searchの全文検索チューニングやキーワードにヒットしない原因調査をする際には役に立つと思ってます。「どうしてこのキーワードがひっかからないの？」を突き詰めるには最終的にアナライザのテキスト解析結果と突き合わせる必要があるのと、アナライザーを選択する際にテキスト解析が視覚化されていると判断しやすいだろうと。ツールは2種類で （１）Web UIツールと（２）コマンドラインツール
 Web UI Tool https://github.com/yokawasa/azure-search-ta
 インストールは超簡単。（１）Githubからazure-search-taをclone （２）azure-search-ta/ui 配下のファイルをPHPが動くWebサーバにコピー （３）analyze-api.phpをエディタで開いてお使いのAzure Searchカウント名とAzure Search API Adminキーの値を設定ください。あとはazure-search-ta-ui.htmlにアクセスいただければ上記のようなUIが出力されるはずです。なぜHTML/JSだけではなく間にPHPを挟んでいるのかについて、Azure SearchのAnalyze APIや管理系APIリクエストに位置付けられており、管理系APIはvia CORSでのリクエストを受け付けていないからである。
@@ -38,10 +38,10 @@ $ pip install --user azure-search-ta 次に、search.confにお使いのAzure Se
     
     <item>
       <title>Video OCR using Azure Media &amp; Cognitive</title>
-      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr/</link>
+      <link>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr/</link>
       <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr/</guid>
       <description>OCRとはOptical Character Recognitionの略で日本語にすると光学文字認識と訳されており、ざっくりと画像の中の文字をテキストに変換する技術のことを指す。テキストに変換されるということは勘が鋭い皆さんはお気づきだと思うが、テキストの全文検索であったり、テキストから音声への変換、さらには機械翻訳を使って多言語への変換といった展開が考えられる。そんな可能性を秘めたOCRであるが、ここではそのOCRの技術を使ってビデオファイルから抽出したテキストデータを元にビデオに字幕表示したり、動画中に表示される文字を全文検索をするデモを紹介したい。内容的には「Azure Media &amp;amp; Cognitiveデモ:Speech-To-Text」で紹介したデモのOCR版といったところ。
 demo site source code 主要テクノロジーと機能 Azure Media OCRメディアプロセッサによるテキスト抽出 このデモではAzure Media OCRメディアプロセッサー(MP)を使用してビデオファイル内のテキストコンテンツを検出してテキストファイルを生成している。OCRメディアプロセッサーは入力パラメータによりビデオ解析の挙動を調整することができる。主なパラメータとしては検索対象テキストの言語（日本語もサポート）、テキストの向き、サンプリングレート、ビデオフレーム内のテキスト検出対象のリージョンがあるが、本デモでの入力パラメータ（Video-OCR-Search-Python/src/ocr-detectregion.json）は以下の通り検索対象言語は日本語、1秒おきのサンプリングレート、テキスト検出対象のリージョンからビデオフレーム内の上部1/4を省く設定（検出対象をフレームトップから85 pixel以下を対象）にしている。
 { &amp;#34;Version&amp;#34;:&amp;#34;1.0&amp;#34;, &amp;#34;Options&amp;#34;: { &amp;#34;Language&amp;#34;:&amp;#34;Japanese&amp;#34;, &amp;#34;TimeInterval&amp;#34;:&amp;#34;00:00:01.000&amp;#34;, &amp;#34;DetectRegions&amp;#34;: [ {&amp;#34;Left&amp;#34;:&amp;#34;0&amp;#34;,&amp;#34;Top&amp;#34;:&amp;#34;85&amp;#34;,&amp;#34;Width&amp;#34;:&amp;#34;1280&amp;#34;,&amp;#34;Height&amp;#34;:&amp;#34;635&amp;#34;} ] } } そして、Azure Media OCRメディアプロセッサはビデオで検出された文字を下記のような表示時間に基づいてセグメント化された形で結果出力する。結果ファイルの完全版はこちら（azuresubs.json）を参照ください。
@@ -50,10 +50,10 @@ demo site source code 主要テクノロジーと機能 Azure Media OCRメディ
     
     <item>
       <title>Speech-To-Text with Azure Media &amp; Cognitive Services</title>
-      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</link>
+      <link>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</guid>
       <description>ビデオコンテンツを音声認識エンジンでテキスト化してそれを元にスピーチ検索するデモコンテンツを紹介したい。これは過去にde:code2016というマイクロソフトの開発者向けイベントで行ったブレイクアウトセッション「DEV-18: Azure Search Deep Dive」にて紹介したビデオコンテンツのスピーチ検索デモを簡略化して再利用しやすいものにしたものである。
 demo site source code 主要テクノロジーと機能 Azure Media Indexer 2 Previewによる音声からテキスト抽出 このデモではAzure Media Indexer 2 Preview メディア プロセッサー (MP)を使用してビデオコンテンツからテキストを抽出している。このAzure Media Indexer 2 Previewは自然言語処理(NLP)や音声認識エンジンを駆使してビデオコンテンツより字幕用データ（時間やテキスト）や検索可能にするためのメタデータを抽出することができる。Indexer 2という名前の通り前のバージョンであるAzure Media Indexerが存在するが、これと比較すると、Azure Media Indexer 2 Previewは、インデックス作成が高速化され、より多くの言語をサポートしていることが特徴である。2016年11月6日時点で英語、スペイン語、フランス語、ドイツ語、イタリア語、中国語、ポルトガル語、アラビア語などがサポートされている（残念ながら日本語はまだ未サポート）。
 下イメージはAzure Media Indexer 2 (Preview)で生成されるTTMLとWebVTTという代表的な字幕データフォーマット。
@@ -64,10 +64,10 @@ HTML5と字幕(Closed Caption) HTML5にはtrackタグエレメントを使って
     
     <item>
       <title>fluentd plugins for Microsoft Azure Services</title>
-      <link>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</link>
+      <link>https://yokawasa.github.io/posts/fluentd-plugins-for-microsoft-azure-services/</link>
       <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</guid>
+      <guid>https://yokawasa.github.io/posts/fluentd-plugins-for-microsoft-azure-services/</guid>
       <description>UPDATED:
 2016-12-10: Added fluent-plugin-azure-loganalytics to the list 2016-11-23: Added fluent-plugin-azurefunctions to the list Here is a list of fluentd plugins for Microsoft Azure Services.
 Plugin Name Target Azure Services Note fluent-plugin-azurestorage Blob Storage Azure Storate output plugin buffers logs in local file and upload them to Azure Storage periodicall fluent-plugin-azureeventhubs Event Hubs Azure Event Hubs buffered output plugin for Fluentd. Currently it supports only HTTPS (not AMQP) fluent-plugin-azuretables Azure Tables Fluent plugin to add event record into Azure Tables Storage fluent-plugin-azuresearch Azure Search Fluent plugin to add event record into Azure Search fluent-plugin-documentdb Cosmos DB Fluent plugin to add event record into Azure Cosmos DB fluent-plugin-azurefunctions Azure Functions Azure Functions (HTTP Trigger) output plugin for Fluentd.</description>
@@ -75,10 +75,10 @@ Plugin Name Target Azure Services Note fluent-plugin-azurestorage Blob Storage A
     
     <item>
       <title>DocumentDBをAzure Searchのデータソースとして利用する</title>
-      <link>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</link>
+      <link>https://yokawasa.github.io/posts/levelage-documentdb-as-azuresearch-datasource/</link>
       <pubDate>Sun, 28 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</guid>
+      <guid>https://yokawasa.github.io/posts/levelage-documentdb-as-azuresearch-datasource/</guid>
       <description>Azure Searchのインデックス更新方法には大きく分けてPUSHとPULLの２種類ある。PUSHは直接Indexing APIを使ってAzure SearchにコンテンツをPOSTして更新。PULLは特定データソースに対してポーリングして更新で、Azure Searchの場合、DocumentDBとSQL Databaseの2種類のデータソースを対象にワンタイムもしくは定期的なスケジュール実行が可能となっている。ここではDocumentDBをデータソースとしてインデックスを更新する方法を紹介する。
 サンプル構成と処理フローの説明 データソースにDocumentDBを利用する。データ「DOCUMENTDB PYTHON SDKとFEEDPARSERで作る簡易クローラー」においてクローリングされDocumentDBに保存されたブログ記事データを使用する。そしてDocumentDBを定期的にポーリングを行い更新があったレコードのみをAzure Searchインデックスに反映するためにDocumentDBインデクサーを設定する。全体構成としては下記の通りとなる。
 DocumentDBと更新先検索インデックスのフィールドのマッピング DocumentDBをデータソースとしてAzure Searchインデックスに更新を行うためDocumentDBの参照先コレクションのフィールドと更新先Azure Searchインデックスのフィールドをマッピングを行う。マッピングはデータソース定義中のDocumentDB参照用Queryで行う。Azure SearchインデックスにインジェストするフィールドをDocumentDBのSELECTクエリー指定するのだが、Azure SearchとDocumentDBのフィールドが異なる場合は下図のようにSELECT &amp;ldquo;Docdbフィールド名&amp;rdquo; AS &amp;ldquo;Searchフィールド名&amp;quot;でインジェスト先フィールド名を指定する。データソース定義については後述の設定内容を確認ください。
@@ -90,10 +90,10 @@ credential.connectionStringで接続先DocumentDB文字列と対象データベ�
     
     <item>
       <title>Wikipediaデータベースを元にAzure Searchインデックスを生成する</title>
-      <link>https://unofficialism.info/posts/putting-wikipedia-data-into-azure-search/</link>
+      <link>https://yokawasa.github.io/posts/putting-wikipedia-data-into-azure-search/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/putting-wikipedia-data-into-azure-search/</guid>
+      <guid>https://yokawasa.github.io/posts/putting-wikipedia-data-into-azure-search/</guid>
       <description>Wikipediaのコンテンツは Creative Commons Licenseおよび GNU Free Documentation Licenseの下にライセンスされておりWikipedia財団は再配布や再利用のために惜しげもなくこの貴重なデータベースのダンプファイル（XMLファイル）を一般提供している。全文検索の検証で大量のデータが必要なときこのWikipediaのような生きたデータを使えるのは非常に有りがたい。これはこのWikipediaデータベースダンプ（日本語）を元にAzure Searchインデックスを生成してみましょうというお話。
 Wikipedia:データベースダウンロード ウィキメディア財団による全プロジェクトのデータベース・ダンプ Wikipedia日本語版のダンプデータレポジトリ(日本語最新版) 利用するWikipedia XMLファイルとその定義 最新版日本語レポジトリには複数のXMLファイルが用意されているがここでは全ページのタイトル、ディスクリプションといった要約データを集約しているファイルjawiki-latest-abstract.xmlを利用する。XMLのフォーマットは次のとおり。この中からtitle, url, abstractを抽出してAzure Searchに投入する。
 &amp;lt;doc&amp;gt; &amp;lt;title&amp;gt;Wikipedia: 自然言語&amp;lt;/title&amp;gt; &amp;lt;url&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E&amp;lt;/url&amp;gt; &amp;lt;abstract&amp;gt;自然言語（しぜんげんご、）とは、人間によって日常の意思疎通のために用いられる、文化的背景を持って自然に発展してきた記号体系である。大別すると音声に&amp;gt;よる話し言葉と文字や記号として書かれる書き言葉がある。&amp;lt;/abstract&amp;gt; &amp;lt;links&amp;gt; &amp;lt;sublink linktype=&amp;#34;nav&amp;#34;&amp;gt;&amp;lt;anchor&amp;gt;概要&amp;lt;/anchor&amp;gt;&amp;lt;link&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E#.E6.A6.82.E8.A6.81&amp;lt;/link&amp;gt;&amp;lt;/sublink&amp;gt; &amp;lt;sublink linktype=&amp;#34;nav&amp;#34;&amp;gt;&amp;lt;anchor&amp;gt;関連項目&amp;lt;/anchor&amp;gt;&amp;lt;link&amp;gt;http://ja.wikipedia.org/wiki/%E8%87%AA%E7%84%B6%E8%A8%80%E8%AA%9E#.E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE&amp;lt;/link&amp;gt;&amp;lt;/sublink&amp;gt; &amp;lt;/links&amp;gt; &amp;lt;/doc&amp;gt; 尚、実際にダウンロードしてみるとわかると思うがこのファイルはサイズが比較的大きく集約されているドキュメント数も実に多い。カウントしてみたところ現時点（2015/06/09）で969541　件あった。Azure Searchの料金プランのうちFreeプランは最大ドキュメント数が10,000であることからここで利用する料金プランはFreeではなく標準プランを選択する必要がある。
@@ -103,10 +103,10 @@ Index Schema インデックス名はwikipedia、フィールドはキーフィ�
     
     <item>
       <title>cUrlコマンドで始める簡単Azure Search</title>
-      <link>https://unofficialism.info/posts/getting-started-azure-search-with-curl/</link>
+      <link>https://yokawasa.github.io/posts/getting-started-azure-search-with-curl/</link>
       <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/getting-started-azure-search-with-curl/</guid>
+      <guid>https://yokawasa.github.io/posts/getting-started-azure-search-with-curl/</guid>
       <description>cUrlはUNIX/Linux系では有名なURLを使ったデータ送受信コマンドで手軽にREST系処理を実行するときにとても重宝している。そんなcUrlコマンドを使ってAzure Searchをお手軽に使ってみようというお話。
 はじめに まだの人はAzureポータルよりAzure Searchサービスを作成してください。「ポータルでの Azure Search サービスの作成」に優しく手順が書かれているのでご参考に。料金プランは無料と標準プランがあるがテストであれば無料プランで十分。まずはAPIキーまで取得ください。API実行のためにはAPIキーが必要。
 cURLでSearch Service REST APIを実行 Search Service REST APIの中からいくつか代表的なAPIをピックアップしてcUrlでクエリを組み立ててみる。ここではインデックス新規作成、そこにいくつかドキュメントを追加、そしてドキュメントを検索する・・といった基本的なシナリオを実行する。ポイントとしてはcUrlの-Hオプションでヘッダ定義、-XオプションでHTTPメソッド指定、-dオプションでリクエストボディを指定する・・・といったところ。尚、下記サンプルでは現時点（2015-06-05）で最新のAPIバージョン2015-02-28-Previewを使用している。

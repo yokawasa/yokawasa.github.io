@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>TrafficManager on unofficialism</title>
-    <link>https://unofficialism.info/tags/trafficmanager/</link>
+    <link>https://yokawasa.github.io/tags/trafficmanager/</link>
     <description>Recent content in TrafficManager on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/trafficmanager/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/trafficmanager/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Controlling Azure Media Services traffic with Traffic Manager</title>
-      <link>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</link>
+      <link>https://yokawasa.github.io/posts/controlling-azure-media-services-traffic-with-traffic-manager/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</guid>
+      <guid>https://yokawasa.github.io/posts/controlling-azure-media-services-traffic-with-traffic-manager/</guid>
       <description>This is an article on how you can achieve Azure Media Services (AMS) streaming traffic distribution with Traffic Manager.
 The process for a client to find target AMS streaming endpoints The figure shows how a client find target AMS streaming endpoints with Traffic Manager and requests from video players are distributed to streaming endpoints in AMS:
 When AMS endpoints are added to an Azure Traffic Manager profile, Azure Traffic Manager keeps track of the status of the endpoints (running, stopped, or deleted) so that it can decide which of those endpoints should receive traffic.</description>
@@ -20,10 +20,10 @@ When AMS endpoints are added to an Azure Traffic Manager profile, Azure Traffic 
     
     <item>
       <title>今一度Traffic Managerのエンドポイント監視について</title>
-      <link>https://unofficialism.info/posts/traffic-manager-endpoint-monitoring/</link>
+      <link>https://yokawasa.github.io/posts/traffic-manager-endpoint-monitoring/</link>
       <pubDate>Sun, 29 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/traffic-manager-endpoint-monitoring/</guid>
+      <guid>https://yokawasa.github.io/posts/traffic-manager-endpoint-monitoring/</guid>
       <description>Azureが提供するDNSによるトラフィックルーティングサービスであるTraffic Managerについて、既にAzure利用ユーザに使い尽くされて新鮮味に欠けるサービスではあるものの、そのエンドポイント監視はTraffic Managerを扱う上でとても重要なことなので今一度そのルールについて整理したい。
 Traffic managerの実態はエンドポイントの監視＋ルーティングを行うDNSサービスである。以下digの結果を見ていただいてわかる通りyoichika-demo1.trafficmanager.netという外向きの名前に対してこの時点ではwebappdemo3.cloudapp.netがCNAMEされている。Traffic Managerは利用ユーザが設定したエンドポイントを監視し、その結果に応じて適切なルーティングを行う。ルーティング方法にはフェールオーバー、ラウンドロビン、パフォーマンスの3通りがある。これについて詳しくは「Traffic Managerのルーティング方法」を参照いただきたい。
 ; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4.3ubuntu0.1-Ubuntu &amp;lt;&amp;lt;&amp;gt;&amp;gt; yoichika-demo1.trafficmanager.net +noall +answer ;; global options: +cmd yoichika-demo1.trafficmanager.net. 30 IN CNAME webappdemo3.cloudapp.net. webappdemo3.cloudapp.net. 60 IN A 70.37.93.167 次に肝心のエンドポイントの監視について「Traffic Manager の監視について」の監視シーケンスを使って要点を整理する。

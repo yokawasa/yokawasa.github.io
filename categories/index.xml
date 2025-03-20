@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on unofficialism</title>
-    <link>https://unofficialism.info/categories/</link>
+    <link>https://yokawasa.github.io/categories/</link>
     <description>Recent content in Categories on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure</title>
-      <link>https://unofficialism.info/categories/azure/</link>
+      <link>https://yokawasa.github.io/categories/azure/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/categories/azure/</guid>
+      <guid>https://yokawasa.github.io/categories/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://unofficialism.info/categories/kubernetes/</link>
+      <link>https://yokawasa.github.io/categories/kubernetes/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/categories/kubernetes/</guid>
+      <guid>https://yokawasa.github.io/categories/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>English</title>
-      <link>https://unofficialism.info/categories/english/</link>
+      <link>https://yokawasa.github.io/categories/english/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/categories/english/</guid>
+      <guid>https://yokawasa.github.io/categories/english/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TIPS</title>
-      <link>https://unofficialism.info/categories/tips/</link>
+      <link>https://yokawasa.github.io/categories/tips/</link>
       <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/categories/tips/</guid>
+      <guid>https://yokawasa.github.io/categories/tips/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Announcement</title>
-      <link>https://unofficialism.info/categories/announcement/</link>
+      <link>https://yokawasa.github.io/categories/announcement/</link>
       <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/categories/announcement/</guid>
+      <guid>https://yokawasa.github.io/categories/announcement/</guid>
       <description></description>
     </item>
     

@@ -2,926 +2,926 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on unofficialism</title>
-    <link>https://unofficialism.info/tags/</link>
+    <link>https://yokawasa.github.io/tags/</link>
     <description>Recent content in Tags on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>https://unofficialism.info/tags/docker/</link>
+      <link>https://yokawasa.github.io/tags/docker/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/docker/</guid>
+      <guid>https://yokawasa.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Finch</title>
-      <link>https://unofficialism.info/tags/finch/</link>
+      <link>https://yokawasa.github.io/tags/finch/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/finch/</guid>
+      <guid>https://yokawasa.github.io/tags/finch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rails</title>
-      <link>https://unofficialism.info/tags/rails/</link>
+      <link>https://yokawasa.github.io/tags/rails/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/rails/</guid>
+      <guid>https://yokawasa.github.io/tags/rails/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Event</title>
-      <link>https://unofficialism.info/tags/event/</link>
+      <link>https://yokawasa.github.io/tags/event/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/event/</guid>
+      <guid>https://yokawasa.github.io/tags/event/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Istio</title>
-      <link>https://unofficialism.info/tags/istio/</link>
+      <link>https://yokawasa.github.io/tags/istio/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/istio/</guid>
+      <guid>https://yokawasa.github.io/tags/istio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vscode</title>
-      <link>https://unofficialism.info/tags/vscode/</link>
+      <link>https://yokawasa.github.io/tags/vscode/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/vscode/</guid>
+      <guid>https://yokawasa.github.io/tags/vscode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Krew-Plugin</title>
-      <link>https://unofficialism.info/tags/krew-plugin/</link>
+      <link>https://yokawasa.github.io/tags/krew-plugin/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/krew-plugin/</guid>
+      <guid>https://yokawasa.github.io/tags/krew-plugin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubectl</title>
-      <link>https://unofficialism.info/tags/kubectl/</link>
+      <link>https://yokawasa.github.io/tags/kubectl/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/kubectl/</guid>
+      <guid>https://yokawasa.github.io/tags/kubectl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubectl-Plugins</title>
-      <link>https://unofficialism.info/tags/kubectl-plugins/</link>
+      <link>https://yokawasa.github.io/tags/kubectl-plugins/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/kubectl-plugins/</guid>
+      <guid>https://yokawasa.github.io/tags/kubectl-plugins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://unofficialism.info/tags/kubernetes/</link>
+      <link>https://yokawasa.github.io/tags/kubernetes/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/kubernetes/</guid>
+      <guid>https://yokawasa.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Socks5</title>
-      <link>https://unofficialism.info/tags/socks5/</link>
+      <link>https://yokawasa.github.io/tags/socks5/</link>
       <pubDate>Mon, 08 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/socks5/</guid>
+      <guid>https://yokawasa.github.io/tags/socks5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Conftest</title>
-      <link>https://unofficialism.info/tags/conftest/</link>
+      <link>https://yokawasa.github.io/tags/conftest/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/conftest/</guid>
+      <guid>https://yokawasa.github.io/tags/conftest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitHubActions</title>
-      <link>https://unofficialism.info/tags/githubactions/</link>
+      <link>https://yokawasa.github.io/tags/githubactions/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/githubactions/</guid>
+      <guid>https://yokawasa.github.io/tags/githubactions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Helm</title>
-      <link>https://unofficialism.info/tags/helm/</link>
+      <link>https://yokawasa.github.io/tags/helm/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/helm/</guid>
+      <guid>https://yokawasa.github.io/tags/helm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubeval</title>
-      <link>https://unofficialism.info/tags/kubeval/</link>
+      <link>https://yokawasa.github.io/tags/kubeval/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/kubeval/</guid>
+      <guid>https://yokawasa.github.io/tags/kubeval/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kustomize</title>
-      <link>https://unofficialism.info/tags/kustomize/</link>
+      <link>https://yokawasa.github.io/tags/kustomize/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/kustomize/</guid>
+      <guid>https://yokawasa.github.io/tags/kustomize/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rancher</title>
-      <link>https://unofficialism.info/tags/rancher/</link>
+      <link>https://yokawasa.github.io/tags/rancher/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/rancher/</guid>
+      <guid>https://yokawasa.github.io/tags/rancher/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Yq</title>
-      <link>https://unofficialism.info/tags/yq/</link>
+      <link>https://yokawasa.github.io/tags/yq/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/yq/</guid>
+      <guid>https://yokawasa.github.io/tags/yq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sqlcheck</title>
-      <link>https://unofficialism.info/tags/sqlcheck/</link>
+      <link>https://yokawasa.github.io/tags/sqlcheck/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/sqlcheck/</guid>
+      <guid>https://yokawasa.github.io/tags/sqlcheck/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Static-Analysis</title>
-      <link>https://unofficialism.info/tags/static-analysis/</link>
+      <link>https://yokawasa.github.io/tags/static-analysis/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/static-analysis/</guid>
+      <guid>https://yokawasa.github.io/tags/static-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Career</title>
-      <link>https://unofficialism.info/tags/career/</link>
+      <link>https://yokawasa.github.io/tags/career/</link>
       <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/career/</guid>
+      <guid>https://yokawasa.github.io/tags/career/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft</title>
-      <link>https://unofficialism.info/tags/microsoft/</link>
+      <link>https://yokawasa.github.io/tags/microsoft/</link>
       <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/microsoft/</guid>
+      <guid>https://yokawasa.github.io/tags/microsoft/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azping</title>
-      <link>https://unofficialism.info/tags/azping/</link>
+      <link>https://yokawasa.github.io/tags/azping/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azping/</guid>
+      <guid>https://yokawasa.github.io/tags/azping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure</title>
-      <link>https://unofficialism.info/tags/azure/</link>
+      <link>https://yokawasa.github.io/tags/azure/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azure/</guid>
+      <guid>https://yokawasa.github.io/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ping</title>
-      <link>https://unofficialism.info/tags/ping/</link>
+      <link>https://yokawasa.github.io/tags/ping/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/ping/</guid>
+      <guid>https://yokawasa.github.io/tags/ping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CKA</title>
-      <link>https://unofficialism.info/tags/cka/</link>
+      <link>https://yokawasa.github.io/tags/cka/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/cka/</guid>
+      <guid>https://yokawasa.github.io/tags/cka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CKAD</title>
-      <link>https://unofficialism.info/tags/ckad/</link>
+      <link>https://yokawasa.github.io/tags/ckad/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/ckad/</guid>
+      <guid>https://yokawasa.github.io/tags/ckad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CNCF</title>
-      <link>https://unofficialism.info/tags/cncf/</link>
+      <link>https://yokawasa.github.io/tags/cncf/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/cncf/</guid>
+      <guid>https://yokawasa.github.io/tags/cncf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure-Kubernetes-Services</title>
-      <link>https://unofficialism.info/tags/azure-kubernetes-services/</link>
+      <link>https://yokawasa.github.io/tags/azure-kubernetes-services/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azure-kubernetes-services/</guid>
+      <guid>https://yokawasa.github.io/tags/azure-kubernetes-services/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubectl-Plugin</title>
-      <link>https://unofficialism.info/tags/kubectl-plugin/</link>
+      <link>https://yokawasa.github.io/tags/kubectl-plugin/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/kubectl-plugin/</guid>
+      <guid>https://yokawasa.github.io/tags/kubectl-plugin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ssh</title>
-      <link>https://unofficialism.info/tags/ssh/</link>
+      <link>https://yokawasa.github.io/tags/ssh/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/ssh/</guid>
+      <guid>https://yokawasa.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker-Compose</title>
-      <link>https://unofficialism.info/tags/docker-compose/</link>
+      <link>https://yokawasa.github.io/tags/docker-compose/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/docker-compose/</guid>
+      <guid>https://yokawasa.github.io/tags/docker-compose/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Envoy</title>
-      <link>https://unofficialism.info/tags/envoy/</link>
+      <link>https://yokawasa.github.io/tags/envoy/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/envoy/</guid>
+      <guid>https://yokawasa.github.io/tags/envoy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Envoyproxy</title>
-      <link>https://unofficialism.info/tags/envoyproxy/</link>
+      <link>https://yokawasa.github.io/tags/envoyproxy/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/envoyproxy/</guid>
+      <guid>https://yokawasa.github.io/tags/envoyproxy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Servicemesh</title>
-      <link>https://unofficialism.info/tags/servicemesh/</link>
+      <link>https://yokawasa.github.io/tags/servicemesh/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/servicemesh/</guid>
+      <guid>https://yokawasa.github.io/tags/servicemesh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Functions</title>
-      <link>https://unofficialism.info/tags/azure-functions/</link>
+      <link>https://yokawasa.github.io/tags/azure-functions/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azure-functions/</guid>
+      <guid>https://yokawasa.github.io/tags/azure-functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://unofficialism.info/tags/python/</link>
+      <link>https://yokawasa.github.io/tags/python/</link>
       <pubDate>Tue, 25 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/python/</guid>
+      <guid>https://yokawasa.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rbac</title>
-      <link>https://unofficialism.info/tags/rbac/</link>
+      <link>https://yokawasa.github.io/tags/rbac/</link>
       <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/rbac/</guid>
+      <guid>https://yokawasa.github.io/tags/rbac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jekyll</title>
-      <link>https://unofficialism.info/tags/jekyll/</link>
+      <link>https://yokawasa.github.io/tags/jekyll/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/jekyll/</guid>
+      <guid>https://yokawasa.github.io/tags/jekyll/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wordpress</title>
-      <link>https://unofficialism.info/tags/wordpress/</link>
+      <link>https://yokawasa.github.io/tags/wordpress/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/wordpress/</guid>
+      <guid>https://yokawasa.github.io/tags/wordpress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AKS</title>
-      <link>https://unofficialism.info/tags/aks/</link>
+      <link>https://yokawasa.github.io/tags/aks/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/aks/</guid>
+      <guid>https://yokawasa.github.io/tags/aks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Container Instances</title>
-      <link>https://unofficialism.info/tags/azure-container-instances/</link>
+      <link>https://yokawasa.github.io/tags/azure-container-instances/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azure-container-instances/</guid>
+      <guid>https://yokawasa.github.io/tags/azure-container-instances/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Container</title>
-      <link>https://unofficialism.info/tags/container/</link>
+      <link>https://yokawasa.github.io/tags/container/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/container/</guid>
+      <guid>https://yokawasa.github.io/tags/container/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Open Service Broker</title>
-      <link>https://unofficialism.info/tags/open-service-broker/</link>
+      <link>https://yokawasa.github.io/tags/open-service-broker/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/open-service-broker/</guid>
+      <guid>https://yokawasa.github.io/tags/open-service-broker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureMediaServices</title>
-      <link>https://unofficialism.info/tags/azuremediaservices/</link>
+      <link>https://yokawasa.github.io/tags/azuremediaservices/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azuremediaservices/</guid>
+      <guid>https://yokawasa.github.io/tags/azuremediaservices/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Resiliency</title>
-      <link>https://unofficialism.info/tags/resiliency/</link>
+      <link>https://yokawasa.github.io/tags/resiliency/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/resiliency/</guid>
+      <guid>https://yokawasa.github.io/tags/resiliency/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TrafficManager</title>
-      <link>https://unofficialism.info/tags/trafficmanager/</link>
+      <link>https://yokawasa.github.io/tags/trafficmanager/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/trafficmanager/</guid>
+      <guid>https://yokawasa.github.io/tags/trafficmanager/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureDiagnostics</title>
-      <link>https://unofficialism.info/tags/azurediagnostics/</link>
+      <link>https://yokawasa.github.io/tags/azurediagnostics/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azurediagnostics/</guid>
+      <guid>https://yokawasa.github.io/tags/azurediagnostics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Beats</title>
-      <link>https://unofficialism.info/tags/beats/</link>
+      <link>https://yokawasa.github.io/tags/beats/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/beats/</guid>
+      <guid>https://yokawasa.github.io/tags/beats/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elasticsearch</title>
-      <link>https://unofficialism.info/tags/elasticsearch/</link>
+      <link>https://yokawasa.github.io/tags/elasticsearch/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/elasticsearch/</guid>
+      <guid>https://yokawasa.github.io/tags/elasticsearch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ElasticStack</title>
-      <link>https://unofficialism.info/tags/elasticstack/</link>
+      <link>https://yokawasa.github.io/tags/elasticstack/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/elasticstack/</guid>
+      <guid>https://yokawasa.github.io/tags/elasticstack/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Logstash</title>
-      <link>https://unofficialism.info/tags/logstash/</link>
+      <link>https://yokawasa.github.io/tags/logstash/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/logstash/</guid>
+      <guid>https://yokawasa.github.io/tags/logstash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureFunctions</title>
-      <link>https://unofficialism.info/tags/azurefunctions/</link>
+      <link>https://yokawasa.github.io/tags/azurefunctions/</link>
       <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azurefunctions/</guid>
+      <guid>https://yokawasa.github.io/tags/azurefunctions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Serverless</title>
-      <link>https://unofficialism.info/tags/serverless/</link>
+      <link>https://yokawasa.github.io/tags/serverless/</link>
       <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/serverless/</guid>
+      <guid>https://yokawasa.github.io/tags/serverless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureSearch</title>
-      <link>https://unofficialism.info/tags/azuresearch/</link>
+      <link>https://yokawasa.github.io/tags/azuresearch/</link>
       <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azuresearch/</guid>
+      <guid>https://yokawasa.github.io/tags/azuresearch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CosmosDB</title>
-      <link>https://unofficialism.info/tags/cosmosdb/</link>
+      <link>https://yokawasa.github.io/tags/cosmosdb/</link>
       <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/cosmosdb/</guid>
+      <guid>https://yokawasa.github.io/tags/cosmosdb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DocumentDB</title>
-      <link>https://unofficialism.info/tags/documentdb/</link>
+      <link>https://yokawasa.github.io/tags/documentdb/</link>
       <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/documentdb/</guid>
+      <guid>https://yokawasa.github.io/tags/documentdb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Javascript</title>
-      <link>https://unofficialism.info/tags/javascript/</link>
+      <link>https://yokawasa.github.io/tags/javascript/</link>
       <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/javascript/</guid>
+      <guid>https://yokawasa.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SPA</title>
-      <link>https://unofficialism.info/tags/spa/</link>
+      <link>https://yokawasa.github.io/tags/spa/</link>
       <pubDate>Sun, 22 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/spa/</guid>
+      <guid>https://yokawasa.github.io/tags/spa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Analyzer</title>
-      <link>https://unofficialism.info/tags/analyzer/</link>
+      <link>https://yokawasa.github.io/tags/analyzer/</link>
       <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/analyzer/</guid>
+      <guid>https://yokawasa.github.io/tags/analyzer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Openssh</title>
-      <link>https://unofficialism.info/tags/openssh/</link>
+      <link>https://yokawasa.github.io/tags/openssh/</link>
       <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/openssh/</guid>
+      <guid>https://yokawasa.github.io/tags/openssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ruby</title>
-      <link>https://unofficialism.info/tags/ruby/</link>
+      <link>https://yokawasa.github.io/tags/ruby/</link>
       <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/ruby/</guid>
+      <guid>https://yokawasa.github.io/tags/ruby/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureMediaAnalytics</title>
-      <link>https://unofficialism.info/tags/azuremediaanalytics/</link>
+      <link>https://yokawasa.github.io/tags/azuremediaanalytics/</link>
       <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azuremediaanalytics/</guid>
+      <guid>https://yokawasa.github.io/tags/azuremediaanalytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CognitiveServices</title>
-      <link>https://unofficialism.info/tags/cognitiveservices/</link>
+      <link>https://yokawasa.github.io/tags/cognitiveservices/</link>
       <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/cognitiveservices/</guid>
+      <guid>https://yokawasa.github.io/tags/cognitiveservices/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fluent-Plugin-Azurefunctions</title>
-      <link>https://unofficialism.info/tags/fluent-plugin-azurefunctions/</link>
+      <link>https://yokawasa.github.io/tags/fluent-plugin-azurefunctions/</link>
       <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/fluent-plugin-azurefunctions/</guid>
+      <guid>https://yokawasa.github.io/tags/fluent-plugin-azurefunctions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fluentd</title>
-      <link>https://unofficialism.info/tags/fluentd/</link>
+      <link>https://yokawasa.github.io/tags/fluentd/</link>
       <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/fluentd/</guid>
+      <guid>https://yokawasa.github.io/tags/fluentd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OCR</title>
-      <link>https://unofficialism.info/tags/ocr/</link>
+      <link>https://yokawasa.github.io/tags/ocr/</link>
       <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/ocr/</guid>
+      <guid>https://yokawasa.github.io/tags/ocr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureMediaIndexer</title>
-      <link>https://unofficialism.info/tags/azuremediaindexer/</link>
+      <link>https://yokawasa.github.io/tags/azuremediaindexer/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azuremediaindexer/</guid>
+      <guid>https://yokawasa.github.io/tags/azuremediaindexer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Speech-to-Text</title>
-      <link>https://unofficialism.info/tags/speech-to-text/</link>
+      <link>https://yokawasa.github.io/tags/speech-to-text/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/speech-to-text/</guid>
+      <guid>https://yokawasa.github.io/tags/speech-to-text/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Embulk</title>
-      <link>https://unofficialism.info/tags/embulk/</link>
+      <link>https://yokawasa.github.io/tags/embulk/</link>
       <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/embulk/</guid>
+      <guid>https://yokawasa.github.io/tags/embulk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fluent-Plugin-Documentdb</title>
-      <link>https://unofficialism.info/tags/fluent-plugin-documentdb/</link>
+      <link>https://yokawasa.github.io/tags/fluent-plugin-documentdb/</link>
       <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/fluent-plugin-documentdb/</guid>
+      <guid>https://yokawasa.github.io/tags/fluent-plugin-documentdb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureBlobStorage</title>
-      <link>https://unofficialism.info/tags/azureblobstorage/</link>
+      <link>https://yokawasa.github.io/tags/azureblobstorage/</link>
       <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azureblobstorage/</guid>
+      <guid>https://yokawasa.github.io/tags/azureblobstorage/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureTables</title>
-      <link>https://unofficialism.info/tags/azuretables/</link>
+      <link>https://yokawasa.github.io/tags/azuretables/</link>
       <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azuretables/</guid>
+      <guid>https://yokawasa.github.io/tags/azuretables/</guid>
       <description></description>
     </item>
     
     <item>
       <title>EventHubs</title>
-      <link>https://unofficialism.info/tags/eventhubs/</link>
+      <link>https://yokawasa.github.io/tags/eventhubs/</link>
       <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/eventhubs/</guid>
+      <guid>https://yokawasa.github.io/tags/eventhubs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LogAnalytics</title>
-      <link>https://unofficialism.info/tags/loganalytics/</link>
+      <link>https://yokawasa.github.io/tags/loganalytics/</link>
       <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/loganalytics/</guid>
+      <guid>https://yokawasa.github.io/tags/loganalytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Patents</title>
-      <link>https://unofficialism.info/tags/patents/</link>
+      <link>https://yokawasa.github.io/tags/patents/</link>
       <pubDate>Wed, 23 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/patents/</guid>
+      <guid>https://yokawasa.github.io/tags/patents/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ARM</title>
-      <link>https://unofficialism.info/tags/arm/</link>
+      <link>https://yokawasa.github.io/tags/arm/</link>
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/arm/</guid>
+      <guid>https://yokawasa.github.io/tags/arm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureCLI</title>
-      <link>https://unofficialism.info/tags/azurecli/</link>
+      <link>https://yokawasa.github.io/tags/azurecli/</link>
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azurecli/</guid>
+      <guid>https://yokawasa.github.io/tags/azurecli/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kibana</title>
-      <link>https://unofficialism.info/tags/kibana/</link>
+      <link>https://yokawasa.github.io/tags/kibana/</link>
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/kibana/</guid>
+      <guid>https://yokawasa.github.io/tags/kibana/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DNS</title>
-      <link>https://unofficialism.info/tags/dns/</link>
+      <link>https://yokawasa.github.io/tags/dns/</link>
       <pubDate>Sun, 29 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/dns/</guid>
+      <guid>https://yokawasa.github.io/tags/dns/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CSharp</title>
-      <link>https://unofficialism.info/tags/csharp/</link>
+      <link>https://yokawasa.github.io/tags/csharp/</link>
       <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/csharp/</guid>
+      <guid>https://yokawasa.github.io/tags/csharp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ILMerge</title>
-      <link>https://unofficialism.info/tags/ilmerge/</link>
+      <link>https://yokawasa.github.io/tags/ilmerge/</link>
       <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/ilmerge/</guid>
+      <guid>https://yokawasa.github.io/tags/ilmerge/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VisualStduio</title>
-      <link>https://unofficialism.info/tags/visualstduio/</link>
+      <link>https://yokawasa.github.io/tags/visualstduio/</link>
       <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/visualstduio/</guid>
+      <guid>https://yokawasa.github.io/tags/visualstduio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureVNET</title>
-      <link>https://unofficialism.info/tags/azurevnet/</link>
+      <link>https://yokawasa.github.io/tags/azurevnet/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azurevnet/</guid>
+      <guid>https://yokawasa.github.io/tags/azurevnet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chrome</title>
-      <link>https://unofficialism.info/tags/chrome/</link>
+      <link>https://yokawasa.github.io/tags/chrome/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/chrome/</guid>
+      <guid>https://yokawasa.github.io/tags/chrome/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Firefox</title>
-      <link>https://unofficialism.info/tags/firefox/</link>
+      <link>https://yokawasa.github.io/tags/firefox/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/firefox/</guid>
+      <guid>https://yokawasa.github.io/tags/firefox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SOCKS</title>
-      <link>https://unofficialism.info/tags/socks/</link>
+      <link>https://yokawasa.github.io/tags/socks/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/socks/</guid>
+      <guid>https://yokawasa.github.io/tags/socks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VPN</title>
-      <link>https://unofficialism.info/tags/vpn/</link>
+      <link>https://yokawasa.github.io/tags/vpn/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/vpn/</guid>
+      <guid>https://yokawasa.github.io/tags/vpn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>API</title>
-      <link>https://unofficialism.info/tags/api/</link>
+      <link>https://yokawasa.github.io/tags/api/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/api/</guid>
+      <guid>https://yokawasa.github.io/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AppServices</title>
-      <link>https://unofficialism.info/tags/appservices/</link>
+      <link>https://yokawasa.github.io/tags/appservices/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/appservices/</guid>
+      <guid>https://yokawasa.github.io/tags/appservices/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AzureInsights</title>
-      <link>https://unofficialism.info/tags/azureinsights/</link>
+      <link>https://yokawasa.github.io/tags/azureinsights/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/azureinsights/</guid>
+      <guid>https://yokawasa.github.io/tags/azureinsights/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Metrics</title>
-      <link>https://unofficialism.info/tags/metrics/</link>
+      <link>https://yokawasa.github.io/tags/metrics/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/metrics/</guid>
+      <guid>https://yokawasa.github.io/tags/metrics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Monitoring</title>
-      <link>https://unofficialism.info/tags/monitoring/</link>
+      <link>https://yokawasa.github.io/tags/monitoring/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/monitoring/</guid>
+      <guid>https://yokawasa.github.io/tags/monitoring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ResourceGroup</title>
-      <link>https://unofficialism.info/tags/resourcegroup/</link>
+      <link>https://yokawasa.github.io/tags/resourcegroup/</link>
       <pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/resourcegroup/</guid>
+      <guid>https://yokawasa.github.io/tags/resourcegroup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Crawler</title>
-      <link>https://unofficialism.info/tags/crawler/</link>
+      <link>https://yokawasa.github.io/tags/crawler/</link>
       <pubDate>Sun, 28 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/crawler/</guid>
+      <guid>https://yokawasa.github.io/tags/crawler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Feedparser</title>
-      <link>https://unofficialism.info/tags/feedparser/</link>
+      <link>https://yokawasa.github.io/tags/feedparser/</link>
       <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/feedparser/</guid>
+      <guid>https://yokawasa.github.io/tags/feedparser/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NoSQL</title>
-      <link>https://unofficialism.info/tags/nosql/</link>
+      <link>https://yokawasa.github.io/tags/nosql/</link>
       <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/nosql/</guid>
+      <guid>https://yokawasa.github.io/tags/nosql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pydocumentdb</title>
-      <link>https://unofficialism.info/tags/pydocumentdb/</link>
+      <link>https://yokawasa.github.io/tags/pydocumentdb/</link>
       <pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/pydocumentdb/</guid>
+      <guid>https://yokawasa.github.io/tags/pydocumentdb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Perl</title>
-      <link>https://unofficialism.info/tags/perl/</link>
+      <link>https://yokawasa.github.io/tags/perl/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/perl/</guid>
+      <guid>https://yokawasa.github.io/tags/perl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wikipedia</title>
-      <link>https://unofficialism.info/tags/wikipedia/</link>
+      <link>https://yokawasa.github.io/tags/wikipedia/</link>
       <pubDate>Tue, 09 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/wikipedia/</guid>
+      <guid>https://yokawasa.github.io/tags/wikipedia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Curl</title>
-      <link>https://unofficialism.info/tags/curl/</link>
+      <link>https://yokawasa.github.io/tags/curl/</link>
       <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/curl/</guid>
+      <guid>https://yokawasa.github.io/tags/curl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JSON</title>
-      <link>https://unofficialism.info/tags/json/</link>
+      <link>https://yokawasa.github.io/tags/json/</link>
       <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/tags/json/</guid>
+      <guid>https://yokawasa.github.io/tags/json/</guid>
       <description></description>
     </item>
     

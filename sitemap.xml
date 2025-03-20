@@ -2,481 +2,481 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://unofficialism.info/search/</loc>
-    <lastmod>2024-08-21T00:25:31+00:00</lastmod>
+    <loc>https://yokawasa.github.io/search/</loc>
+    <lastmod>2025-03-20T00:47:21+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/</loc>
-    <lastmod>2024-08-21T00:25:31+00:00</lastmod>
+    <loc>https://yokawasa.github.io/</loc>
+    <lastmod>2025-03-20T00:47:21+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/docker/</loc>
+    <loc>https://yokawasa.github.io/tags/docker/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/finch/</loc>
+    <loc>https://yokawasa.github.io/tags/finch/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/finched-rails-cli/</loc>
+    <loc>https://yokawasa.github.io/posts/finched-rails-cli/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/</loc>
+    <loc>https://yokawasa.github.io/posts/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/rails/</loc>
+    <loc>https://yokawasa.github.io/tags/rails/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/</loc>
+    <loc>https://yokawasa.github.io/tags/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/about/</loc>
+    <loc>https://yokawasa.github.io/about/</loc>
     <lastmod>2023-01-24T23:12:10+09:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/event/</loc>
+    <loc>https://yokawasa.github.io/tags/event/</loc>
     <lastmod>2022-05-01T09:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/istio/</loc>
+    <loc>https://yokawasa.github.io/tags/istio/</loc>
     <lastmod>2022-05-01T09:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/istiocon2022/</loc>
+    <loc>https://yokawasa.github.io/posts/istiocon2022/</loc>
     <lastmod>2022-05-01T09:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/works/</loc>
+    <loc>https://yokawasa.github.io/works/</loc>
     <lastmod>2022-03-12T23:12:10+09:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/software-design-manazine-github-actions-article/</loc>
+    <loc>https://yokawasa.github.io/posts/software-design-manazine-github-actions-article/</loc>
     <lastmod>2022-01-18T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/vscode/</loc>
+    <loc>https://yokawasa.github.io/tags/vscode/</loc>
     <lastmod>2022-01-18T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/krew-plugin/</loc>
+    <loc>https://yokawasa.github.io/tags/krew-plugin/</loc>
     <lastmod>2021-02-08T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/kubectl/</loc>
+    <loc>https://yokawasa.github.io/tags/kubectl/</loc>
     <lastmod>2021-02-08T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/kubectl-plugin-socks5-proxy/</loc>
+    <loc>https://yokawasa.github.io/posts/kubectl-plugin-socks5-proxy/</loc>
     <lastmod>2021-02-08T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/kubectl-plugins/</loc>
+    <loc>https://yokawasa.github.io/tags/kubectl-plugins/</loc>
     <lastmod>2021-02-08T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/kubernetes/</loc>
+    <loc>https://yokawasa.github.io/tags/kubernetes/</loc>
     <lastmod>2021-02-08T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/socks5/</loc>
+    <loc>https://yokawasa.github.io/tags/socks5/</loc>
     <lastmod>2021-02-08T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/conftest/</loc>
+    <loc>https://yokawasa.github.io/tags/conftest/</loc>
     <lastmod>2020-07-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/action-setup-kube-tools/</loc>
+    <loc>https://yokawasa.github.io/posts/action-setup-kube-tools/</loc>
     <lastmod>2020-07-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/githubactions/</loc>
+    <loc>https://yokawasa.github.io/tags/githubactions/</loc>
     <lastmod>2020-07-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/helm/</loc>
+    <loc>https://yokawasa.github.io/tags/helm/</loc>
     <lastmod>2020-07-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/kubeval/</loc>
+    <loc>https://yokawasa.github.io/tags/kubeval/</loc>
     <lastmod>2020-07-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/kustomize/</loc>
+    <loc>https://yokawasa.github.io/tags/kustomize/</loc>
     <lastmod>2020-07-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/rancher/</loc>
+    <loc>https://yokawasa.github.io/tags/rancher/</loc>
     <lastmod>2020-07-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/yq/</loc>
+    <loc>https://yokawasa.github.io/tags/yq/</loc>
     <lastmod>2020-07-05T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/action-setup-ecctl/</loc>
+    <loc>https://yokawasa.github.io/posts/action-setup-ecctl/</loc>
     <lastmod>2020-06-22T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/sqlcheck/</loc>
+    <loc>https://yokawasa.github.io/tags/sqlcheck/</loc>
     <lastmod>2020-06-22T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/static-analysis/</loc>
+    <loc>https://yokawasa.github.io/tags/static-analysis/</loc>
     <lastmod>2020-06-22T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/my-old-collage-roommate/</loc>
+    <loc>https://yokawasa.github.io/posts/my-old-collage-roommate/</loc>
     <lastmod>2020-06-16T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/visual-studio-code-textbook/</loc>
+    <loc>https://yokawasa.github.io/posts/visual-studio-code-textbook/</loc>
     <lastmod>2020-05-01T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/action-sqlcheck/</loc>
+    <loc>https://yokawasa.github.io/posts/action-sqlcheck/</loc>
     <lastmod>2020-04-30T11:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/career/</loc>
+    <loc>https://yokawasa.github.io/tags/career/</loc>
     <lastmod>2019-09-30T22:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/microsoft/</loc>
+    <loc>https://yokawasa.github.io/tags/microsoft/</loc>
     <lastmod>2019-09-30T22:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/my-last-day-at-microsoft/</loc>
+    <loc>https://yokawasa.github.io/posts/my-last-day-at-microsoft/</loc>
     <lastmod>2019-09-30T22:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azping/</loc>
+    <loc>https://yokawasa.github.io/tags/azping/</loc>
     <lastmod>2019-08-10T10:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azure/</loc>
+    <loc>https://yokawasa.github.io/tags/azure/</loc>
     <lastmod>2019-08-10T10:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/find-the-lowest-latency-azure-regions-from-your-place-using-azping/</loc>
+    <loc>https://yokawasa.github.io/posts/find-the-lowest-latency-azure-regions-from-your-place-using-azping/</loc>
     <lastmod>2019-08-10T10:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/ping/</loc>
+    <loc>https://yokawasa.github.io/tags/ping/</loc>
     <lastmod>2019-08-10T10:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/cka/</loc>
+    <loc>https://yokawasa.github.io/tags/cka/</loc>
     <lastmod>2019-03-18T08:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/ckad/</loc>
+    <loc>https://yokawasa.github.io/tags/ckad/</loc>
     <lastmod>2019-03-18T08:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/cncf/</loc>
+    <loc>https://yokawasa.github.io/tags/cncf/</loc>
     <lastmod>2019-03-18T08:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/unofficial-tips-for-cka-and-ckad-exams/</loc>
+    <loc>https://yokawasa.github.io/posts/unofficial-tips-for-cka-and-ckad-exams/</loc>
     <lastmod>2019-03-18T08:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azure-kubernetes-services/</loc>
+    <loc>https://yokawasa.github.io/tags/azure-kubernetes-services/</loc>
     <lastmod>2019-02-12T08:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</loc>
+    <loc>https://yokawasa.github.io/posts/easy-way-ssh-into-aks-cluster-node/</loc>
     <lastmod>2019-02-12T08:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/kubectl-plugin/</loc>
+    <loc>https://yokawasa.github.io/tags/kubectl-plugin/</loc>
     <lastmod>2019-02-12T08:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/ssh/</loc>
+    <loc>https://yokawasa.github.io/tags/ssh/</loc>
     <lastmod>2019-02-12T08:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/docker-compose/</loc>
+    <loc>https://yokawasa.github.io/tags/docker-compose/</loc>
     <lastmod>2019-01-14T19:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/envoy/</loc>
+    <loc>https://yokawasa.github.io/tags/envoy/</loc>
     <lastmod>2019-01-14T19:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/envoyproxy/</loc>
+    <loc>https://yokawasa.github.io/tags/envoyproxy/</loc>
     <lastmod>2019-01-14T19:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/servicemesh/</loc>
+    <loc>https://yokawasa.github.io/tags/servicemesh/</loc>
     <lastmod>2019-01-14T19:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/envoy-proxy-demos/</loc>
+    <loc>https://yokawasa.github.io/posts/envoy-proxy-demos/</loc>
     <lastmod>2019-01-14T19:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azure-functions/</loc>
+    <loc>https://yokawasa.github.io/tags/azure-functions/</loc>
     <lastmod>2018-09-25T19:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/python/</loc>
+    <loc>https://yokawasa.github.io/tags/python/</loc>
     <lastmod>2018-09-25T19:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/quick-start-with-azure-function-v2-python-preview/</loc>
+    <loc>https://yokawasa.github.io/posts/quick-start-with-azure-function-v2-python-preview/</loc>
     <lastmod>2018-09-25T19:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/accessing-rbac-enabled-kubernetes-dashboard/</loc>
+    <loc>https://yokawasa.github.io/posts/accessing-rbac-enabled-kubernetes-dashboard/</loc>
     <lastmod>2018-08-11T16:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/rbac/</loc>
+    <loc>https://yokawasa.github.io/tags/rbac/</loc>
     <lastmod>2018-08-11T16:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/jekyll/</loc>
+    <loc>https://yokawasa.github.io/tags/jekyll/</loc>
     <lastmod>2018-07-05T17:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/moving-to-jekyll-based-github-page/</loc>
+    <loc>https://yokawasa.github.io/posts/moving-to-jekyll-based-github-page/</loc>
     <lastmod>2018-07-05T17:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/wordpress/</loc>
+    <loc>https://yokawasa.github.io/tags/wordpress/</loc>
     <lastmod>2018-07-05T17:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/aks/</loc>
+    <loc>https://yokawasa.github.io/tags/aks/</loc>
     <lastmod>2018-04-25T13:40:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/categories/azure/</loc>
+    <loc>https://yokawasa.github.io/categories/azure/</loc>
     <lastmod>2018-04-25T13:40:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azure-container-instances/</loc>
+    <loc>https://yokawasa.github.io/tags/azure-container-instances/</loc>
     <lastmod>2018-04-25T13:40:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/categories/</loc>
+    <loc>https://yokawasa.github.io/categories/</loc>
     <lastmod>2018-04-25T13:40:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/container/</loc>
+    <loc>https://yokawasa.github.io/tags/container/</loc>
     <lastmod>2018-04-25T13:40:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/categories/kubernetes/</loc>
+    <loc>https://yokawasa.github.io/categories/kubernetes/</loc>
     <lastmod>2018-04-25T13:40:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</loc>
+    <loc>https://yokawasa.github.io/posts/kubernetes-x-paas-noops-container-days-201804/</loc>
     <lastmod>2018-04-25T13:40:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/open-service-broker/</loc>
+    <loc>https://yokawasa.github.io/tags/open-service-broker/</loc>
     <lastmod>2018-04-25T13:40:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azuremediaservices/</loc>
+    <loc>https://yokawasa.github.io/tags/azuremediaservices/</loc>
     <lastmod>2018-01-06T23:05:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</loc>
+    <loc>https://yokawasa.github.io/posts/controlling-azure-media-services-traffic-with-traffic-manager/</loc>
     <lastmod>2018-01-06T23:05:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/categories/english/</loc>
+    <loc>https://yokawasa.github.io/categories/english/</loc>
     <lastmod>2018-01-06T23:05:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/resiliency/</loc>
+    <loc>https://yokawasa.github.io/tags/resiliency/</loc>
     <lastmod>2018-01-06T23:05:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/trafficmanager/</loc>
+    <loc>https://yokawasa.github.io/tags/trafficmanager/</loc>
     <lastmod>2018-01-06T23:05:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/15min-elastic-stack-on-azure/</loc>
+    <loc>https://yokawasa.github.io/posts/15min-elastic-stack-on-azure/</loc>
     <lastmod>2018-01-01T11:14:17+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azurediagnostics/</loc>
+    <loc>https://yokawasa.github.io/tags/azurediagnostics/</loc>
     <lastmod>2018-01-01T11:14:17+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/beats/</loc>
+    <loc>https://yokawasa.github.io/tags/beats/</loc>
     <lastmod>2018-01-01T11:14:17+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/elasticsearch/</loc>
+    <loc>https://yokawasa.github.io/tags/elasticsearch/</loc>
     <lastmod>2018-01-01T11:14:17+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/elasticstack/</loc>
+    <loc>https://yokawasa.github.io/tags/elasticstack/</loc>
     <lastmod>2018-01-01T11:14:17+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/logstash/</loc>
+    <loc>https://yokawasa.github.io/tags/logstash/</loc>
     <lastmod>2018-01-01T11:14:17+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/azure-functions-app-development-with-python-experimental/</loc>
+    <loc>https://yokawasa.github.io/posts/azure-functions-app-development-with-python-experimental/</loc>
     <lastmod>2017-12-29T17:13:02+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azurefunctions/</loc>
+    <loc>https://yokawasa.github.io/tags/azurefunctions/</loc>
     <lastmod>2017-12-29T17:13:02+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/serverless/</loc>
+    <loc>https://yokawasa.github.io/tags/serverless/</loc>
     <lastmod>2017-12-29T17:13:02+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azuresearch/</loc>
+    <loc>https://yokawasa.github.io/tags/azuresearch/</loc>
     <lastmod>2017-10-22T13:35:42+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/cosmosdb/</loc>
+    <loc>https://yokawasa.github.io/tags/cosmosdb/</loc>
     <lastmod>2017-10-22T13:35:42+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/building-full-text-search-application-using-azure-services/</loc>
+    <loc>https://yokawasa.github.io/posts/building-full-text-search-application-using-azure-services/</loc>
     <lastmod>2017-10-22T13:35:42+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/documentdb/</loc>
+    <loc>https://yokawasa.github.io/tags/documentdb/</loc>
     <lastmod>2017-10-22T13:35:42+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/javascript/</loc>
+    <loc>https://yokawasa.github.io/tags/javascript/</loc>
     <lastmod>2017-10-22T13:35:42+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/spa/</loc>
+    <loc>https://yokawasa.github.io/tags/spa/</loc>
     <lastmod>2017-10-22T13:35:42+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/analyzer/</loc>
+    <loc>https://yokawasa.github.io/tags/analyzer/</loc>
     <lastmod>2017-05-13T12:19:24+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</loc>
+    <loc>https://yokawasa.github.io/posts/azure-search-analyzer-test-with-azure-search-ta/</loc>
     <lastmod>2017-05-13T12:19:24+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/python-easter-egg/</loc>
+    <loc>https://yokawasa.github.io/posts/python-easter-egg/</loc>
     <lastmod>2017-05-13T10:22:30+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/categories/tips/</loc>
+    <loc>https://yokawasa.github.io/categories/tips/</loc>
     <lastmod>2017-05-13T10:22:30+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/categories/announcement/</loc>
+    <loc>https://yokawasa.github.io/categories/announcement/</loc>
     <lastmod>2017-02-05T16:12:24+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</loc>
+    <loc>https://yokawasa.github.io/posts/azuresshconfig-has-been-dockerized/</loc>
     <lastmod>2017-02-05T16:12:24+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/openssh/</loc>
+    <loc>https://yokawasa.github.io/tags/openssh/</loc>
     <lastmod>2017-02-05T16:12:24+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/logstash-plugins-for-azure-services/</loc>
+    <loc>https://yokawasa.github.io/posts/logstash-plugins-for-azure-services/</loc>
     <lastmod>2016-12-29T23:25:36+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/ruby/</loc>
+    <loc>https://yokawasa.github.io/tags/ruby/</loc>
     <lastmod>2016-12-29T23:25:36+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azuremediaanalytics/</loc>
+    <loc>https://yokawasa.github.io/tags/azuremediaanalytics/</loc>
     <lastmod>2016-12-18T22:21:16+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/cognitiveservices/</loc>
+    <loc>https://yokawasa.github.io/tags/cognitiveservices/</loc>
     <lastmod>2016-12-18T22:21:16+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/azure-media-cognitive-demos-video-frames-face-recognition/</loc>
+    <loc>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-frames-face-recognition/</loc>
     <lastmod>2016-12-18T22:21:16+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/fluent-plugin-azurefunctions/</loc>
+    <loc>https://yokawasa.github.io/posts/fluent-plugin-azurefunctions/</loc>
     <lastmod>2016-11-27T08:27:46+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/fluent-plugin-azurefunctions/</loc>
+    <loc>https://yokawasa.github.io/tags/fluent-plugin-azurefunctions/</loc>
     <lastmod>2016-11-27T08:27:46+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/fluentd/</loc>
+    <loc>https://yokawasa.github.io/tags/fluentd/</loc>
     <lastmod>2016-11-27T08:27:46+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/ocr/</loc>
+    <loc>https://yokawasa.github.io/tags/ocr/</loc>
     <lastmod>2016-11-07T04:46:11+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr/</loc>
+    <loc>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr/</loc>
     <lastmod>2016-11-07T04:46:11+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azuremediaindexer/</loc>
+    <loc>https://yokawasa.github.io/tags/azuremediaindexer/</loc>
     <lastmod>2016-11-06T17:13:12+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/speech-to-text/</loc>
+    <loc>https://yokawasa.github.io/tags/speech-to-text/</loc>
     <lastmod>2016-11-06T17:13:12+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</loc>
+    <loc>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</loc>
     <lastmod>2016-11-06T17:13:12+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/azuresshconfig/</loc>
+    <loc>https://yokawasa.github.io/posts/azuresshconfig/</loc>
     <lastmod>2016-10-13T01:22:24+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/embulk/</loc>
+    <loc>https://yokawasa.github.io/tags/embulk/</loc>
     <lastmod>2016-09-01T06:05:05+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/embulk-plugins-for-microsoft-azure-services/</loc>
+    <loc>https://yokawasa.github.io/posts/embulk-plugins-for-microsoft-azure-services/</loc>
     <lastmod>2016-09-01T06:05:05+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/fluent-plugin-documentdb/</loc>
+    <loc>https://yokawasa.github.io/tags/fluent-plugin-documentdb/</loc>
     <lastmod>2016-08-20T15:55:21+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</loc>
+    <loc>https://yokawasa.github.io/posts/fluent-plugin-documentdb-supports-partitioned-collections/</loc>
     <lastmod>2016-08-20T15:55:21+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</loc>
+    <loc>https://yokawasa.github.io/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</loc>
     <lastmod>2016-02-21T19:35:09+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azureblobstorage/</loc>
+    <loc>https://yokawasa.github.io/tags/azureblobstorage/</loc>
     <lastmod>2016-02-16T09:56:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azuretables/</loc>
+    <loc>https://yokawasa.github.io/tags/azuretables/</loc>
     <lastmod>2016-02-16T09:56:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/eventhubs/</loc>
+    <loc>https://yokawasa.github.io/tags/eventhubs/</loc>
     <lastmod>2016-02-16T09:56:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/fluentd-plugins-for-microsoft-azure-services/</loc>
+    <loc>https://yokawasa.github.io/posts/fluentd-plugins-for-microsoft-azure-services/</loc>
     <lastmod>2016-02-16T09:56:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/loganalytics/</loc>
+    <loc>https://yokawasa.github.io/tags/loganalytics/</loc>
     <lastmod>2016-02-16T09:56:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/patents/</loc>
+    <loc>https://yokawasa.github.io/posts/patents/</loc>
     <lastmod>2015-12-23T10:45:33+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/patents/</loc>
+    <loc>https://yokawasa.github.io/tags/patents/</loc>
     <lastmod>2015-12-23T10:45:33+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/arm/</loc>
+    <loc>https://yokawasa.github.io/tags/arm/</loc>
     <lastmod>2015-12-17T13:18:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</loc>
+    <loc>https://yokawasa.github.io/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</loc>
     <lastmod>2015-12-17T13:18:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azurecli/</loc>
+    <loc>https://yokawasa.github.io/tags/azurecli/</loc>
     <lastmod>2015-12-17T13:18:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/kibana/</loc>
+    <loc>https://yokawasa.github.io/tags/kibana/</loc>
     <lastmod>2015-12-17T13:18:28+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/dns/</loc>
+    <loc>https://yokawasa.github.io/tags/dns/</loc>
     <lastmod>2015-11-29T13:30:05+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/traffic-manager-endpoint-monitoring/</loc>
+    <loc>https://yokawasa.github.io/posts/traffic-manager-endpoint-monitoring/</loc>
     <lastmod>2015-11-29T13:30:05+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/csharp/</loc>
+    <loc>https://yokawasa.github.io/tags/csharp/</loc>
     <lastmod>2015-09-09T00:12:47+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/ilmerge/</loc>
+    <loc>https://yokawasa.github.io/tags/ilmerge/</loc>
     <lastmod>2015-09-09T00:12:47+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</loc>
+    <loc>https://yokawasa.github.io/posts/tips-visual-studio-csharp-merge-exe-and-dll/</loc>
     <lastmod>2015-09-09T00:12:47+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/visualstduio/</loc>
+    <loc>https://yokawasa.github.io/tags/visualstduio/</loc>
     <lastmod>2015-09-09T00:12:47+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azurevnet/</loc>
+    <loc>https://yokawasa.github.io/tags/azurevnet/</loc>
     <lastmod>2015-08-18T11:16:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/chrome/</loc>
+    <loc>https://yokawasa.github.io/tags/chrome/</loc>
     <lastmod>2015-08-18T11:16:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/firefox/</loc>
+    <loc>https://yokawasa.github.io/tags/firefox/</loc>
     <lastmod>2015-08-18T11:16:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/socks/</loc>
+    <loc>https://yokawasa.github.io/tags/socks/</loc>
     <lastmod>2015-08-18T11:16:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</loc>
+    <loc>https://yokawasa.github.io/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</loc>
     <lastmod>2015-08-18T11:16:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/vpn/</loc>
+    <loc>https://yokawasa.github.io/tags/vpn/</loc>
     <lastmod>2015-08-18T11:16:03+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/api/</loc>
+    <loc>https://yokawasa.github.io/tags/api/</loc>
     <lastmod>2015-08-15T01:57:57+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/appservices/</loc>
+    <loc>https://yokawasa.github.io/tags/appservices/</loc>
     <lastmod>2015-08-15T01:57:57+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/getting-resource-metrics-with-azure-insights-rest-api/</loc>
+    <loc>https://yokawasa.github.io/posts/getting-resource-metrics-with-azure-insights-rest-api/</loc>
     <lastmod>2015-08-15T01:57:57+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/azureinsights/</loc>
+    <loc>https://yokawasa.github.io/tags/azureinsights/</loc>
     <lastmod>2015-08-15T01:57:57+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/metrics/</loc>
+    <loc>https://yokawasa.github.io/tags/metrics/</loc>
     <lastmod>2015-08-15T01:57:57+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/monitoring/</loc>
+    <loc>https://yokawasa.github.io/tags/monitoring/</loc>
     <lastmod>2015-08-15T01:57:57+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/resourcegroup/</loc>
+    <loc>https://yokawasa.github.io/tags/resourcegroup/</loc>
     <lastmod>2015-08-15T01:57:57+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/crawler/</loc>
+    <loc>https://yokawasa.github.io/tags/crawler/</loc>
     <lastmod>2015-06-28T16:13:45+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/levelage-documentdb-as-azuresearch-datasource/</loc>
+    <loc>https://yokawasa.github.io/posts/levelage-documentdb-as-azuresearch-datasource/</loc>
     <lastmod>2015-06-28T16:13:45+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/crawler-with-documentdb-python-sdk-and-feedparser/</loc>
+    <loc>https://yokawasa.github.io/posts/crawler-with-documentdb-python-sdk-and-feedparser/</loc>
     <lastmod>2015-06-21T17:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/feedparser/</loc>
+    <loc>https://yokawasa.github.io/tags/feedparser/</loc>
     <lastmod>2015-06-21T17:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/nosql/</loc>
+    <loc>https://yokawasa.github.io/tags/nosql/</loc>
     <lastmod>2015-06-21T17:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/pydocumentdb/</loc>
+    <loc>https://yokawasa.github.io/tags/pydocumentdb/</loc>
     <lastmod>2015-06-21T17:32:40+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/perl/</loc>
+    <loc>https://yokawasa.github.io/tags/perl/</loc>
     <lastmod>2015-06-09T08:33:23+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/wikipedia/</loc>
+    <loc>https://yokawasa.github.io/tags/wikipedia/</loc>
     <lastmod>2015-06-09T08:33:23+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/putting-wikipedia-data-into-azure-search/</loc>
+    <loc>https://yokawasa.github.io/posts/putting-wikipedia-data-into-azure-search/</loc>
     <lastmod>2015-06-09T08:33:23+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/curl/</loc>
+    <loc>https://yokawasa.github.io/tags/curl/</loc>
     <lastmod>2015-06-05T06:32:14+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/posts/getting-started-azure-search-with-curl/</loc>
+    <loc>https://yokawasa.github.io/posts/getting-started-azure-search-with-curl/</loc>
     <lastmod>2015-06-05T06:32:14+00:00</lastmod>
   </url><url>
-    <loc>https://unofficialism.info/tags/json/</loc>
+    <loc>https://yokawasa.github.io/tags/json/</loc>
     <lastmod>2015-06-05T06:32:14+00:00</lastmod>
   </url>
 </urlset>

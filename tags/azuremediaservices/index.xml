@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AzureMediaServices on unofficialism</title>
-    <link>https://unofficialism.info/tags/azuremediaservices/</link>
+    <link>https://yokawasa.github.io/tags/azuremediaservices/</link>
     <description>Recent content in AzureMediaServices on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azuremediaservices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/azuremediaservices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Controlling Azure Media Services traffic with Traffic Manager</title>
-      <link>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</link>
+      <link>https://yokawasa.github.io/posts/controlling-azure-media-services-traffic-with-traffic-manager/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</guid>
+      <guid>https://yokawasa.github.io/posts/controlling-azure-media-services-traffic-with-traffic-manager/</guid>
       <description>This is an article on how you can achieve Azure Media Services (AMS) streaming traffic distribution with Traffic Manager.
 The process for a client to find target AMS streaming endpoints The figure shows how a client find target AMS streaming endpoints with Traffic Manager and requests from video players are distributed to streaming endpoints in AMS:
 When AMS endpoints are added to an Azure Traffic Manager profile, Azure Traffic Manager keeps track of the status of the endpoints (running, stopped, or deleted) so that it can decide which of those endpoints should receive traffic.</description>
@@ -20,10 +20,10 @@ When AMS endpoints are added to an Azure Traffic Manager profile, Azure Traffic 
     
     <item>
       <title>Detecting faces in Video contents using Azure Cognitive Services Face API</title>
-      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-frames-face-recognition/</link>
+      <link>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-frames-face-recognition/</link>
       <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-frames-face-recognition/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-frames-face-recognition/</guid>
       <description>過去に本ブログでビデオコンテンツを切り口とした音声認識やOCR技術を利用したデモを紹介したが、ここではビデオコンテンツの中の人物出現箇所に連動して人物名を字幕で表示させるデモとその実装方法を紹介したい。人物識別にはAzureのCognitive ServicesのFace APIを使っていて、これで動画の中に出現する顔の検出を行い、予め登録している人物リストとのマッチングにより実現している。 Cognitive Serivcesとは視覚、音声、言語、知識などマイクロソフトがこれまで研究を通じて開発してきたさまざまな要素技術をAPIとして提供しているサービスのことで、最近巷で人工知能（AI）だとかインテリジェンスとかいうキーワードをよく耳にするのではないかと思うがAzure利用シナリオでそういったインテリジェンス（知能/知性）を兼ね備えたアプリを作る場合は間違いなく中核となるサービスの1つである。Face APIはその中でも顔の検出・識別や、顔にまつわる感情、特徴などメタデータ抽出に特化したAPIである。
 demo site source code 主要テクノロジーと機能 下図は今回のデモ作成のために行っている処理フローと主要テクノロジーを表している。やっていることは大きく分けて3つ: (1) 動画コンテンツをAzure Media Encoder Standardを使ってフレームごとの静止画像の作成, (2) Cognitive ServicesのFace APIを使って1より得られた静止画像から顔の検出を行い予め登録している人物リストとマッチング（最も類似度が高いものを本人とみなす）して人物を識別, (3) 2で得られた各フレーム中の人物情報を時間順に並べて字幕(Closed Caption)用のデータファイルを生成。以下、各処理の詳細について説明する。
 1. Azure Media Encoder Standardでフレームごとの静止画生成 残念ながらFace APIはビデオコンテンツから直接顔検出することができないため、一旦ビデオコンテンツから各フレームごとの静止画を生成してその静止画を対象に処理を行う必要がある。ここでは各フレームごとの静止画生成にAzure Media Encoder Standard（MES）を利用する。MESを使うことでエンコードタスクとしてビデオコンテンツに対して様々な処理を行うことができるのだが、MESにはそのエンコードタスクの１つとしてサムネイル生成のためのタスクが用意されており、今回はこのサムネール生成タスクを利用する。他のエンコードタスク同様にサムネイル生成タスクについてもプリセットと呼ばれるエンコードに必要な情報を記述した XML または JSON形式ファイルを用意する必要がある。今回は1秒フレームごとにJPEG形式の静止画（サムネイル）を生成するために次のようなプリセット（amsmp-thumbnail-config.json）を用意した。
@@ -32,10 +32,10 @@ demo site source code 主要テクノロジーと機能 下図は今回のデモ
     
     <item>
       <title>Video OCR using Azure Media &amp; Cognitive</title>
-      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr/</link>
+      <link>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr/</link>
       <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr/</guid>
       <description>OCRとはOptical Character Recognitionの略で日本語にすると光学文字認識と訳されており、ざっくりと画像の中の文字をテキストに変換する技術のことを指す。テキストに変換されるということは勘が鋭い皆さんはお気づきだと思うが、テキストの全文検索であったり、テキストから音声への変換、さらには機械翻訳を使って多言語への変換といった展開が考えられる。そんな可能性を秘めたOCRであるが、ここではそのOCRの技術を使ってビデオファイルから抽出したテキストデータを元にビデオに字幕表示したり、動画中に表示される文字を全文検索をするデモを紹介したい。内容的には「Azure Media &amp;amp; Cognitiveデモ:Speech-To-Text」で紹介したデモのOCR版といったところ。
 demo site source code 主要テクノロジーと機能 Azure Media OCRメディアプロセッサによるテキスト抽出 このデモではAzure Media OCRメディアプロセッサー(MP)を使用してビデオファイル内のテキストコンテンツを検出してテキストファイルを生成している。OCRメディアプロセッサーは入力パラメータによりビデオ解析の挙動を調整することができる。主なパラメータとしては検索対象テキストの言語（日本語もサポート）、テキストの向き、サンプリングレート、ビデオフレーム内のテキスト検出対象のリージョンがあるが、本デモでの入力パラメータ（Video-OCR-Search-Python/src/ocr-detectregion.json）は以下の通り検索対象言語は日本語、1秒おきのサンプリングレート、テキスト検出対象のリージョンからビデオフレーム内の上部1/4を省く設定（検出対象をフレームトップから85 pixel以下を対象）にしている。
 { &amp;#34;Version&amp;#34;:&amp;#34;1.0&amp;#34;, &amp;#34;Options&amp;#34;: { &amp;#34;Language&amp;#34;:&amp;#34;Japanese&amp;#34;, &amp;#34;TimeInterval&amp;#34;:&amp;#34;00:00:01.000&amp;#34;, &amp;#34;DetectRegions&amp;#34;: [ {&amp;#34;Left&amp;#34;:&amp;#34;0&amp;#34;,&amp;#34;Top&amp;#34;:&amp;#34;85&amp;#34;,&amp;#34;Width&amp;#34;:&amp;#34;1280&amp;#34;,&amp;#34;Height&amp;#34;:&amp;#34;635&amp;#34;} ] } } そして、Azure Media OCRメディアプロセッサはビデオで検出された文字を下記のような表示時間に基づいてセグメント化された形で結果出力する。結果ファイルの完全版はこちら（azuresubs.json）を参照ください。
@@ -44,10 +44,10 @@ demo site source code 主要テクノロジーと機能 Azure Media OCRメディ
     
     <item>
       <title>Speech-To-Text with Azure Media &amp; Cognitive Services</title>
-      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</link>
+      <link>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</guid>
       <description>ビデオコンテンツを音声認識エンジンでテキスト化してそれを元にスピーチ検索するデモコンテンツを紹介したい。これは過去にde:code2016というマイクロソフトの開発者向けイベントで行ったブレイクアウトセッション「DEV-18: Azure Search Deep Dive」にて紹介したビデオコンテンツのスピーチ検索デモを簡略化して再利用しやすいものにしたものである。
 demo site source code 主要テクノロジーと機能 Azure Media Indexer 2 Previewによる音声からテキスト抽出 このデモではAzure Media Indexer 2 Preview メディア プロセッサー (MP)を使用してビデオコンテンツからテキストを抽出している。このAzure Media Indexer 2 Previewは自然言語処理(NLP)や音声認識エンジンを駆使してビデオコンテンツより字幕用データ（時間やテキスト）や検索可能にするためのメタデータを抽出することができる。Indexer 2という名前の通り前のバージョンであるAzure Media Indexerが存在するが、これと比較すると、Azure Media Indexer 2 Previewは、インデックス作成が高速化され、より多くの言語をサポートしていることが特徴である。2016年11月6日時点で英語、スペイン語、フランス語、ドイツ語、イタリア語、中国語、ポルトガル語、アラビア語などがサポートされている（残念ながら日本語はまだ未サポート）。
 下イメージはAzure Media Indexer 2 (Preview)で生成されるTTMLとWebVTTという代表的な字幕データフォーマット。

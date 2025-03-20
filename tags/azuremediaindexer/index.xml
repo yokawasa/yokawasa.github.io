@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AzureMediaIndexer on unofficialism</title>
-    <link>https://unofficialism.info/tags/azuremediaindexer/</link>
+    <link>https://yokawasa.github.io/tags/azuremediaindexer/</link>
     <description>Recent content in AzureMediaIndexer on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azuremediaindexer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/azuremediaindexer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Speech-To-Text with Azure Media &amp; Cognitive Services</title>
-      <link>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</link>
+      <link>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</link>
       <pubDate>Sun, 06 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-media-cognitive-demos-video-ocr-speech-to-text/</guid>
       <description>ビデオコンテンツを音声認識エンジンでテキスト化してそれを元にスピーチ検索するデモコンテンツを紹介したい。これは過去にde:code2016というマイクロソフトの開発者向けイベントで行ったブレイクアウトセッション「DEV-18: Azure Search Deep Dive」にて紹介したビデオコンテンツのスピーチ検索デモを簡略化して再利用しやすいものにしたものである。
 demo site source code 主要テクノロジーと機能 Azure Media Indexer 2 Previewによる音声からテキスト抽出 このデモではAzure Media Indexer 2 Preview メディア プロセッサー (MP)を使用してビデオコンテンツからテキストを抽出している。このAzure Media Indexer 2 Previewは自然言語処理(NLP)や音声認識エンジンを駆使してビデオコンテンツより字幕用データ（時間やテキスト）や検索可能にするためのメタデータを抽出することができる。Indexer 2という名前の通り前のバージョンであるAzure Media Indexerが存在するが、これと比較すると、Azure Media Indexer 2 Previewは、インデックス作成が高速化され、より多くの言語をサポートしていることが特徴である。2016年11月6日時点で英語、スペイン語、フランス語、ドイツ語、イタリア語、中国語、ポルトガル語、アラビア語などがサポートされている（残念ながら日本語はまだ未サポート）。
 下イメージはAzure Media Indexer 2 (Preview)で生成されるTTMLとWebVTTという代表的な字幕データフォーマット。

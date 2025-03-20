@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Fluent-Plugin-Documentdb on unofficialism</title>
-    <link>https://unofficialism.info/tags/fluent-plugin-documentdb/</link>
+    <link>https://yokawasa.github.io/tags/fluent-plugin-documentdb/</link>
     <description>Recent content in Fluent-Plugin-Documentdb on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Aug 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/fluent-plugin-documentdb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/fluent-plugin-documentdb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fluent-plugin-documentdb supports Partitioned collections</title>
-      <link>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</link>
+      <link>https://yokawasa.github.io/posts/fluent-plugin-documentdb-supports-partitioned-collections/</link>
       <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/fluent-plugin-documentdb-supports-partitioned-collections/</guid>
+      <guid>https://yokawasa.github.io/posts/fluent-plugin-documentdb-supports-partitioned-collections/</guid>
       <description>I’d like to announce fluent-plugin-documentdb finally supports Azure DocumentDB Partitioned collections for higher storage and throughput. If you&amp;rsquo;re not familiar with fluent-plugin-documentdb, read my previous article before move on.
 Partitioned collections is kick-ass feature that I had wanted to support in fluent-plugin-documentdb since the feature came out public (see the announcement). For big fan of fluent-plugin-documentdb, sorry for keeping you waiting for such a long time :-) If I may make excuses, I would say I haven&amp;rsquo;t had as much time on the project, and I had to do ruby client implementation of Partitioned collections by myself as there is no official DocumentDB Ruby SDK that supports it (As a result I&amp;rsquo;ve created tiny Ruby DocumentDB client libraries that support the feature.</description>
     </item>
     
     <item>
       <title>Collecting logs into Azure DocumentDB using fluent-plugin-documentdb</title>
-      <link>https://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</link>
+      <link>https://yokawasa.github.io/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</link>
       <pubDate>Sun, 21 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</guid>
+      <guid>https://yokawasa.github.io/posts/collecting-logs-into-azure-documentdb-using-fluent-plugin-documentdb/</guid>
       <description>In this article, I&amp;rsquo;d like to introduces a solution to collect logs and store them into Azure DocumentDB using fluentd and its plugin, fluent-plugin-documentdb.
 Azure DocumentDB is a managed NoSQL database service provided by Microsoft Azure. It&amp;rsquo;s schemaless, natively support JSON, very easy-to-use, very fast, highly reliable, and enables rapid deployment, you name it. Fluentd is an open source data collector, which lets you unify the data collection and consumption for a better use and understanding of data.</description>
     </item>

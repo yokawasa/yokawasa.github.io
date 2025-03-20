@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ILMerge on unofficialism</title>
-    <link>https://unofficialism.info/tags/ilmerge/</link>
+    <link>https://yokawasa.github.io/tags/ilmerge/</link>
     <description>Recent content in ILMerge on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 09 Sep 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/ilmerge/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Sep 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/ilmerge/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Static linking DLL to EXE in C Sharp</title>
-      <link>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</link>
+      <link>https://yokawasa.github.io/posts/tips-visual-studio-csharp-merge-exe-and-dll/</link>
       <pubDate>Wed, 09 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/tips-visual-studio-csharp-merge-exe-and-dll/</guid>
+      <guid>https://yokawasa.github.io/posts/tips-visual-studio-csharp-merge-exe-and-dll/</guid>
       <description>Q1. C Sharpでexeに複数DLLをスタティックリンクさせて１ファイルにすることはできますか？
 C、C++ではおなじみのスタティックリンクだが、そもそもC Sharpではスタティックリンクができない。ただし
 MS Research謹製のILMergeを使えば実行ファイル(exe)に対して複数のクラスアセンブリ(DLL)を１つのアセンブリにマージすることはできる。使い方はこちらが参考になる。また、ILMerge-GUIというGUIツールもある。

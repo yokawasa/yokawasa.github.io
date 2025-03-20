@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Fluent-Plugin-Azurefunctions on unofficialism</title>
-    <link>https://unofficialism.info/tags/fluent-plugin-azurefunctions/</link>
+    <link>https://yokawasa.github.io/tags/fluent-plugin-azurefunctions/</link>
     <description>Recent content in Fluent-Plugin-Azurefunctions on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/fluent-plugin-azurefunctions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/fluent-plugin-azurefunctions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Collecting events into Azure Functions and triggering your custom code using fluent-plugin-azurefunctions</title>
-      <link>https://unofficialism.info/posts/fluent-plugin-azurefunctions/</link>
+      <link>https://yokawasa.github.io/posts/fluent-plugin-azurefunctions/</link>
       <pubDate>Sun, 27 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/fluent-plugin-azurefunctions/</guid>
+      <guid>https://yokawasa.github.io/posts/fluent-plugin-azurefunctions/</guid>
       <description>In this article, I’d like to introduces a solution to collect events from various sources and send them into HTTP Trigger function in Azure Functions using fluent-plugin-azurefunctions. Triggers in Azure Functions are event responses used to trigger your custom code. HTTP Trigger functions allow you to respond to HTTP events sent from fluentd and cook them into whatever you want!
 [note] Azure Functions is a (&amp;ldquo;serverless&amp;rdquo;) solution for easily running small pieces of code, or &amp;ldquo;functions,&amp;rdquo; in Azure.</description>
     </item>

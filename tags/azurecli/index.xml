@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AzureCLI on unofficialism</title>
-    <link>https://unofficialism.info/tags/azurecli/</link>
+    <link>https://yokawasa.github.io/tags/azurecli/</link>
     <description>Recent content in AzureCLI on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Dec 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azurecli/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Dec 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/azurecli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ARMテンプレートを使って3分でAzure上にElasticsearchクラスタを構築する</title>
-      <link>https://unofficialism.info/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</link>
+      <link>https://yokawasa.github.io/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</link>
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</guid>
+      <guid>https://yokawasa.github.io/posts/deploy-elasticsearch-cluster-in-azure-using-arm-template/</guid>
       <description>これはElasticsearch Advent Calendar 2015の17日目のエントリー
 ARMテンプレートと呼ばれるデプロイ手法を使ってAzure上にElasticsearchクラスタをさくっと構築する方法についてのお話で、主にAzure界隈のElasticsearchユーザ向けの内容となっている。タイトルにある3分でというのは実際に計ったわけではないがそれくらい簡単且つ短時間でできることを強調したく使わせていただいている・・・ということを前もって補足しておく（汗）。
 ARMテンプレートとは？ ARMテンプレートの前にARMについて少し解説する。ARMはAzure Resource Managerの略で、アプリケーション構築に必要な

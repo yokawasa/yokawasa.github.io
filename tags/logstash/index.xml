@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Logstash on unofficialism</title>
-    <link>https://unofficialism.info/tags/logstash/</link>
+    <link>https://yokawasa.github.io/tags/logstash/</link>
     <description>Recent content in Logstash on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/logstash/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/logstash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>15分でお届けするElastic Stack on Azure設計・構築ノウハウ</title>
-      <link>https://unofficialism.info/posts/15min-elastic-stack-on-azure/</link>
+      <link>https://yokawasa.github.io/posts/15min-elastic-stack-on-azure/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/15min-elastic-stack-on-azure/</guid>
+      <guid>https://yokawasa.github.io/posts/15min-elastic-stack-on-azure/</guid>
       <description>UPDATED on Feb 3, 2018 - Elastic社イベントサイトを追加
 イベント開催日から少々時間が経過したが、Elastic {ON} Tour 2017 東京（2017年12月14日開催）というElastic社オフィシャルのユーザーカンファレンスにて登壇させていただく機会があり、そこで「15分でお届けする Elastic Stack on Azure 設計・構築ノウハウ」というお題でお話をさせていただいた。個人的にとても大好きなプロダクトなので、そのユーザーカンファレンスでお話をさせていただいたということと、そのプロダクトのAzureでの利用促進に微力ながらも貢献できたということは光栄至極である。ここではそのElastic {ON} Tourでの発表で使用したスライドに補足解説を加えて共有させていただく。
 セッションスライド（＋デモ動画） 15分でお届けする Elastic Stack on Azure 設計・構築ノウハウ from Yoichi Kawasaki
@@ -27,10 +27,10 @@ Azureサービスからのデータコレクション Azure VMについては、
     
     <item>
       <title>Logstash plugins for Microsoft Azure Services</title>
-      <link>https://unofficialism.info/posts/logstash-plugins-for-azure-services/</link>
+      <link>https://yokawasa.github.io/posts/logstash-plugins-for-azure-services/</link>
       <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/logstash-plugins-for-azure-services/</guid>
+      <guid>https://yokawasa.github.io/posts/logstash-plugins-for-azure-services/</guid>
       <description>Logstash is an open source, server-side data processing pipeline that ingests data from a multitude of sources simultaneously, transforms it, and then sends it to your favorite destinations. Here is a list of logstash plugins for Microsoft Azure Services.
 Plugin Name Target Azure Services Note logstash-input-azureeventhub EventHub Logstash input plugin reads data from specified Azure Event Hubs logstash-input-azureblob Blob Storage Logstash input plugin that reads and parses data from Azure Storage Blobs logstash-input-azuretopic Service Bus Topic Logstash input plugin reads messages from Azure Service Bus Topics logstash-input-azuretopicthreadable Service Bus Topic Logstash input plugin reads messages from Azure Service Bus Topics using multiple threads logstash-output-applicationinsights Application Insights Logstash output plugin that store events to Application Insights logstash-input-azurewadtable Table Storage Logstash input plugin for Azure Diagnostics.</description>
     </item>

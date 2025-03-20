@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Serverless on unofficialism</title>
-    <link>https://unofficialism.info/tags/serverless/</link>
+    <link>https://yokawasa.github.io/tags/serverless/</link>
     <description>Recent content in Serverless on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/serverless/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Functions Python Programming  - Experimental</title>
-      <link>https://unofficialism.info/posts/azure-functions-app-development-with-python-experimental/</link>
+      <link>https://yokawasa.github.io/posts/azure-functions-app-development-with-python-experimental/</link>
       <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-functions-app-development-with-python-experimental/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-functions-app-development-with-python-experimental/</guid>
       <description>今年もあと少し。ほぼ趣味の範囲を超えないレベルで今年取り組んだテーマの１つにAzure Functions with Pythonがある。あまり情報が無い中、興味本位でサンプルコードを作っては動かして試して得られた情報をシコシコとGithubに上げているうちにナレッジが溜まって来た。それほど多くはないと思うがPythonでAzure Functionsアプリを作りたいという人もいると思うのでノウハウをブログにまとめておく。いきなり水を差すようではあるが、現時点（2017年12月）ではAzure FunctionsのPythonサポータビリティはExperimental（実験的サポート）でありプロダクション向きではない状況であるので、ホントにPythonが好きな人がOn your own riskで楽しんでいただければと思う。
 Azure FunctionsのPythonサポート状況 Azure FunctionsのRuntimeには大きく1系と２系の２種類あるが、現時点でPythonは1系でのみExperimentalサポートという状況（ See also 言語サポート状況）
 Experimental（実験的サポート）なので本番での利用は非推奨であり、公式サポートはない（ベストエフォートでのサポートは得られるはず）。また、当然ながらGA言語に比べパフォーマンスは悪い。PythonはFunction呼び出し毎にpython.exeが実行される（GA言語はRuntimeと同じプロセスで実行）。

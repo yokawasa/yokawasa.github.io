@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Analyzer on unofficialism</title>
-    <link>https://unofficialism.info/tags/analyzer/</link>
+    <link>https://yokawasa.github.io/tags/analyzer/</link>
     <description>Recent content in Analyzer on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/analyzer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/analyzer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Azure Search Text Analyzer Tools - azure-search-ta</title>
-      <link>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</link>
+      <link>https://yokawasa.github.io/posts/azure-search-analyzer-test-with-azure-search-ta/</link>
       <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azure-search-analyzer-test-with-azure-search-ta/</guid>
+      <guid>https://yokawasa.github.io/posts/azure-search-analyzer-test-with-azure-search-ta/</guid>
       <description>Azure Searchのアナライザーによるテキスト解析結果を出力する（だけの）ツールを作ってみたのでここで紹介します。その名もazure-search-ta（ta=Test Analyzer）。中身はAzure SearchのAnalyzer APIの出力結果を整形して表示させていているだけの単純なものでありますが、Azure Searchの全文検索チューニングやキーワードにヒットしない原因調査をする際には役に立つと思ってます。「どうしてこのキーワードがひっかからないの？」を突き詰めるには最終的にアナライザのテキスト解析結果と突き合わせる必要があるのと、アナライザーを選択する際にテキスト解析が視覚化されていると判断しやすいだろうと。ツールは2種類で （１）Web UIツールと（２）コマンドラインツール
 Web UI Tool https://github.com/yokawasa/azure-search-ta
 インストールは超簡単。（１）Githubからazure-search-taをclone （２）azure-search-ta/ui 配下のファイルをPHPが動くWebサーバにコピー （３）analyze-api.phpをエディタで開いてお使いのAzure Searchカウント名とAzure Search API Adminキーの値を設定ください。あとはazure-search-ta-ui.htmlにアクセスいただければ上記のようなUIが出力されるはずです。なぜHTML/JSだけではなく間にPHPを挟んでいるのかについて、Azure SearchのAnalyze APIや管理系APIリクエストに位置付けられており、管理系APIはvia CORSでのリクエストを受け付けていないからである。

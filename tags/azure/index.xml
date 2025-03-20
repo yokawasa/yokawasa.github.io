@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Azure on unofficialism</title>
-    <link>https://unofficialism.info/tags/azure/</link>
+    <link>https://yokawasa.github.io/tags/azure/</link>
     <description>Recent content in Azure on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Find the lowest latency Azure regions from your place using azping</title>
-      <link>https://unofficialism.info/posts/find-the-lowest-latency-azure-regions-from-your-place-using-azping/</link>
+      <link>https://yokawasa.github.io/posts/find-the-lowest-latency-azure-regions-from-your-place-using-azping/</link>
       <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/find-the-lowest-latency-azure-regions-from-your-place-using-azping/</guid>
+      <guid>https://yokawasa.github.io/posts/find-the-lowest-latency-azure-regions-from-your-place-using-azping/</guid>
       <description>azping is a command line tools that help you find the lowest latency Azure Region from your place. It acutally reports median latency to Azure regions. It is a fork of gcping.
 What does azping actually evalulate? azping evalulate the median latecy of http requests to Azure blob storage endpoints located in each of Azure reagions from your place. Number of requests to be made to each region is 5 by default, but it can be changed with -n parameter that you can give in executing azping command.</description>
     </item>
     
     <item>
       <title>Easy way to SSH into Azure Kubernetes Service cluster node VMs</title>
-      <link>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</link>
+      <link>https://yokawasa.github.io/posts/easy-way-ssh-into-aks-cluster-node/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/easy-way-ssh-into-aks-cluster-node/</guid>
+      <guid>https://yokawasa.github.io/posts/easy-way-ssh-into-aks-cluster-node/</guid>
       <description>This is an article on how you can SSH into Azure Kubernetes Service (AKS) cluster node VMs using kubectl-plugin-ssh-jump.
 Motivation I wanted to SSH into Azure Kubernetes Service (AKS) cluster node VMs, then looking up azure docs I found a relevant page - Connect with SSH to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting. But when I first saw this procedure, I thought this was very troublesome. Lazy person like me couldn&amp;rsquo;t accept going thourgh all the steps just to SSH into AKS cluster nodes VMs.</description>
     </item>

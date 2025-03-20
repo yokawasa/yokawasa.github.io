@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Istio on unofficialism</title>
-    <link>https://unofficialism.info/tags/istio/</link>
+    <link>https://yokawasa.github.io/tags/istio/</link>
     <description>Recent content in Istio on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/istio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/istio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My presentation at IstioCon 2022</title>
-      <link>https://unofficialism.info/posts/istiocon2022/</link>
+      <link>https://yokawasa.github.io/posts/istiocon2022/</link>
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/istiocon2022/</guid>
+      <guid>https://yokawasa.github.io/posts/istiocon2022/</guid>
       <description>I presented on Apri 28th (April 29th JST): &amp;ldquo;Accelerating ZOZOTOWN Modernization with Istio&amp;rdquo; at IstioCon 2022. It was an awesome experience for me to present for the global technology conference like IsitoCon.
 ⛵️Istio is a synonym of acceleration &amp;amp; modernization. Register for #IstioCon to learn about &amp;quot;Accelerating ZOZOTOWN Modernization process with #Istio&amp;quot; by @yokawasa 🤓👉 https://t.co/SWyXAsfqcO #Istio #CloudNative #ServiceMesh pic.twitter.com/BNyeLsAVHI
 &amp;mdash; Istio (@IstioMesh) April 25, 2022 You can find the slides for my presentation: https://speakerdeck.</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>Set of Envoy Proxy features demos</title>
-      <link>https://unofficialism.info/posts/envoy-proxy-demos/</link>
+      <link>https://yokawasa.github.io/posts/envoy-proxy-demos/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/envoy-proxy-demos/</guid>
+      <guid>https://yokawasa.github.io/posts/envoy-proxy-demos/</guid>
       <description>Set of demos to demonstrate Envoy Proxy features
 HTTP Routing: Simple Match Routing All traffic is routed by the front envoy to the service containers. Internally the traffic is routed to the service envoys, then the service envoys route the request to the flask app via the loopback address. In this demo, all traffic is routed to the service envoys like this:
 A request (path /service/blue &amp;amp; port 8000) is routed to service_blue A request (path /service/green &amp;amp; port 8000) is routed to service_green A request (path /service/red &amp;amp; port 8000) is routed to service_red Key definition 1 - virtual_hosts in front-envoy.</description>
@@ -31,10 +31,10 @@ A request (path /service/blue &amp;amp; port 8000) is routed to service_blue A r
     
     <item>
       <title>Kubernetes x PaaS コンテナアプリケーションのNoOpsへの挑戦 (Japan Container Days v18.04)</title>
-      <link>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</link>
+      <link>https://yokawasa.github.io/posts/kubernetes-x-paas-noops-container-days-201804/</link>
       <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/kubernetes-x-paas-noops-container-days-201804/</guid>
+      <guid>https://yokawasa.github.io/posts/kubernetes-x-paas-noops-container-days-201804/</guid>
       <description>先日、4月19日に開催されたJapan Container Days v18.04にて「Kubernetes x PaaS – コンテナアプリケーションのNoOpsへの挑戦」というタイトルでセッションを担当させていただいた。その名の通りメインがKubernetesで、KubernetesアプリケーションにおいてNoOps（運用レス）を目指すためのにどういった工夫ができるのか、どういったものを活用していけばよいのか、という内容です。このブログではJapan Container Daysでの発表に使用したスライドの共有とセッションに中のサンプルやデモについて補足させていただく。
 Session Slides Kubernetes x PaaS – コンテナアプリケーションの NoOpsへの挑戦 from Yoichi Kawasaki
 補足情報 1. Open Service Broker for AzureでAzure Database for MySQLの利用 スライドでお見せした実際のファイルを使ってAzure Database for MySQLのサービスインスタンス作成、バインディング、そして実際のアプリケーションからの利用までの流れを紹介させていただく。

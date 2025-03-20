@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Resiliency on unofficialism</title>
-    <link>https://unofficialism.info/tags/resiliency/</link>
+    <link>https://yokawasa.github.io/tags/resiliency/</link>
     <description>Recent content in Resiliency on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/resiliency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/resiliency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Controlling Azure Media Services traffic with Traffic Manager</title>
-      <link>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</link>
+      <link>https://yokawasa.github.io/posts/controlling-azure-media-services-traffic-with-traffic-manager/</link>
       <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/controlling-azure-media-services-traffic-with-traffic-manager/</guid>
+      <guid>https://yokawasa.github.io/posts/controlling-azure-media-services-traffic-with-traffic-manager/</guid>
       <description>This is an article on how you can achieve Azure Media Services (AMS) streaming traffic distribution with Traffic Manager.
 The process for a client to find target AMS streaming endpoints The figure shows how a client find target AMS streaming endpoints with Traffic Manager and requests from video players are distributed to streaming endpoints in AMS:
 When AMS endpoints are added to an Azure Traffic Manager profile, Azure Traffic Manager keeps track of the status of the endpoints (running, stopped, or deleted) so that it can decide which of those endpoints should receive traffic.</description>

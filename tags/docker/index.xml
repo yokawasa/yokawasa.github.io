@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Docker on unofficialism</title>
-    <link>https://unofficialism.info/tags/docker/</link>
+    <link>https://yokawasa.github.io/tags/docker/</link>
     <description>Recent content in Docker on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Finched Rails CLI makes it a breeze to try out Rails withough installing anything but Finch</title>
-      <link>https://unofficialism.info/posts/finched-rails-cli/</link>
+      <link>https://yokawasa.github.io/posts/finched-rails-cli/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/finched-rails-cli/</guid>
+      <guid>https://yokawasa.github.io/posts/finched-rails-cli/</guid>
       <description>Preface In this article, I’d like to introduces Finched Rails CLI that makes it a breeze to try out Rails without installing anything but Finch. Finch is an OSS CLI for building, running, and publishing Linux containers create by AWS. As long as you have Finch, you can quick start a Rails app only by copying and pasting a few commands. Finched Rails CLI is a fork of Docked Rails CLI and simply a Finch version of it.</description>
     </item>
     
     <item>
       <title>azuresshconfig has been dockerized</title>
-      <link>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</link>
+      <link>https://yokawasa.github.io/posts/azuresshconfig-has-been-dockerized/</link>
       <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</guid>
+      <guid>https://yokawasa.github.io/posts/azuresshconfig-has-been-dockerized/</guid>
       <description>UPDATED 2017-02-15: changed docker run command example due to Issue#4
 以前「azuresshconfigの紹介 – Azure上でのSSH生活を少しだけ快適にする」の投稿でazuresshconfigの紹介をさせていただいたが、ツールをリリースして以来、数少ない貴重な利用者様からインストールがコケるんだけど何とかしろというクレームをいただいていた。そこでインストールマニュアルを充実させようかとか、インストーラーをプラットフォーム別に充実させようかとか考えたものの、ここは流行りのコンテナ実行できるようしたほうがいいだろうということでDocker対応することにした。
 今回の対応によりpipインストールや、プラットフォーム別にprerequisiteなランタイム、ヘッダファイル、ライブラリといった面倒なインストールが不要となり、Mac、Windows、Linux(Ubuntu、CentOS、その他distro)関係なくシンプルにdocker runコマンドでの実行が可能となった。

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Openssh on unofficialism</title>
-    <link>https://unofficialism.info/tags/openssh/</link>
+    <link>https://yokawasa.github.io/tags/openssh/</link>
     <description>Recent content in Openssh on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://unofficialism.info/tags/openssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Feb 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/tags/openssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>azuresshconfig has been dockerized</title>
-      <link>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</link>
+      <link>https://yokawasa.github.io/posts/azuresshconfig-has-been-dockerized/</link>
       <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azuresshconfig-has-been-dockerized/</guid>
+      <guid>https://yokawasa.github.io/posts/azuresshconfig-has-been-dockerized/</guid>
       <description>UPDATED 2017-02-15: changed docker run command example due to Issue#4
 以前「azuresshconfigの紹介 – Azure上でのSSH生活を少しだけ快適にする」の投稿でazuresshconfigの紹介をさせていただいたが、ツールをリリースして以来、数少ない貴重な利用者様からインストールがコケるんだけど何とかしろというクレームをいただいていた。そこでインストールマニュアルを充実させようかとか、インストーラーをプラットフォーム別に充実させようかとか考えたものの、ここは流行りのコンテナ実行できるようしたほうがいいだろうということでDocker対応することにした。
 今回の対応によりpipインストールや、プラットフォーム別にprerequisiteなランタイム、ヘッダファイル、ライブラリといった面倒なインストールが不要となり、Mac、Windows、Linux(Ubuntu、CentOS、その他distro)関係なくシンプルにdocker runコマンドでの実行が可能となった。
@@ -23,10 +23,10 @@ $ curl https://raw.githubusercontent.com/yokawasa/azure-ssh-config/master/Docker
     
     <item>
       <title>Making SSH lives in Azure easier with azuresshconfig</title>
-      <link>https://unofficialism.info/posts/azuresshconfig/</link>
+      <link>https://yokawasa.github.io/posts/azuresshconfig/</link>
       <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/azuresshconfig/</guid>
+      <guid>https://yokawasa.github.io/posts/azuresshconfig/</guid>
       <description>UPDATED 2016-10-31: paramsオプション + Bash Completion追加
 みんな大好きSSHとAzureのお話し。物理サーバ、EC2/仮想マシン、コンテナなどなんでもよいがその上にLinuxサーバをたてたらまずやることの1つにSSHログインのためにそのIPアドレス調べて~/.ssh/configにそのエントリーを追加してやることがあるんじゃないかと思います。この作業、エントリー数が少なければ大したことはないものの、追加対象のホストが大量にある場合はかなり面倒な作業になってきます。さらにDHCPなどでアドレスを動的に取得するような設定であればサーバの上げ下げのたびにIPアドレスが変わってくるので~/.ssh/configの更新が必要になってきて、どうしようもなく面倒になってきます。こういった単純でどうしようもなくつまらない作業は自動化したいですよね？ ここではそんな皆さんのためにazuresshconfigというツールを紹介させていただきます。
 これは皆さんのAzureサブスクリプション下に作られた仮想マシン一覧（ARMに限る）の情報を取得して各仮想マシンごとのエントリー情報（マシン名とIPアドレス）を~/.ssh/configに追加・更新してくれるツール。新規に仮想マシンを追加した際や、仮想マシンのIPアドレスが追加した際にはazuresshconfigを実行してあげることで~/.ssh/configが最新のエントリー情報でアップデートされ、各マシンにマシン名でSSHログインできるようになります。
@@ -38,10 +38,10 @@ $ pip install azuresshconfig 設定ファイルの編集（サービスプリン
     
     <item>
       <title>SOCKSプロキシを経由したAzure VNETプライベートリソースへのアクセス</title>
-      <link>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</link>
+      <link>https://yokawasa.github.io/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</link>
       <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://unofficialism.info/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</guid>
+      <guid>https://yokawasa.github.io/posts/accessing-private-resource-in-azure-vnet-via-socks-proxy/</guid>
       <description>UPDATED 2017-03-22: Added SOCKS Proxy Configuration for Internet Explorer
 外部からの接続（SSH、HTTPなど）を受け付けていないAzure 仮想ネットワーク(以下VNET)内のリソースにSOCKSプロキシを経由して外部からアクセスしましょうというお話。本記事ではAzure VNET内の外部からのアクセス許可していないVMへのSSHログインとHTTPサーバコンテンツへのブラウジングの2つの方法を紹介する。
 SOCKS(RFC1928) とはさまざまなアプリケーションが間にファイアーウォールを挟んでいても安全に快適にやり取りができるようにすることを目的として作られたプロトコルのことで、SOCKSプロキシはSOCKSプロトコルを受け取りファイアウォール内外との接続を可能にするものである。エンドポイントやNetwork Security Group (NSG)によりネットーワーク分離設定されたAzure VNET内のリソースに対して一時的に本来直接アクセス許可しないネットワークからアクセスが必要な状況はあるかと思う。そのような時に毎回設定変更で必要なプロトコル、アクセス先に対して穴をあけるのは非常に面倒であり、またサイト間VPN、ポイント対サイトVPNとなるとさらに手間がかかる。お手軽に、もしくは定常的ではないが一時的に内部リソースにアクセスしたい場合にSOCKSプロキシ経由でのアクセスを検討してみてはいかがだろうか。以下はSOCKSプロキシ経由によるAzure VNET内のプライベートリソースへのアクセスイメージである。
