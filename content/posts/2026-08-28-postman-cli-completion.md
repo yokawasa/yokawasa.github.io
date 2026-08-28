@@ -8,8 +8,10 @@ tags:
 - postman
 - cli
 - completion
-title: Tab completion for the Postman CLI
+title: An unofficial tab completion for the Postman CLI
 ---
+
+> **Disclaimer:** postman-cli-completion is a personal, unofficial open-source project I built on my own time. It is not a Postman product, and it is not affiliated with, endorsed by, or supported by Postman. If something breaks, please open an issue on the GitHub repo — not with Postman support.
 
 ## The small friction of not being able to hit `postman <TAB>`
 
@@ -17,16 +19,16 @@ If you use the Postman CLI, how many times have you typed `postman --help` just 
 
 `collection`, `spec`, `monitor`, `workspace`, `flows`. That's a lot to keep in your head just at the top level. Under each of those sit more subcommands, flag values like `-r cli,json,junit,html`, and file arguments such as `*.json` and `*.yaml`. You type from memory, get it wrong, scroll back through history, and squint at `--help` again. It's a familiar little friction of CLI work.
 
-Tab completion would solve it. But the Postman CLI doesn't ship official shell completion yet.
+Tab completion would solve it. But the Postman CLI doesn't ship shell completion today, and I didn't want to wait for it.
 
-[postman-cli-completion](https://github.com/yokawasa/postman-cli-completion) fills that gap. It's a small open-source tool that adds tab completion for the `postman` command to zsh, bash, and fish.
+So I built [postman-cli-completion](https://github.com/yokawasa/postman-cli-completion) to fill that gap for myself — a small, unofficial open-source tool that adds tab completion for the `postman` command to zsh, bash, and fish.
 
 ![](/assets/20260828-postman-cli-completion.gif)
 
 
 ## What the tool is
 
-postman-cli-completion is a set of shell completion scripts for the Postman CLI. It supports **zsh, bash, and fish**.
+postman-cli-completion is my own set of shell completion scripts for the Postman CLI. It supports **zsh, bash, and fish**.
 
 Here's what it completes:
 
