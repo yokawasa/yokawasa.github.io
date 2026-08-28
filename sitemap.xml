@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yokawasa.github.io/search/</loc>
-    <lastmod>2026-08-28T00:18:33+00:00</lastmod>
+    <lastmod>2026-08-28T00:41:36+00:00</lastmod>
   </url><url>
     <loc>https://yokawasa.github.io/</loc>
-    <lastmod>2026-08-28T00:18:33+00:00</lastmod>
+    <lastmod>2026-08-28T00:41:36+00:00</lastmod>
+  </url><url>
+    <loc>https://yokawasa.github.io/tags/cli/</loc>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yokawasa.github.io/tags/completion/</loc>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yokawasa.github.io/tags/postman/</loc>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yokawasa.github.io/posts/</loc>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yokawasa.github.io/posts/postman-cli-completion/</loc>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yokawasa.github.io/tags/</loc>
+    <lastmod>2026-08-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yokawasa.github.io/tags/docker/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
@@ -17,13 +35,7 @@
     <loc>https://yokawasa.github.io/posts/finched-rails-cli/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yokawasa.github.io/posts/</loc>
-    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yokawasa.github.io/tags/rails/</loc>
-    <lastmod>2023-01-28T01:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yokawasa.github.io/tags/</loc>
     <lastmod>2023-01-28T01:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yokawasa.github.io/about/</loc>

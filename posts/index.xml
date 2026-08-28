@@ -6,7 +6,17 @@
     <description>Recent content in Posts on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tab completion for the Postman CLI</title>
+      <link>https://yokawasa.github.io/posts/postman-cli-completion/</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://yokawasa.github.io/posts/postman-cli-completion/</guid>
+      <description>The small friction of not being able to hit postman &amp;lt;TAB&amp;gt; If you use the Postman CLI, how many times have you typed postman --help just because you couldn&amp;rsquo;t remember a subcommand name?
+collection, spec, monitor, workspace, flows. That&amp;rsquo;s a lot to keep in your head just at the top level. Under each of those sit more subcommands, flag values like -r cli,json,junit,html, and file arguments such as *.json and *.</description>
+    </item>
+    
     <item>
       <title>Finched Rails CLI makes it a breeze to try out Rails withough installing anything but Finch</title>
       <link>https://yokawasa.github.io/posts/finched-rails-cli/</link>
