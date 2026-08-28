@@ -6,16 +6,16 @@
     <description>Recent content on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Aug 2026 00:41:36 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Aug 2026 00:52:14 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Tab completion for the Postman CLI</title>
+      <title>An unofficial tab completion for the Postman CLI</title>
       <link>https://yokawasa.github.io/posts/postman-cli-completion/</link>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
       
       <guid>https://yokawasa.github.io/posts/postman-cli-completion/</guid>
-      <description>The small friction of not being able to hit postman &amp;lt;TAB&amp;gt; If you use the Postman CLI, how many times have you typed postman --help just because you couldn&amp;rsquo;t remember a subcommand name?
-collection, spec, monitor, workspace, flows. That&amp;rsquo;s a lot to keep in your head just at the top level. Under each of those sit more subcommands, flag values like -r cli,json,junit,html, and file arguments such as *.json and *.</description>
+      <description>Disclaimer: postman-cli-completion is a personal, unofficial open-source project I built on my own time. It is not a Postman product, and it is not affiliated with, endorsed by, or supported by Postman. If something breaks, please open an issue on the GitHub repo — not with Postman support.
+The small friction of not being able to hit postman &amp;lt;TAB&amp;gt; If you use the Postman CLI, how many times have you typed postman --help just because you couldn&amp;rsquo;t remember a subcommand name?</description>
     </item>
     
     <item>
