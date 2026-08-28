@@ -81,10 +81,12 @@ params:
         # subtitle: "Software Engineer, NoOps Practitioner"
         title: "unofficialism"
         subtitle: "Random notes by Yoichi Kawasaki"
-        imageUrl: "profile.png"
-        imageWidth: 200
-        imageHeight: 200
-        imageTitle: my image
+        #### Removed profile image for now
+        # imageUrl: "profile.png"
+        # imageWidth: 200
+        # imageHeight: 200
+        # imageTitle: my image
+        #### ENd of removed profile image section
         #buttons:
         #  - name: posts
         #    url: posts
@@ -127,16 +129,10 @@ params:
         keys: ["title", "permalink", "summary", "content"]
 menu:
     main:
-        - name: about
-          url: about
-          weight: 5
         - identifier: posts
           name: posts
           url: posts
           weight: 10
-        - name: works
-          url: works
-          weight: 15
         - name: search
           url: search/
           weight: 20 
