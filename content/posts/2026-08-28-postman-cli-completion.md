@@ -13,7 +13,7 @@ title: An unofficial tab completion for the Postman CLI
 
 > **Disclaimer:** postman-cli-completion is a personal, unofficial open-source project I built on my own time. It is not a Postman product, and it is not affiliated with, endorsed by, or supported by Postman. If something breaks, please open an issue on the GitHub repo — not with Postman support.
 
-## The small friction of not being able to hit `postman <TAB>`
+## Reaching for `postman --help`, again
 
 If you use the Postman CLI, how many times have you typed `postman --help` just because you couldn't remember a subcommand name?
 
