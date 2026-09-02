@@ -6,7 +6,7 @@
     <description>Recent content on unofficialism</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Aug 2026 00:58:51 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Sep 2026 02:33:51 +0000</lastBuildDate><atom:link href="https://yokawasa.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>An unofficial tab completion for the Postman CLI</title>
@@ -15,7 +15,7 @@
       
       <guid>https://yokawasa.github.io/posts/postman-cli-completion/</guid>
       <description>Disclaimer: postman-cli-completion is a personal, unofficial open-source project I built on my own time. It is not a Postman product, and it is not affiliated with, endorsed by, or supported by Postman. If something breaks, please open an issue on the GitHub repo — not with Postman support.
-The small friction of not being able to hit postman &amp;lt;TAB&amp;gt; If you use the Postman CLI, how many times have you typed postman --help just because you couldn&amp;rsquo;t remember a subcommand name?</description>
+Reaching for postman --help, again If you use the Postman CLI, how many times have you typed postman --help just because you couldn&amp;rsquo;t remember a subcommand name?</description>
     </item>
     
     <item>
